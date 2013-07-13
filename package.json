@@ -15,6 +15,7 @@
   "dependencies": {
     "hogan.js": "~2.0.0",
     "cli-color": "~0.2.2",
-    "connect": "~2.7.11"
+    "connect": "~2.7.11",
+    "express": "~3.3.4"
   }
 }

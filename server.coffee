@@ -1,6 +1,17 @@
-connect = require 'connect'
-port = process.env.PORT or 3000
+express = require 'express'
+http = require 'http'
+fs = require 'fs'
+path = require 'path'
 
-console.log port
+app = express()
 
-connect.createServer(connect.static './www/').listen port
+app.configure 'development', () -> app.use express.logger 'dev'
+
+app.get '/cordova.js', (req, res) -> res.send ' '
+
+app.use express.static path.resolve './www/'
+app.use express.bodyParser()
+
+server = http.createServer app
+
+server.listen process.env.PORT || 3000, -> console.log 'Running...'
