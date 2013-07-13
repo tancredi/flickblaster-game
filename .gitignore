@@ -12,5 +12,9 @@ editor/js/templates.js
 editor/css
 platforms/android/bin/dexedLibs/cordova-2.9.0-93cf26563ea24777a358fd96cf85de41.jar
 www/cordova.js
-www/cordova_plugins.js
 www/cordova_plugins.json
+platforms/android/bin
+platforms/android/gen
+platforms/android/assets
+platforms/ios/CordovaLib/build
+platforms/ios/build/
