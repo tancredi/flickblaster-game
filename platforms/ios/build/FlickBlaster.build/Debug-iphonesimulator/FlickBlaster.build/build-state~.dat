@@ -1,0 +1,634 @@
+TFlickBlaster
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Info.plist FlickBlaster/FlickBlaster-Info.plist
+cPhaseScriptExecution "Copy www directory" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Script-304B58A110DAC018002A0835.sh
+cCpResource FlickBlaster/config.xml build/FlickBlaster.app/config.xml
+cCpResource FlickBlaster/Resources/icons/icon.png build/FlickBlaster.app/icon.png
+cCpResource FlickBlaster/Resources/icons/icon-72.png build/FlickBlaster.app/icon-72.png
+cCpResource FlickBlaster/Resources/icons/icon@2x.png build/FlickBlaster.app/icon@2x.png
+cCpResource FlickBlaster/Resources/Capture.bundle build/FlickBlaster.app/Capture.bundle
+cCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/en.lproj/Localizable.strings FlickBlaster/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/es.lproj/Localizable.strings FlickBlaster/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.xib
+cCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/de.lproj/Localizable.strings FlickBlaster/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/se.lproj/Localizable.strings FlickBlaster/Resources/se.lproj/Localizable.strings
+cCpResource FlickBlaster/Resources/splash/Default-Landscape~ipad.png build/FlickBlaster.app/Default-Landscape~ipad.png
+cCpResource FlickBlaster/Resources/splash/Default-Landscape@2x~ipad.png build/FlickBlaster.app/Default-Landscape@2x~ipad.png
+cCpResource FlickBlaster/Resources/splash/Default-Portrait@2x~ipad.png build/FlickBlaster.app/Default-Portrait@2x~ipad.png
+cCpResource FlickBlaster/Resources/splash/Default-Portrait~ipad.png build/FlickBlaster.app/Default-Portrait~ipad.png
+cCpResource FlickBlaster/Resources/splash/Default@2x~iphone.png build/FlickBlaster.app/Default@2x~iphone.png
+cCpResource FlickBlaster/Resources/splash/Default~iphone.png build/FlickBlaster.app/Default~iphone.png
+cCpResource FlickBlaster/Resources/splash/Default-568h@2x~iphone.png build/FlickBlaster.app/Default-568h@2x~iphone.png
+cCpResource FlickBlaster/Resources/icons/icon-72@2x.png build/FlickBlaster.app/icon-72@2x.png
+cProcessPCH /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.pth FlickBlaster/FlickBlaster-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster normal i386
+cGenerateDSYMFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app.dSYM /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster
+cTouch /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000050EDEAFB0000000000000110
+t1357769467
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000519E049900000000001EB540
+t1369310361
+s2012480
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c00000000519E049900000000000C1030
+t1369310361
+s790576
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c00000000519E04990000000000193640
+t1369310361
+s1652288
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c00000000519E049900000000000226E0
+t1369310361
+s141024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000519E049900000000003D4DF0
+t1369310361
+s4017648
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c00000000519E04990000000000215DB0
+t1369310361
+s2186672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000519E04990000000000228FE0
+t1369310361
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c00000000519E0499000000000009C590
+t1369310361
+s640400
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c00000000519E04990000000000085620
+t1369310361
+s546336
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000519E049A00000000003DDFA0
+t1369310362
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+c00000000519E049A00000000002CFBE0
+t1369310362
+s2948064
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c00000000519E049B00000000002DBA50
+t1369310363
+s2996816
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c00000000519E049B00000000000BCC20
+t1369310363
+s773152
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c00000000519E049B0000000000030EB0
+t1369310363
+s200368
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000519E049B00000000001D5750
+t1369310363
+s1922896
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c00000000519E049B000000000006CC50
+t1369310363
+s445520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000519E049C0000000000AB6230
+t1369310364
+s11231792
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m
+c0000000051E1A09B00000000000013DE
+t1373741211
+s5086
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.m
+c0000000051E1A09B000000000000126D
+t1373741211
+s4717
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.xib
+c0000000051E1A09B0000000000001759
+t1373741211
+s5977
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/FlickBlaster-Prefix.pch
+c0000000051E1A09B00000000000003C9
+t1373741211
+s969
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/Capture.bundle
+c0000000051E1A09B000000000000030E
+t1373741211
+s782
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/de.lproj/Localizable.strings
+c0000000051E1A09B00000000000004BF
+t1373741211
+s1215
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/en.lproj/Localizable.strings
+c0000000051E1A09B00000000000004AA
+t1373741211
+s1194
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/es.lproj/Localizable.strings
+c0000000051E1A09B00000000000004B7
+t1373741211
+s1207
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon-72.png
+c0000000051E1A09B0000000000001350
+t1373741211
+s4944
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon-72@2x.png
+c0000000051E1A09B0000000000002DBA
+t1373741211
+s11706
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon.png
+c0000000051E1A09B0000000000000F3E
+t1373741211
+s3902
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon@2x.png
+c0000000051E1A09B0000000000001EBD
+t1373741211
+s7869
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/se.lproj/Localizable.strings
+c0000000051E1A09B00000000000004AB
+t1373741211
+s1195
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-568h@2x~iphone.png
+c0000000051E1A09B00000000000085B1
+t1373741211
+s34225
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Landscape@2x~ipad.png
+c0000000051E1A09B0000000000012DF4
+t1373741211
+s77300
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Landscape~ipad.png
+c0000000051E1A09B0000000000008877
+t1373741211
+s34935
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Portrait@2x~ipad.png
+c0000000051E1A09B0000000000012B02
+t1373741211
+s76546
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Portrait~ipad.png
+c0000000051E1A09B00000000000085E6
+t1373741211
+s34278
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default@2x~iphone.png
+c0000000051E1A09B0000000000007323
+t1373741211
+s29475
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default~iphone.png
+c0000000051E1A09B000000000000289A
+t1373741211
+s10394
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/config.xml
+c0000000051E1ACD70000000000000CFC
+t1373744343
+s3324
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/main.m
+c0000000051E1A09B000000000000045E
+t1373741211
+s1118
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app.dSYM
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Capture.bundle
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default~iphone.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Info.plist
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/MainViewController.nib
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/PkgInfo
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/config.xml
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon-72.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon-72@2x.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon@2x.png
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/FlickBlaster.LinkFileList
+c0000000051E1ACDD00000000000001EC
+t1373744349
+s492
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Script-304B58A110DAC018002A0835.sh
+c0000000051E1ACDD000000000000051A
+t1373744349
+s1306
+
+N/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/libCordova.a
+c0000000051E1ACDD000000000036FD30
+t1373744349
+s3603760
+
+N/var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.pth
+t2
+s0
+
+NFlickBlaster/FlickBlaster-Info.plist
+c0000000051E1ACD7000000000000074B
+t1373744343
+s1867
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd123be5de491b741^fb3fbf5de491b741^---0#1#0#--18"Check dependencies36"6F04496B-3AA2-423E-92FE-0CF18488EB96-
+
+CCompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395437153.002118
+e395437153.090201
+r1
+xCompileC
+xbuild/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.o
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m:80:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]
+o    self.viewController.useSplashScreen = YES;
+o                        ^
+o/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/include/Cordova/CDVViewController.h:46:47: note: 'useSplashScreen' declared here
+o@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");
+o                                              ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.me7ab0061e491b741^01181761e491b741^-720"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m:80:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]    self.viewController.useSplashScreen = YES;                        ^/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/include/Cordova/CDVViewController.h:46:47: note: 'useSplashScreen' declared here@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");                                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@128"'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property.-395437153#18446744073709551615#0#1(2@31"'useSplashScreen' declared here-395437153#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@118"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/CordovaLib/Classes/CDVViewController.h0000000000000000^45#46#45#46#1826#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@114"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m0000000000000000^79#24#79#24#2697#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@114"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m0000000000000000^4076"CompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.o FlickBlaster/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-generated-files.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-own-target-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-all-target-headers.hmap -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-project-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/usr/local/lib/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/UninstalledProducts/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources/i386 -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources -F/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -include /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch -MMD -MT dependencies -MF /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.dia -c /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/AppDelegate.m -o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/AppDelegate.o36"603613A6-70F7-4D75-B35D-DCBDB39587DC-
+
+CCompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395437153.002122
+e395437153.079877
+r1
+xCompileC
+xbuild/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.o
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.m17bc0061e491b741^de731461e491b741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.m0000000000000000^4118"CompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.o FlickBlaster/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-generated-files.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-own-target-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-all-target-headers.hmap -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-project-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/usr/local/lib/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/UninstalledProducts/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources/i386 -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources -F/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -include /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch -MMD -MT dependencies -MF /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.dia -c /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.m -o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/MainViewController.o36"EAD2CDE3-67B8-46FA-B413-9C12DA8B851C-
+
+CCompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395437153.002117
+e395437153.028779
+r1
+xCompileC
+xbuild/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.o
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/main.mc5ab0061e491b741^ff5d0761e491b741^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/main.m0000000000000000^4018"CompileC build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.o FlickBlaster/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-generated-files.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-own-target-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-all-target-headers.hmap -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-project-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/usr/local/lib/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/UninstalledProducts/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources/i386 -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources -F/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -include /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch -MMD -MT dependencies -MF /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.dia -c /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/main.m -o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/main.o36"45059D02-3AC5-46EA-833E-CB6D98B8FB09-
+
+CCompileXIB /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.xib
+s395437150.443915
+e395437152.680674
+r1
+xCompileXIB
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.xib
+o2013-07-13 21:39:12.087 Interface Builder Cocoa Touch Tool[50062:f07] CFPreferences: user home directory at file://localhost/Users/tancreditrugenberger/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compiling /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.xib4cc2715ee491b741^494aae60e491b741^-253"2013-07-13 21:39:12.087 Interface Builder Cocoa Touch Tool[50062:f07] CFPreferences: user home directory at file://localhost/Users/tancreditrugenberger/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.xib0000000000000000^1191"CompileXIB FlickBlaster/Classes/MainViewController.xib    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/MainViewController.nib /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"5E0B1E90-6CA2-4722-85A6-754FAFF8A837-
+
+CCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/de.lproj/Localizable.strings FlickBlaster/Resources/de.lproj/Localizable.strings
+s395437150.447353
+e395437150.463414
+r1
+xCopyStringsFile
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/de.lproj/Localizable.strings
+xFlickBlaster/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy FlickBlaster/Resources/de.lproj/Localizable.strings2ba2725ee491b741^fda4765ee491b741^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/de.lproj/Localizable.strings0000000000000000^835"CopyStringsFile build/FlickBlaster.app/de.lproj/Localizable.strings FlickBlaster/Resources/de.lproj/Localizable.strings    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/de.lproj -- FlickBlaster/Resources/de.lproj/Localizable.strings36"455DB87C-3B58-487F-8C35-01BDA5E7A417-
+
+CCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/en.lproj/Localizable.strings FlickBlaster/Resources/en.lproj/Localizable.strings
+s395437150.443535
+e395437150.451936
+r1
+xCopyStringsFile
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/en.lproj/Localizable.strings
+xFlickBlaster/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy FlickBlaster/Resources/en.lproj/Localizable.strings62bd715ee491b741^25b2735ee491b741^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/en.lproj/Localizable.strings0000000000000000^835"CopyStringsFile build/FlickBlaster.app/en.lproj/Localizable.strings FlickBlaster/Resources/en.lproj/Localizable.strings    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/en.lproj -- FlickBlaster/Resources/en.lproj/Localizable.strings36"3723208F-6DDE-4F13-A700-E030206FAF68-
+
+CCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/es.lproj/Localizable.strings FlickBlaster/Resources/es.lproj/Localizable.strings
+s395437150.443905
+e395437150.460183
+r1
+xCopyStringsFile
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/es.lproj/Localizable.strings
+xFlickBlaster/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy FlickBlaster/Resources/es.lproj/Localizable.strings16c3715ee491b741^8ece755ee491b741^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/es.lproj/Localizable.strings0000000000000000^835"CopyStringsFile build/FlickBlaster.app/es.lproj/Localizable.strings FlickBlaster/Resources/es.lproj/Localizable.strings    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/es.lproj -- FlickBlaster/Resources/es.lproj/Localizable.strings36"65ED416C-FC83-45EE-A1F1-DD3FEBFA5706-
+
+CCopyStringsFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/se.lproj/Localizable.strings FlickBlaster/Resources/se.lproj/Localizable.strings
+s395437150.447363
+e395437150.464572
+r1
+xCopyStringsFile
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/se.lproj/Localizable.strings
+xFlickBlaster/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy FlickBlaster/Resources/se.lproj/Localizable.stringsb1a6725ee491b741^cced765ee491b741^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/se.lproj/Localizable.strings0000000000000000^835"CopyStringsFile build/FlickBlaster.app/se.lproj/Localizable.strings FlickBlaster/Resources/se.lproj/Localizable.strings    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/se.lproj -- FlickBlaster/Resources/se.lproj/Localizable.strings36"8F405744-F519-42C9-B638-F7754F0FE40C-
+
+CCpResource FlickBlaster/Resources/Capture.bundle build/FlickBlaster.app/Capture.bundle
+s395437150.443495
+e395437150.498469
+r1
+xCpResource
+xFlickBlaster/Resources/Capture.bundle
+xbuild/FlickBlaster.app/Capture.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/FlickBlaster.app/Capture.bundle03b0715ee491b741^cc9b7f5ee491b741^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Capture.bundle000000000080d041^862"CpResource FlickBlaster/Resources/Capture.bundle build/FlickBlaster.app/Capture.bundle    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/Capture.bundle /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"04D775E7-8D4D-4317-A04A-44FA1F02D812-
+
+CCpResource FlickBlaster/Resources/icons/icon-72.png build/FlickBlaster.app/icon-72.png
+s395437150.443468
+e395437150.447077
+r1
+xCpResource
+xFlickBlaster/Resources/icons/icon-72.png
+xbuild/FlickBlaster.app/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/FlickBlaster.app/icon-72.pngf8aa715ee491b741^2a74725ee491b741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon-72.png000000000080d041^865"CpResource FlickBlaster/Resources/icons/icon-72.png build/FlickBlaster.app/icon-72.png    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon-72.png /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"8635036A-225A-4558-9F0A-4F9A86E274D8-
+
+CCpResource FlickBlaster/Resources/icons/icon-72@2x.png build/FlickBlaster.app/icon-72@2x.png
+s395437150.467486
+e395437150.474928
+r1
+xCpResource
+xFlickBlaster/Resources/icons/icon-72@2x.png
+xbuild/FlickBlaster.app/icon-72@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/FlickBlaster.app/icon-72@2x.png69c5775ee491b741^7d94795ee491b741^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon-72@2x.png000000000080d041^880"CpResource "FlickBlaster/Resources/icons/icon-72@2x.png" "build/FlickBlaster.app/icon-72@2x.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon-72@2x.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"5F8B8426-322E-4D92-A134-BA49B19B217F-
+
+CCpResource FlickBlaster/Resources/icons/icon.png build/FlickBlaster.app/icon.png
+s395437150.443457
+e395437150.446226
+r1
+xCpResource
+xFlickBlaster/Resources/icons/icon.png
+xbuild/FlickBlaster.app/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/FlickBlaster.app/icon.png2eaa715ee491b741^643c725ee491b741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon.png000000000080d041^856"CpResource FlickBlaster/Resources/icons/icon.png build/FlickBlaster.app/icon.png    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon.png /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"C64CA9E4-B6D5-461C-AAB3-776EE4D49733-
+
+CCpResource FlickBlaster/Resources/icons/icon@2x.png build/FlickBlaster.app/icon@2x.png
+s395437150.443483
+e395437150.449387
+r1
+xCpResource
+xFlickBlaster/Resources/icons/icon@2x.png
+xbuild/FlickBlaster.app/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/FlickBlaster.app/icon@2x.png6dab715ee491b741^5b0b735ee491b741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/icon@2x.png000000000080d041^871"CpResource "FlickBlaster/Resources/icons/icon@2x.png" "build/FlickBlaster.app/icon@2x.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/icons/icon@2x.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"A2EA5740-61D2-4A84-97E0-E2317DF655E2-
+
+CCpResource FlickBlaster/Resources/splash/Default-568h@2x~iphone.png build/FlickBlaster.app/Default-568h@2x~iphone.png
+s395437150.465773
+e395437150.471397
+r1
+xCpResource
+xFlickBlaster/Resources/splash/Default-568h@2x~iphone.png
+xbuild/FlickBlaster.app/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/FlickBlaster.app/Default-568h@2x~iphone.png9b59775ee491b741^79ad785ee491b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-568h@2x~iphone.png000000000080d041^918"CpResource "FlickBlaster/Resources/splash/Default-568h@2x~iphone.png" "build/FlickBlaster.app/Default-568h@2x~iphone.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-568h@2x~iphone.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"5C5BEF8E-24DA-469D-A04F-0377D951B047-
+
+CCpResource FlickBlaster/Resources/splash/Default-Landscape@2x~ipad.png build/FlickBlaster.app/Default-Landscape@2x~ipad.png
+s395437150.450551
+e395437150.464822
+r1
+xCpResource
+xFlickBlaster/Resources/splash/Default-Landscape@2x~ipad.png
+xbuild/FlickBlaster.app/Default-Landscape@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/FlickBlaster.app/Default-Landscape@2x~ipad.png5471735ee491b741^61fe765ee491b741^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Landscape@2x~ipad.png000000000080d041^927"CpResource "FlickBlaster/Resources/splash/Default-Landscape@2x~ipad.png" "build/FlickBlaster.app/Default-Landscape@2x~ipad.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Landscape@2x~ipad.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"D784E01F-4765-4F29-80A5-9DB9CF8D6C11-
+
+CCpResource FlickBlaster/Resources/splash/Default-Landscape~ipad.png build/FlickBlaster.app/Default-Landscape~ipad.png
+s395437150.450547
+e395437150.466332
+r1
+xCpResource
+xFlickBlaster/Resources/splash/Default-Landscape~ipad.png
+xbuild/FlickBlaster.app/Default-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/FlickBlaster.app/Default-Landscape~ipad.png1d76735ee491b741^6761775ee491b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Landscape~ipad.png000000000080d041^918"CpResource "FlickBlaster/Resources/splash/Default-Landscape~ipad.png" "build/FlickBlaster.app/Default-Landscape~ipad.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Landscape~ipad.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"827A731B-8D0C-4366-8B9C-5C5C6412D635-
+
+CCpResource FlickBlaster/Resources/splash/Default-Portrait@2x~ipad.png build/FlickBlaster.app/Default-Portrait@2x~ipad.png
+s395437150.453183
+e395437150.466790
+r1
+xCpResource
+xFlickBlaster/Resources/splash/Default-Portrait@2x~ipad.png
+xbuild/FlickBlaster.app/Default-Portrait@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/FlickBlaster.app/Default-Portrait@2x~ipad.pnge624745ee491b741^d482775ee491b741^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Portrait@2x~ipad.png000000000080d041^924"CpResource "FlickBlaster/Resources/splash/Default-Portrait@2x~ipad.png" "build/FlickBlaster.app/Default-Portrait@2x~ipad.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Portrait@2x~ipad.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"67F5893B-FD99-4610-A44F-02CFDDB73783-
+
+CCpResource FlickBlaster/Resources/splash/Default-Portrait~ipad.png build/FlickBlaster.app/Default-Portrait~ipad.png
+s395437150.464646
+e395437150.469605
+r1
+xCpResource
+xFlickBlaster/Resources/splash/Default-Portrait~ipad.png
+xbuild/FlickBlaster.app/Default-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy build/FlickBlaster.app/Default-Portrait~ipad.png9910775ee491b741^1938785ee491b741^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default-Portrait~ipad.png000000000080d041^915"CpResource "FlickBlaster/Resources/splash/Default-Portrait~ipad.png" "build/FlickBlaster.app/Default-Portrait~ipad.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default-Portrait~ipad.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"56C691D2-B7B4-425D-AFA5-E23084C944B9-
+
+CCpResource FlickBlaster/Resources/splash/Default@2x~iphone.png build/FlickBlaster.app/Default@2x~iphone.png
+s395437150.464652
+e395437150.469968
+r1
+xCpResource
+xFlickBlaster/Resources/splash/Default@2x~iphone.png
+xbuild/FlickBlaster.app/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy build/FlickBlaster.app/Default@2x~iphone.pngb212775ee491b741^b14f785ee491b741^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default@2x~iphone.png000000000080d041^903"CpResource "FlickBlaster/Resources/splash/Default@2x~iphone.png" "build/FlickBlaster.app/Default@2x~iphone.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default@2x~iphone.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"B8E1625D-57B5-4B17-8C5D-EFBF66ED973A-
+
+CCpResource FlickBlaster/Resources/splash/Default~iphone.png build/FlickBlaster.app/Default~iphone.png
+s395437150.465733
+e395437150.470005
+r1
+xCpResource
+xFlickBlaster/Resources/splash/Default~iphone.png
+xbuild/FlickBlaster.app/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy build/FlickBlaster.app/Default~iphone.png0c57775ee491b741^c652785ee491b741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Default~iphone.png000000000080d041^894"CpResource "FlickBlaster/Resources/splash/Default~iphone.png" "build/FlickBlaster.app/Default~iphone.png"    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/Resources/splash/Default~iphone.png" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"17D6AF87-2813-415A-B355-760DEF92C0DF-
+
+CCpResource FlickBlaster/config.xml build/FlickBlaster.app/config.xml
+s395437150.443454
+e395437150.450196
+r1
+xCpResource
+xFlickBlaster/config.xml
+xbuild/FlickBlaster.app/config.xml
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Copy build/FlickBlaster.app/config.xml4ab7715ee491b741^a340735ee491b741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/config.xml000000000080d041^830"CpResource FlickBlaster/config.xml build/FlickBlaster.app/config.xml    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/config.xml /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"D6493830-2B38-4772-95D8-77274D48E3FF-
+
+CGenerateDSYMFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app.dSYM /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster
+s395437153.274182
+e395437153.380271
+r1
+xGenerateDSYMFile
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app.dSYM
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Generate /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app.dSYM78474661e491b741^3e596161e491b741^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app.dSYM000000000080d041^850"GenerateDSYMFile build/FlickBlaster.app.dSYM build/FlickBlaster.app/FlickBlaster    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster -o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app.dSYM36"33BFF433-D3D1-4BB0-9DA9-E54CFD591DE0-
+
+CLd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster normal i386
+s395437153.096536
+e395437153.267213
+r1
+xLd
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Link /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster4ad31861e491b741^12684461e491b741^---0#0#0#--2102"Ld build/FlickBlaster.app/FlickBlaster normal i386    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -F/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -filelist /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/FlickBlaster.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/libCordova.a -ObjC -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 -framework CoreLocation -framework ImageIO -framework OpenAL -framework AssetsLibrary /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -framework CoreLocation -o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/FlickBlaster36"78BC75D4-2535-4126-B1D1-931218B6C084-
+
+CPhaseScriptExecution "Copy www directory" /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Script-304B58A110DAC018002A0835.sh
+s395437149.765141
+e395437150.435753
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.649s
+ouser	0m0.273s
+osys	0m0.336s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'2270c45de491b741^df8b6f5ee491b741^-42"real	0m0.649suser	0m0.273ssys	0m0.336s3(21%IDEActivityLogMessage2@14"real	0m0.649s-395437150#1#14#-0#-----2@14"user	0m0.273s-395437150#15#14#-0#-----2@13"sys	0m0.336s-395437150#29#13#-0#-----0#0#0#--22004"PhaseScriptExecution "Copy www directory" build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Script-304B58A110DAC018002A0835.sh    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER tancreditrugenberger    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv BUILD_ROOT /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv CACHE_ROOT /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC YES    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv CONFIGURATION_TEMP_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH FlickBlaster.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH FlickBlaster.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/FlickBlaster.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME FlickBlaster.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH FlickBlaster.app/Executables    setenv EXECUTABLE_FOLDER_PATH FlickBlaster.app    setenv EXECUTABLE_NAME FlickBlaster    setenv EXECUTABLE_PATH FlickBlaster.app/FlickBlaster    setenv FILE_LIST /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH FlickBlaster.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME FlickBlaster.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER FlickBlaster/FlickBlaster-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/include\" \"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/usr/local/lib/include\" \"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/UninstalledProducts/include\" \"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE FlickBlaster/FlickBlaster-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH FlickBlaster.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH FlickBlaster.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/FlickBlaster.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER tancreditrugenberger    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/FlickBlaster.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH FlickBlaster.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal/i386/FlickBlaster.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH FlickBlaster.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12D78    setenv MAC_OS_X_VERSION_ACTUAL 1083    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0803    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Objects-normal    setenv OBJROOT /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/libCordova.a -ObjC"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH FlickBlaster.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/PkgInfo    setenv PKGINFO_PATH FlickBlaster.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60100    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH FlickBlaster.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH FlickBlaster.app/PrivateHeaders    setenv PRODUCT_NAME FlickBlaster    setenv PRODUCT_SETTINGS_PATH /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/FlickBlaster-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT FlickBlaster    setenv PROJECT_DERIVED_FILE_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/DerivedSources    setenv PROJECT_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PROJECT_FILE_PATH /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster.xcodeproj    setenv PROJECT_NAME FlickBlaster    setenv PROJECT_TEMP_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build    setenv PROJECT_TEMP_ROOT /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv PUBLIC_HEADERS_FOLDER_PATH FlickBlaster.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH FlickBlaster.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_NAME iphonesimulator6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH FlickBlaster.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH FlickBlaster.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv SRCROOT /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME FlickBlaster    setenv TARGET_BUILD_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv TARGET_NAME FlickBlaster    setenv TARGET_TEMP_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build    setenv TEMP_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build    setenv TEMP_FILES_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build    setenv TEMP_FILE_DIR /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build    setenv TEMP_ROOT /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH FlickBlaster.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER tancreditrugenberger    setenv USER_APPS_DIR /Users/tancreditrugenberger/Applications    setenv USER_LIBRARY_DIR /Users/tancreditrugenberger/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH FlickBlaster.app/version.plist    setenv VERSION_INFO_BUILDER tancreditrugenberger    setenv VERSION_INFO_FILE FlickBlaster_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:FlickBlaster  PROJECT:FlickBlaster-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME FlickBlaster.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H1003    setenv XCODE_VERSION_ACTUAL 0462    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/Script-304B58A110DAC018002A0835.sh36"AECE8127-314C-4F59-91EE-38A7F4F98209-
+
+CProcessInfoPlistFile /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Info.plist FlickBlaster/FlickBlaster-Info.plist
+s395437149.752625
+e395437149.756090
+r1
+xProcessInfoPlistFile
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Info.plist
+xFlickBlaster/FlickBlaster-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Process FlickBlaster/FlickBlaster-Info.plist1ac3c05de491b741^0c8fc15de491b741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/FlickBlaster-Info.plist0000000000000000^902"ProcessInfoPlistFile build/FlickBlaster.app/Info.plist FlickBlaster/FlickBlaster-Info.plist    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    builtin-infoPlistUtility FlickBlaster/FlickBlaster-Info.plist -genpkginfo /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app/Info.plist36"02A25821-E639-408F-A8DF-1CD1861FDAC2-
+
+CProcessPCH /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.pth FlickBlaster/FlickBlaster-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395437152.690336
+e395437152.995277
+r1
+xProcessPCH
+x/var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.pth
+xFlickBlaster/FlickBlaster-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile FlickBlaster/FlickBlaster-Prefix.pch2ee5b060e491b741^8ec9fe60e491b741^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/FlickBlaster-Prefix.pch0000000000000000^4001"ProcessPCH /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.pth FlickBlaster/FlickBlaster-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-generated-files.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-own-target-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-all-target-headers.hmap -iquote /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/FlickBlaster-project-headers.hmap -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/usr/local/lib/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/UninstalledProducts/include -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources/i386 -I/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.build/Debug-iphonesimulator/FlickBlaster.build/DerivedSources -F/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build --serialize-diagnostics /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.dia -c /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/FlickBlaster/FlickBlaster-Prefix.pch -o /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/sd/gv6wcrgn2fbd54_y9k32b5jh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FlickBlaster-Prefix-bmtchiglmqsfweadjkkgfyrdoogs/FlickBlaster-Prefix.pch.d36"1C3FA4C5-266F-439E-82A8-34D19CDB449A-
+
+CTouch /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app
+s395437153.388626
+e395437153.396109
+r1
+xTouch
+x/Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Touch /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app92916361e491b741^66676561e491b741^---0#0#0#--612"Touch build/FlickBlaster.app    cd /Users/tancreditrugenberger/projects/flickblaster/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/android/adt-bundle-mac-x86_64-20130522/sdk/tools:/Users/tancreditrugenberger/android/adt-bundle-mac-x86_64-20130522/sdk/platform-tools"    /usr/bin/touch -c /Users/tancreditrugenberger/projects/flickblaster/platforms/ios/build/FlickBlaster.app36"8B691013-53A9-441D-8246-C02DFABD4F7D-
+

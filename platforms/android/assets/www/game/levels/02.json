@@ -1,0 +1,44 @@
+{
+    "size": [
+        540,
+        959
+    ],
+    "layers": [
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 274,
+                    "y": 840,
+                    "preset": "player",
+                    "id": "player"
+                },
+                {
+                    "x": 274,
+                    "y": 120,
+                    "preset": "target",
+                    "id": "target"
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 129,
+                    "y": 478,
+                    "type": "rect",
+                    "width": 452,
+                    "height": 15
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
+node_modules
+www/lib
+www/js/app.js
+www/js/templates.js
+www/css
+editor/lib
+editor/js/editor.js
+editor/js/templates.js
+editor/css

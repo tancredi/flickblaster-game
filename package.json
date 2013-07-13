@@ -1,0 +1,20 @@
+{
+  "name": "b2d",
+  "version": "0.0.0",
+  "author": "Tancredi Trugenberger",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.5.1",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-browserify2": "~0.1.7",
+    "grunt-exec": "~0.4.0",
+    "grunt-parallel": "~0.1.0",
+    "grunt-contrib-handlebars": "~0.5.9"
+  },
+  "dependencies": {
+    "hogan.js": "~2.0.0",
+    "cli-color": "~0.2.2",
+    "connect": "~2.7.11"
+  }
+}

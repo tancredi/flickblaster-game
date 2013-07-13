@@ -1,0 +1,36 @@
+
+// Blink > Default
+
+.keyframes-blink {
+
+    from {
+        .opacity(0);
+    } to {
+        .opacity(1);
+    }
+}
+
+@-webkit-keyframes blink { .keyframes-blink; }
+@keyframes blink { .keyframes-blink; }
+ 
+.animate-blink (@duration: .5s, @delay: 0) {
+    .animation(blink, @duration, infinite, @delay, ease, alternate);
+}
+
+// Blink > Reversed
+
+.keyframes-blink-reversed {
+
+    from {
+        .opacity(1);
+    } to {
+        .opacity(0);
+    }
+}
+
+@-webkit-keyframes blink-reversed { .keyframes-blink-reversed; }
+@keyframes blink-reversed { .keyframes-blink-reversed; }
+
+.animate-blink-reversed (@duration: .5s, @delay: 0) {
+    .animation(blink-reversed, @duration, infinite, @delay, ease, alternate);
+}
