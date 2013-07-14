@@ -1,7 +1,7 @@
 
 class BaseBehaviour
 
-  constructor: (@entity) ->
+  constructor: (@entity, @world) ->
 
   update: ->
     @entity.body.update()

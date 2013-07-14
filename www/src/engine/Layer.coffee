@@ -19,10 +19,7 @@ class Layer
     else return
 
     @items.push item
-
-    if item.group?
-      if not _.has @groups, entity.group then @groups[entity.group] = []
-      @groups[entity.group].push entity
+    return item
 
   update: => item.update() for item in @items
 

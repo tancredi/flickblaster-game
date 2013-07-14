@@ -20,6 +20,7 @@ class World
     @readyCallbacks = []
     options = $.extend true, {}, defaults, options
     @gravity = options.gravity
+    @items = []
     @layers = {}
     @stage = ($ renderer.render 'game-stage').appendTo @wrap
     @loop = new Loop
@@ -50,7 +51,7 @@ class World
 
       layer = @addLayer 'entities', 'entity'
       for entity in (@loadLayerData 'entities').items
-        layer.add entity
+        @addItem 'entities', entity
 
       @walls = new Walls @
 
@@ -59,7 +60,13 @@ class World
       @walls.refresh()
 
       @ready = true
+
       cb() for cb in @readyCallbacks
+
+  addItem: (layerId, item) ->
+    layer = @getLayerById layerId
+    item = layer.add item
+    @items.push item
 
   loadLayerData: (layerId) ->
     if layerId?
@@ -76,14 +83,24 @@ class World
   addBody: (body) -> return @b2dWorld.CreateBody(body.bodyDef).CreateFixture body.fixtureDef
 
   getItemById: (id) ->
-    for layerId, layer of @layers
-      for item in layer.items
-        if item.id is id then return item
+    for item in @items
+      if item.id is id then return item
     return null
 
+  getItemsByAttr: (attr) ->
+    matches = []
+    for item in @items
+      matches.push item if (item.attributes.indexOf attr) isnt -1
+    return matches
+
   start: ->
+    @initBehaviours()
     @loop.use => @update()
     if debug.debugPhysics then debugHelpers.initPhysicsDebugger @
+
+  initBehaviours: ->
+    for item in @items
+      item.initBehaviour() if item.itemType is 'entity'
 
   update: -> layer.update() for layerId, layer of @layers
 

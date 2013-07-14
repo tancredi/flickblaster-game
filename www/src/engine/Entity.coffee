@@ -19,6 +19,7 @@ class Entity extends BaseItem
     @attributes = options.attributes or null
     @id = options.id or null
     @data = options.data or {}
+    @behaviourType = options.behaviour or 'base'
 
     @offset = x: 0, y: 0
 
@@ -32,8 +33,7 @@ class Entity extends BaseItem
 
     @updatePos()
 
-    if options.behaviour then @behaviour = new behaviours[options.behaviour] @
-    else @behaviour = new behaviours.base @
+  initBehaviour: -> @behaviour = new behaviours[@behaviourType] @, @layer.world
 
   render: ->
     @el = $ renderer.render 'game-entity'

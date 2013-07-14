@@ -6,7 +6,6 @@ debug = require '../core/debug'
 phys = require '../helpers/physics'
 World = require '../engine/World'
 GameControls = require '../engine/GameControls'
-entityFx = require '../helpers/entityFx'
 
 win = $ window
 
@@ -41,18 +40,9 @@ class GameView extends BaseView
     @world.start()
     @world.loop.play()
 
-    @target = @world.getItemById 'target'
     @player = @world.getItemById 'player'
 
-    @player.onCollisionStart @target, => @win()
-
     @showIntro => @enableControls()
-
-  win: ->
-    dist = @player.distance @target, false
-    @player.body.applyForce dist.x, dist.y, -40
-    @player.body.setDrag 10
-    entityFx.stopAndPop @player
 
   enableControls: ->
     @world.loop.use @update
