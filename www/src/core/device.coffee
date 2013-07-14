@@ -23,7 +23,7 @@ touchEvents =
 isMobile = if window.navigator.userAgent.match /(iPhone|iPod|iPad|Android|BlackBerry)/ then true else false
 
 # Detect if using a touch device
-isTouch = (_.has window, 'ontouchstart') or (_.has window, 'onmsgesturechange')
+isTouch = (_.has document.documentElement, 'ontouchstart') or (_.has window, 'onmsgesturechange')
 
 device =
   isTouch: isMobile       # Returns true if supported touch device is detected

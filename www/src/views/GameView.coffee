@@ -2,11 +2,14 @@
 BaseView = require '../core/BaseView'
 getByRole = require('../helpers/dom').getByRole
 device = require '../core/device'
+debug = require '../core/debug'
 phys = require '../helpers/physics'
 World = require '../engine/World'
 GameControls = require '../engine/GameControls'
 
 win = $ window
+
+introDuration = if debug.skipAnimations then 0 else 2400
 
 class GameView extends BaseView
   templateName: 'game'
@@ -40,19 +43,20 @@ class GameView extends BaseView
     @target = @world.getItemById 'target'
     @player = @world.getItemById 'player'
 
-    @player.onCollisionStart @target, =>
-      console.log 'Win!'
+    @player.onCollisionStart @target, => console.log 'Win!'
 
-    @showIntro =>
-      @world.loop.use @update
-      @controls = new GameControls @
-      @controls.on()
+    @showIntro => @enableControls()
+
+  enableControls: ->
+    @world.loop.use @update
+    @controls = new GameControls @
+    @controls.on()
 
   showIntro: (callback) ->
     @viewportFits = @world.viewport.fits()
     if not @viewportFits
-      @world.viewport.followEntity @target, 1000, =>
-        @world.viewport.followEntity @player, 1000, =>
+      @world.viewport.followEntity @target, introDuration / 2, =>
+        @world.viewport.followEntity @player, introDuration / 2, =>
           callback()
     else callback()
 

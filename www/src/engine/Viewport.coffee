@@ -3,6 +3,8 @@ device = require '../core/device'
 
 win = $ window
 
+followEasing = 20
+
 class Viewport
 
   constructor: (@el, @width, @height) ->
@@ -25,8 +27,8 @@ class Viewport
 
   moveTo: (x, y, duration = 0, callback = null, ease = false) ->
     if ease and not duration
-      newX = @x + ( x - @x ) / 20
-      newY = @y + ( y - @y ) / 20
+      newX = @x + ( x - @x ) / followEasing
+      newY = @y + ( y - @y ) / followEasing
       if (Math.abs @x - newX) < .1 and (Math.abs @y - newY) < .1
         return
       else
@@ -39,8 +41,9 @@ class Viewport
 
     if not duration
       @el.css x: @x, y: @y
+      callback() if callback?
     else
-      @el.transition x: @x, y: @y, duration, callback
+      @el.transition x: @x, y: @y, duration, => callback() if callback?
 
   worldToScreen: (value) ->
     if typeof value is 'object' and value.x? and value.y?
@@ -61,20 +64,18 @@ class Viewport
   followEntity: (target, duration = 0, callback = null) ->
     targetPos = @worldToScreen target.position()
 
-    maskedSize = width: @elWidth, height: @elHeight
-
     x = -targetPos.x + @elWidth / 2
     y = -targetPos.y + @elHeight / 2
 
     screen = device.getSize()
 
-    if maskedSize.height >= screen.height
-      margin = maskedSize.height - screen.height
+    if @elHeight >= screen.height
+      margin = @elHeight - screen.height
       if y > 0 then y = 0
-      else if y < -margin then y = -margin
+      else if y > -margin then y = -margin
 
-    if maskedSize.width >= screen.width
-      margin = maskedSize.width - screen.width
+    if @elWidth >= screen.width
+      margin = @elWidth - screen.width
       if x > 0 then x = 0
       else if x < -margin then x = -margin
 

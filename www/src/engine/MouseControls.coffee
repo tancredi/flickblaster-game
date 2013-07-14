@@ -5,7 +5,8 @@ body = $ 'body'
 
 class MouseControls
 
-  constructor: (@wrap) ->
+  constructor: (@game) ->
+    @wrap = @game.world.stage
     @active = false
     @mouse = x: null, y: null, down: false, dragging: false
     @clickStart = null
@@ -87,8 +88,8 @@ class MouseControls
   getRelativeMouse: ->
     wrapOffset = @wrap.offset()
     pos =
-      x: @mouse.x - wrapOffset.left
-      y: @mouse.y - wrapOffset.top
+      x: @mouse.x - wrapOffset.left + @viewport.x / 2
+      y: @mouse.y - wrapOffset.top + @viewport.y / 2
     return pos
 
   getMouseEvent: (e) ->

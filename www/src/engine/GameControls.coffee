@@ -14,7 +14,7 @@ class GameControls extends MouseControls
     @viewport = @game.world.viewport
     @render()
 
-    super @game.elements.main
+    super
 
   render: ->
     ctx = width: @viewport.elWidth, height: @viewport.elHeight
