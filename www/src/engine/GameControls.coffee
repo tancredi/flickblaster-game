@@ -23,11 +23,18 @@ class GameControls extends MouseControls
     @ctx = @canvas[0].getContext '2d'
     $.extend @ctx, style
 
-  clearCanvas: -> @ctx.clearRect 0, 0, @viewport.elWidth, @viewport.elHeight
+  clearLast: ->
+    if @lastUpdate?
+      x = @lastUpdate.x - style.lineWidth
+      y = @lastUpdate.y - style.lineWidth
+      width = @lastUpdate.width + style.lineWidth * 2
+      height = @lastUpdate.height + style.lineWidth * 2
+      @ctx.clearRect x, y, width, height
 
-  hideCanvas: -> @canvas.stop().fadeOut()
 
-  showCanvas: -> @canvas.stop().fadeIn()
+  hideCanvas: -> @canvas.hide()
+
+  showCanvas: -> @canvas.show()
 
   dragStart: (e) ->
     super
@@ -48,13 +55,13 @@ class GameControls extends MouseControls
       vertex = @getRelativeMouse()
       dragged = x: center.x - vertex.x, y: center.y - vertex.y
       @hideCanvas()
-      @clearCanvas()
+      @clearLast()
       @flickTarget.body.applyForce dragged.x, dragged.y, 60
       @flicking = false
       @flickTarget = null
 
   dragMove: ->
-    @clearCanvas()
+    @clearLast()
     if @flicking
       center = @viewport.worldToScreen @game.player.position()
       vertex = @getRelativeMouse()
@@ -62,5 +69,10 @@ class GameControls extends MouseControls
       @ctx.moveTo center.x, center.y
       @ctx.lineTo vertex.x, vertex.y
       @ctx.stroke()
+      @lastUpdate =
+        x: if center.x < vertex.x then center.x else vertex.x
+        y: if center.y < vertex.y then center.y else vertex.y
+        width: Math.abs center.x - vertex.x
+        height: Math.abs center.y - vertex.y
 
 module.exports = GameControls

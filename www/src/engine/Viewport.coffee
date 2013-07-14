@@ -11,18 +11,16 @@ class Viewport
     @scaleRatio = 0
     @x = 0
     @y = 0
+    @screen = device.getSize()
     @fitInScreen()
     @elWidth = @el.width()
     @elHeight = @el.height()
     @center()
 
-  center: ->
-    screen = device.getSize()
-    @moveTo ( screen.width - @elWidth ) / 2, ( screen.height - @elHeight ) / 2
+  center: -> @moveTo ( @screen.width - @elWidth ) / 2, ( @screen.height - @elHeight ) / 2
 
   fitInScreen: ->
-    screen = device.getSize()
-    @scaleRatio = @width / screen.width
+    @scaleRatio = @width / @screen.width
     @el.css width: @width / @scaleRatio, height: @height / @scaleRatio
 
   moveTo: (x, y, duration = 0, callback = null, ease = false) ->
@@ -57,25 +55,21 @@ class Viewport
     else
       return value * @scaleRatio
 
-  fits: ->
-    screen = device.getSize()
-    @elHeight <= screen.height
+  fits: -> @elHeight <= @screen.height
 
   followEntity: (target, duration = 0, callback = null) ->
     targetPos = @worldToScreen target.position()
 
-    x = -targetPos.x + @elWidth / 2
-    y = -targetPos.y + @elHeight / 2
+    x = - targetPos.x + @screen.width / 2
+    y = - targetPos.y + @screen.height / 2
 
-    screen = device.getSize()
-
-    if @elHeight >= screen.height
-      margin = @elHeight - screen.height
+    if @elHeight >= @screen.height
+      margin = @elHeight - @screen.height
       if y > 0 then y = 0
-      else if y > -margin then y = -margin
+      else if y < -margin then y = -margin
 
-    if @elWidth >= screen.width
-      margin = @elWidth - screen.width
+    if @elWidth >= @screen.width
+      margin = @elWidth - @screen.width
       if x > 0 then x = 0
       else if x < -margin then x = -margin
 
