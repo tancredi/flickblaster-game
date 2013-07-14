@@ -48,7 +48,6 @@ class GameControls extends MouseControls
       @ctx.clearRect x, y, width, height
       @lastUpdate = null
 
-
   hideCanvas: -> @canvas.hide()
 
   showCanvas: -> @canvas.show()

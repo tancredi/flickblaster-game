@@ -41,6 +41,7 @@ class GameView extends BaseView
     @world.loop.play()
 
     @player = @world.getItemById 'player'
+    @targets = @world.getItemsByAttr 'target'
 
     @showIntro => @enableControls()
 
@@ -52,7 +53,7 @@ class GameView extends BaseView
   showIntro: (callback) ->
     @viewportFits = @world.viewport.fits()
     if not @viewportFits
-      @world.viewport.followEntity @target, introDuration / 2, =>
+      @world.viewport.followEntity @targets[0], introDuration / 2, =>
         @world.viewport.followEntity @player, introDuration / 2, =>
           callback()
     else callback()

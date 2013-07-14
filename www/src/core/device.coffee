@@ -26,7 +26,7 @@ isMobile = if window.navigator.userAgent.match /(iPhone|iPod|iPad|Android|BlackB
 isTouch = (_.has document.documentElement, 'ontouchstart') or (_.has window, 'onmsgesturechange')
 
 device =
-  isTouch: isMobile       # Returns true if supported touch device is detected
+  isMobile: isMobile       # Returns true if supported touch device is detected
   size: null              # Device screen size
   isTouch: isTouch        # Is a touch device
 
@@ -36,7 +36,6 @@ $(window).on 'resize', onResize
 
 # Executes once to populate device size
 onResize()
-
 module.exports =
 
   isTouch: -> device.isTouch
