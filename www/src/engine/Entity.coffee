@@ -1,8 +1,10 @@
 
 BaseItem = require './BaseItem'
 gameData = require './gameData'
+behaviours = require '../behaviours/index'
 Sprite = require './Sprite'
 Body = require './Body'
+renderer = require '../core/renderer'
 
 class Entity extends BaseItem
   itemType: 'entity'
@@ -16,14 +18,27 @@ class Entity extends BaseItem
 
     @attributes = options.attributes or null
     @id = options.id or null
+    @data = options.data or {}
 
     @offset = x: 0, y: 0
+
+    @render()
 
     @body = null
     @makeBody options.bodies
 
     @sprites = []
     @makeSprites options.sprites
+
+    @updatePos()
+
+    if options.behaviour then @behaviour = new behaviours[options.behaviour] @
+    else @behaviour = new behaviours.base @
+
+  render: ->
+    @el = $ renderer.render 'game-entity'
+    @el.appendTo @layer.element
+    @el.data 'entity', @
 
   makeSprites: (sprites) ->
     for sprite in sprites
@@ -49,18 +64,18 @@ class Entity extends BaseItem
 
   setPose: (pose) => @sprite.pose = pose
 
-  updatePos: (x, y) =>
-    @x = x
-    @y = y
-    for sprite in @sprites
-      sprite.update()
+  updatePos: ->
+    pos = @body.position()
+    @x = pos.x
+    @y = pos.y
+    @el.css @layer.viewport.worldToScreen x: @x, y: @y
 
-  update: =>
-    sprite.update() for sprite in @sprites
-    @body.update()
-    if @body?
-      bodyPos = @body.position()
-      if @x isnt bodyPos.x or @y isnt bodyPos.y then @updatePos bodyPos.x, bodyPos.y
+  distance: (target, absolute = true) ->
+    diff = x: @x - target.x, y: @x - target.y
+    return Math.abs diff if absolute
+    return diff
+
+  update: -> @behaviour.update()
 
   position: ->
     if @body? @body.position()

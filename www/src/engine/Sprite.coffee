@@ -18,25 +18,23 @@ class Sprite extends BaseItem
   render: =>
     @renderer.render()
     @el = @renderer.el
-    @update()
-    @el.appendTo @layer.element
+    @updatePos()
+    if @entity?
+      @el.appendTo @entity.el
+    else
+      @el.appendTo @layer.element
 
     if @entity? then @el.data 'entity', @entity
     @el.data 'sprite', @
 
   moveTo: ->
     super
-    @update()
+    @updatePos()
 
-  getAbsolutePosition: ->
-    x = @x
-    y = @y
-    if @entity? then out = x: @entity.x - @entity.offset.x + x, y: @entity.y - @entity.offset.y + y
-    else out = x: x, y: y
-    return @viewport.worldToScreen out
+  getScreenPosition: -> return @viewport.worldToScreen x: @x, y: @y
 
-  update: (x, y) ->
-    pos = @getAbsolutePosition()
+  updatePos: (x, y) ->
+    pos = @getScreenPosition()
     @el.css
       x: pos.x - @renderer.width / 2
       y: pos.y - @renderer.height / 2

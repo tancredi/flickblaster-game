@@ -29,6 +29,8 @@ class World
     @onReady => @start
 
   initPhysics: ->
+    fps = @loop.getFPS()
+
     @gravity = new phys.Vector @gravity[0], @gravity[1]
     @b2dWorld = new phys.World @gravity, true
     

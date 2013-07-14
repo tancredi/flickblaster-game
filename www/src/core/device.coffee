@@ -10,7 +10,7 @@ testSizes =
   'iphone-5': [ 640, 1136, 2 ]
 
 # If not null will fake specified resolution
-# fakeSize = testSizes['iphone-4']
+fakeSize = testSizes['iphone-5']
 
 # Used to translate mouse events in touch events
 touchEvents =
@@ -42,7 +42,7 @@ module.exports =
   isTouch: -> device.isTouch
 
   getSize: ->
-    if fakeSize? then return width: fakeSize[0] / fakeSize[2], height: fakeSize[1] / fakeSize[2]
+    if fakeSize? and not device.isMobile then return width: fakeSize[0] / fakeSize[2], height: fakeSize[1] / fakeSize[2]
     return device.size
 
   getEvent: (evtType) -> if device.isTouch and (_.has touchEvents, evtType) then touchEvents[evtType] else evtType

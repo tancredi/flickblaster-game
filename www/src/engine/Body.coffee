@@ -62,9 +62,11 @@ class Body extends BaseItem
     vector = phys.getVector x, y
     @b2dBody.m_body.ApplyForce vector, point
 
-  position: -> @viewport.screenToWorld (phys.getBodyPosition @b2dBody)
+  position: -> @viewport.screenToWorld phys.getBodyPosition @b2dBody
 
   setSensor: (state) -> @b2dBody.SetSensor state
+
+  setDrag: (amt) -> @b2dBody.m_body.m_linearDamping = amt
 
   update: ->
     for listener in @touchListeners
