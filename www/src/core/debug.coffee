@@ -5,4 +5,4 @@ helpers = require '../helpers/debug'
 
 module.exports =
   skipAnimations: false     # Skip view transitions (And other animations)
-  debugPhysics: true		# Debug physics environment
+  debugPhysics: false		# Debug physics environment
