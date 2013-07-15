@@ -31,6 +31,11 @@ class Sprite extends BaseItem
     super
     @updatePos()
 
+  remove: ->
+    super
+
+    @el.remove()
+
   getScreenPosition: -> return @viewport.worldToScreen x: @x, y: @y
 
   updatePos: (x, y) ->

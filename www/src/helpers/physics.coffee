@@ -15,6 +15,7 @@ module.exports =
   dynamicBody: Box2D.Dynamics.b2Body.b2_dynamicBody
   staticBody: Box2D.Dynamics.b2Body.b2_staticBody
   kinematicBody: Box2D.Dynamics.b2Body.b2_kinematicBody
+  ContactListener: Box2D.Dynamics.b2ContactListener
   shapes:
     Circle: Box2D.Collision.Shapes.b2CircleShape
     Poly: Box2D.Collision.Shapes.b2PolygonShape

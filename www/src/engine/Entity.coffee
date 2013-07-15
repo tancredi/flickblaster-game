@@ -77,6 +77,13 @@ class Entity extends BaseItem
 
   update: -> @behaviour.update()
 
+  remove: ->
+    super
+
+    sprite.remove() for sprite in @sprites
+    @body.remove() if @body?
+    @removed = true
+
   position: ->
     if @body? @body.position()
     else x: @x, y: @y

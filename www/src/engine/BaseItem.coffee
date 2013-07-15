@@ -11,12 +11,14 @@ class BaseItem
     @x = options.x or 0
     @y = options.y or 0
 
-  translate: (x, y) => @moveTo @x + x, @y + y
+  translate: (x, y) -> @moveTo @x + x, @y + y
 
-  moveTo: (x, y) =>
+  moveTo: (x, y) ->
     @x = x
     @y = y
 
-  update: =>
+  update: ->
+
+  remove: ->
 
 module.exports = BaseItem

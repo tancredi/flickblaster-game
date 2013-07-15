@@ -10,35 +10,30 @@
             "items": [
                 {
                     "x": 274,
-                    "y": 840,
-                    "preset": "player",
-                    "id": "player"
-                },
-                {
-                    "x": 274,
                     "y": 120,
                     "preset": "target",
                     "id": "target"
+                },
+                {
+                    "x": 274,
+                    "y": 540,
+                    "preset": "player",
+                    "id": "player"
                 }
             ]
         },
         {
             "id": "walls",
             "type": "body",
-            "items": [
-                {
-                    "x": 129,
-                    "y": 478,
-                    "type": "rect",
-                    "width": 452,
-                    "height": 15
-                }
-            ]
+            "items": []
         },
         {
             "id": "background",
             "type": "sprite",
             "items": []
         }
-    ]
+    ],
+    "data": {
+        "shots": 1
+    }
 }

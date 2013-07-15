@@ -9,6 +9,7 @@ phys = require '../helpers/physics'
 Loop = require './Loop'
 Viewport = require './Viewport'
 Walls = require './Walls'
+CollisionManager = require './CollisionManager'
 
 defaults =
   gravity: [ 0, 0 ]
@@ -34,6 +35,7 @@ class World
 
     @gravity = new phys.Vector @gravity[0], @gravity[1]
     @b2dWorld = new phys.World @gravity, true
+    @collisionManager = new CollisionManager @
     
     @b2dInterval = window.setInterval =>
       @b2dWorld.Step 1 / 60, 10, 10

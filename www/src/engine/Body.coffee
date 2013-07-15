@@ -68,26 +68,17 @@ class Body extends BaseItem
 
   setDrag: (amt) -> @b2dBody.m_body.m_linearDamping = amt
 
-  update: ->
-    for listener in @touchListeners
-      contact = @b2dBody.m_body.GetContactList()
-      if contact?
-        if contact.other is listener.body
-          if listener.colliding and listener.evt is 'collision'
-            callback()
-          else if not listener.colliding
-            listener.colliding = true
-            listener.callback() if listener.evt is 'collisionstart'
-        else if listener.colliding
-          listener.colliding = false
-          listener.callback() if listener.evt is 'collisionstop'
+  remove: ->
+    if @entity? then @entity.body = null
+    @world.b2dWorld.DestroyBody @b2dBody.m_body
 
   on: (evt, target, callback) ->
-    @touchListeners.push
-      target: target
-      evt: evt
-      body: target.b2dBody.m_body
-      callback: callback
-      colliding: false
+    @world.collisionManager.on 'start', (c) =>
+      bodyA = c.m_fixtureA.m_body
+      bodyB = c.m_fixtureB.m_body
+
+      targetBody = target.b2dBody.m_body
+      if (bodyA is targetBody and bodyB is @b2dBody.m_body) or (bodyA is @b2dBody.m_body and bodyB is targetBody)
+        callback c
 
 module.exports = Body
