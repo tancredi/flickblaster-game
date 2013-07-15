@@ -2,7 +2,6 @@
 # Provides information about the device and make adjustments for testing
 
 win = $ window
-viewWrap = $ '#view-wrap'
 
 # Popular mobile screen sizes and pixel densities for testing
 testSizes =
@@ -13,7 +12,7 @@ testSizes =
   'iphone-5': [ 640, 1136, 2 ]
 
 # If not null will fake specified resolution
-fakeSize = testSizes['iphone-5']
+# fakeSize = testSizes['iphone-5']
 
 # Used to translate mouse events in touch events
 touchEvents =
@@ -39,16 +38,6 @@ device =
 # Updates screen size when device resizes
 onResize = -> device.size = width: win.innerWidth(), height: win.innerHeight()
 win.on 'resize', onResize
-
-# Adjusts size and alignment of view wrapper in case screen size is being faked
-if useFakeSize
-  width = fakeSize[0] / fakeSize[2]
-  height = fakeSize[1] / fakeSize[2]
-  viewWrap.css
-    width: width
-    height: height
-    left: (win.width() - width) / 2
-    top: (win.height() - height) / 2
 
 # Executes once to populate device size
 onResize()

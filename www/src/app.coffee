@@ -13,6 +13,9 @@ views.load
   levels: require './views/LevelsView'
   game: require './views/GameView'
 
+# Initialise views
+views.init()
+
 # Load templates
 renderer.templates = window.templates
 

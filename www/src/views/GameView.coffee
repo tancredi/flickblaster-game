@@ -14,6 +14,7 @@ introDuration = if debug.skipAnimations then 0 else 2400
 
 class GameView extends BaseView
   templateName: 'game'
+  fixHeight: true
 
   constructor: (@levelName) ->
     super

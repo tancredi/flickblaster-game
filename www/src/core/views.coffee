@@ -2,8 +2,12 @@
 # Views manager - Stores, instanciates, animate and handle views
 
 renderer = require './renderer'
+device = require './device'
 getByRole = (require '../helpers/dom').getByRole
 transitions = require './viewTransitions'
+
+win = $ window
+viewWrap = $ '#view-wrap'
 
 module.exports =
 
@@ -11,6 +15,16 @@ module.exports =
   current: null         # Active view (Open and focused)
   shown: []             # All shown views (Open)
   views: {}             # Object containing loaded views
+
+  # Initialises views wrapper based on device screen size
+  init: ->
+    screen = device.getSize()
+    viewWrap.css
+      overflow: 'hidden'
+      width: screen.width
+      height: screen.height
+      left: (win.width() - screen.width) / 2
+      top: (win.height() - screen.height) / 2
 
   # Close all views
   closeAll: -> getByRole('view', @wrap).remove()
