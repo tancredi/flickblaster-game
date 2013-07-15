@@ -12,7 +12,7 @@ class BaseView
   context: {}       # Context used for rendering template
 
   # Render template, append element to given wrapper and perform additional operations
-  render: (wrapper) =>
+  render: (wrapper) ->
     rendered = renderer.render "views/#{@templateName}", @context
 
     @elements = main: $ "<div data-role='view' class='view #{@classNames}'>#{rendered}</div>"
@@ -29,23 +29,26 @@ class BaseView
     
     return @
 
+  # Method called when all transitions have been completed
+  transitionComplete: ->
+
   # Method called after rendering
-  getElements: =>
+  getElements: ->
 
   # Method called after elements parsed
-  bind: =>
+  bind: ->
 
   # Method called on window resize (and after rendering)
-  resize: =>
+  resize: ->
 
   # Method called when view is closed
-  close: => @elements.main.remove()
+  close: -> @elements.main.remove()
 
   # Method called when view is hidden
-  hide: =>  @elements.main.hide()
+  hide: ->  @elements.main.hide()
 
   # Method called when view is shown
-  show: =>
+  show: ->
     @elements.main.removeAttr 'style'
     @resize()
     @elements.main.show()

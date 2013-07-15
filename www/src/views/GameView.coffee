@@ -14,16 +14,16 @@ introDuration = if debug.skipAnimations then 0 else 2400
 
 class GameView extends BaseView
   templateName: 'game'
+  classNames: 'view-game'
   fixHeight: true
 
   constructor: (@levelName) ->
     super
 
   bind: ->
-    super()
+    super
 
     @world = new World @elements.main, @levelName
-    @world.onReady => @startGame()
 
     (getByRole 'restart', @elements.main).on 'click', (e) =>
       views.open 'game', null, null, false, @levelName
@@ -32,6 +32,11 @@ class GameView extends BaseView
     (getByRole 'back', @elements.main).on 'click', (e) =>
       views.open 'levels', 'pop-out'
       e.preventDefault()
+
+  transitionComplete: ->
+    super
+
+    @world.onReady => @startGame()
 
   startGame: ->
     @world.start()
@@ -43,7 +48,7 @@ class GameView extends BaseView
     @showIntro => @enableControls()
 
   enableControls: ->
-    @world.loop.use @update
+    @world.loop.use => @update()
     @controls = new GameControls @
     @controls.on()
 
@@ -55,7 +60,7 @@ class GameView extends BaseView
           callback()
     else callback()
 
-  update: =>
+  update: ->
     if not @viewportFits
       @world.viewport.followEntity @player
 

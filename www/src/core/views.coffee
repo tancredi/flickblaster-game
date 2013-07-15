@@ -80,6 +80,7 @@ module.exports =
 
   # Fires after a view is shown
   onShown: (view, callback = null, openOnTop = false) ->
+    view.transitionComplete()
     if not openOnTop
       if @current? then @current.close()
     else
