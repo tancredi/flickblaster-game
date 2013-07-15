@@ -7,9 +7,35 @@
 		top: 0;
 		z-index: 3;
 		width: 100%;
+		text-align: center;
 
 		.button-back {
 			.top-bar-button;
+		}
+
+		.shots-counter {
+			margin: auto;
+			display: inline-block;
+			margin-top: -3px;
+			font-size: 25px;
+			color: @color-primary;
+			background: rgba(255, 255, 255, .6);
+			line-height: 60px;
+			width: 60px;
+			.border-radius(100%);
+			text-align: center;
+
+			&.stars-2 {
+				color: @color-yellow-dark;
+			}
+
+			&.stars-1 {
+				color: @color-red-light;
+			}
+
+			&.stars-0 {
+				color: @color-pale-blue-light;
+			}
 		}
 	}
 }

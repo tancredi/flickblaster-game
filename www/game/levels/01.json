@@ -35,7 +35,7 @@
                 },
                 {
                     "x": 143,
-                    "y": 334.5,
+                    "y": 340,
                     "type": "rect",
                     "width": 450,
                     "height": 20
@@ -47,5 +47,8 @@
             "type": "sprite",
             "items": []
         }
-    ]
+    ],
+    "data": {
+        "shots": 3
+    }
 }

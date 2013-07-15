@@ -20,11 +20,15 @@ class GameView extends BaseView
   constructor: (@levelName) ->
     super
 
+    @shots = null
+    @stars = 3
+
   getElements: ->
     super
 
     @elements.restart = getByRole 'restart', @elements.main
     @elements.back = getByRole 'back', @elements.main
+    @elements.shots = getByRole 'shots-counter', @elements.main
 
   bind: ->
     super
@@ -39,12 +43,15 @@ class GameView extends BaseView
       views.open 'levels', 'pop-out'
       e.preventDefault()
 
+    (_ @).on 'shoot', -> @setShots @shots - 1
+
   transitionComplete: ->
     super
 
     @world.onReady => @startGame()
 
   startGame: ->
+    @setShots @world.level.data.shots
     @world.start()
     @world.loop.play()
 
@@ -52,6 +59,19 @@ class GameView extends BaseView
     @targets = @world.getItemsByAttr 'target'
 
     @showIntro => @enableControls()
+
+  setShots: (amt) ->
+    @shots = amt
+    if amt < -2 then @setStars 0
+    else if amt < -1 then @setStars 1
+    else if amt < 0 then @setStars 2
+    @elements.shots.text amt
+
+  setStars: (amt) ->
+    if @stars isnt amt
+      @elements.shots.removeClass "stars-#{@stars}"
+      @stars = amt
+      @elements.shots.addClass "stars-#{@stars}"
 
   enableControls: ->
     @world.loop.use => @update()
