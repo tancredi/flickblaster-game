@@ -2,7 +2,7 @@
 # Views manager - Stores, instanciates, animate and handle views
 
 renderer = require './renderer'
-getByRole = require('../helpers/dom').getByRole
+getByRole = (require '../helpers/dom').getByRole
 transitions = require './viewTransitions'
 
 module.exports =
@@ -47,6 +47,7 @@ module.exports =
     @animating = true
     oldViewStyle = @current.elements.main.attr 'style'
     newViewStyle = view.elements.main.attr 'style'
+    wrapStyle = @wrap.attr 'style'
 
     @transitions[transition] view, @current, =>
       @animating = false
@@ -61,7 +62,7 @@ module.exports =
       if newViewStyle then view.elements.main.attr 'style', newViewStyle
       else view.elements.main.removeAttr 'style'
 
-      @wrap.removeAttr 'style'
+      @wrap.attr 'style', wrapStyle
 
   # Fires after a view is shown
   onShown: (view, callback = null, openOnTop = false) ->

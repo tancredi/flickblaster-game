@@ -10,7 +10,7 @@ touchables = require './ui/touchables'
 
 # Import Views
 views.load
-  home: require './views/HomeView'
+  levels: require './views/LevelsView'
   game: require './views/GameView'
 
 # Load templates
@@ -29,6 +29,6 @@ touchables.initialise()
 
 # Create app object
 gameData.init()
-gameData.onReady -> views.open 'game'
+gameData.onReady -> views.open 'levels'
 
 init()

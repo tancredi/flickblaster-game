@@ -2,12 +2,13 @@
 device = require '../core/device'
 
 body = $ 'body'
+viewWrap = $ '#view-wrap'
 
 class MouseControls
 
   constructor: (@game) ->
     @wrap = @game.world.stage
-    @offset = @game.world.wrap.offset()
+    @offset = viewWrap.offset()
     @active = false
     @mouse = x: null, y: null, down: false, dragging: false
     @clickStart = null

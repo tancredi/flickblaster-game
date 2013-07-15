@@ -9,7 +9,7 @@ class BaseView
   templateName: ''  # Relative to www/templates/views
   fixHeight: false  # Set view height to device screen height after rendering
   classNames: ''    # Will be applied along with '.view'
-  context: {}
+  context: {}       # Context used for rendering template
 
   # Render template, append element to given wrapper and perform additional operations
   render: (wrapper) =>
@@ -17,7 +17,7 @@ class BaseView
 
     @elements = main: $ "<div data-role='view' class='view #{@classNames}'>#{rendered}</div>"
 
-    if @fixHeight then @elements.main.css height: device.getSize().height
+    if @fixHeight then @elements.main.css height: device.getSize().height, overflow: 'auto'
 
     @getElements()
 

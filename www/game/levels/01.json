@@ -25,7 +25,22 @@
         {
             "id": "walls",
             "type": "body",
-            "items": []
+            "items": [
+                {
+                    "x": 383,
+                    "y": 604,
+                    "type": "rect",
+                    "width": 450,
+                    "height": 20
+                },
+                {
+                    "x": 143,
+                    "y": 334.5,
+                    "type": "rect",
+                    "width": 450,
+                    "height": 20
+                }
+            ]
         },
         {
             "id": "background",

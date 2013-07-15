@@ -1,11 +1,11 @@
 
 a {
-	color: @color-highlight;
+	color: @color-primary;
 	text-decoration: none;
 }
 
 .icon-button {
-	color: @color-highlight;
+	color: @color-primary;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
@@ -16,6 +16,14 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 h1, h2, h3, h4, h5, h6 {
 	font-family: @type-heading-face;
 	color: @type-heading-color;
+
+	&.center {
+		text-align: center;
+	}
+
+	&.ruled {
+		border-bottom: 1px solid @rule-base-color;
+	}
 }
 
 h1 {

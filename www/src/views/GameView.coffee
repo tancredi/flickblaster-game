@@ -1,6 +1,6 @@
 
 BaseView = require '../core/BaseView'
-getByRole = require('../helpers/dom').getByRole
+getByRole = (require '../helpers/dom').getByRole
 device = require '../core/device'
 debug = require '../core/debug'
 phys = require '../helpers/physics'
@@ -16,18 +16,6 @@ class GameView extends BaseView
 
   constructor: ->
     super
-
-  getElements: ->
-    super()
-
-    screenSize = device.getSize()
-    @elements.main.css
-      overflow: 'hidden'
-      width: screenSize.width
-      height: screenSize.height
-      position: 'relative'
-      left: ( win.width() - screenSize.width ) / 2
-      top: ( win.height() - screenSize.height ) / 2
 
   bind: ->
     super()

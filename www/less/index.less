@@ -1,11 +1,15 @@
 
 // Variables > Colors
-@color-highlight: #09ca96;
+@color-primary: #41708a;
+@color-pale-blue-lighter: #a2bfc9;
+@color-pale-blue-light: #99b7c2;
+@color-pale-blue-dark: #87a6b1;
+@color-pale-blue-darker: #7796a1;
 
 // Variables > Type: Base
 @type-base-face: 'GEInspira', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 @type-base-size: 14px;
-@type-base-color: #eee;
+@type-base-color: #fff;
 
 // Variables > Type: Headings
 @type-heading-face: 'GEInspira', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -19,11 +23,14 @@
 
 // Variables > Mixed
 @radius-base: 3px;
+@rule-base-color: #87a6b1;
+
+// Imports > Vendor
+@import "vendor/font-awesome/font-awesome.less";
 
 // Imports > Core
 @import "core/layout.less";
 @import "core/mixins.less";
-@import "core/icons.less";
 @import "core/fonts.less";
 @import "core/typography.less";
 
@@ -40,7 +47,9 @@
 @import "elements/buttons.less";
 @import "elements/animations.less";
 
+// Imports > Game
 @import "game/main.less";
 
 // Imports > Views
 @import "views/home.less";
+@import "views/levels.less";

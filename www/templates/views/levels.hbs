@@ -1,0 +1,17 @@
+<div class="top-bar fixed">
+	
+	<a class="button-flat button-left" href="#">
+		<i class="icon-caret-left"></i>
+	</a>
+
+	<h1 class="center">Levels</h1>
+
+</div>
+
+<ul class="levels-list">
+	{{#each levels}}
+		<li data-role="level" data-level-name="{{ name }}">
+			{{ index }}
+		</li>
+	{{/each}}
+</ul>

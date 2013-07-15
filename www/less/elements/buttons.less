@@ -3,7 +3,7 @@
 	padding: 10px;
 }
 
-.button-color (@bg-color: @color-highlight, @text-color: #fff) {
+.button-color (@bg-color: @color-primary, @text-color: #fff) {
 	display: inline-block;
 	background-color: @bg-color;
 	.bg-image('ui/button', 1px 100%, repeat-x, center center);
@@ -24,4 +24,15 @@
 
 .button, button, input[type="submit"] {
 	.button-color();
+}
+
+.button-flat-color (@bg-color: @color-pale-blue-dark) {
+	display: inline-block;
+	padding: 10px;
+	background: @bg-color;
+	.border-radius(@radius-base);
+}
+
+.button-flat {
+	.button-flat-color();
 }

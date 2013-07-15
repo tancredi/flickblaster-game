@@ -82,6 +82,8 @@ module.exports =
 
   # Pop FX preset: Pops new view zooming in
   'pop-in': (newView, oldView, callback) -> popView .7, newView, oldView, callback
-    
 
-    
+  'fade-in': (newView, oldView, callback) ->
+    newView.elements.main.hide()
+    newView.elements.main.fadeIn defaultDuration, -> callback newView
+
