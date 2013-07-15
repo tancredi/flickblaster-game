@@ -20,16 +20,22 @@ class GameView extends BaseView
   constructor: (@levelName) ->
     super
 
+  getElements: ->
+    super
+
+    @elements.restart = getByRole 'restart', @elements.main
+    @elements.back = getByRole 'back', @elements.main
+
   bind: ->
     super
 
     @world = new World @elements.main, @levelName
 
-    (getByRole 'restart', @elements.main).on 'click', (e) =>
+    @elements.restart.on (device.getEvent 'click'), (e) =>
       views.open 'game', null, null, false, @levelName
       e.preventDefault()
 
-    (getByRole 'back', @elements.main).on 'click', (e) =>
+    @elements.back.on (device.getEvent 'click'), (e) =>
       views.open 'levels', 'pop-out'
       e.preventDefault()
 
@@ -59,6 +65,15 @@ class GameView extends BaseView
         @world.viewport.followEntity @player, introDuration / 2, =>
           callback()
     else callback()
+
+  close: ->
+    @elements.restart.off device.getEvent 'click'
+    @elements.back.off device.getEvent 'click'
+
+    super
+
+    @controls.off() if @controls?
+    @world.stop() if @world?
 
   update: ->
     if not @viewportFits

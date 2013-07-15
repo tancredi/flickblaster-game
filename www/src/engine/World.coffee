@@ -35,7 +35,7 @@ class World
     @gravity = new phys.Vector @gravity[0], @gravity[1]
     @b2dWorld = new phys.World @gravity, true
     
-    window.setInterval =>
+    @b2dInterval = window.setInterval =>
       @b2dWorld.Step 1 / 60, 10, 10
       @b2dWorld.ClearForces()
     , 1000 / 60
@@ -97,6 +97,10 @@ class World
     @initBehaviours()
     @loop.use => @update()
     if debug.debugPhysics then debugHelpers.initPhysicsDebugger @
+
+  stop: ->
+    @loop.pause()
+    clearInterval @b2dInterval
 
   initBehaviours: ->
     for item in @items
