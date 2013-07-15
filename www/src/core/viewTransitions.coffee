@@ -24,7 +24,7 @@ placeAbsolutely = (view) ->
 popView = (scaleFrom, newView, oldView, callback, duration = defaultDuration) ->
   placeAbsolutely newView
 
-  newView.elements.main.css scale: scaleFrom, opacity: 0
+  newView.elements.main.css scale: scaleFrom, opacity: 0, zIndex: 9999999
   newView.elements.main.transition scale: 1, opacity: 1
 
   setTimeout ->

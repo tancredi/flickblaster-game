@@ -1,8 +1,9 @@
 
 BaseView = require '../core/BaseView'
+views = require '../core/views'
+device = require '../core/device'
 getByRole = (require '../helpers/dom').getByRole
 zeroPad = (require '../helpers/string').zeroPad
-views = require '../core/views'
 
 levels = 20
 
@@ -27,9 +28,8 @@ class LevelsView extends BaseView
     super
 
     self = @
-    @elements.levels.on 'click', -> self.openLevel ($ @).attr 'data-level-name'
+    @elements.levels.on (device.getEvent 'click'), -> self.openLevel ($ @).attr 'data-level-name'
 
-  openLevel: (levelName) ->
-    views.open 'game', 'pop-in'
+  openLevel: (levelName) -> views.open 'game', 'pop-in', null, false, levelName
 
 module.exports = LevelsView

@@ -14,7 +14,7 @@ body {
 
 #view-wrap {
 	position: absolute;
-	// overflow: hidden;
+	overflow: hidden;
 }
 
 .float-left {
@@ -45,6 +45,30 @@ body {
 	background: @color-pale-blue-lighter;
 }
 
+.top-bar-button {
+	.button-flat;
+	position: absolute;
+	top: 6px;
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+
+	.icon-caret-left {
+		position: relative;
+		right: 2px;
+	}
+
+	&.button-left {
+		left: 6px;
+	}
+
+	&.button-right {
+		right: 6px;
+	}
+}
+
 .top-bar {
 	margin: 0;
 	padding: 10px 0;
@@ -62,24 +86,5 @@ body {
 	h1 {
 		font-weight: normal;
 		margin: 0;
-	}
-
-	.button-flat {
-		position: absolute;
-		top: 6px;
-		width: 20px;
-		line-height: 20px;
-		text-align: center;
-		color: #fff;
-		font-size: 20px;
-
-		&.button-left {
-			left: 6px;
-		}
-
-		.icon-caret-left {
-			position: relative;
-			right: 2px;
-		}
 	}
 }
