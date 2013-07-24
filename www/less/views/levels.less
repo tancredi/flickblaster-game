@@ -12,11 +12,44 @@
 			.button-flat;
 			width: 85px;
 			height: 85px;
-			line-height: 85px;
-			font-size: 40px;
+			line-height: 69px;
+			padding-bottom: 16px;
+			font-size: 35px;
+			font-weight: bold;
 			padding: 0;
 			color: #fff;
 			margin: 0 5px 10px;
+			position: relative;
+
+			.progress {
+				font-size: 16px;
+				background: @color-pale-blue-darker;
+				.border-radius(0 0 @radius-base @radius-base);
+				line-height: 16px;
+				padding: 5px 0;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+
+				.star {
+					color: @color-pale-blue-light;
+
+					&.scored {
+						color: @color-yellow-dark;
+					}
+				}
+			}
+
+			&.locked {
+				background: @color-pale-blue-darker;
+				color: @color-pale-blue-light;
+
+				.progress {
+					background: darken(@color-pale-blue-darker, 5%);
+					color: @color-pale-blue-lighter;
+				}
+			}
 		}
 	}
 }

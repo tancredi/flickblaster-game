@@ -7,6 +7,8 @@ phys = require '../helpers/physics'
 World = require '../engine/World'
 GameControls = require '../engine/GameControls'
 views = require '../core/views'
+EndGameModal = require '../ui/modals/EndGameModal'
+userData = require '../engine/userData'
 
 win = $ window
 
@@ -21,6 +23,7 @@ class GameView extends BaseView
     super
 
     @shots = null
+    @targets = null
     @stars = 3
 
   getElements: ->
@@ -36,14 +39,17 @@ class GameView extends BaseView
     @world = new World @elements.main, @levelName
 
     @elements.restart.on (device.getEvent 'click'), (e) =>
-      views.open 'game', null, null, false, @levelName
+      @restart()
       e.preventDefault()
 
     @elements.back.on (device.getEvent 'click'), (e) =>
       views.open 'levels', 'pop-out'
       e.preventDefault()
 
-    (_ @).on 'shoot', -> @setShots @shots - 1
+    (_ @world).on 'shoot', => @setShots @shots - 1
+    (_ @world).on 'pot', => @setTargets @targets - 1
+
+  restart: -> views.open 'game', null, null, false, @levelName
 
   transitionComplete: ->
     super
@@ -51,14 +57,26 @@ class GameView extends BaseView
     @world.onReady => @startGame()
 
   startGame: ->
-    @setShots @world.level.data.shots
     @world.start()
     @world.loop.play()
 
     @player = @world.getItemById 'player'
     @targets = @world.getItemsByAttr 'target'
 
+    @setShots @world.level.data.shots
+    @setTargets @targets.length
+
     @showIntro => @enableControls()
+
+  setTargets: (amt) ->
+    @targets = amt
+    if amt is 0 then @finish()
+
+  finish: ->
+    context = title: 'Level Complete!'
+    options = stars: @stars, game: @
+    userData.saveLevelScore @levelName, @stars
+    new EndGameModal @elements.main, context, options
 
   setShots: (amt) ->
     @shots = amt

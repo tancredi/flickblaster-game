@@ -4,8 +4,8 @@ views = require '../core/views'
 device = require '../core/device'
 getByRole = (require '../helpers/dom').getByRole
 zeroPad = (require '../helpers/string').zeroPad
-
-levels = 20
+gameData = require '../engine/gameData'
+userData = require '../engine/userData'
 
 class LevelsView extends BaseView
   templateName: 'levels'
@@ -13,11 +13,27 @@ class LevelsView extends BaseView
   classNames: 'view-levels'
 
   constructor: ->
-  	super
+    super
 
-  	@context.levels = []
-  	for i in [ 0..levels ]
-  		@context.levels.push index: i + 1, name: zeroPad i + 1, 2
+    @context.levels = []
+
+    levelsProgress = userData.getLevelsProgress()
+
+    for level, i in gameData.get 'levels'
+      stars = []
+      for n in [0..2]
+        if levelsProgress[i].stars > n
+          stars.push scored: true
+        else
+          stars.push scored: false
+
+      @context.levels.push
+        index: i + 1
+        name: level.name
+        completed: levelsProgress[i].completed
+        perfect: if levelsProgress[i] is 3 then true else false
+        stars: stars
+        locked: levelsProgress[i].locked
 
   getElements: =>
     super

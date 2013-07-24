@@ -9,16 +9,21 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 274,
-                    "y": 120,
+                    "x": 360,
+                    "y": 474,
+                    "preset": "player",
+                    "id": "player"
+                },
+                {
+                    "x": 208,
+                    "y": 290,
                     "preset": "target",
                     "id": "target"
                 },
                 {
-                    "x": 274,
-                    "y": 540,
-                    "preset": "player",
-                    "id": "player"
+                    "x": 232,
+                    "y": 670.5,
+                    "preset": "player"
                 }
             ]
         },
@@ -34,6 +39,6 @@
         }
     ],
     "data": {
-        "shots": 1
+        "shots": 3
     }
 }

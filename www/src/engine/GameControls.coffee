@@ -67,13 +67,13 @@ class GameControls extends MouseControls
     super
 
     if @flicking
-      (_ @game).emit 'shoot', []
+      (_ @game.world).emit 'shoot', []
       center = @viewport.worldToScreen @game.player.position()
       vertex = @getRelativeMouse()
       dragged = x: center.x - vertex.x, y: center.y - vertex.y
       @hideCanvas()
       @clearLast()
-      @flickTarget.body.applyForce dragged.x, dragged.y, 60
+      @flickTarget.body.applyForce dragged.x, dragged.y, -60
       @flicking = false
       @flickTarget = null
 

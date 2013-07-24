@@ -10,8 +10,17 @@
 
 <ul class="levels-list">
 	{{#each levels}}
-		<li data-role="level" data-level-name="{{ name }}">
-			{{ index }}
+		<li class="{{#if locked}}locked{{/if}}" data-role="level" data-level-name="{{ name }}">
+			{{ name }}
+			<div class="progress">
+				{{#if locked}}
+					<i class="icon-lock"></i>
+				{{else}}
+					{{#each stars}}
+						<i class="icon-star star {{#if scored}}scored{{/if}}"></i>
+					{{/each}}
+				{{/if}}
+			</div>
 		</li>
 	{{/each}}
 </ul>

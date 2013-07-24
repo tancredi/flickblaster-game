@@ -4,19 +4,20 @@ baseDir = 'game/'
 gameData =
   sprites: {}
   materials: {}
-  levels: {}
+  levels: []
 
 ready = false
 readyCallbacks = []
 
 module.exports =
   init: ->
-    @loadData [ 'sprites', 'materials', 'presets' ], ->
+    @loadData [ 'sprites', 'materials', 'presets', 'levels' ], ->
       ready = true
       cb() for cb in readyCallbacks
 
   get: (type, id) ->
     throw "GameData error: No data for '#{type}'" if not _.has gameData, type
+    return gameData[type] if not id?
     throw "GameData error: '#{type}' does not contain '#{id}'" if not _.has gameData[type], id
     return gameData[type][id]
 

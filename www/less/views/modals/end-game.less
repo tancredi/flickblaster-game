@@ -1,0 +1,35 @@
+
+.modal.modal-end-game {
+
+	.stars {
+		margin: auto;
+		width: 50%;
+		background: @color-pale-blue-lighter;
+		.inner-shadow(@color-pale-blue-light, 0, 0, 2px, 0);
+		.border-radius(@radius-base);
+		.clearfix;
+		padding: 0 10px;
+
+		.star-holder {
+			color: @color-pale-blue-dark;
+			width: 33%;
+			float: left;
+			padding: 5px;
+			text-align: center;
+			.border-box;
+			font-size: 200%;
+			position: relative;
+
+			.star {
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: @color-yellow-dark;
+				width: 100%;
+				text-align: center;
+				line-height: 40px;
+				.opacity(0);
+			}
+		}
+	}
+}
