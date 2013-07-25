@@ -64,7 +64,7 @@ class Body extends BaseItem
 
   position: -> @viewport.screenToWorld phys.getBodyPosition @b2dBody
 
-  setSensor: (state) -> @b2dBody.SetSensor state
+  setSensor: (state) -> #not working: @b2dBody.SetSensor state
 
   setDrag: (amt) -> @b2dBody.m_body.m_linearDamping = amt
 

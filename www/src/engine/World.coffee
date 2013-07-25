@@ -92,7 +92,8 @@ class World
   getItemsByAttr: (attr) ->
     matches = []
     for item in @items
-      matches.push item if (item.attributes.indexOf attr) isnt -1
+      if item.attributes?
+        matches.push item if (item.attributes.indexOf attr) isnt -1
     return matches
 
   start: ->

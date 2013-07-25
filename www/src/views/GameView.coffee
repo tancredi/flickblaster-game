@@ -23,7 +23,7 @@ class GameView extends BaseView
     super
 
     @shots = null
-    @targets = null
+    @targetsCount = null
     @stars = 3
 
   getElements: ->
@@ -47,7 +47,7 @@ class GameView extends BaseView
       e.preventDefault()
 
     (_ @world).on 'shoot', => @setShots @shots - 1
-    (_ @world).on 'pot', => @setTargets @targets - 1
+    (_ @world).on 'pot', => @setTargetsCount @targets - 1
 
   restart: -> views.open 'game', null, null, false, @levelName
 
@@ -64,12 +64,12 @@ class GameView extends BaseView
     @targets = @world.getItemsByAttr 'target'
 
     @setShots @world.level.data.shots
-    @setTargets @targets.length
+    @setTargetsCount @targets.length
 
     @showIntro => @enableControls()
 
-  setTargets: (amt) ->
-    @targets = amt
+  setTargetsCount: (amt) ->
+    @targetsCount = amt
     if amt is 0 then @finish()
 
   finish: ->
