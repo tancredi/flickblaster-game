@@ -74,7 +74,7 @@ class GameView extends BaseView
 
   finish: ->
     context = title: 'Level Complete!'
-    options = stars: @stars, game: @
+    options = stars: @stars, game: @, levelName: @levelName
     userData.saveLevelScore @levelName, @stars
     new EndGameModal @elements.main, context, options
 

@@ -35,6 +35,6 @@ gameData.init()
 gameData.onReady ->
 	# views.open 'levels'
 	game = views.open 'game', null, null, false, '1'
-	# game.finish()
+	game.finish()
 
 init()

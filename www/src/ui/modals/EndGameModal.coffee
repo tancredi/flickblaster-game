@@ -2,6 +2,7 @@
 BaseModal = require './BaseModal'
 device = require '../../core/device'
 views = require '../../core/views'
+gameData = require '../../engine/gameData'
 
 animationsDelay = 600
 
@@ -14,6 +15,15 @@ class EndGameModal extends BaseModal
   constructor: (@wrap, @context, options = {}) ->
     @starsCount = options.stars
     @game = options.game
+    @levelName = options.levelName
+
+    levels = gameData.get 'levels'
+    nextLevel = null
+
+    for level, i in levels
+      if level.name is @levelName
+        @nextLevel = levels[i + 1] if levels[i + 1]
+        break
 
     super
 
@@ -25,7 +35,7 @@ class EndGameModal extends BaseModal
       e.preventDefault()
 
     @inner.on (device.getEvent 'click'), '[data-role="next"]', (e) =>
-      @nextLevel()
+      @openNextLevel()
       e.preventDefault()
 
     @inner.on (device.getEvent 'click'), '[data-role="back"]', (e) =>
@@ -33,6 +43,9 @@ class EndGameModal extends BaseModal
       e.preventDefault()
 
     @addStars()
+
+  openNextLevel: ->
+    views.open 'game', 'slide-right', null, false, @nextLevel.name
 
   addStars: ->
     @stars = @inner.find selectors.star
