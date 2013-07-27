@@ -15,6 +15,7 @@
 	},
 
 	"target": {
+		"behaviour": "target",
 		"attributes": [ "target", "sensor" ],
 		"sprites": [
 			{ "type": "target", "x": 0, "y": 0 }

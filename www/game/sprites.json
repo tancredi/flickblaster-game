@@ -12,9 +12,9 @@
             "frameLength": 0,
             "repeat": true,
             "play": false
-          },
-          "decorators": {}
-        }
+          }
+        },
+        "decorators": {}
     },
     "target": {
         "assets": {
@@ -29,8 +29,10 @@
             "frameLength": 0,
             "repeat": true,
             "play": false
-          },
-          "decorators": {}
-        }
+          }
+        },
+        "decorators": {
+        "lights": "sprites/target-lights@2x.png"
+      }
     }
 }

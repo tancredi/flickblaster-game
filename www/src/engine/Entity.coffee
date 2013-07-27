@@ -88,10 +88,12 @@ class Entity extends BaseItem
     if @body? @body.position()
     else x: @x, y: @y
 
-  onCollision: (target, callback) -> @body.on 'collision', target.body, callback
+  onCollisionPre: (target, callback) -> @body.onCollision 'pre', target.body, callback
 
-  onCollisionStart: (target, callback) -> @body.on 'collisionstart', target.body, callback
+  onCollisionPost: (target, callback) -> @body.onCollision 'post', target.body, callback
 
-  onCollision: (target, callback) -> @body.on 'collisionstop', target.body, callback
+  onCollisionStart: (target, callback) -> @body.onCollision 'start', target.body, callback
+
+  onCollisionEnd: (target, callback) -> @body.onCollision 'end', target.body, callback
 
 module.exports = Entity

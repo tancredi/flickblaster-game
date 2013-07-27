@@ -34,6 +34,7 @@ touchables.initialise()
 gameData.init()
 gameData.onReady ->
 	# views.open 'levels'
-	views.open 'game', null, null, false, '1'
+	game = views.open 'game', null, null, false, '1'
+	# game.finish()
 
 init()

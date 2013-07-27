@@ -43,11 +43,11 @@ class GameView extends BaseView
       e.preventDefault()
 
     @elements.back.on (device.getEvent 'click'), (e) =>
-      views.open 'levels', 'pop-out'
+      views.open 'levels', 'slide-left'
       e.preventDefault()
 
     (_ @world).on 'shoot', => @setShots @shots - 1
-    (_ @world).on 'pot', => @setTargetsCount @targets - 1
+    (_ @world).on 'pot', => @setTargetsCount @targetsCount - 1
 
   restart: -> views.open 'game', null, null, false, @levelName
 

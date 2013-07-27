@@ -1,6 +1,7 @@
 
 BaseModal = require './BaseModal'
 device = require '../../core/device'
+views = require '../../core/views'
 
 animationsDelay = 600
 
@@ -25,6 +26,10 @@ class EndGameModal extends BaseModal
 
     @inner.on (device.getEvent 'click'), '[data-role="next"]', (e) =>
       @nextLevel()
+      e.preventDefault()
+
+    @inner.on (device.getEvent 'click'), '[data-role="back"]', (e) =>
+      views.open 'levels', 'slide-left'
       e.preventDefault()
 
     @addStars()

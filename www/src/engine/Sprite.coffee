@@ -2,6 +2,7 @@
 BaseItem = require './BaseItem'
 SpriteRenderer = require './SpriteRenderer'
 gameData = require './gameData'
+renderer = require '../core/renderer'
 
 class Sprite extends BaseItem
   type: 'sprite'
@@ -13,7 +14,23 @@ class Sprite extends BaseItem
     @preset = gameData.get 'sprites', @type
     @viewport = @layer.viewport
     @renderer = new SpriteRenderer @preset, @viewport
+    @decorators = {}
     @render()
+    @renderDecorators()
+
+  renderDecorators: ->
+    for key, decorator of @preset.decorators
+      el = $ renderer.render 'game-decorator'
+      el.css backgroundImage: "url(assets/#{decorator})"
+      el.hide()
+      @el.append el
+      @decorators[key] = el
+
+  showDecorator: (decoratorId) -> (@getDecorator decoratorId).show()
+
+  hideDecorator: (decoratorId) -> (@getDecorator decoratorId).hide()
+
+  getDecorator: (decoratorId) -> @decorators[decoratorId]
 
   render: =>
     @renderer.render()

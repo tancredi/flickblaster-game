@@ -64,7 +64,7 @@ class Body extends BaseItem
 
   position: -> @viewport.screenToWorld phys.getBodyPosition @b2dBody
 
-  setSensor: (state) -> #not working: @b2dBody.SetSensor state
+  setSensor: (state) -> @b2dBody.m_body.m_fixtureList.m_isSensor = state
 
   setDrag: (amt) -> @b2dBody.m_body.m_linearDamping = amt
 
@@ -72,8 +72,8 @@ class Body extends BaseItem
     if @entity? then @entity.body = null
     @world.b2dWorld.DestroyBody @b2dBody.m_body
 
-  on: (evt, target, callback) ->
-    @world.collisionManager.on 'start', (c) =>
+  onCollision: (evt, target, callback) ->
+    @world.collisionManager.on evt, (c) =>
       bodyA = c.m_fixtureA.m_body
       bodyB = c.m_fixtureB.m_body
 

@@ -46,6 +46,6 @@ class LevelsView extends BaseView
     self = @
     @elements.levels.on (device.getEvent 'click'), -> self.openLevel ($ @).attr 'data-level-name'
 
-  openLevel: (levelName) -> views.open 'game', 'pop-in', null, false, levelName
+  openLevel: (levelName) -> views.open 'game', 'slide-right', null, false, levelName
 
 module.exports = LevelsView
