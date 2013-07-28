@@ -9,10 +9,11 @@ phys = require '../helpers/physics'
 Loop = require './Loop'
 Viewport = require './Viewport'
 Walls = require './Walls'
+Lasers = require './Lasers'
 CollisionManager = require './CollisionManager'
 
 defaults =
-  gravity: [ 0, 0 ]
+  gravity: [ 0, 20 ]
 
 class World
 
@@ -51,15 +52,23 @@ class World
       @level = level
       @viewport = new Viewport @stage, @level.size[0], @level.size[1]
 
-      layer = @addLayer 'entities', 'entity'
-      for entity in (@loadLayerData 'entities').items
-        @addItem 'entities', entity
+      @addLayer 'lasers', 'entity'
+      @addLayer 'entities', 'entity'
 
       @walls = new Walls @
+      @lasers = new Lasers @, @getLayerById 'lasers'
+
+      for entity in (@loadLayerData 'entities').items
+        @addItem 'entities', entity
 
       for body in (@loadLayerData 'walls').items
         @walls.add body
       @walls.refresh()
+
+      for entity in (@loadLayerData 'lasers').items
+        laser = @addItem 'lasers', entity
+        laser.elements = @lasers.add entity
+      @lasers.refresh()
 
       @ready = true
 
@@ -89,11 +98,12 @@ class World
       if item.id is id then return item
     return null
 
-  getItemsByAttr: (attr) ->
+  getItemsByAttr: (attr, value) ->
     matches = []
     for item in @items
       if item.attributes?
-        matches.push item if (item.attributes.indexOf attr) isnt -1
+        if (_.has item.attributes, attr) and item.attributes[attr] is value
+          matches.push item
     return matches
 
   start: ->

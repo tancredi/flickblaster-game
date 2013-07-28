@@ -21,6 +21,8 @@ class Layer
     @items.push item
     return item
 
-  update: => item.update() if not item.removed for item in @items
+  update: =>
+    for item in @items
+      item.update() if not item.removed
 
 module.exports = Layer

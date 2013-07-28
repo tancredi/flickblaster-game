@@ -61,7 +61,7 @@ class GameView extends BaseView
     @world.loop.play()
 
     @player = @world.getItemById 'player'
-    @targets = @world.getItemsByAttr 'target'
+    @targets = @world.getItemsByAttr 'type', 'target'
 
     @setShots @world.level.data.shots
     @setTargetsCount @targets.length

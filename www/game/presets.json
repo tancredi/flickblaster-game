@@ -2,7 +2,9 @@
 
 	"player": {
 		"behaviour": "player",
-		"attributes": [ "player" ],
+		"attributes": {
+			"type": "player"
+		},
 		"sprites": [
 			{ "type": "player", "x": 0, "y": 0 }
 		],
@@ -16,7 +18,11 @@
 
 	"target": {
 		"behaviour": "target",
-		"attributes": [ "target", "sensor" ],
+		"attributes": {
+			"type": "target",
+			"sensor": true,
+			"interaction": "static"
+		},
 		"sprites": [
 			{ "type": "target", "x": 0, "y": 0 }
 		],

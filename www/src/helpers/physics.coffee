@@ -28,7 +28,8 @@ module.exports =
       else return null
 
   getBodyPosition: (body) ->
-    return x: (body.m_aabb.GetCenter().x * @ratio), y: (body.m_aabb.GetCenter().y * @ratio)
+    pos = body.m_aabb.GetCenter()
+    return x: pos.x * @ratio, y: pos.y * @ratio
 
   moveBodyTo: (body, x, y) ->
     newPos = new @Vector (x / @ratio), (y / @ratio)

@@ -10,6 +10,7 @@ class BaseItem
     options = $.extend true, {}, defaults, options
     @x = options.x or 0
     @y = options.y or 0
+    @removed = false
 
   translate: (x, y) -> @moveTo @x + x, @y + y
 

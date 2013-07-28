@@ -3,7 +3,7 @@ Wall = require './Wall'
 Body = require './Body'
 renderer = require '../core/renderer'
 
-thickness = 40
+thickness = 10
 
 class Walls
 

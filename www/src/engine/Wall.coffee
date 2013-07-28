@@ -2,12 +2,12 @@
 Body = require './Body'
 renderer = require '../core/renderer'
 
-fill = '#a2bfc9'
+wallsColor = '#a2bfc9'
 
 class Wall extends Body
   itemType: 'wall'
 
-  constructor: (options, @world, @svg) ->
+  constructor: (options, @world, @wrap, @color = wallsColor) ->
     options.interaction = 'static'
     super
     @render()
@@ -16,7 +16,7 @@ class Wall extends Body
     ctx =
       x: @viewport.worldToScreen @x
       y: @viewport.worldToScreen @y
-      fill: fill
+      fill: @color
 
     if @type is 'rect'
       ctx.width = @viewport.worldToScreen @width
@@ -36,6 +36,6 @@ class Wall extends Body
       ctx.points = ctx.points.join ' '
 
     @el = $ renderer.render "svg-#{@type}", ctx
-    @el.appendTo @svg
+    @el.appendTo @wrap
 
 module.exports = Wall

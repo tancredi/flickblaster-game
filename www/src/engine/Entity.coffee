@@ -45,15 +45,18 @@ class Entity extends BaseItem
       options = $.extend true, {}, sprite, entity: @
       @sprites.push new Sprite options, @layer
 
-  hasAttr: (attrName) ->
+  hasAttr: (attr) ->
     return false if not @attributes?
-    return (@attributes.indexOf attrName) isnt -1
+    return _.has @attributes, attr
 
   makeBody: (bodies) ->
     for body, i in bodies
       options = $.extend true, {}, body
       options.x = @x + body.x
       options.y = @y + body.y
+      if @hasAttr 'interaction'
+        options.interaction = @attributes.interaction
+
       if i is 0
         @offset = x: body.x, y: body.y
         @body = new Body options, @layer.world
@@ -64,11 +67,7 @@ class Entity extends BaseItem
 
   setPose: (pose) => @sprite.pose = pose
 
-  updatePos: ->
-    pos = @body.position()
-    @x = pos.x
-    @y = pos.y
-    @el.css @layer.viewport.worldToScreen x: @x, y: @y
+  updatePos: -> @el.css @layer.viewport.worldToScreen @body.position()
 
   distance: (target, absolute = true) ->
     diff = x: @x - target.x, y: @x - target.y
@@ -85,7 +84,7 @@ class Entity extends BaseItem
     @removed = true
 
   position: ->
-    if @body? @body.position()
+    if @body? then @body.position()
     else x: @x, y: @y
 
   onCollisionPre: (target, callback) -> @body.onCollision 'pre', target.body, callback

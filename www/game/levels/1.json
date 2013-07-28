@@ -5,6 +5,32 @@
     ],
     "layers": [
         {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 449,
+                    "y": 340,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 162,
+                            "height": 8
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "interaction": "static",
+                        "color": "yellow"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
             "id": "entities",
             "type": "entity",
             "items": [
@@ -12,12 +38,20 @@
                     "x": 274,
                     "y": 160,
                     "preset": "target",
+                    "attributes": {
+                        "type": "target",
+                        "sensor": true,
+                        "interaction": "static"
+                    },
                     "id": "target"
                 },
                 {
                     "x": 274,
                     "y": 800,
                     "preset": "player",
+                    "attributes": {
+                        "type": "player"
+                    },
                     "id": "player"
                 }
             ]

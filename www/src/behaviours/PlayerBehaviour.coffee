@@ -6,7 +6,7 @@ class PlayerBehaviour extends BaseBehaviour
   constructor: (@entity, @world) ->
     super
 
-    targets = @world.getItemsByAttr 'target'
+    targets = @world.getItemsByAttr 'type', 'target'
     @hoveredTarget = null
     @potted = false
 
@@ -23,6 +23,7 @@ class PlayerBehaviour extends BaseBehaviour
 
   update: ->
     super
+
     if @hoveredTarget? and not @potted
       speedX = @entity.body.b2dBody.m_body.m_linearVelocity.x
       speedY = @entity.body.b2dBody.m_body.m_linearVelocity.y
