@@ -25,6 +25,7 @@ class GameView extends BaseView
     @shots = null
     @targetsCount = null
     @stars = 3
+    @finished = false
 
   getElements: ->
     super
@@ -63,6 +64,8 @@ class GameView extends BaseView
     @player = @world.getItemById 'player'
     @targets = @world.getItemsByAttr 'type', 'target'
 
+    (_ @player).on 'die', => @finish false
+
     @setShots @world.level.data.shots
     @setTargetsCount @targets.length
 
@@ -70,13 +73,15 @@ class GameView extends BaseView
 
   setTargetsCount: (amt) ->
     @targetsCount = amt
-    if amt is 0 then @finish()
+    if amt is 0 then @finish true
 
-  finish: ->
-    context = title: 'Level Complete!'
-    options = stars: @stars, game: @, levelName: @levelName
-    userData.saveLevelScore @levelName, @stars
-    new EndGameModal @elements.main, context, options
+  finish: (win = false) ->
+    if not @finished
+      @finished = true
+      context = win: win, title: if win then 'Level Complete!' else 'Ouch!'
+      options = stars: @stars, game: @, levelName: @levelName
+      if win then userData.saveLevelScore @levelName, @stars
+      new EndGameModal @elements.main, context, options
 
   setShots: (amt) ->
     @shots = amt

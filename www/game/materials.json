@@ -1,7 +1,7 @@
 {
 	"default": {
 		"density": 1,
-		"friction": 0.5,
+		"friction": 0.3,
 		"restitution": 0.2,
 		"linearDamping": 0
 	},

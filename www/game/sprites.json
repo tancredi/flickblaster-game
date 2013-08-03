@@ -14,7 +14,9 @@
             "play": false
           }
         },
-        "decorators": {}
+        "decorators": {
+            "burn": "sprites/player-burn@2x.png"
+        }
     },
     "target": {
         "assets": {
@@ -32,7 +34,7 @@
           }
         },
         "decorators": {
-        "lights": "sprites/target-lights@2x.png"
-      }
+           "lights": "sprites/target-lights@2x.png"
+        }
     }
 }
