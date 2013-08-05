@@ -19,7 +19,6 @@ class Lasers
       width: @viewport.worldToScreen @width
       height: @viewport.worldToScreen @height
     @el = $ renderer.render 'game-lasers', ctx
-    @el.appendTo @layer.element
 
   add: (entityOptions) ->
     out = []
@@ -44,7 +43,8 @@ class Lasers
     return out
 
   refresh: ->
+    @layer.element.html ' '
+    @el.clone().appendTo @layer.element
     @layer.element.html @layer.element.html()
-    @el = @layer.element.find 'svg'
 
 module.exports = Lasers

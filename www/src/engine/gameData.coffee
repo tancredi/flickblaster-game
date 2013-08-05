@@ -34,8 +34,20 @@ module.exports =
     loaded = 0
     for ns in nsArr
       do (ns) =>
-        $.getJSON "#{baseDir}#{ns}.json", (data) ->
+        $.getJSON "#{baseDir}#{ns}.json", (data) =>
           gameData[ns] = data
+          @solveInheritances ns
           loaded++
           callback data if loaded is nsArr.length and typeof callback is 'function'
         .fail (req, err) -> throw "Error loading game data: #{ns}.json - #{err}"
+
+  solveInheritances: (ns) ->
+    for itemId, item of gameData[ns]
+      item = @solveInheritance ns, itemId
+
+  solveInheritance: (ns, id) ->
+    while gameData[ns][id].extends?
+      extendFrom = gameData[ns][id].extends
+      gameData[ns][id].extends = null
+      gameData[ns][id] = $.extend {}, (@get ns, extendFrom), gameData[ns][id]
+    return gameData[ns][id]

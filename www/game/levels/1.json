@@ -24,9 +24,11 @@
                     "attributes": {
                         "type": "laser",
                         "interaction": "static",
-                        "color": "yellow"
+                        "color": "yellow",
+                        "group": "laser-yellow"
                     },
-                    "behaviour": "laser"
+                    "behaviour": "laser",
+                    "id": "laser-01"
                 }
             ]
         },
@@ -49,30 +51,14 @@
                     "id": "player"
                 },
                 {
-                    "x": 18,
-                    "y": 590,
-                    "preset": "button-v-yellow",
-                    "attributes": {
-                        "anchor": "left"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 524,
-                    "y": 666,
-                    "preset": "button-v-yellow",
-                    "attributes": {
-                        "flip-x": true,
-                        "anchor": "right"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 203,
-                    "y": 530,
+                    "x": 157,
+                    "y": 358,
                     "preset": "button-h-yellow",
                     "attributes": {
-                        "fdsfdsf": "fdsfds"
+                        "flip-y": true,
+                        "action": "laser-toggle",
+                        "target-group": "laser-yellow",
+                        "anchor": "top"
                     },
                     "id": ""
                 }

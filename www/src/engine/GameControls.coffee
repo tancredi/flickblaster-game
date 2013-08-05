@@ -3,6 +3,8 @@ MouseControls = require './MouseControls'
 renderer = require '../core/renderer'
 phys = require '../helpers/physics'
 
+shotStrength = 40
+
 style =
   lineCap: 'round'
   strokeStyle: '#db7c52'
@@ -73,7 +75,7 @@ class GameControls extends MouseControls
       dragged = x: center.x - vertex.x, y: center.y - vertex.y
       @hideCanvas()
       @clearLast()
-      @flickTarget.body.applyForce dragged.x, dragged.y, -60
+      @flickTarget.body.applyForce dragged.x, dragged.y, -shotStrength
       @flicking = false
       @flickTarget = null
 

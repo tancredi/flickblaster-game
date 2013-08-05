@@ -13,7 +13,7 @@ Lasers = require './Lasers'
 CollisionManager = require './CollisionManager'
 
 defaults =
-  gravity: [ 0, 20 ]
+  gravity: [ 0, 0 ]
 
 class World
 
@@ -65,9 +65,9 @@ class World
         @walls.add body
       @walls.refresh()
 
-      for entity in (@loadLayerData 'lasers').items
-        laser = @addItem 'lasers', entity
-        laser.elements = @lasers.add entity
+      for laser in (@loadLayerData 'lasers').items
+        entity = @addItem 'lasers', laser
+        entity.elements = @lasers.add laser
       @lasers.refresh()
 
       @ready = true
@@ -78,6 +78,7 @@ class World
     layer = @getLayerById layerId
     item = layer.add item
     @items.push item
+    return item
 
   loadLayerData: (layerId) ->
     if layerId?

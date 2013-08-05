@@ -3,7 +3,7 @@
 		"density": 1,
 		"friction": 0.3,
 		"restitution": 0.2,
-		"linearDamping": 0
+		"linearDamping": 0.7
 	},
 	"bouncy": {
 		"density": 1,

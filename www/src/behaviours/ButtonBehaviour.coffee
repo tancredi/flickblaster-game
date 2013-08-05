@@ -1,16 +1,19 @@
 
 BaseBehaviour = require './BaseBehaviour'
+actions = require './actions'
 
 class ButtonBehaviour extends BaseBehaviour
 
   constructor: (@entity, @world) ->
     super
 
+    @pressed = false
     @anchor = @entity.attributes.anchor or 'left'
 
-    @entity.body.onCollision 'start', null, => @press()
+    @entity.body.onCollision 'start', null, => @press() if not @pressed
 
   press: ->
+    @pressed = true
     sprite = @entity.sprites[0]
 
     bgPos = (sprite.el.css 'background-position').split ' '
@@ -29,9 +32,10 @@ class ButtonBehaviour extends BaseBehaviour
     if @anchor is 'top' or @anchor is 'bottom'
       height = sprite.el.height()
       css.height = height / 2
-      css.backgroundPosition = "#{bgPos.x}px #{bgPos.y - height / 2}px"
+      css.backgroundPosition = "#{bgPos.x}px -#{bgPos.y - height / 2}px"
       if @anchor is 'bottom' then css.top = height / 2
 
+    actions.perform @entity.attributes.action, @
     sprite.el.transition css, 100
 
   update: ->

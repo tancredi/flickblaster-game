@@ -47,6 +47,9 @@
 		"extends": "button-v-yellow",
 		"sprites": [
 			{ "type": "button-h-yellow", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "rect", "width": 42, "height": 15, "x": 0, "y": 0 }
 		]
 	}
 
