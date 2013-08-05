@@ -17,6 +17,7 @@ class SpriteRenderer
       height: Math.floor @viewport.worldToScreen @poses[@pose].module[1]
       backgroundImage: "url(assets/#{asset})"
       backgroundSize: "#{Math.floor @width}px #{Math.floor @height}px"
+      backgroundPosition: "-#{@offset.x}px -#{@offset.y}px"
 
   make: ->
     @width = @viewport.worldToScreen (@preset.size[0] or 0)
@@ -30,6 +31,8 @@ class SpriteRenderer
     @pose = 'default'
     @frame = 0
     @extendPoses()
+
+  getPose: -> @poses[@pose]
 
   extendPoses: ->
     for poseId, pose of @poses

@@ -10,10 +10,7 @@
 		],
 		"bodies": [
 			{ "type": "circle", "radius": 42, "x": -3, "y": -3 }
-		],
-		"data": {
-			"targetType": "red"
-		}
+		]
 	},
 
 	"target": {
@@ -28,10 +25,29 @@
 		],
 		"bodies": [
 			{ "type": "circle", "radius": 42, "x": 0, "y": 0 }
+		]
+	},
+
+	"button-v-yellow": {
+		"behaviour": "button",
+		"attributes": {
+			"type": "button",
+			"sensor": true,
+			"interaction": "static"
+		},
+		"sprites": [
+			{ "type": "button-v-yellow", "x": 0, "y": 0 }
 		],
-		"data": {
-			"targetType": "red"
-		}
+		"bodies": [
+			{ "type": "rect", "width": 15, "height": 42, "x": 0, "y": 0 }
+		]
+	},
+
+	"button-h-yellow": {
+		"extends": "button-v-yellow",
+		"sprites": [
+			{ "type": "button-h-yellow", "x": 0, "y": 0 }
+		]
 	}
 
 }

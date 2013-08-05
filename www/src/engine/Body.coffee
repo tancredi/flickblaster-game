@@ -77,8 +77,12 @@ class Body extends BaseItem
       bodyA = c.m_fixtureA.m_body
       bodyB = c.m_fixtureB.m_body
 
-      targetBody = target.b2dBody.m_body
-      if (bodyA is targetBody and bodyB is @b2dBody.m_body) or (bodyA is @b2dBody.m_body and bodyB is targetBody)
-        callback c
+      if not target?
+        if bodyA is @b2dBody.m_body then callback c
+        return
+      else
+        targetBody = target.b2dBody.m_body
+        if (bodyA is targetBody and bodyB is @b2dBody.m_body) or (bodyA is @b2dBody.m_body and bodyB is targetBody)
+          callback c
 
 module.exports = Body

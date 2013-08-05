@@ -18,7 +18,7 @@
                             "y": 0,
                             "type": "rect",
                             "width": 162,
-                            "height": 8
+                            "height": 4
                         }
                     ],
                     "attributes": {
@@ -38,21 +38,43 @@
                     "x": 274,
                     "y": 160,
                     "preset": "target",
-                    "attributes": {
-                        "type": "target",
-                        "sensor": true,
-                        "interaction": "static"
-                    },
+                    "attributes": {},
                     "id": "target"
                 },
                 {
                     "x": 274,
                     "y": 800,
                     "preset": "player",
-                    "attributes": {
-                        "type": "player"
-                    },
+                    "attributes": {},
                     "id": "player"
+                },
+                {
+                    "x": 18,
+                    "y": 590,
+                    "preset": "button-v-yellow",
+                    "attributes": {
+                        "anchor": "left"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 524,
+                    "y": 666,
+                    "preset": "button-v-yellow",
+                    "attributes": {
+                        "flip-x": true,
+                        "anchor": "right"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 203,
+                    "y": 530,
+                    "preset": "button-h-yellow",
+                    "attributes": {
+                        "fdsfdsf": "fdsfds"
+                    },
+                    "id": ""
                 }
             ]
         },

@@ -17,6 +17,7 @@ class Sprite extends BaseItem
     @decorators = {}
     @render()
     @renderDecorators()
+    @flipped = x: false, y: false
 
   renderDecorators: ->
     for key, decorator of @preset.decorators
@@ -48,6 +49,17 @@ class Sprite extends BaseItem
     super
     @updatePos()
 
+  flip: (dir) ->
+    if dir is 0
+      @flipped.x = not @flipped.x
+    else if dir is 1
+      @flipped.y = not @flipped.y
+
+    scaleX = if @flipped.x then -1 else 1
+    scaleY = if @flipped.y then -1 else 1
+
+    @el.css scale: "#{scaleX}, #{scaleY}"
+
   remove: ->
     super
 
@@ -57,9 +69,11 @@ class Sprite extends BaseItem
 
   updatePos: (x, y) ->
     pos = @getScreenPosition()
+    w = @viewport.worldToScreen @renderer.getPose().module[0]
+    h = @viewport.worldToScreen @renderer.getPose().module[1]
     @el.css
-      x: pos.x - @renderer.width / 2
-      y: pos.y - @renderer.height / 2
+      x: pos.x - w / 2
+      y: pos.y - h / 2
 
   export: -> x: @x, y: @y, type: @type
 

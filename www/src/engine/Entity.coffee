@@ -14,9 +14,9 @@ class Entity extends BaseItem
 
     if options.preset
       preset = gameData.get 'presets', options.preset
-      $.extend options, preset
+      $.extend true, options, preset
 
-    @attributes = options.attributes or null
+    @attributes = options.attributes or {}
     @id = options.id or null
     @data = options.data or {}
     @behaviourType = options.behaviour or 'base'
@@ -45,9 +45,13 @@ class Entity extends BaseItem
       options = $.extend true, {}, sprite, entity: @
       @sprites.push new Sprite options, @layer
 
-  hasAttr: (attr) ->
-    return false if not @attributes?
-    return _.has @attributes, attr
+    if (@hasAttr 'flip-x') and @attributes['flip-x']
+      (sprite.flip 0) for sprite in @sprites
+
+    if (@hasAttr 'flip-y') and @attributes['flip-y']
+      (sprite.flip 1) for sprite in @sprites
+
+  hasAttr: (attr) -> return _.has @attributes, attr
 
   makeBody: (bodies) ->
     for body, i in bodies
