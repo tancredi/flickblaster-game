@@ -9,15 +9,15 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 270,
-                    "y": 260,
+                    "x": 449,
+                    "y": 340,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 520,
+                            "width": 162,
                             "height": 4
                         }
                     ],
@@ -45,19 +45,20 @@
                 },
                 {
                     "x": 274,
-                    "y": 360,
+                    "y": 800,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
                 },
                 {
-                    "x": 274,
-                    "y": 943,
+                    "x": 157,
+                    "y": 358,
                     "preset": "button-h-yellow",
                     "attributes": {
+                        "flip-y": true,
                         "action": "laser-toggle",
                         "target-group": "laser-yellow",
-                        "anchor": "bottom"
+                        "anchor": "top"
                     },
                     "id": ""
                 }
@@ -66,7 +67,22 @@
         {
             "id": "walls",
             "type": "body",
-            "items": []
+            "items": [
+                {
+                    "x": 383,
+                    "y": 604,
+                    "type": "rect",
+                    "width": 450,
+                    "height": 20
+                },
+                {
+                    "x": 143,
+                    "y": 340,
+                    "type": "rect",
+                    "width": 450,
+                    "height": 20
+                }
+            ]
         },
         {
             "id": "background",
