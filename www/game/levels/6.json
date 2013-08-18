@@ -24,7 +24,8 @@
                     "attributes": {
                         "color": "yellow",
                         "type": "laser",
-                        "group": "laser-yellow"
+                        "group": "laser-yellow",
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 }

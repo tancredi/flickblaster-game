@@ -37,7 +37,7 @@ module.exports =
 
   rectBody: (x, y, width, height, options) ->
     options = $.extend true, {}, bodyDefaults, options
-    fixtureDef = @getFixtureDef (new @shapes.Poly), options.mat
+    fixtureDef = @getFixtureDef (new @shapes.Poly() ), options.mat
     fixtureDef.shape.SetAsBox ( width / 2 ) / @ratio, ( height / 2 ) / @ratio
     bodyDef = @getBodyDef x, y, options.interaction, options.mat
     return { bodyDef, fixtureDef }
@@ -47,7 +47,7 @@ module.exports =
     for point in points
       vertexes.push new @Vector point[0] / @ratio, point[1] / @ratio
     options = $.extend true, {}, bodyDefaults, options
-    fixtureDef = @getFixtureDef (new @shapes.Poly), options.mat
+    fixtureDef = @getFixtureDef (new @shapes.Poly() ), options.mat
     fixtureDef.shape.SetAsArray vertexes, vertexes.length
     bodyDef = @getBodyDef x, y, options.interaction, options.mat
     return { bodyDef, fixtureDef }
@@ -63,10 +63,13 @@ module.exports =
     bodyDef = new @BodyDef
     if type is 'static' then bodyDef.type = @staticBody
     else if type is 'kinematic' then bodyDef.type = @kinematicBody
-    else bodyDef.type = @dynamicBody
+    else
+      bodyDef.type = @dynamicBody
+      bodyDef.bullet = true
     bodyDef.linearDamping = material.linearDamping if material.linearDamping
     bodyDef.position.x = x / @ratio
     bodyDef.position.y = y / @ratio
+
     return bodyDef
 
   getVector: (x, y) -> new @Vector ( x ), ( y )

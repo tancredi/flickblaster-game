@@ -56,34 +56,8 @@
                     "id": ""
                 },
                 {
-                    "x": 33,
-                    "y": 522.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "poly",
-                            "points": [
-                                0,
-                                0,
-                                0,
-                                100,
-                                200,
-                                100,
-                                200,
-                                0
-                            ]
-                        }
-                    ],
-                    "attributes": {
-                        "interaction": "static"
-                    },
-                    "behaviour": null
-                },
-                {
-                    "x": 77,
-                    "y": 246.5,
+                    "x": 93,
+                    "y": 270.5,
                     "sprites": [],
                     "bodies": [
                         {
@@ -97,8 +71,68 @@
                     "behaviour": null
                 },
                 {
-                    "x": 77,
-                    "y": 726.5,
+                    "x": 93,
+                    "y": 430.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "circle",
+                            "radius": 20
+                        }
+                    ],
+                    "attributes": {},
+                    "behaviour": null
+                },
+                {
+                    "x": 41,
+                    "y": 312.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "circle",
+                            "radius": 20
+                        }
+                    ],
+                    "attributes": {},
+                    "behaviour": null
+                },
+                {
+                    "x": 55,
+                    "y": 466.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "circle",
+                            "radius": 20
+                        }
+                    ],
+                    "attributes": {},
+                    "behaviour": null
+                },
+                {
+                    "x": 85,
+                    "y": 356.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "circle",
+                            "radius": 20
+                        }
+                    ],
+                    "attributes": {},
+                    "behaviour": null
+                },
+                {
+                    "x": 305,
+                    "y": 488.5,
                     "sprites": [],
                     "bodies": [
                         {
@@ -109,10 +143,24 @@
                             "height": 60
                         }
                     ],
-                    "attributes": {
-                        "interaction": "static"
-                    },
-                    "behaviour": ""
+                    "attributes": {},
+                    "behaviour": null
+                },
+                {
+                    "x": 327,
+                    "y": 568.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 26,
+                            "y": 12,
+                            "type": "rect",
+                            "width": 64,
+                            "height": 100
+                        }
+                    ],
+                    "attributes": {},
+                    "behaviour": null
                 }
             ]
         },
