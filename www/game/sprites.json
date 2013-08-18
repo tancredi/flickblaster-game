@@ -75,12 +75,12 @@
         "assets": {
             "default": "sprites/teleport@2x.png"
         },
-        "size": [ 90, 90 ],
+        "size": [ 80, 80 ],
         "offset": [ 0, 0 ],
         "poses": {
             "default": {
                 "offset": [ 0, 0 ],
-                "module": [ 90, 90 ],
+                "module": [ 80, 80 ],
                 "frameLength": 0,
                 "repeat": true,
                 "play": false

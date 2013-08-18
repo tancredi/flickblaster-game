@@ -52,7 +52,7 @@
                 },
                 {
                     "x": 157,
-                    "y": 358,
+                    "y": 352,
                     "preset": "button-h-yellow",
                     "attributes": {
                         "flip-y": true,
@@ -91,6 +91,6 @@
         }
     ],
     "data": {
-        "shots": 3
+        "shots": 2
     }
 }

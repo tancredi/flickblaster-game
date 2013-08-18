@@ -36,10 +36,11 @@ class TeleportBehaviour extends BaseBehaviour
 
   activate: (delay = 0) ->
     @active = true
+
     setTimeout ( =>
       (@lights.css opacity: 0, rotation: 0).show().stop().transition opacity: 1, rotate: 90, 100, 'easeOutCirc', =>
+        @active = false
         @lights.stop().transition opacity: 0, rotate: 180, 200, 'easeInCirc', =>
-          @active = false
     ), delay
 
   update: ->
