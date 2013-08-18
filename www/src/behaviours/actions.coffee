@@ -5,6 +5,7 @@ actions =
     targets = []
 
     if entity.hasAttr 'target-id'
+      console.log 'ffds'
       targets.push world.getItemById entity.attributes['target-id']
 
     if entity.hasAttr 'target-group'

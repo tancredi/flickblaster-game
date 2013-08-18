@@ -13,7 +13,7 @@ Lasers = require './Lasers'
 CollisionManager = require './CollisionManager'
 
 defaults =
-  gravity: [ 0, 0 ]
+  gravity: [ 0, 10 ]
 
 class World
 

@@ -64,7 +64,7 @@ module.exports =
     if type is 'static' then bodyDef.type = @staticBody
     else if type is 'kinematic' then bodyDef.type = @kinematicBody
     else bodyDef.type = @dynamicBody
-    bodyDef.linearDamping = material.linearDamping
+    bodyDef.linearDamping = material.linearDamping if material.linearDamping
     bodyDef.position.x = x / @ratio
     bodyDef.position.y = y / @ratio
     return bodyDef

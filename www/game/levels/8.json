@@ -1,0 +1,140 @@
+{
+    "size": [
+        540,
+        959
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 150,
+                    "y": 393,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 4,
+                            "height": 770
+                        }
+                    ],
+                    "attributes": {
+                        "color": "red",
+                        "type": "laser",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 274,
+                    "y": 160,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 66,
+                    "y": 72,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": -444,
+                    "y": 223.5,
+                    "preset": "button-v-red",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 33,
+                    "y": 522.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "poly",
+                            "points": [
+                                0,
+                                0,
+                                0,
+                                100,
+                                200,
+                                100,
+                                200,
+                                0
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "interaction": "static"
+                    },
+                    "behaviour": null
+                },
+                {
+                    "x": 77,
+                    "y": 246.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "circle",
+                            "radius": 20
+                        }
+                    ],
+                    "attributes": {},
+                    "behaviour": null
+                },
+                {
+                    "x": 77,
+                    "y": 726.5,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 60,
+                            "height": 60
+                        }
+                    ],
+                    "attributes": {
+                        "interaction": "static"
+                    },
+                    "behaviour": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 150,
+                    "y": 800,
+                    "type": "circle",
+                    "radius": 22
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 2
+    }
+}

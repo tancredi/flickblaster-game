@@ -71,6 +71,20 @@
         }
     },
 
+    "button-v-red": {
+        "extends": "button-v-yellow",
+        "assets": {
+            "default": "sprites/button-red@2x.png"
+        }
+    },
+
+    "button-h-red": {
+        "extends": "button-h-yellow",
+        "assets": {
+            "default": "sprites/button-red@2x.png"
+        }
+    },
+
     "teleport": {
         "assets": {
             "default": "sprites/teleport@2x.png"

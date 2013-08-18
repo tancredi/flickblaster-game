@@ -25,12 +25,13 @@ class PlayerBehaviour extends BaseBehaviour
     super
 
     if @hoveredTarget? and not @potted
-      speedX = @entity.body.b2dBody.m_body.m_linearVelocity.x
-      speedY = @entity.body.b2dBody.m_body.m_linearVelocity.y
-      totalSpeed = (Math.abs speedX) + (Math.abs speedY)
-      if totalSpeed < .3
-        @potIn @hoveredTarget
-        @potted = true
+      # speedX = @entity.body.b2dBody.m_body.m_linearVelocity.x
+      # speedY = @entity.body.b2dBody.m_body.m_linearVelocity.y
+      # totalSpeed = (Math.abs speedX) + (Math.abs speedY)
+      # if totalSpeed < .3
+
+      @potIn @hoveredTarget
+      @potted = true
 
   potIn: (target) ->
     # dist = @entity.distance target, false

@@ -53,6 +53,20 @@
 		]
 	},
 
+	"button-v-red": {
+		"extends": "button-v-yellow",
+		"sprites": [
+			{ "type": "button-v-red", "x": 0, "y": 0 }
+		]
+	},
+
+	"button-h-red": {
+		"extends": "button-h-red",
+		"sprites": [
+			{ "type": "button-h-red", "x": 0, "y": 0 }
+		]
+	},
+
 	"teleport": {
 		"behaviour": "teleport",
 		"attributes": {
