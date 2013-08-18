@@ -37,21 +37,14 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 274,
+                    "x": 270,
                     "y": 160,
                     "preset": "target",
                     "attributes": {},
                     "id": "target"
                 },
                 {
-                    "x": 274,
-                    "y": 360,
-                    "preset": "player",
-                    "attributes": {},
-                    "id": "player"
-                },
-                {
-                    "x": 274,
+                    "x": 270,
                     "y": 943,
                     "preset": "button-h-yellow",
                     "attributes": {
@@ -60,6 +53,13 @@
                         "anchor": "bottom"
                     },
                     "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 360,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
                 }
             ]
         },

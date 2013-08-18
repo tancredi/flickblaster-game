@@ -72,7 +72,8 @@
                     "preset": "button-v-yellow",
                     "attributes": {
                         "action": "laser-toggle",
-                        "target-group": "laser-yellow"
+                        "target-group": "laser-yellow",
+                        "anchor": "left"
                     },
                     "id": ""
                 }
