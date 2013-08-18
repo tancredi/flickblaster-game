@@ -26,13 +26,24 @@
 	.button-color();
 }
 
-.button-flat-color (@bg-color: @color-pale-blue-dark) {
+.button-flat-color (@bg-color: @color-pale-blue-dark, @text-color: #fff) {
 	display: inline-block;
 	padding: 10px;
 	background: @bg-color;
 	.border-radius(@radius-base);
+	color: @text-color;
+
+	&.block {
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+	}
 }
 
 .button-flat {
 	.button-flat-color();
+}
+
+.button-flat-light {
+	.button-flat-color(@color-pale-blue-light);
 }

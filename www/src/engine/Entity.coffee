@@ -71,7 +71,9 @@ class Entity extends BaseItem
 
   setPose: (pose) => @sprite.pose = pose
 
-  updatePos: -> @el.css @layer.viewport.worldToScreen @body.position()
+  updatePos: ->
+    if @body?
+      @el.css @layer.viewport.worldToScreen @body.position()
 
   distance: (target, absolute = true) ->
     diff = x: @x - target.x, y: @x - target.y

@@ -8,6 +8,7 @@ World = require '../engine/World'
 GameControls = require '../engine/GameControls'
 views = require '../core/views'
 EndGameModal = require '../ui/modals/EndGameModal'
+PauseModal = require '../ui/modals/PauseModal'
 userData = require '../engine/userData'
 
 win = $ window
@@ -30,8 +31,7 @@ class GameView extends BaseView
   getElements: ->
     super
 
-    @elements.restart = getByRole 'restart', @elements.main
-    @elements.back = getByRole 'back', @elements.main
+    @elements.pause = getByRole 'pause', @elements.main
     @elements.shots = getByRole 'shots-counter', @elements.main
 
   bind: ->
@@ -39,12 +39,10 @@ class GameView extends BaseView
 
     @world = new World @elements.main, @levelName
 
-    @elements.restart.on (device.getEvent 'click'), (e) =>
-      @restart()
-      e.preventDefault()
-
-    @elements.back.on (device.getEvent 'click'), (e) =>
-      views.open 'levels', 'slide-left'
+    @elements.pause.on (device.getEvent 'click'), (e) =>
+      context = title: 'Pause'
+      options = game: @, levelName: @levelName
+      new PauseModal @elements.main, context, options
       e.preventDefault()
 
     (_ @world).on 'shoot', => @setShots @shots - 1
@@ -110,8 +108,7 @@ class GameView extends BaseView
     else callback()
 
   close: ->
-    @elements.restart.off device.getEvent 'click'
-    @elements.back.off device.getEvent 'click'
+    @elements.pause.off device.getEvent 'click'
 
     super
 

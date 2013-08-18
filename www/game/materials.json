@@ -1,9 +1,9 @@
 {
 	"default": {
-		"density": 1,
-		"friction": 0.3,
+		"density": 1.2,
+		"friction": 0.5,
 		"restitution": 0.2,
-		"linearDamping": 0.6
+		"linearDamping": 0.7
 	},
 	"bouncy": {
 		"density": 1,

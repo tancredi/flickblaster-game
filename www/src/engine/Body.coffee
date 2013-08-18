@@ -47,6 +47,12 @@ class Body extends BaseItem
 
     return out
 
+  moveTo: (pos) ->
+    x = ( @viewport.worldToScreen pos.x ) / 30
+    y = ( @viewport.worldToScreen pos.y ) / 30
+    pos = new phys.Vector x, y
+    setTimeout ( => @b2dBody.m_body.SetPosition pos ), .001
+
   addShape: (options) ->
     options = @getBodyOptions options
     body = phys.getBody options

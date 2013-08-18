@@ -72,7 +72,7 @@
                     "y": 322,
                     "type": "rect",
                     "width": 250,
-                    "height": 20
+                    "height": 10
                 },
                 {
                     "x": 134,
@@ -97,7 +97,7 @@
                     "y": 322,
                     "type": "rect",
                     "width": 250,
-                    "height": 20
+                    "height": 10
                 }
             ]
         },

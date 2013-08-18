@@ -73,14 +73,14 @@
                     "y": 604,
                     "type": "rect",
                     "width": 450,
-                    "height": 20
+                    "height": 10
                 },
                 {
                     "x": 143,
                     "y": 340,
                     "type": "rect",
                     "width": 450,
-                    "height": 20
+                    "height": 10
                 }
             ]
         },
