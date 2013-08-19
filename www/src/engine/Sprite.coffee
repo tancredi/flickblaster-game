@@ -4,6 +4,8 @@ SpriteRenderer = require './SpriteRenderer'
 gameData = require './gameData'
 renderer = require '../core/renderer'
 
+wallsColor = '#a2bfc9'
+
 class Sprite extends BaseItem
   type: 'sprite'
 
@@ -37,8 +39,11 @@ class Sprite extends BaseItem
     @renderer.render()
     @el = @renderer.el
     @updatePos()
+
     if @entity?
       @el.appendTo @entity.el
+      if @entity.hasAttr 'wall-bg'
+        @el.css backgroundColor: wallsColor
     else
       @el.appendTo @layer.element
 

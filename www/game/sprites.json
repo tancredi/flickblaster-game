@@ -103,6 +103,43 @@
         "decorators": {
             "lights": "sprites/teleport-lights@2x.png"
         }
+    },
+
+    "sensor": {
+        "assets": {
+            "default": "sprites/sensor@2x.png"
+        },
+        "size": [ 40, 40 ],
+        "offset": [ 0, 0 ],
+        "poses": {
+            "default": {
+                "offset": [ 0, 0 ],
+                "module": [ 40, 40 ],
+                "frameLength": 0,
+                "repeat": true,
+                "play": false
+            }
+        },
+        "decorators": {
+            "light": "sprites/sensor-light@2x.png"
+        }
+    },
+
+    "bullet": {
+        "assets": {
+            "default": "sprites/bullet@2x.png"
+        },
+        "size": [ 40, 40 ],
+        "offset": [ 0, 0 ],
+        "poses": {
+            "default": {
+                "offset": [ 0, 0 ],
+                "module": [ 40, 40 ],
+                "frameLength": 0,
+                "repeat": true,
+                "play": false
+            }
+        }
     }
 
 }

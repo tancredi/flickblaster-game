@@ -80,6 +80,31 @@
 		"bodies": [
 			{ "type": "circle", "radius": 35, "x": 0, "y": 0 }
 		]
+	},
+
+	"sensor": {
+		"behaviour": "sensor",
+		"attributes": {
+			"type": "sensor"
+		},
+		"sprites": [
+			{ "type": "sensor", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "circle", "radius": 20, "x": 0, "y": 0 }
+		]
+	},
+
+	"bullet": {
+		"attributes": {
+			"type": "bullet"
+		},
+		"sprites": [
+			{ "type": "bullet", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "circle", "radius": 15, "x": 0, "y": 0 }
+		]
 	}
 
 }

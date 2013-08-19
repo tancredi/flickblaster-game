@@ -4,6 +4,7 @@ renderer = require '../core/renderer'
 colors =
   yellow: '#f2c456'
   red: '#f56949'
+  blue: '#5adef6'
 
 lasers = []
 

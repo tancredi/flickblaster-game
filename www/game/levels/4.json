@@ -55,7 +55,7 @@
                     "y": 943,
                     "preset": "button-h-yellow",
                     "attributes": {
-                        "action": "laser-toggle",
+                        "action": "laser-off",
                         "target-group": "laser-yellow",
                         "anchor": "bottom"
                     },

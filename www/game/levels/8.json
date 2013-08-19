@@ -9,8 +9,52 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 150,
-                    "y": 393,
+                    "x": 431,
+                    "y": 199,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 198,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "sensor": true,
+                        "color": "blue",
+                        "interaction": "static",
+                        "type": "laser"
+                    },
+                    "behaviour": "laser",
+                    "id": "laser-blue"
+                },
+                {
+                    "x": 232,
+                    "y": 199,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 180,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "sensor": true,
+                        "interaction": "static",
+                        "color": "red",
+                        "type": "laser"
+                    },
+                    "behaviour": "laser",
+                    "id": "laser-red"
+                },
+                {
+                    "x": 173,
+                    "y": 739,
                     "sprites": [],
                     "bodies": [
                         {
@@ -18,15 +62,15 @@
                             "y": 0,
                             "type": "rect",
                             "width": 4,
-                            "height": 770
+                            "height": 108
                         }
                     ],
                     "attributes": {
-                        "color": "red",
                         "type": "laser",
-                        "interaction": "static"
+                        "color": "yellow"
                     },
-                    "behaviour": "laser"
+                    "behaviour": "laser",
+                    "id": "laser-yellow"
                 }
             ]
         },
@@ -35,18 +79,11 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 274,
-                    "y": 160,
+                    "x": 431,
+                    "y": 102,
                     "preset": "target",
                     "attributes": {},
                     "id": "target"
-                },
-                {
-                    "x": 66,
-                    "y": 72,
-                    "preset": "player",
-                    "attributes": {},
-                    "id": "player"
                 },
                 {
                     "x": -444,
@@ -56,111 +93,71 @@
                     "id": ""
                 },
                 {
-                    "x": 93,
-                    "y": 270.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "circle",
-                            "radius": 20
-                        }
-                    ],
-                    "attributes": {},
-                    "behaviour": null
+                    "x": 266,
+                    "y": 438,
+                    "preset": "sensor",
+                    "attributes": {
+                        "action": "laser-toggle",
+                        "target-id": "laser-blue",
+                        "sensor": true
+                    },
+                    "id": ""
                 },
                 {
-                    "x": 93,
-                    "y": 430.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "circle",
-                            "radius": 20
-                        }
-                    ],
-                    "attributes": {},
-                    "behaviour": null
+                    "x": 320,
+                    "y": 876.5,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-b"
+                    },
+                    "id": "teleport-a"
                 },
                 {
-                    "x": 41,
-                    "y": 312.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "circle",
-                            "radius": 20
-                        }
-                    ],
-                    "attributes": {},
-                    "behaviour": null
+                    "x": 99,
+                    "y": 98.5,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-a"
+                    },
+                    "id": "teleport-b"
                 },
                 {
-                    "x": 55,
-                    "y": 466.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "circle",
-                            "radius": 20
-                        }
-                    ],
+                    "x": -1173,
+                    "y": -261.5,
+                    "preset": "button-v-yellow",
                     "attributes": {},
-                    "behaviour": null
+                    "id": ""
+                },
+                {
+                    "x": 316,
+                    "y": 98,
+                    "preset": "button-v-yellow",
+                    "attributes": {
+                        "flip-x": true,
+                        "anchor": "right",
+                        "action": "laser-toggle",
+                        "target-id": "laser-yellow"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 524,
+                    "y": 734.5,
+                    "preset": "button-v-red",
+                    "attributes": {
+                        "flip-x": true,
+                        "anchor": "right",
+                        "action": "laser-toggle",
+                        "target-id": "laser-red"
+                    },
+                    "id": ""
                 },
                 {
                     "x": 85,
-                    "y": 356.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "circle",
-                            "radius": 20
-                        }
-                    ],
+                    "y": 880,
+                    "preset": "player",
                     "attributes": {},
-                    "behaviour": null
-                },
-                {
-                    "x": 305,
-                    "y": 488.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "rect",
-                            "width": 60,
-                            "height": 60
-                        }
-                    ],
-                    "attributes": {},
-                    "behaviour": null
-                },
-                {
-                    "x": 327,
-                    "y": 568.5,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 26,
-                            "y": 12,
-                            "type": "rect",
-                            "width": 64,
-                            "height": 100
-                        }
-                    ],
-                    "attributes": {},
-                    "behaviour": null
+                    "id": "player"
                 }
             ]
         },
@@ -169,10 +166,45 @@
             "type": "body",
             "items": [
                 {
-                    "x": 150,
-                    "y": 800,
-                    "type": "circle",
-                    "radius": 22
+                    "x": 327,
+                    "y": 98,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 210
+                },
+                {
+                    "x": 250,
+                    "y": 679.5,
+                    "type": "rect",
+                    "width": 600,
+                    "height": 10
+                },
+                {
+                    "x": 364,
+                    "y": 798,
+                    "type": "rect",
+                    "width": 400,
+                    "height": 10
+                },
+                {
+                    "x": 42,
+                    "y": 198,
+                    "type": "rect",
+                    "width": 200,
+                    "height": 10
+                },
+                {
+                    "x": 5,
+                    "y": 683.5,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
                 }
             ]
         },
@@ -183,6 +215,6 @@
         }
     ],
     "data": {
-        "shots": 2
+        "shots": 4
     }
 }

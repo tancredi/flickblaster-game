@@ -56,7 +56,7 @@
                     "preset": "button-h-yellow",
                     "attributes": {
                         "flip-y": true,
-                        "action": "laser-toggle",
+                        "action": "laser-off",
                         "target-group": "laser-yellow",
                         "anchor": "top"
                     },

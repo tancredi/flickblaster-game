@@ -1,18 +1,28 @@
 
+getEntityTargets = (entity, world) ->
+  targets = []
+
+  if entity.hasAttr 'target-id'
+    targets.push world.getItemById entity.attributes['target-id']
+
+  if entity.hasAttr 'target-group'
+    targets = targets.concat world.getItemsByAttr 'group', entity.attributes['target-group']
+
+  return targets
+
 actions =
 
   'laser-toggle': (entity, world, behaviour) ->
-    targets = []
+    targets = getEntityTargets entity, world
+    target.behaviour.toggle() for target in targets
 
-    if entity.hasAttr 'target-id'
-      console.log 'ffds'
-      targets.push world.getItemById entity.attributes['target-id']
+  'laser-off': (entity, world, behaviour) ->
+    targets = getEntityTargets entity, world
+    target.behaviour.off() for target in targets
 
-    if entity.hasAttr 'target-group'
-      targets = targets.concat world.getItemsByAttr 'group', entity.attributes['target-group']
-
-    for target in targets
-      target.behaviour.toggle()
+  'laser-on': (entity, world, behaviour) ->
+    targets = getEntityTargets entity, world
+    target.behaviour.on() for target in targets
     
 module.exports =
   perform: (action, target) ->

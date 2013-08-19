@@ -11,6 +11,7 @@ class LaserBehaviour extends BaseBehaviour
     @player = @world.getItemById 'player'
 
     @entity.onCollisionStart @player, => @burnPlayer() if @active
+    @off() if (@entity.hasAttr 'off') and @entity.attributes.off
 
   burnPlayer: ->
     sprite = @player.sprites[0]

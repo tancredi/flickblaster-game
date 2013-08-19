@@ -85,7 +85,7 @@
                     "attributes": {
                         "flip-x": true,
                         "anchor": "right",
-                        "action": "laser-toggle",
+                        "action": "laser-off",
                         "target-group": "laser-red"
                     },
                     "id": ""
@@ -96,7 +96,7 @@
                     "preset": "button-v-yellow",
                     "attributes": {
                         "anchor": "left",
-                        "action": "laser-toggle",
+                        "action": "laser-off",
                         "target-group": "laser-yellow"
                     },
                     "id": ""

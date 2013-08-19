@@ -72,7 +72,7 @@
                     "y": 880,
                     "preset": "button-v-yellow",
                     "attributes": {
-                        "action": "laser-toggle",
+                        "action": "laser-off",
                         "target-group": "laser-yellow",
                         "anchor": "left"
                     },
