@@ -33,8 +33,8 @@ touchables.initialise()
 # Create app object
 gameData.init()
 gameData.onReady ->
-	# views.open 'levels'
-	game = views.open 'game', null, null, false, '9'
+	views.open 'levels'
+	# game = views.open 'game', null, null, false, '10'
 	# game.finish()
 
 init()

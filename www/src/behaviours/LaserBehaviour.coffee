@@ -9,8 +9,15 @@ class LaserBehaviour extends BaseBehaviour
     @active = true
     @entity.body.setSensor true
     @player = @world.getItemById 'player'
+    @touching = false
 
-    @entity.onCollisionStart @player, => @burnPlayer() if @active
+    @entity.onCollisionStart @player, =>
+      @touching = true
+      @burnPlayer() if @active
+
+    @entity.onCollisionStart @player, =>
+      @touching = false
+
     @off() if (@entity.hasAttr 'off') and @entity.attributes.off
 
   burnPlayer: ->
@@ -32,6 +39,7 @@ class LaserBehaviour extends BaseBehaviour
     for element in @cachedElements
       @world.lasers.el.append element
     @world.lasers.refresh()
+    if @touching then @burnPlayer()
     @active = true
 
   toggle: -> if @active then @off() else @on()
