@@ -97,7 +97,8 @@
 
 	"bullet": {
 		"attributes": {
-			"type": "bullet"
+			"type": "bullet",
+			"material": "metal"
 		},
 		"sprites": [
 			{ "type": "bullet", "x": 0, "y": 0 }

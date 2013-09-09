@@ -1,0 +1,95 @@
+{
+    "size": [
+        540,
+        959
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": []
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 140,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": -444,
+                    "y": 223.5,
+                    "preset": "button-v-red",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 840,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 70,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 370,
+                    "y": 540,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 470,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 170,
+                    "y": 540,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 230,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 320,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": []
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1
+    }
+}

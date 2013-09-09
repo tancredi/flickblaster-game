@@ -58,8 +58,12 @@ class Entity extends BaseItem
       options = $.extend true, {}, body
       options.x = @x + body.x
       options.y = @y + body.y
+
       if @hasAttr 'interaction'
         options.interaction = @attributes.interaction
+
+      if @hasAttr 'material'
+        options.mat = @attributes.material
 
       if i is 0
         @offset = x: body.x, y: body.y

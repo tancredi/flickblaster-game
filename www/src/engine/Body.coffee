@@ -25,7 +25,10 @@ class Body extends BaseItem
     @b2dBody = @world.addBody (phys.getBody @getBodyOptions options)
 
   getBodyOptions: (options) ->
-    out = type: options.type, interaction: options.interaction or 'dynamic'
+    out =
+      type: options.type
+      mat: options.mat or 'default'
+      interaction: options.interaction or 'dynamic'
 
     if options.x? and options.y?
       out.x = @viewport.worldToScreen options.x
