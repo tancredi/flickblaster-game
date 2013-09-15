@@ -1,13 +1,17 @@
 
-# DB manager: Filters calls to local HTML5 DB (SQLite)
+###
+DB manager
+
+Filters calls to local SQLite DB
+###
 
 debugDb = require('./debug').debugDB
 
 # SQLite database configuration
 config =
-  ns: 'greekathlon'       # Local DB namespace
+  ns: 'flickblaster'       # Local DB namespace
   version: ''             # Database Version
-  name: 'Greekathlon'     # Display Name
+  name: 'Flickblaster'     # Display Name
   size: 1024 * 1024       # Database Size
 
 module.exports =

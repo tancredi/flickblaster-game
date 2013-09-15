@@ -1,5 +1,10 @@
 
-# Base class for all views - takes care of basic rendering and defines mein methods
+###
+Base View class
+
+Base class to extend from to create any view
+Takes care of basic rendering and defines mein methods
+###
 
 renderer = require './renderer'
 device = require './device'

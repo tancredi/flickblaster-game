@@ -1,4 +1,10 @@
 
+###
+World class
+
+Ties together level data, physics, game loop, stage element, game layers and game items
+###
+
 gameData = require './gameData'
 Layer = require './Layer'
 device = require '../core/device'
@@ -15,8 +21,6 @@ CollisionManager = require './CollisionManager'
 # Default options
 defaults =
   gravity: [ 0, 0 ]
-
-# World - Ties together level data, physics, gameloop, stage element, game layers, game items
 
 class World
 
@@ -43,20 +47,20 @@ class World
     @b2dWorld = new phys.World @gravity, true
     @collisionManager = new CollisionManager @
 
+  # Start running Box2D physics
   playPhysics: ->
-    # Start Box2D physics
     @b2dInterval = window.setInterval =>
       @b2dWorld.Step 1 / 60, 10, 10
       @b2dWorld.ClearForces()
     , 1000 / 60
 
+  # Attach a callback to level data loading - execute straight away if loaded
   onReady: (callback) ->
-    # Attach a callback to level data loading - execute straight away if loaded
     @readyCallbacks.push callback
     callback() if @ready
 
+  # Load level data from gameData module and initialise
   loadLevel: (levelId, callback) ->
-    # Load level data from gameData module and initialise
     gameData.loadLevel levelId, (level) =>
       @level = level
       @viewport = new Viewport @stage, @level.size[0], @level.size[1]
@@ -108,8 +112,8 @@ class World
     if @layers[layerId] then return @layers[layerId]
     return null
 
+  # Initialise Box2D body from object containing fixtureDev and bodyDef
   addBody: (body) ->
-    # Initialise Box2D body from object containing fixtureDev and bodyDef
     return @b2dWorld.CreateBody(body.bodyDef).CreateFixture body.fixtureDef
 
   getItemById: (id) ->
@@ -125,29 +129,29 @@ class World
           matches.push item
     return matches
 
+  # Initialise gameloop and behaviours
   start: ->
-    # Initialise gameloop and behaviours
     @initBehaviours()
     @loop.use => @update()
     if debug.debugPhysics then debugHelpers.initPhysicsDebugger @
 
+  # Start gameloop and physics
   play: ->
-    # Start gameloop and physics
     @playPhysics()
     @loop.play()
 
+  # Stop gameloop and physics
   stop: ->
-    # Stop gameloop and physics
     @loop.pause()
     clearInterval @b2dInterval
 
+  # Initialise all entities behaviours
   initBehaviours: ->
-    # Initialise all entities behaviours
     for item in @items
       item.initBehaviour() if item.itemType is 'entity'
 
+  #Update each layer
   update: ->
-    #Update each layer
     layer.update() for layerId, layer of @layers
 
 module.exports = World

@@ -1,19 +1,21 @@
 
+###
+Entity class
+
+Entities are the central players on the scene - They can have a body and multiple sprites which
+will move relatively to their position, they can be associated to a Behaviour, which will be
+manage their instance at every .update, they can have attributes which play a central role in
+the game mechanics.
+
+Entities can be instanciated with a preset from the ones contained in www/game/presets.json
+###
+
 BaseItem = require './BaseItem'
 gameData = require './gameData'
 behaviours = require '../behaviours/index'
 Sprite = require './Sprite'
 Body = require './Body'
 renderer = require '../core/renderer'
-
-# Entity class
-#
-# Entities are the central players on the scene - They can have a body and multiple sprites which
-# will move relatively to their position, they can be associated to a Behaviour, which will be
-# manage their instance at every .update, they can have attributes which play a central role in
-# the game mechanics.
-#
-# Entities can be instanciated with a preset from the ones contained in www/game/presets.json
 
 class Entity extends BaseItem
   itemType: 'entity'
@@ -43,16 +45,18 @@ class Entity extends BaseItem
 
     @updatePos()
 
-  initBehaviour: -> # Instanciate the Behaviour - It will handle the Entity at every .update
+  # Instanciate the Behaviour - It will handle the Entity at every .update
+  initBehaviour: ->
     @behaviour = new behaviours[@behaviourType] @, @layer.world
 
-  render: -> # Render the wrapping element
+  # Render the wrapping element
+  render: ->
     @el = $ renderer.render 'game-entity'
     @el.appendTo @layer.element
     @el.data 'entity', @
 
+  # Instanciate the sprites
   makeSprites: (sprites) ->
-    # Instanciate the sprites
     for sprite in sprites
       options = $.extend true, {}, sprite, entity: @
       @sprites.push new Sprite options, @layer
@@ -65,10 +69,12 @@ class Entity extends BaseItem
     if (@hasAttr 'flip-y') and @attributes['flip-y']
       (sprite.flip 1) for sprite in @sprites
 
-  hasAttr: (attr) -> # Returns true if given attribute is defined
+  # Returns true if given attribute is defined
+  hasAttr: (attr) ->
     return _.has @attributes, attr
 
-  makeBody: (bodies) -> # Parses some custom attributes and instanciates the body
+  # Parses some custom attributes and instanciates the body
+  makeBody: (bodies) ->
     for body, i in bodies
       options = $.extend true, {}, body
       options.x = @x + body.x
@@ -103,10 +109,12 @@ class Entity extends BaseItem
     return Math.abs diff if absolute
     return diff
 
-  update: -> # Update all children position
+  # Update all children position
+  update: ->
     @behaviour.update()
 
-  remove: -> # Remove Entity element, sprites and bodies from the scene
+  # Remove Entity element, sprites and bodies from the scene
+  remove: ->
     super
 
     @el.remove();
@@ -115,7 +123,8 @@ class Entity extends BaseItem
 
     @removed = true
 
-  position: -> # Returns the Entity's position in game coordinates
+  # Returns the Entity's position in game coordinates
+  position: ->
     if @body? then @body.position()
     else x: @x, y: @y
 

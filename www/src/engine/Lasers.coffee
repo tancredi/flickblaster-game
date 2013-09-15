@@ -1,6 +1,16 @@
 
+###
+Lasers class
+
+Similar to Layer class, but handling lasers in the scene
+Renders the laser body using SVG, takes care of manipulating and updating it when needed
+###
+
 renderer = require '../core/renderer'
 
+# Define lasers palette
+# Add a `color` attribute using one of the following keys as value to an entity of 'laser' type
+# to change its color
 colors =
   yellow: '#f2c456'
   red: '#f56949'
@@ -16,15 +26,18 @@ class Lasers
     @height = @viewport.height
     @render()
 
+  # Renders SVG wrapper and inner element
   render: ->
     ctx =
       width: @viewport.worldToScreen @width
       height: @viewport.worldToScreen @height
     @el = $ renderer.render 'game-lasers', ctx
 
+  # Add a laser with the given options
   add: (entityOptions) ->
     out = []
 
+    # Renders a rectangle for each given set of body options
     for body in entityOptions.bodies
       width = @viewport.worldToScreen body.width
       height = @viewport.worldToScreen body.height
@@ -38,12 +51,14 @@ class Lasers
         height: height
         fill: colors[entityOptions.attributes.color]
 
+      # Create element and add it to the wrapper
       el = $ renderer.render 'svg-rect', ctx
       @el.append el
       out.push el
 
     return out
 
+  # Hack to update the rendered SVG
   refresh: ->
     @layer.element.html ' '
     @el.clone().appendTo @layer.element

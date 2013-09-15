@@ -1,17 +1,24 @@
 
+###
+Base Modal class
+
+Extend this class to create a custom modal.
+Instanciate the class to render and open the modal
+
+Class-based modals may not necessarily be a great idea,
+but hey, I wanted to try a new approach.
+Deal with it.
+###
+
 renderer = require '../../core/renderer'
 
 modalTemplate = 'modal' # Base modal wrapper template
 transitionTime = 200    # Duration of modal transition in milliseconds
 
-selectors = inner: '.modal', overlay: '.overlay' # Selectors used in this class
-
-# Base Modal class - Extend this class to create a custom modal.
-# Instanciate the class to render and open the modal
-
-# Class-based modals may not necessarily be a great idea,
-# but hey, I wanted to try a new approach.
-# Deal with it.
+# Selectors used in this class
+selectors =
+  inner: '.modal'
+  overlay: '.overlay'
 
 class BaseModal
   templateName: 'modal-foo' # Customise this property to render a different template
@@ -22,8 +29,8 @@ class BaseModal
     @onOpen = options.onOpen or null    # Callback triggered when .open() is called
     @open()
 
+  # Render modal body template
   render: ->
-    # Render modal body template
     body = renderer.render @templateName, @context
 
     # Render modal wrap
@@ -54,10 +61,11 @@ class BaseModal
       @bind()
       @onOpen @ if @onOpen?
 
-  bind: -> # Called after opening transition is over
+  # Called after opening transition is over
+  bind: ->
 
+  # Start closing transition
   close: (callback) ->
-    # Start closing transition
     @overlay.transition opacity: 0, transitionTime / 2
     @inner.transition scale: .5, opacity: 0, transitionTime, =>
       # Remove elements and trigger .onClose callback

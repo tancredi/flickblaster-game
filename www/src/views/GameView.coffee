@@ -1,4 +1,10 @@
 
+###
+Game View class
+
+Loads a level's data, wraps, initialises and runs game logic
+###
+
 BaseView = require '../core/BaseView'
 getByRole = (require '../helpers/dom').getByRole
 device = require '../core/device'
@@ -16,8 +22,6 @@ win = $ window
 
 # Milliseconds duration of intro animation (showing player and target if not visible already)
 introDuration = if debug.skipAnimations then 0 else 2400
-
-# Game View - Loads a level's data, wraps, initialises and runs game logic
 
 class GameView extends BaseView
   templateName: 'game'
@@ -54,14 +58,14 @@ class GameView extends BaseView
     (_ @world).on 'shoot', => @setShots @shots - 1
     (_ @world).on 'pot', => @setTargetsCount @targetsCount - 1
 
+  # Re-initialise this view with same level to restart the game
   restart: ->
-    # Re-initialise this view with same level to restart the game
     views.open 'game', null, null, false, @levelName
 
+  # Called when all level data has been loaded
   transitionComplete: ->
     super
 
-    # Called when all level data has been loaded
     @world.onReady => @startGame()
 
   startGame: ->
@@ -112,14 +116,14 @@ class GameView extends BaseView
       @stars = amt
       @elements.shots.addClass "stars-#{@stars}"
 
+  # Initialise game controls
   enableControls: ->
-    # Initialise game controls
     @world.loop.use => @update()
     @controls = new GameControls @
     @controls.on()
 
+  # Show intro animation if target and players don't fit in viewport
   showIntro: (callback) ->
-    # Show intro animation if target and players don't fit in viewport
     @viewportFits = @world.viewport.fits()
     if not @viewportFits
       @world.viewport.followEntity @targets[0], introDuration / 2, =>
@@ -137,8 +141,8 @@ class GameView extends BaseView
     @controls.off() if @controls?
     @world.stop() if @world?
 
+  # Center viewport on player
   update: ->
-    # Center viewport on player
     if not @viewportFits
       @world.viewport.followEntity @player
 

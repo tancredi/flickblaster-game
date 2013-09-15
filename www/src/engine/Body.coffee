@@ -1,16 +1,18 @@
 
+###
+Body class
+
+This game item type interfaces the game logic with Box2D bodies
+Bodies can be added to the scene either stand-alone of as children of entities
+
+Currently supported types of Body are:
+1. Circle:      ('circle') Initialise with x, y and radius
+2. Rectangles:  ('rect') Initialise with x, y, width and height
+3. Polygons:    ('poly') Initialise with x, y and an array with all coordinates of points
+###
+
 BaseItem = require './BaseItem'
 phys = require '../helpers/physics'
-
-# Body class
-#
-# This game item type interfaces the game logic with Box2D bodies
-# Bodies can be added to the scene either stand-alone of as children of entities
-#
-# Currently supported types of Body are:
-# 1. Circle:      ('circle') Initialise with x, y and radius
-# 2. Rectangles:  ('rect') Initialise with x, y, width and height
-# 3. Polygons:    ('poly') Initialise with x, y and an array with all coordinates of points
 
 class Body extends BaseItem
   itemType: 'body'
@@ -40,7 +42,8 @@ class Body extends BaseItem
     bodyData = phys.getBody @parseOptions options
     @b2dBody = @world.addBody bodyData
 
-  parseOptions: (options) -> # Parses and scales to viewport given body options
+  # Parses and scales to viewport given body options
+  parseOptions: (options) ->
     out =
       type: options.type                            # Body type
       mat: options.mat or 'default'                 # Material
@@ -78,7 +81,8 @@ class Body extends BaseItem
     # Horrible hack to force the Box2D body to change position
     setTimeout ( => @b2dBody.m_body.SetPosition pos ), .001
 
-  addShape: (options) -> # Add a shape to the same body
+  # Add a shape to the same body
+  addShape: (options) ->
     options = @parseOptions options
     body = phys.getBody options
 
@@ -92,21 +96,20 @@ class Body extends BaseItem
     # Adds the body to itself
     @b2dBody.m_body.CreateFixture body.fixtureDef
 
-  applyForce: (x, y, multiplier = 0) -> # Applies a force with given direction and multiplier
+  # Applies a force with given direction and multiplier
+  applyForce: (x, y, multiplier = 0) ->
     point = @b2dBody.m_body.GetWorldCenter()
     x = (@viewport.worldToScreen x) * multiplier
     y = (@viewport.worldToScreen y) * multiplier
     vector = phys.getVector x, y
     @b2dBody.m_body.ApplyForce vector, point
 
-  position: ->
-    # Retuns position in world coordinates
-    @viewport.screenToWorld phys.getBodyPosition @b2dBody
+  # Retuns position in world coordinates
+  position: -> @viewport.screenToWorld phys.getBodyPosition @b2dBody
 
+  # Set sensor state
+  # If true the object will stop interactive in collisions, but keep triggering them
   setSensor: (state) ->
-    # Set sensor state
-    # If true the object will stop interactive in collisions, but keep triggering them
-
     # @b2dBody.m_body.m_fixtureList.m_isSensor = state
     # @b2dBody.m_body.m_isSensor = state
     # @b2dBody.SetSensor state
@@ -120,9 +123,9 @@ class Body extends BaseItem
     if @entity? then @entity.body = null
     @world.b2dWorld.DestroyBody @b2dBody.m_body
 
+  # Attach an event listener in the collision manager
+  # For available events read CollisionManager
   onCollision: (evt, target, callback) ->
-    # Attach an event listener in the collision manager
-    # For available events read CollisionManager
     @world.collisionManager.on evt, (c) =>
       bodyA = c.m_fixtureA.m_body
       bodyB = c.m_fixtureB.m_body

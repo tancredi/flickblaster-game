@@ -1,15 +1,17 @@
 
-MouseControls = require './MouseControls'
-renderer = require '../core/renderer'
-phys = require '../helpers/physics'
+###
+Game Controls Class
 
-# Game Controls Class
-#
-# Handles the binding, handling and UI of the game controls
-# Read MouseControls for DOM bindings
+Handles the binding, handling and UI of the game controls
+Read MouseControls for DOM bindings
+###
 
 # Multiplier used for the force applied to the player's Body when flicked
 shotStrength = 40
+
+MouseControls = require './MouseControls'
+renderer = require '../core/renderer'
+phys = require '../helpers/physics'
 
 # Style of the line rendered to display visual feedback of the dragging
 style =
@@ -27,7 +29,8 @@ class GameControls extends MouseControls
 
     super
 
-  render: -> # Render the UI canvas element in the given World's Viewport
+  # Render the UI canvas element in the given World's Viewport
+  render: ->
     ctx = width: @viewport.elWidth, height: @viewport.elHeight
     @canvas = $ renderer.render 'game-controls', ctx
     # Hide the UI canvas (Will be displayed when dragging) and get its context
@@ -51,7 +54,8 @@ class GameControls extends MouseControls
         width: Math.abs center.x - vertex.x
         height: Math.abs center.y - vertex.y
 
-  clearLast: -> # Clear the the bounding box of last frame's render area if happened
+  # Clear the the bounding box of last frame's render area if happened
+  clearLast: ->
     if @lastUpdate?
       x = @lastUpdate.x - style.lineWidth
       y = @lastUpdate.y - style.lineWidth
@@ -66,7 +70,8 @@ class GameControls extends MouseControls
   showCanvas: ->
     @canvas.show()
 
-  dragStart: (e) -> # Called when drag starts
+  # Called when drag starts
+  dragStart: (e) ->
     super
 
     evt = @getMouseEvent e
@@ -77,7 +82,8 @@ class GameControls extends MouseControls
       @flicking = true
       @flickTarget = entity
 
-  dragStop: -> # Called when drag stops
+  # Called when drag stops
+  dragStop: ->
     super
 
     # Creates force vector and applies it to target when flicked
