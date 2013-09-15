@@ -25,7 +25,7 @@ init = -> if device.isTouch() then bind() else onDeviceReady()
 # Bind deviceReady event
 bind = -> document.addEventListener 'deviceready', onDeviceReady, false
 
-onDeviceReady = ->
+onDeviceReady = -> # nothing here
 
 # Initialise clickables
 touchables.initialise()
@@ -33,8 +33,8 @@ touchables.initialise()
 # Create app object
 gameData.init()
 gameData.onReady ->
+	# Open Levels view
 	views.open 'levels'
-	game = views.open 'game', null, null, false, '11'
-	# game.finish()
+	# game = views.open 'game', null, null, false, '01'
 
 init()

@@ -6,6 +6,15 @@ Sprite = require './Sprite'
 Body = require './Body'
 renderer = require '../core/renderer'
 
+# Entity class
+#
+# Entities are the central players on the scene - They can have a body and multiple sprites which
+# will move relatively to their position, they can be associated to a Behaviour, which will be
+# manage their instance at every .update, they can have attributes which play a central role in
+# the game mechanics.
+#
+# Entities can be instanciated with a preset from the ones contained in www/game/presets.json
+
 class Entity extends BaseItem
   itemType: 'entity'
 
@@ -20,40 +29,46 @@ class Entity extends BaseItem
     @id = options.id or null
     @data = options.data or {}
     @behaviourType = options.behaviour or 'base'
-
     @offset = x: 0, y: 0
 
+    # Create the element
     @render()
 
-    @body = null
+    # Create the Body
     @makeBody options.bodies
 
+    # Create the Sprites
     @sprites = []
     @makeSprites options.sprites
 
     @updatePos()
 
-  initBehaviour: -> @behaviour = new behaviours[@behaviourType] @, @layer.world
+  initBehaviour: -> # Instanciate the Behaviour - It will handle the Entity at every .update
+    @behaviour = new behaviours[@behaviourType] @, @layer.world
 
-  render: ->
+  render: -> # Render the wrapping element
     @el = $ renderer.render 'game-entity'
     @el.appendTo @layer.element
     @el.data 'entity', @
 
   makeSprites: (sprites) ->
+    # Instanciate the sprites
     for sprite in sprites
       options = $.extend true, {}, sprite, entity: @
       @sprites.push new Sprite options, @layer
 
+    # Mirror the sprite on the X if specified
     if (@hasAttr 'flip-x') and @attributes['flip-x']
       (sprite.flip 0) for sprite in @sprites
 
+  # Mirror the sprite on the Y if specified
     if (@hasAttr 'flip-y') and @attributes['flip-y']
       (sprite.flip 1) for sprite in @sprites
 
-  hasAttr: (attr) -> return _.has @attributes, attr
+  hasAttr: (attr) -> # Returns true if given attribute is defined
+    return _.has @attributes, attr
 
-  makeBody: (bodies) ->
+  makeBody: (bodies) -> # Parses some custom attributes and instanciates the body
     for body, i in bodies
       options = $.extend true, {}, body
       options.x = @x + body.x
@@ -84,7 +99,8 @@ class Entity extends BaseItem
     return Math.abs diff if absolute
     return diff
 
-  update: -> @behaviour.update()
+  update: -> # Update all children position
+    @behaviour.update()
 
   remove: ->
     super

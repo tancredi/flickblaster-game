@@ -11,34 +11,40 @@ EndGameModal = require '../ui/modals/EndGameModal'
 PauseModal = require '../ui/modals/PauseModal'
 userData = require '../engine/userData'
 
+# Cache jQuery-wrapped window object
 win = $ window
 
+# Milliseconds duration of intro animation (showing player and target if not visible already)
 introDuration = if debug.skipAnimations then 0 else 2400
+
+# Game View - Loads a level's data, wraps, initialises and runs game logic
 
 class GameView extends BaseView
   templateName: 'game'
-  classNames: 'view-game'
-  fixHeight: true
+  classNames:   'view-game'
+  fixHeight:    true
 
   constructor: (@levelName) ->
     super
 
-    @shots = null
-    @targetsCount = null
-    @stars = 3
-    @finished = false
+    @shots = null         # Available shots count
+    @targetsCount = null  # Number of targets still active
+    @stars = 3            # Count of stars left
+    @finished = false     # Game was finished
 
   getElements: ->
     super
 
-    @elements.pause = getByRole 'pause', @elements.main
-    @elements.shots = getByRole 'shots-counter', @elements.main
+    @elements.pause = getByRole 'pause', @elements.main         # Pause button
+    @elements.shots = getByRole 'shots-counter', @elements.main # Shots display
 
   bind: ->
     super
 
+    # Instanciate the World (Containing the core of the game logic)
     @world = new World @elements.main, @levelName
 
+    # Bind pause button
     @elements.pause.on (device.getEvent 'click'), (e) =>
       context = title: 'Pause'
       options = game: @, levelName: @levelName
@@ -48,22 +54,27 @@ class GameView extends BaseView
     (_ @world).on 'shoot', => @setShots @shots - 1
     (_ @world).on 'pot', => @setTargetsCount @targetsCount - 1
 
-  restart: -> views.open 'game', null, null, false, @levelName
+  restart: ->
+    # Re-initialise this view with same level to restart the game
+    views.open 'game', null, null, false, @levelName
 
   transitionComplete: ->
     super
 
+    # Called when all level data has been loaded
     @world.onReady => @startGame()
 
   startGame: ->
-    @world.start()
-    @world.loop.play()
+    @world.play()
 
+    # Fetch base game entities
     @player = @world.getItemById 'player'
     @targets = @world.getItemsByAttr 'type', 'target'
 
+    # Bind player death
     (_ @player).on 'die', => @finish false
 
+    # Initialise game stats
     @setShots @world.level.data.shots
     @setTargetsCount @targets.length
 
@@ -71,11 +82,15 @@ class GameView extends BaseView
 
   setTargetsCount: (amt) ->
     @targetsCount = amt
+
+    # End the game if all targets were hit
     if amt is 0 then @finish true
 
   finish: (win = false) ->
     if not @finished
       @finished = true
+
+      # Render and show end of game modal
       context = win: win, title: if win then 'Level Complete!' else 'Ouch!'
       options = stars: @stars, game: @, levelName: @levelName
       if win then userData.saveLevelScore @levelName, @stars
@@ -83,23 +98,28 @@ class GameView extends BaseView
 
   setShots: (amt) ->
     @shots = amt
+
+    # Update shots display and stars count
     if amt < -2 then @setStars 0
     else if amt < -1 then @setStars 1
     else if amt < 0 then @setStars 2
     @elements.shots.text amt
 
   setStars: (amt) ->
+    # Add custom class to shots display depending on current stars scoring
     if @stars isnt amt
       @elements.shots.removeClass "stars-#{@stars}"
       @stars = amt
       @elements.shots.addClass "stars-#{@stars}"
 
   enableControls: ->
+    # Initialise game controls
     @world.loop.use => @update()
     @controls = new GameControls @
     @controls.on()
 
   showIntro: (callback) ->
+    # Show intro animation if target and players don't fit in viewport
     @viewportFits = @world.viewport.fits()
     if not @viewportFits
       @world.viewport.followEntity @targets[0], introDuration / 2, =>
@@ -108,14 +128,17 @@ class GameView extends BaseView
     else callback()
 
   close: ->
+    # Unbind events
     @elements.pause.off device.getEvent 'click'
 
     super
 
+    # Unbind game controls and stop gameloop
     @controls.off() if @controls?
     @world.stop() if @world?
 
   update: ->
+    # Center viewport on player
     if not @viewportFits
       @world.viewport.followEntity @player
 

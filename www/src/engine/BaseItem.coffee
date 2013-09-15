@@ -1,10 +1,18 @@
 
-defaults =
-  x: 0
-  y: 0
+# Base Item class
+#
+# Item classes that interact with the game logic have to extend from here
+#
+# E.g. Entities, Bodies, Sprites and Walls extend from BaseItem
+#
+# The World and Layer classes will need to always have acces to the basic
+# method specified in this class
+
+# Default properties
+defaults = x: 0, y: 0
 
 class BaseItem
-  type: 'base'
+  itemType: 'base' # Must change when extending
 
   constructor: (options, @layer) ->
     options = $.extend true, {}, defaults, options
@@ -12,14 +20,17 @@ class BaseItem
     @y = options.y or 0
     @removed = false
 
-  translate: (x, y) -> @moveTo @x + x, @y + y
+  translate: (x, y) ->
+    # Adds given x and y to current item position
+    @moveTo @x + x, @y + y
 
   moveTo: (x, y) ->
+    # Absolutely sets the physical position of the item to given x and y
     @x = x
     @y = y
 
-  update: ->
+  update: -> # Called in any gameloop iteration
 
-  remove: ->
+  remove: -> # Called whenever item needs removing
 
 module.exports = BaseItem

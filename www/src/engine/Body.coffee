@@ -2,46 +2,67 @@
 BaseItem = require './BaseItem'
 phys = require '../helpers/physics'
 
+# Body class
+#
+# This game item type interfaces the game logic with Box2D bodies
+# Bodies can be added to the scene either stand-alone of as children of entities
+#
+# Currently supported types of Body are:
+# 1. Circle:      ('circle') Initialise with x, y and radius
+# 2. Rectangles:  ('rect') Initialise with x, y, width and height
+# 3. Polygons:    ('poly') Initialise with x, y and an array with all coordinates of points
+
 class Body extends BaseItem
   itemType: 'body'
 
   constructor: (options, @world) ->
     super
-    @type = options.type
-    @viewport = @world.viewport
-    @touchListeners = []
 
-    if @type is 'circle'
-      @radius = options.radius
-    else if @type is 'rect'
-      @width = options.width
-      @height = options.height
-    else if @type is 'poly'
-      @points = []
-      for i in [ 0 ... options.points.length / 2 ]
-        @points.push [ options.points[i * 2], options.points[i * 2 + 1] ]
-    else return
+    @type = options.type        # Body type
+    @viewport = @world.viewport # Viewport (Needed to match scaling)
 
-    @b2dBody = @world.addBody (phys.getBody @getBodyOptions options)
+    # Adds right properties in base of body type
+    switch @type
+      when 'circle'
+        @radius = options.radius
+      when 'rect'
+        @width = options.width
+        @height = options.height
+      when 'poly'
+        @points = []
+        for i in [ 0 ... options.points.length / 2 ]
+          @points.push [ options.points[i * 2], options.points[i * 2 + 1] ]
+      else
+        # Won't continue if body type is not supported
+        return
 
-  getBodyOptions: (options) ->
+    # Creates the Box2D body through the physics module and adds it to the scene
+    bodyData = phys.getBody @parseOptions options
+    @b2dBody = @world.addBody bodyData
+
+  parseOptions: (options) -> # Parses and scales to viewport given body options
     out =
-      type: options.type
-      mat: options.mat or 'default'
-      interaction: options.interaction or 'dynamic'
+      type: options.type                            # Body type
+      mat: options.mat or 'default'                 # Material
+      interaction: options.interaction or 'dynamic' # 'dynamic', 'static' or 'kinematic'
 
     if options.x? and options.y?
+      # Translate position to screen coordinates
       out.x = @viewport.worldToScreen options.x
       out.y = @viewport.worldToScreen options.y
 
     if options.radius?
+      # Translate radius to screen coordinates
       out.radius = @viewport.worldToScreen options.radius
 
     if options.width? and options.height?
+      # Translate width and height to screen coordinates
       out.width = @viewport.worldToScreen options.width
       out.height = @viewport.worldToScreen options.height
 
     if options.points?
+      # Translate points array data structure from
+      # [ ax, ay, bx, by, .. ] to [ ax, ay, bx, by, .. ]
       out.points = []
       for point in @points
         x = @viewport.worldToScreen point[0]
@@ -51,41 +72,57 @@ class Body extends BaseItem
     return out
 
   moveTo: (pos) ->
-    x = ( @viewport.worldToScreen pos.x ) / 30
-    y = ( @viewport.worldToScreen pos.y ) / 30
+    x = ( @viewport.worldToScreen pos.x ) / phys.ratio
+    y = ( @viewport.worldToScreen pos.y ) / phys.ratio
     pos = new phys.Vector x, y
+    # Horrible hack to force the Box2D body to change position
     setTimeout ( => @b2dBody.m_body.SetPosition pos ), .001
 
-  addShape: (options) ->
-    options = @getBodyOptions options
+  addShape: (options) -> # Add a shape to the same body
+    options = @parseOptions options
     body = phys.getBody options
+
+    # Translates relative position to screen coordinates
     pos = @viewport.worldToScreen @position()
-    body.fixtureDef.shape.m_p.x = ( options.x - pos.x ) / 30
-    body.fixtureDef.shape.m_p.y = ( options.y - pos.y ) / 30
+
+    # Places the new body relatively to the main one
+    body.fixtureDef.shape.m_p.x = ( options.x - pos.x ) / phys.ratio
+    body.fixtureDef.shape.m_p.y = ( options.y - pos.y ) / phys.ratio
+
+    # Adds the body to itself
     @b2dBody.m_body.CreateFixture body.fixtureDef
 
-  applyForce: (x, y, multiplier = 0) ->
+  applyForce: (x, y, multiplier = 0) -> # Applies a force with given direction and multiplier
     point = @b2dBody.m_body.GetWorldCenter()
     x = (@viewport.worldToScreen x) * multiplier
     y = (@viewport.worldToScreen y) * multiplier
     vector = phys.getVector x, y
     @b2dBody.m_body.ApplyForce vector, point
 
-  position: -> @viewport.screenToWorld phys.getBodyPosition @b2dBody
+  position: ->
+    # Retuns position in world coordinates
+    @viewport.screenToWorld phys.getBodyPosition @b2dBody
 
   setSensor: (state) ->
-    @b2dBody.m_body.m_fixtureList.m_isSensor = state
-    @b2dBody.m_body.m_isSensor = state
-    @b2dBody.SetSensor state
+    # Set sensor state
+    # If true the object will stop interactive in collisions, but keep triggering them
+
+    # @b2dBody.m_body.m_fixtureList.m_isSensor = state
+    # @b2dBody.m_body.m_isSensor = state
+    # @b2dBody.SetSensor state
     @b2dBody.m_body.m_fixtureList.SetSensor state
 
-  setDrag: (amt) -> @b2dBody.m_body.m_linearDamping = amt
+  setDrag: (amt) -> # Default material's drag is 0.8
+    @b2dBody.m_body.m_linearDamping = amt
 
   remove: ->
+    # Remove the body from the entity, if child of an entity, then destroy its Box2D body
     if @entity? then @entity.body = null
     @world.b2dWorld.DestroyBody @b2dBody.m_body
 
   onCollision: (evt, target, callback) ->
+    # Attach an event listener in the collision manager
+    # For available events read CollisionManager
     @world.collisionManager.on evt, (c) =>
       bodyA = c.m_fixtureA.m_body
       bodyB = c.m_fixtureB.m_body
