@@ -3,8 +3,15 @@ MouseControls = require './MouseControls'
 renderer = require '../core/renderer'
 phys = require '../helpers/physics'
 
+# Game Controls Class
+#
+# Handles the binding, handling and UI of the game controls
+# Read MouseControls for DOM bindings
+
+# Multiplier used for the force applied to the player's Body when flicked
 shotStrength = 40
 
+# Style of the line rendered to display visual feedback of the dragging
 style =
   lineCap: 'round'
   strokeStyle: '#db7c52'
@@ -15,15 +22,18 @@ class GameControls extends MouseControls
   constructor: (@game) ->
     @viewport = @game.world.viewport
     @render()
+    # Add .update to the gameloop
     @game.world.loop.use => @update()
 
     super
 
-  render: ->
+  render: -> # Render the UI canvas element in the given World's Viewport
     ctx = width: @viewport.elWidth, height: @viewport.elHeight
     @canvas = $ renderer.render 'game-controls', ctx
+    # Hide the UI canvas (Will be displayed when dragging) and get its context
     @canvas.hide().appendTo @game.world.stage
     @ctx = @canvas[0].getContext '2d'
+    # Apply style attributes to the canvas
     $.extend @ctx, style
 
   update: ->
@@ -41,7 +51,7 @@ class GameControls extends MouseControls
         width: Math.abs center.x - vertex.x
         height: Math.abs center.y - vertex.y
 
-  clearLast: ->
+  clearLast: -> # Clear the the bounding box of last frame's render area if happened
     if @lastUpdate?
       x = @lastUpdate.x - style.lineWidth
       y = @lastUpdate.y - style.lineWidth
@@ -50,11 +60,13 @@ class GameControls extends MouseControls
       @ctx.clearRect x, y, width, height
       @lastUpdate = null
 
-  hideCanvas: -> @canvas.hide()
+  hideCanvas: ->
+    @canvas.hide()
 
-  showCanvas: -> @canvas.show()
+  showCanvas: ->
+    @canvas.show()
 
-  dragStart: (e) ->
+  dragStart: (e) -> # Called when drag starts
     super
 
     evt = @getMouseEvent e
@@ -65,9 +77,10 @@ class GameControls extends MouseControls
       @flicking = true
       @flickTarget = entity
 
-  dragStop: ->
+  dragStop: -> # Called when drag stops
     super
 
+    # Creates force vector and applies it to target when flicked
     if @flicking
       (_ @game.world).emit 'shoot', []
       center = @viewport.worldToScreen @game.player.position()

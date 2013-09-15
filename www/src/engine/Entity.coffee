@@ -57,11 +57,11 @@ class Entity extends BaseItem
       options = $.extend true, {}, sprite, entity: @
       @sprites.push new Sprite options, @layer
 
-    # Mirror the sprite on the X if specified
+    # If specified in the Entity attributes, mirror the sprite on the X and/or Y axis
+
     if (@hasAttr 'flip-x') and @attributes['flip-x']
       (sprite.flip 0) for sprite in @sprites
 
-  # Mirror the sprite on the Y if specified
     if (@hasAttr 'flip-y') and @attributes['flip-y']
       (sprite.flip 1) for sprite in @sprites
 
@@ -74,15 +74,19 @@ class Entity extends BaseItem
       options.x = @x + body.x
       options.y = @y + body.y
 
+      # If specified in the Entity attributes, set custom interaction or material in the Body
+
       if @hasAttr 'interaction'
         options.interaction = @attributes.interaction
 
       if @hasAttr 'material'
         options.mat = @attributes.material
 
+      # Create the first body in the bodies array and adds other bodies shapes to it
       if i is 0
         @offset = x: body.x, y: body.y
         @body = new Body options, @layer.world
+        # If specified in the Entity attributes, make the body a sensor
         if @hasAttr 'sensor'
           @body.setSensor true
       else
@@ -102,23 +106,24 @@ class Entity extends BaseItem
   update: -> # Update all children position
     @behaviour.update()
 
-  remove: ->
+  remove: -> # Remove Entity element, sprites and bodies from the scene
     super
 
+    @el.remove();
     sprite.remove() for sprite in @sprites
     @body.remove() if @body?
+
     @removed = true
 
-  position: ->
+  position: -> # Returns the Entity's position in game coordinates
     if @body? then @body.position()
     else x: @x, y: @y
 
+  # Methods to bind callbacks to collision events on the Entity's body
+  # Read CollisionManager for more about these events
   onCollisionPre: (target, callback) -> @body.onCollision 'pre', target.body, callback
-
   onCollisionPost: (target, callback) -> @body.onCollision 'post', target.body, callback
-
   onCollisionStart: (target, callback) -> @body.onCollision 'start', target.body, callback
-
   onCollisionEnd: (target, callback) -> @body.onCollision 'end', target.body, callback
 
 module.exports = Entity
