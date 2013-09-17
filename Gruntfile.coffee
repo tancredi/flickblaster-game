@@ -63,7 +63,7 @@ module.exports = (grunt) =>
 
       # Watch the LESS directory for changes
       less:
-        files: [ 'www/less/*/**.less', 'www/less/*.less' ]
+        files: [ 'less/*/*.less', 'less/*.less' ]
         tasks: 'less'
         options: interrupt: true, spawn: false, interval: 0
 
