@@ -7,6 +7,7 @@ The game is written in [CoffeeScript](http://coffeescript.org/), bundled with [B
 
 The source code is commented end to end and for better understanding.
 
+
 # Requirements
 
 Includes requirements to build the app locally and run with a the local server for browser testing and also to deploy to a cordova build
@@ -31,11 +32,37 @@ sudo npm install -g coffee-script
 sudo npm install -g coffee-script
 ```
 
-# Installation
+* [Grunt](http://gruntjs.com/) - Runs build tasks
+```
+sudo npm install -g grunt-cli
+```
+
+# Install
 
 ```
 git clone git@github.com:tancredi/flickblaster-game.git
 cd flickblaster-game
 npm install -d
-cake build
 ```
+
+# Build
+
+A Gruntfile and a Cakefile are setup for building the app.
+Grunt can run all necessary tasks on his own, the Cakefile is only setup to execute some of the Grunt tasks and spawn a more performant coffee and browserify process along with those - Use Cake for faster development
+
+### Using Grunt
+
+* `grunt build` - Build the app once
+* `grunt` - Watch for changes
+
+### Using Cake
+
+* `cake build` - Built the app once
+* `cake watch` - Watch for changes
+
+### Build Tasks
+
+* **LESS** - Compile `less/index.less` into `www/css/index.css`
+* **Handlebars** Pre-compile all Handlebars templates contained in `templates/` into `www/js/templates.js`
+* **Coffee** Compile the CoffeeScript source in `src/` in Javascript inside `lib/`
+* **Bundle** Bundle the generated javascript in `lib/` into a single `www/js/app.js` file
