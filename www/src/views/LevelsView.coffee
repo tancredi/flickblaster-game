@@ -2,7 +2,7 @@
 ###
 Levels View
 
-Displays all levels with user progress and
+View containing information about user progress and levels navigation
 ###
 
 BaseView = require '../core/BaseView'
@@ -26,7 +26,7 @@ class LevelsView extends BaseView
     # Load level progress from userData module
     levelsProgress = userData.getLevelsProgress()
 
-    # Iterate through levels and create context for the template
+    # Iterate through levels loaded through gameData module and build the context for the template
     for level, i in gameData.get 'levels'
       stars = []
 

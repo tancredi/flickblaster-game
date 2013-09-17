@@ -1,36 +1,56 @@
 
+###
+Walls Class
+
+Used as a child World, handles the creation of the 4 Walls around the viewport and any other
+level-specific Wall passed from the World after loading the level data
+
+Also takes care of wrapping its children into an SVG object and refreshing its tree to display the
+updated render after the addition or change of any child Wall
+###
+
 Wall = require './Wall'
 Body = require './Body'
 renderer = require '../core/renderer'
 
+# Default wall thickness (Used for the 4 main walls)
 thickness = 10
 
 class Walls
 
   constructor: (@world) ->
-    @width = @world.viewport.width
-    @height = @world.viewport.height
-    @render()
+    @width = @world.viewport.width    # Shortcut to Viewport width
+    @height = @world.viewport.height  # Shortcut to Viewport height
     @walls = []
+
+    @render()
     @build()
     @refresh()
 
+  # Render the SVG element wrapping paths for all children Walls
   render: ->
     ctx =
-      width: @world.viewport.worldToScreen @width
-      height: @world.viewport.worldToScreen @height
+      width: @world.viewport.worldToScreen @width   # Width on screen
+      height: @world.viewport.worldToScreen @height # Height on screen
+
+    # Create wrap element
     @wrap = $ renderer.render 'game-walls', ctx
+    # Get its inner SVG
     @svg = @wrap.find 'svg'
+    # Add it to the scene
     @wrap.appendTo @world.stage
 
   refresh: ->
+    # Rebuild the wrap DOM tree to refresh
     @wrap.html @wrap.html()
+    # Get the SVG after it's been re-rendered
     @svg = @wrap.find 'svg'
 
+  # Instanciate and add a Wall with the given options
   add: (options) -> @walls.push new Wall options, @world, @svg
 
+  # Create the 4 walls around the Viewport
   build: ->
-    walls = []
     for dir in [ 'x', 'y' ]
       for opposite in [ false, true ]
         if dir is 'x'
@@ -43,7 +63,6 @@ class Walls
           h = @height
           x = if opposite then @width - thickness / 2 else thickness / 2
           y = @height / 2
-        walls.push type: 'rect', x: x, y: y, width: w, height: h
-    @add wall for wall in walls
+        @add type: 'rect', x: x, y: y, width: w, height: h
 
 module.exports = Walls

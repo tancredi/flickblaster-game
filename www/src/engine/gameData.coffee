@@ -1,6 +1,6 @@
 
 ###
-Game Data class
+Game Data module
 
 Handles the loading and storing of the JSON game assets
 The assets used are located in www/game/ and they are:
