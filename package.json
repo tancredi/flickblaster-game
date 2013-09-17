@@ -6,11 +6,12 @@
     "grunt": "~0.4.1",
     "grunt-contrib-less": "~0.5.1",
     "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-coffee": "~0.7.0",
     "grunt-browserify2": "~0.1.7",
-    "grunt-exec": "~0.4.0",
+    "grunt-exec": "~0.4.2",
     "grunt-parallel": "~0.1.0",
-    "grunt-contrib-handlebars": "~0.5.9"
+    "grunt-contrib-handlebars": "~0.5.9",
+    "coffee-script": "~1.6.3",
+    "browserify": "~2.31.0"
   },
   "dependencies": {
     "hogan.js": "~2.0.0",

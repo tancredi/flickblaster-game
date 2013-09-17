@@ -2,7 +2,7 @@
 *.sublime-workspace
 *.DS_Store
 node_modules
-www/lib
+lib
 www/js/app.js
 www/js/templates.js
 www/css
