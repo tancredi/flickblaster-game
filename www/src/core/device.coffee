@@ -1,5 +1,10 @@
 
-# Provides information about the device and make adjustments for testing
+###
+Device module
+
+* Provides information about the device and makes adjustments for testing if specified
+* Maps all click events to equivalent touch events and provides them to UI modules
+###
 
 win = $ window
 

@@ -1,4 +1,11 @@
 
+###
+Pause Modal class
+
+Modal shown when pausing
+Read BaseModal for more
+###
+
 BaseModal = require './BaseModal'
 device = require '../../core/device'
 views = require '../../core/views'
@@ -8,13 +15,15 @@ class PauseModal extends BaseModal
   classNames: 'modal-pause'
 
   constructor: (@wrap, @context, options = {}) ->
-    @game = options.game
-    @levelName = options.levelName
+    @game = options.game            # Parent GameView instance
+    @levelName = options.levelName  # Name of the level currently played
 
+    # 'Pause' the world physics and updates
     @game.world.stop()
 
     super
 
+  # Delegate actions to all buttons
   bind: ->
     super
 

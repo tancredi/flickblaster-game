@@ -1,3 +1,10 @@
+
+###
+Geometry helpers
+
+A few geometry shortcuts and utilities
+###
+
 module.exports =
 
   radToDeg: (rad) -> return rad * ( 180 / Math.PI )
@@ -11,6 +18,7 @@ module.exports =
       y: force * Math.sin rad
     return vector
 
+  # Returns the distance between two points
   getDistance: (a, b) ->
     xs = b.x - a.x
     xs = xs * xs
@@ -20,6 +28,7 @@ module.exports =
 
     return Math.abs Math.sqrt xs + ys
 
+  # Return the addition of an array of X and Y vectors
   sumVectors: (vectors) ->
     anglesSumX = 0
     anglesSumY = 0
@@ -36,5 +45,11 @@ module.exports =
     force = forceSum
     return @degToVector angleDeg, force
 
+  # Test if two rectangles intersect
   rectanglesIntersect: (a, b) ->
-    return not (b.x > a.x + a.width or b.x + b.x + b.width < a.x or b.y > a.y + a.height or b.y + b.height < a.y)
+    return not (
+      b.x > a.x + a.width or
+      b.x + b.x + b.width < a.x or
+      b.y > a.y + a.height or
+      b.y + b.height < a.y
+      )

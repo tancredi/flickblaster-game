@@ -1,5 +1,9 @@
 
-# Views manager - Stores, instanciates, animate and handle views
+###
+Views module
+
+Stores, instanciates, animates and handles views
+###
 
 renderer = require './renderer'
 device = require './device'

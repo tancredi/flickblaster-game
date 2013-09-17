@@ -1,8 +1,8 @@
 
 ###
-DB manager
+DB Manager module
 
-Filters calls to local SQLite DB
+Interface to local SQLite DB
 ###
 
 debugDb = require('./debug').debugDB

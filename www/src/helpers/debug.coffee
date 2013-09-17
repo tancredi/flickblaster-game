@@ -1,10 +1,18 @@
 
+###
+Debug helpers
+
+Debugging tools
+###
+
+# Create a full-width canvas element, add it to the DOM and return its 2D context
 createDebugCtx = (wrap, width, height) ->
     canvas = $ "<canvas width='#{width}' height='#{height}'></canvas>"
     canvas.css position: 'absolute', left: 0, top: 0
     wrap.prepend canvas
     return canvas[0].getContext '2d'
 
+# Creates and displays the Box2D canvas debugger for a given World
 initPhysicsDebugger = (world) ->
   width = world.viewport.worldToScreen world.viewport.width
   height = world.viewport.worldToScreen world.viewport.height
@@ -23,5 +31,4 @@ initPhysicsDebugger = (world) ->
 
   return debugDraw
 
-module.exports =
-  initPhysicsDebugger: initPhysicsDebugger
+module.exports = { initPhysicsDebugger }

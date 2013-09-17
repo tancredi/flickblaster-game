@@ -1,5 +1,9 @@
 
-# View Transitions - Core transitions and core DOM manipulation
+###
+View Transitions module
+
+Contains core transitions between Views and DOM manipulation
+###
 
 device = require './device'
 debug = require './debug'

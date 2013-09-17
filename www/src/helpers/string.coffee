@@ -1,4 +1,9 @@
 
+###
+String helpers
+
+###
+
 module.exports =
 
   zeroPad: (value, padding) ->

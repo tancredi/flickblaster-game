@@ -1,3 +1,10 @@
+
+###
+DOM helpers
+
+Common functions and utilities for DOM manipulation
+###
+
 module.exports =
 
   getByRole: (role, parent = null, filter = '') ->

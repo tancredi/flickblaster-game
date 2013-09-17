@@ -1,5 +1,10 @@
 
-# Schemas manager, takes care of migrations and versioning of DB tables
+###
+
+Schemas class
+
+Takes care of migrations and versioning of DB tables in basic and hacky fashion
+###
 
 db = require './db'
 debugDb = require('./debug').debugDB

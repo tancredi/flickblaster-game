@@ -1,7 +1,11 @@
 
-helpers = require '../helpers/debug'
+###
+Debug module
 
-# Debug settings
+Defines debug settings - useful for debugging
+###
+
+helpers = require '../helpers/debug'
 
 module.exports =
   skipAnimations: false     # Skip view transitions (And other animations)

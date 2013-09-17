@@ -1,5 +1,14 @@
 
-# Templates manager and renderer using Handlebars
+###
+Renderer Module
+
+Handles the storing and rendering of templates
+
+The templates stored are Handlebars templates pre-compiled into functions
+They are set in the main App file
+
+Used to render all UI elements
+###
 
 module.exports =
 
