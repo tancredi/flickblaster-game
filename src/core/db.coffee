@@ -9,9 +9,9 @@ debugDb = require('./debug').debugDB
 
 # SQLite database configuration
 config =
-  ns: 'flickblaster'       # Local DB namespace
+  ns: 'flickblaster'      # Local DB namespace
   version: ''             # Database Version
-  name: 'Flickblaster'     # Display Name
+  name: 'Flickblaster'    # Display Name
   size: 1024 * 1024       # Database Size
 
 module.exports =

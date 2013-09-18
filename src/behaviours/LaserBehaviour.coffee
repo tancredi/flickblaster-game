@@ -36,22 +36,16 @@ class LaserBehaviour extends BaseBehaviour
     # Switch off if the laser Entity has the attribute 'off' set to true
     @off() if (@entity.hasAttr 'off') and @entity.attributes.off
 
-  # Fry that MOFO
   burnPlayer: ->
-    # Add extremely violent burning effect to the player's sprite
+    # Fade in burning FX decorator
     sprite = @player.sprites[0]
     decorator = sprite.getDecorator 'burn'
     decorator.fadeIn 100
 
-    # Fade that n00b user off the scene
+    # Fade the player Sprite out
     sprite.el.fadeOut 300, =>
       @player.remove()
-      # Use underscore event emitter to communicate the crude ending of this story
       (_ @player).emit 'die'
-      # The player is just past now
-      # Should have thought about it before flicking on a laser
-      # Hopefully, he'll learn with time
-      # And stop flicking about like a nutter
 
   # Turn the laser off
   off: ->

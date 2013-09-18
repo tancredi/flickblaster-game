@@ -45,7 +45,7 @@ class PlayerBehaviour extends BaseBehaviour
       @entity.remove()
       (_ @world).emit 'pot', [ @entity, target ]
 
-  # Fade the player out and scale it down with
+  # Fade the player Sprites out
   potFx: (callback) ->
     for sprite in @entity.sprites
       sprite.el.transition scale: .1, opacity: 0, 600
