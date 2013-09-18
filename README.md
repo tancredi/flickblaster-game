@@ -57,10 +57,10 @@ Grunt can run all necessary tasks on his own, the Cakefile is only setup to exec
 
 ### Build Tasks
 
-* **LESS** - Compile `less/index.less` into `www/css/index.css`
-* **Handlebars** - Pre-compile Handlebars templates in `templates/` into `www/js/templates.js`
-* **Coffee** - Compile the CoffeeScript source in `src/` in Javascript inside `lib/`
-* **Bundle** - Wrap the generated JavaScript in `lib/` using Browserify into a single `www/js/app.js` file
+* LESS - Compile `less/index.less` into `www/css/index.css`
+* Handlebars - Pre-compile Handlebars templates in `templates/` into `www/js/templates.js`
+* Coffee - Compile the CoffeeScript source in `src/` in Javascript inside `lib/`
+* *Bundle** - Wrap the generated JavaScript in `lib/` using Browserify into a single `www/js/app.js` fil
 
 # Run
 
@@ -85,16 +85,16 @@ For more information about the Cordova Commmand-line interface read the [officia
 
 A map of the core directories of the app
 
-├── **less** - *Contains the LESS source*
-├── **platforms**
-│   ├── **android** - *Android app*
-│   └── **ios** - *iOS Xcode project*
-├── **plugins** - *Cordova plugins*
-├── **src** - *App source*
-├── **templates** - *Handlebards templates*
-└── **www** - *Web-app root*
-    ├── **css** - *Compiled CSS*
-    ├── **game** - *JSON Game data*
-    └── **js** - *Compiled and vendor JavaScript
+├── less - Contains the LESS source
+├── platforms
+│   ├── android - Android app
+│   └── ios - iOS Xcode project
+├── plugins - Cordova plugins
+├── src - App source
+├── templates - Handlebards templates
+└── www - Web-app root
+    ├── css - Compiled CSS
+    ├── game - JSON Game data
+    └── js - Compiled and vendor JavaScript
 
 
