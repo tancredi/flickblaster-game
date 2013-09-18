@@ -7,6 +7,17 @@ The game is written in [CoffeeScript](http://coffeescript.org/), bundled with [B
 
 The source code is commented end to end and for better understanding.
 
+# Quick source overlook
+
+The coffeescript source of the app is all contained in `src/`
+The directories inside it are the following:
+
+* core - *The web-app framework core (Template rendering, routing, UI) is contained in*
+* views - *All view controllers. GameView contains part of the base game mechanics*
+* engine - *The game engine core is contained in this directory. World, viewport, entities, etc...*
+* behaviours - *The bahaviours of all game entities that determine the game logic*
+* ui - *UI elements and modules*
+* helpers - *Shared utilities*
 
 # Requirements
 
@@ -99,14 +110,3 @@ A map of the core directories of the app
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript
 ```
-# The source
-
-The coffeescript source of the app is all contained in `src/`
-The directories inside it are the following:
-
-* core - *The web-app framework core (Template rendering, routing, UI) is contained in*
-* views - *All view controllers. GameView contains part of the base game mechanics*
-* engine - *The game engine core is contained in this directory. World, viewport, entities, etc...*
-* behaviours - *The bahaviours of all game entities that determine the game logic*
-* ui - *UI elements and modules*
-* helpers - *Shared utilities*
