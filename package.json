@@ -5,6 +5,9 @@
   "scripts": {
     "start": "coffee server.coffee"  
   },
+  "dependencies": {
+    "express": "~3.3.4"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-less": "~0.5.1",
@@ -15,11 +18,5 @@
     "grunt-contrib-handlebars": "~0.5.9",
     "coffee-script": "~1.6.3",
     "browserify": "~2.31.0"
-  },
-  "dependencies": {
-    "hogan.js": "~2.0.0",
-    "cli-color": "~0.2.2",
-    "connect": "~2.7.11",
-    "express": "~3.3.4"
   }
 }
