@@ -2,6 +2,9 @@
   "name": "b2d",
   "version": "0.0.0",
   "author": "Tancredi Trugenberger",
+  "scripts": {
+    "start": "coffee server.coffee"  
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-less": "~0.5.1",
