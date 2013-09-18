@@ -71,3 +71,30 @@ npm start
 ```
 
 You can open your browser at http://localhost:3000 and start playing
+
+# Build with Cordova
+
+Run `cordova build` to build the app to all configured platforms
+You can also run `cordova build [platform]` to build to a specific platform. `ios` and `android` are already configured in the project.
+
+Find the generated builds in the `platforms/` directory.
+
+For more information about the Cordova Commmand-line interface read the [official documentation](http://cordova.apache.org/docs/en/2.9.0/guide_cli_index.md.html).
+
+# Directory stucture
+
+A map of the core directories of the app
+
+├── **less** - *Contains the LESS source*
+├── **platforms**
+│   ├── **android** - *Android app*
+│   └── **ios** - *iOS Xcode project*
+├── **plugins** - *Cordova plugins*
+├── **src** - *App source*
+├── **templates** - *Handlebards templates*
+└── **www** - *Web-app root*
+    ├── **css** - *Compiled CSS*
+    ├── **game** - *JSON Game data*
+    └── **js** - *Compiled and vendor JavaScript
+
+
