@@ -33,7 +33,7 @@ brew install node
 sudo npm install -g cordova`
 ```
 
-* [Coffeescript](coffeescript.com) - Server, build tools and the game source are written in coffeescript
+* [Coffeescript](coffeescript.com) - Server, build tools and game source are written in coffeescript
 ```
 sudo npm install -g coffee-script
 ```
