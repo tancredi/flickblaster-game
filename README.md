@@ -23,25 +23,10 @@ The directories inside it are the following:
 
 Includes requirements to build the app locally and run with a the local server for browser testing and also to deploy to a cordova build
 
-* [Node.js](http://nodejs.org/) - Used for building the app, managing dependencies and run the local server for testing
-```
-brew install node
-```
-
-* [Cordova command-line interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html) - Used to build and deploy the app to cordova with a few simple commands
-```
-sudo npm install -g cordova`
-```
-
-* [Coffeescript](coffeescript.com) - Server, build tools and game source are written in coffeescript
-```
-sudo npm install -g coffee-script
-```
-
-* [Grunt](http://gruntjs.com/) - Runs build tasks
-```
-sudo npm install -g grunt-cli
-```
+* [Node.js](http://nodejs.org/) ``brew install node``
+* [Coffeescript](coffeescript.com) - To build the web source - Install: `sudo npm install -g coffee-script`
+* [Grunt](http://gruntjs.com/) - To run build tasks - Install: `sudo npm install -g grunt-cli`
+* [Cordova command-line interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html) - To build mobile source - Install: `sudo npm install -g cordova`
 
 # Install
 
