@@ -85,6 +85,7 @@ For more information about the Cordova Commmand-line interface read the [officia
 
 A map of the core directories of the app
 
+```
 ├── less - Contains the LESS source
 ├── platforms
 │   ├── android - Android app
@@ -96,5 +97,5 @@ A map of the core directories of the app
     ├── css - Compiled CSS
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript
-
+```
 
