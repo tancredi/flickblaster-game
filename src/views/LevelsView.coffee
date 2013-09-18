@@ -9,7 +9,6 @@ BaseView = require '../core/BaseView'
 views = require '../core/views'
 device = require '../core/device'
 getByRole = (require '../helpers/dom').getByRole
-zeroPad = (require '../helpers/string').zeroPad
 gameData = require '../engine/gameData'
 userData = require '../engine/userData'
 
