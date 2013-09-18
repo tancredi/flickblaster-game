@@ -1,16 +1,14 @@
 
 # FlickBlaster
 
-An open-source HTML5 game created as a demo for my LXJS 2013 talk about game development
+An HTML5 top-down physics-based puzzle game layed out in MVC fashion, rendered using a combination of DOM, SVG and canvas wrapped as a mobile app using Cordova.
 
 The game is written in [CoffeeScript](http://coffeescript.org/), bundled with [Browserify](http://browserify.org/) and wrapped as a [Cordova](http://cordova.apache.org/) cross-platform app, but can also be executed and tested in the browser.
-
-The source code is commented end to end and for better understanding.
 
 # Quick source overlook
 
 The coffeescript source of the app is all contained in `src/`
-The directories inside it are the following:
+The directory structure is layed out as follow:
 
 * core - *The web-app framework core (Template rendering, routing, UI) is contained in*
 * views - *All view controllers. GameView contains part of the base game mechanics*
@@ -19,7 +17,7 @@ The directories inside it are the following:
 * ui - *UI elements and modules*
 * helpers - *Shared utilities*
 
-# Requirements
+# Global dependencies
 
 Includes requirements to build the app locally and run with a the local server for browser testing and also to deploy to a cordova build
 
@@ -51,7 +49,7 @@ Grunt can run all necessary tasks on his own, the Cakefile is only setup to exec
 * `cake build` - Built the app once
 * `cake watch` - Watch for changes
 
-### Build Tasks
+### Building Tasks
 
 * less - *Compile `less/index.less` into `www/css/index.css`*
 * handlebars - *Pre-compile Handlebars templates in `templates/` into `www/js/templates.js`*
