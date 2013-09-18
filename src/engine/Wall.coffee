@@ -43,7 +43,7 @@ class Wall extends Body
       ctx.y -= ctx.height / 2
 
     # Set circle-specific rendering variables
-    if @type is 'circle'
+    else if @type is 'circle'
       ctx.radius = @viewport.worldToScreen @radius
 
     # Set polygon-specific rendering variables
