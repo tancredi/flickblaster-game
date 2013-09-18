@@ -75,6 +75,7 @@ You can open your browser at http://localhost:3000 and start playing
 # Build with Cordova
 
 Run `cordova build` to build the app to all configured platforms.
+
 You can also run `cordova build [platform]` to build to a specific platform. `ios` and `android` are already configured in the project.
 
 Find the generated builds in the `platforms/` directory.
