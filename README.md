@@ -63,6 +63,12 @@ You can open your browser at http://localhost:3000 and start playing
 
 # Build with Cordova
 
+First, you may have to setup your environment to build for ios / android.
+For instructions on how to do that read the Apache Cordova Documentation:
+
+* [Getting Started with iOS](http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_ios_index.md.html)
+* [Getting Started with Android](http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_android_index.md.html)
+
 Run `cordova build` to build the app to all configured platforms.
 
 You can also run `cordova build [platform]` to build to a specific platform. `ios` and `android` are already configured in the project.
