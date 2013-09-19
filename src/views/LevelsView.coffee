@@ -52,13 +52,21 @@ class LevelsView extends BaseView
 
     # Get level elements
     @elements.levels = getByRole 'level', @elements.main
+    @elements.nav = home: getByRole 'nav-home', @elements.main
 
   bind: =>
     super
 
     # Bind click on level elements
     self = @
-    @elements.levels.on (device.getEvent 'click'), -> self.openLevel ($ @).attr 'data-level-name'
+    @elements.levels.on (device.getEvent 'click'), (e) ->
+      e.preventDefault()
+      self.openLevel ($ @).attr 'data-level-name'
+
+    # Bind back to home button
+    @elements.nav.home.on (device.getEvent 'click'), (e) ->
+      e.preventDefault()
+      views.open 'home', 'slide-left'
 
   # Start the game on the specified level (Opens Game View with chosen level name)
   openLevel: (levelName) -> views.open 'game', 'slide-right', null, false, levelName

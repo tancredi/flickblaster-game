@@ -6,9 +6,7 @@
     "start": "coffee server.coffee"
   },
   "dependencies": {
-    "express": "~3.3.x"
-  },
-  "devDependencies": {
+    "express": "~3.3.x",
     "coffee-script": "~1.6.x",
     "browserify": "~2.31.x",
     "watch-tree-maintained": "~0.1.x",

@@ -30,7 +30,7 @@ class LaserBehaviour extends BaseBehaviour
       @burnPlayer() if @active
 
     # Bind callback to collision stop with player instance
-    @entity.onCollisionStop @player, =>
+    @entity.onCollisionEnd @player, =>
       @touching = false
 
     # Switch off if the laser Entity has the attribute 'off' set to true

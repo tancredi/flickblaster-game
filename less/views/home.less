@@ -1,0 +1,46 @@
+
+.view.view-home {
+	@bg-color: lighten(@color-pale-blue-lighter, 20%);
+
+	background-color: @bg-color;
+	.bg-image('illustrations/home', 100% auto, no-repeat, center bottom);
+
+	.inner {
+		padding: 20px;
+		.vertical-gradient(@bg-color, fade(@bg-color, 0%), transparent);
+		padding-bottom: 100px;
+
+		.main-nav {
+			margin: auto;
+			max-width: 500px;
+
+			.logo {
+				width: 100%;
+				display: block;
+				margin: 20px auto 40px;
+			}
+
+			.button-flat {
+				max-width: 300px;
+				margin: auto;
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.button-flat {
+				font-size: @type-heading6-size - 3px;
+
+				i {
+					margin-right: 4px;
+				}
+
+				.icon-list {
+					font-size: @type-heading6-size - 6px;
+				}
+			}
+		}
+	}
+}

@@ -32,7 +32,7 @@ Includes requirements to build the app locally and run with a the local server f
 ```
 git clone git@github.com:tancredi/flickblaster-game.git
 cd flickblaster-game
-npm install -d
+npm install
 ```
 
 Now you just have to compile the app and run the server
