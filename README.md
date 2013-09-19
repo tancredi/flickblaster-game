@@ -129,6 +129,42 @@ src/game
 └── utils - Shared utilities and modules
 ```
 
+# Core Game Modeling
+
+#### World
+
+The game is tied together by the **World**, which contains **Layers** and a **Loop**, a **Viewport** and the Box2D **physics world**
+
+#### Loop
+
+The **Loop** updates the game at every accessible frame depending on the device performance using `requestAnimationFrame` or falling back to vendor polyfills or a simple `setTimeout` loop.
+
+It provides a simple `use` method to bind callbacks to every update.
+
+#### Viewport
+
+The **Viewport** wraps the stage element and takes care of moving it around, scaling it to fit the screen size and is used by other modules to translate game coordinates into screen coordinates and vice-versa.
+
+#### Layers
+
+The **Layers** contain different types of game items. They take care of separating it's children and updating at every iteration of the **World**'s **Loop**
+
+#### Game Items
+
+Gamt items are the player, targets, lasers and everything that appears on stage. They all extend from **BaseItem**, and there are three main types of them:
+
+* **Body** - *Bodies are bi-dimensional physical objects in the stage, they are added to the Box2D World and can be of three types: `circle`, `rect` and `poly`*
+* **Sprite** - *Sprites are visual elements, they can be animated and contain decorators, which are visual sub-elemtents used for effects*
+* **Entity** - *Entites are the main players on the scene - They contain bodies and sprites and can be associated to a **Behaviour** *
+
+#### Behaviours
+
+**Behaviours** are instanciated from **Entities**, depending on the entity `behaviour` property, usually determined through the editor or by a preset.
+
+They are passed the parent **Entity** and **World**, and they get updated at every **Loop* iteration, so that they can manipulate properties and events around them freely.
+
+Behaviours determine the base game-logic.
+
 # Documentation
 
 The documentation contained in `docs/` is generated using [Codo](https://github.com/netzpirat/codo).
