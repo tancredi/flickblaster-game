@@ -14,7 +14,7 @@ The directory structure is layed out as follow:
 
 * core - *The web-app framework core (Template rendering, routing, UI, ...) is contained in*
 * views - *All view controllers. GameView contains part of the base game mechanics*
-* engine - *The game engine core (World, Viewport, Entity, ...) is contained in this directory.*
+* game - *The game engine core (World, Viewport, Entity, ...) is contained in this directory.*
 * behaviours - *The bahaviours of all game entities that determine the game logic*
 * ui - *UI elements and modules*
 * helpers - *Shared utilities*
@@ -84,6 +84,7 @@ For more information about the Cordova Commmand-line interface read the [officia
 A map of the core directories of the app
 
 ```
+*
 ├── docs - Contains Codo documentation
 ├── less - Contains the LESS source
 ├── platforms
@@ -97,6 +98,37 @@ A map of the core directories of the app
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript
 ```
+
+### Core directory
+
+The web app framework taking care of views, transitions, routing, rendering of the templates, etc.. is contained in `src/core/` and contains the following modules:
+
+```
+src/core
+├── BaseView.coffee - Base view controller class
+├── device.coffee - Module providing information about the used device
+├── renderer.coffee - Template storage and rendering
+├── viewTransitions.coffee - All available transitions between views
+└── views.coffee - Manages views and routing
+```
+
+### Game directory
+
+Most modules and classes relative to the actual game engine are contained in `src/game/`, except for the GameView class contained in `src/views/`.
+
+The game directory is organised as follows:
+
+```
+src/game
+├── World.coffee - World class - Ties together the engine
+├── behaviours - Behaviour classes that apply to Entities and define the game logic
+├── components - Core game classes (Loop, Viewport, Layer, physics, ...)
+├── config.coffee - Configuration settings used across the game modules
+├── controls - Game controls classes
+├── items - GameItem Classes (Entity, Sprite, Body, ...)
+└── utils - Shared utilities and modules
+```
+
 # Documentation
 
 The documentation contained in `docs/` is generated using [Codo](https://github.com/netzpirat/codo).

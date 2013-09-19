@@ -15,7 +15,7 @@ The main file that starts up the app
 device = require './core/device'
 renderer = require './core/renderer'
 views = require './core/views'
-gameData = require './engine/gameData'
+gameData = require './game/utils/gameData'
 
 # Import Secondary Modules
 touchables = require './ui/touchables'

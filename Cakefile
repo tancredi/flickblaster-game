@@ -67,6 +67,7 @@ build =
   js: (callback) ->
     # Compile CoffeeScript
     console.log color.yellow 'Compiling CoffeeScript...'
+
     exec "coffee -o #{confs.js.lib} #{confs.js.src}", ->
 
       # Bundles app.js with the generated files using local browserify

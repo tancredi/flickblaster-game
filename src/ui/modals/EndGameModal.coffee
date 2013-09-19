@@ -2,7 +2,7 @@
 BaseModal = require './BaseModal'
 device = require '../../core/device'
 views = require '../../core/views'
-gameData = require '../../engine/gameData'
+gameData = require '../../game/utils/gameData'
 
 # Delay in milliseconds of the stars animations after opening
 animationsDelay = 600

@@ -3,13 +3,15 @@ BaseView = require '../core/BaseView'
 getByRole = (require '../helpers/dom').getByRole
 device = require '../core/device'
 debug = require '../core/debug'
-phys = require '../helpers/physics'
-World = require '../engine/World'
-GameControls = require '../engine/GameControls'
 views = require '../core/views'
+
 EndGameModal = require '../ui/modals/EndGameModal'
 PauseModal = require '../ui/modals/PauseModal'
-userData = require '../engine/userData'
+
+World = require '../game/World'
+GameControls = require '../game/controls/GameControls'
+userData = require '../game/utils/userData'
+phys = require '../game/utils/physics'
 
 # Cache jQuery-wrapped window object
 win = $ window

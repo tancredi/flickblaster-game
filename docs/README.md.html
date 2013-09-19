@@ -119,7 +119,7 @@
 The directory structure is layed out as follow:</p><ul>
 <li>core - <em>The web-app framework core (Template rendering, routing, UI, ...) is contained in</em></li>
 <li>views - <em>All view controllers. GameView contains part of the base game mechanics</em></li>
-<li>engine - <em>The game engine core (World, Viewport, Entity, ...) is contained in this directory.</em></li>
+<li>game - <em>The game engine core (World, Viewport, Entity, ...) is contained in this directory.</em></li>
 <li>behaviours - <em>The bahaviours of all game entities that determine the game logic</em></li>
 <li>ui - <em>UI elements and modules</em></li>
 <li>helpers - <em>Shared utilities</em></li>
@@ -149,7 +149,8 @@ npm install -d</code></pre><p>Now you just have to compile the app and run the s
 For instructions on how to do that read the Apache Cordova Documentation:</p><ul>
 <li><a href="http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_ios_index.md.html">Getting Started with iOS</a></li>
 <li><a href="http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_android_index.md.html">Getting Started with Android</a></li>
-</ul><p>Run <code>cordova build</code> to build the app to all configured platforms.</p><p>You can also run <code>cordova build [platform]</code> to build to a specific platform. <code>ios</code> and <code>android</code> are already configured in the project.</p><p>Find the generated builds in the <code>platforms/</code> directory.</p><p>For more information about the Cordova Commmand-line interface read the <a href="http://cordova.apache.org/docs/en/2.9.0/guide_cli_index.md.html">official documentation</a>.</p><h1>Directory stucture</h1><p>A map of the core directories of the app</p><pre><code>├── docs - Contains Codo documentation
+</ul><p>Run <code>cordova build</code> to build the app to all configured platforms.</p><p>You can also run <code>cordova build [platform]</code> to build to a specific platform. <code>ios</code> and <code>android</code> are already configured in the project.</p><p>Find the generated builds in the <code>platforms/</code> directory.</p><p>For more information about the Cordova Commmand-line interface read the <a href="http://cordova.apache.org/docs/en/2.9.0/guide_cli_index.md.html">official documentation</a>.</p><h1>Directory stucture</h1><p>A map of the core directories of the app</p><pre><code>*
+├── docs - Contains Codo documentation
 ├── less - Contains the LESS source
 ├── platforms
 │   ├── android - Android app
@@ -161,6 +162,20 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
     ├── css - Compiled CSS
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript</code></pre>
+<h3>Core directory</h3><p>The web app framework taking care of views, transitions, routing, rendering of the templates, etc.. is contained in <code>src/core/</code> and contains the following modules:</p><pre><code>src/core
+├── BaseView.coffee - Base view controller class
+├── device.coffee - Module providing information about the used device
+├── renderer.coffee - Template storage and rendering
+├── viewTransitions.coffee - All available transitions between views
+└── views.coffee - Manages views and routing</code></pre>
+<h3>Game directory</h3><p>Most modules and classes relative to the actual game engine are contained in <code>src/game/</code>, except for the GameView class contained in <code>src/views/</code>.</p><p>The game directory is organised as follows:</p><pre><code>src/game
+├── World.coffee - World class - Ties together the engine
+├── behaviours - Behaviour classes that apply to Entities and define the game logic
+├── components - Core game classes (Loop, Viewport, Layer, physics, ...)
+├── config.coffee - Configuration settings used across the game modules
+├── controls - Game controls classes
+├── items - GameItem Classes (Entity, Sprite, Body, ...)
+└── utils - Shared utilities and modules</code></pre>
 <h1>Documentation</h1><p>The documentation contained in <code>docs/</code> is generated using <a href="https://github.com/netzpirat/codo">Codo</a>.</p><p>Generate an updated version by running <code>cake docs</code>.</p><h1>Dependencies</h1>
 <ul>
 <li><code>express</code>: <a href="http://expressjs.com/">Express 3</a> - Used to run the server</li>
@@ -179,7 +194,7 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
     </div>
     <div id='footer'>
   Generated on
-  Thu Sep 19 2013 05:30:29 GMT+0100 (BST)
+  Thu Sep 19 2013 17:21:49 GMT+0100 (BST)
   by
   <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
   v1.9.0
