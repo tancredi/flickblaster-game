@@ -131,6 +131,8 @@ src/game
 
 # Core Game Modeling
 
+![Core game engine concepts](http://oi40.tinypic.com/2rrxyyp.jpg)
+
 #### World
 
 The game is tied together by the **World**, which contains **Layers** and a **Loop**, a **Viewport** and the Box2D **physics world**
