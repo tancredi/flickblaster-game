@@ -105,12 +105,13 @@ Generate an updated version by running `cake docs`.
 
 # Dependencies
 
-* `coffee-script`: [Coffeescript](http://coffeescript.org) - Compile and run the game
-* `browserify`: [Browserify](http://browserify.org/) - Bundles javascript modules for the browser
-* `watch-tree-maintained`: [Watch-Tree](https://github.com/tafa/node-watch-tree) - Set up watch tasks
-* `async`: [Async.js](https://github.com/caolan/async) - Powerful helper for asynchronus JavaScript
-* `cli-color`: [Cli-color](https://github.com/medikoo/cli-color) - Simple colors for the console
-* `less`: [LESS CSS](http://lesscss.org/ - Dynamic CSS pre-processor
-* `handlebars`: [Handlebars](http://handlebarsjs.com/) - Semantic templating language
-* `codo`: [Codo](https://github.com/netzpirat/codo) - CoffeeSccript API generator
-* `retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Generate image resizes for different pixel-ratios
+* `express`: [Express 3](http://expressjs.com/) - Used to run the server
+* `coffee-script`: [Coffeescript](http://coffeescript.org) - Used to compile and run the game
+* `browserify`: [Browserify](http://browserify.org/) - Used to bundle javascript modules for the browser
+* `watch-tree-maintained`: [Watch-Tree](https://github.com/tafa/node-watch-tree) - Used to set up watch tasks
+* `async`: [Async.js](https://github.com/caolan/async) - Used to ease asynchronus operations
+* `cli-color`: [Cli-color](https://github.com/medikoo/cli-color) - Used to easily display colors in the console
+* `less`: [LESS CSS](http://lesscss.org/ - Used to pre-process the CSS
+* `handlebars`: [Handlebars](http://handlebarsjs.com/) - Used to pre-compile templates
+* `codo`: [Codo](https://github.com/netzpirat/codo) - Used to generate the documentation
+* `retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Used to generate resized assets for different pixel-ratios
