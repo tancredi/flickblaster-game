@@ -18,3 +18,4 @@ platforms/ios/CordovaLib/build
 platforms/ios/build/
 platforms/ios/www/
 platforms/ios/cordova/console.log
+npm-debug.log
