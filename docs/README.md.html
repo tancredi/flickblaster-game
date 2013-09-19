@@ -135,6 +135,8 @@ cd flickblaster-game
 npm install -d</code></pre><p>Now you just have to compile the app and run the server</p><h1>Compile</h1><p>Build the app using <a href="http://coffeescript.org/documentation/docs/cake.html">Cake</a></p><ul>
 <li><code>cake build</code> - Built the app once</li>
 <li><code>cake watch</code> - Watch for changes</li>
+<li><code>cake docs</code> - Update documentation</li>
+<li><code>cake downsize</code> - Generate resized assets for different pixel-ratios</li>
 </ul>
 <h3>Building Tasks</h3>
 <ul>
@@ -147,7 +149,8 @@ npm install -d</code></pre><p>Now you just have to compile the app and run the s
 For instructions on how to do that read the Apache Cordova Documentation:</p><ul>
 <li><a href="http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_ios_index.md.html">Getting Started with iOS</a></li>
 <li><a href="http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_android_index.md.html">Getting Started with Android</a></li>
-</ul><p>Run <code>cordova build</code> to build the app to all configured platforms.</p><p>You can also run <code>cordova build [platform]</code> to build to a specific platform. <code>ios</code> and <code>android</code> are already configured in the project.</p><p>Find the generated builds in the <code>platforms/</code> directory.</p><p>For more information about the Cordova Commmand-line interface read the <a href="http://cordova.apache.org/docs/en/2.9.0/guide_cli_index.md.html">official documentation</a>.</p><h1>Directory stucture</h1><p>A map of the core directories of the app</p><pre><code>├── less - Contains the LESS source
+</ul><p>Run <code>cordova build</code> to build the app to all configured platforms.</p><p>You can also run <code>cordova build [platform]</code> to build to a specific platform. <code>ios</code> and <code>android</code> are already configured in the project.</p><p>Find the generated builds in the <code>platforms/</code> directory.</p><p>For more information about the Cordova Commmand-line interface read the <a href="http://cordova.apache.org/docs/en/2.9.0/guide_cli_index.md.html">official documentation</a>.</p><h1>Directory stucture</h1><p>A map of the core directories of the app</p><pre><code>├── docs - Contains Codo documentation
+├── less - Contains the LESS source
 ├── platforms
 │   ├── android - Android app
 │   └── ios - iOS Xcode project
@@ -158,12 +161,25 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
     ├── css - Compiled CSS
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript</code></pre>
-
+<h1>Documentation</h1><p>The documentation contained in <code>docs/</code> is generated using <a href="https://github.com/netzpirat/codo">Codo</a>.</p><p>Generate an updated version by running <code>cake docs</code>.</p><h1>Dependencies</h1>
+<ul>
+<li><code>express</code>: <a href="http://expressjs.com/">Express 3</a> - Used to run the server</li>
+<li><code>coffee-script</code>: <a href="http://coffeescript.org">Coffeescript</a> - Used to compile and run the game</li>
+<li><code>browserify</code>: <a href="http://browserify.org/">Browserify</a> - Used to bundle javascript modules for the browser</li>
+<li><code>watch-tree-maintained</code>: <a href="https://github.com/tafa/node-watch-tree">Watch-Tree</a> - Used to set up watch tasks</li>
+<li><code>async</code>: <a href="https://github.com/caolan/async">Async.js</a> - Used to ease asynchronus operations</li>
+<li><code>cli-color</code>: <a href="https://github.com/medikoo/cli-color">Cli-color</a> - Used to easily display colors in the console</li>
+<li><code>less</code>: [LESS CSS](<a href="http://lesscss.org/">http://lesscss.org/</a> - Used to pre-process the CSS)</li>
+<li><code>handlebars</code>: <a href="http://handlebarsjs.com/">Handlebars</a> - Used to pre-compile templates</li>
+<li><code>codo</code>: <a href="https://github.com/netzpirat/codo">Codo</a> - Used to generate the documentation</li>
+<li><code>retina-downsizer</code>: <a href="https://github.com/tancredi/node-retina-downsizer">Retina Downsizer</a> - Used to generate resized assets for different pixel-ratios</li>
+</ul>
+<h1>Sublime Text Project</h1><p>A <a href="http://www.sublimetext.com/">Sublime Text</a> project is provided in the repository (<code>flickblaster-game.sublime-project</code>).</p><p>The project makes it easier to browse through the directories of the project without being disturbed by compiled output, dependencies, mobile builds, documentation and superfluous directories or files.</p>
       </div>
     </div>
     <div id='footer'>
   Generated on
-  Thu Sep 19 2013 04:09:29 GMT+0100 (BST)
+  Thu Sep 19 2013 05:30:29 GMT+0100 (BST)
   by
   <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
   v1.9.0
