@@ -4,9 +4,11 @@ Game Data module
 
 Handles the loading and storing of the JSON game assets
 The assets used are located in www/game/ and they are:
-1. 'levels.json': Contains all levels maps
-2. 'materials.json': Contains all materials properties
-3.
+1. 'levels.json': Index of all levels
+2. 'levels/[level-name].json': Level maps
+3. 'materials.json': Contains all materials properties
+4. 'sprites.json': All sprite presets
+5. 'presets.json': All entity presets
 ###
 
 # Directory containing JSON assets - Relative to www/
