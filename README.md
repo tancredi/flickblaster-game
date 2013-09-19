@@ -37,15 +37,7 @@ npm install -d
 
 # Compile
 
-A Gruntfile and a Cakefile are setup for building the app.
-Grunt can run all necessary tasks on his own, the Cakefile is only setup to execute some of the Grunt tasks and spawn a more performant coffee and browserify process along with those - Use Cake for faster development
-
-### Using Grunt
-
-* `grunt build` - Build the app once
-* `grunt` - Watch for changes
-
-### Using Cake
+Build the app using [Cake](http://coffeescript.org/documentation/docs/cake.html)
 
 * `cake build` - Built the app once
 * `cake watch` - Watch for changes
