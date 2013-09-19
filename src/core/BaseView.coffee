@@ -1,15 +1,14 @@
 
+renderer = require './renderer'
+device = require './device'
+
 ###
-Base View class
+## Base View class
 
 Base class to extend from to create any view
 Takes care of basic rendering and defines mein methods
 ###
 
-renderer = require './renderer'
-device = require './device'
-
-# called by views module when initialising new views or changing state
 class BaseView
   templateName: ''  # Relative to www/templates/views
   fixHeight: false  # Set view height to device screen height after rendering

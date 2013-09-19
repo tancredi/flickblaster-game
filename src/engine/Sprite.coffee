@@ -1,6 +1,13 @@
 
+BaseItem = require './BaseItem'
+SpriteRenderer = require './SpriteRenderer'
+gameData = require './gameData'
+renderer = require '../core/renderer'
+
+wallsColor = '#a2bfc9'
+
 ###
-Sprite class
+## Sprite class
 
 Game Item displaying an asset or a portion of it in a DOM element on the stage
 Can be a child of an Entity, in which case it will wrap it's element in the Entity's wrap element,
@@ -11,15 +18,9 @@ It also makes use of decorators, which are other overlapped sprites that can be 
 off to create effects
 
 Initialise with a 'type' option, which will be the key of its preset in www/game/sprites.json
+
 Read Game Data class for more on JSON assets
 ###
-
-BaseItem = require './BaseItem'
-SpriteRenderer = require './SpriteRenderer'
-gameData = require './gameData'
-renderer = require '../core/renderer'
-
-wallsColor = '#a2bfc9'
 
 class Sprite extends BaseItem
   type: 'sprite'

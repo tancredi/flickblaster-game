@@ -1,10 +1,4 @@
 
-###
-Game View class
-
-Loads a level's data, wraps, initialises and runs game logic
-###
-
 BaseView = require '../core/BaseView'
 getByRole = (require '../helpers/dom').getByRole
 device = require '../core/device'
@@ -22,6 +16,12 @@ win = $ window
 
 # Milliseconds duration of intro animation (showing player and target if not visible already)
 introDuration = if debug.skipAnimations then 0 else 2400
+
+###
+## Game View class
+
+Loads a level's data, wraps, initialises and runs game logic
+###
 
 class GameView extends BaseView
   templateName: 'game'

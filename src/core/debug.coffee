@@ -1,6 +1,6 @@
 
 ###
-Debug module
+## Debug module
 
 Defines debug settings - useful for debugging
 ###

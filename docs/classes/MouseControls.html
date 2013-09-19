@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript API Documentation</title>
+  <link rel='stylesheet' href='../assets/codo.css' type='text/css'>
+  <script src='../assets/codo.js'></script>
+  <script src='../assets/search_data.js'></script>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../README.md.html' title='Flickblaster-game'>Flickblaster-game</a>
+    &raquo;
+    <a href='../class_index.html' title='Index'>Index</a>
+    &raquo;
+    <span class='title'>MouseControls</span>
+    <nav>
+      <ul>
+        <li class='noframes'>
+          (<a class='noframes' href='#'>no frames</a>)
+        </li>
+      </ul>
+    </nav>
+    <div id='search'>
+      <a id='class_list_link' href='../class_list.html'>Classes</a>
+      <a id='file_list_link' href='../file_list.html'>Files</a>
+      <a id='method_list_link' href='../method_list.html'>Methods</a>
+      <a id='extra_list_link' href='../extra_list.html'>Extras</a>
+    </div>
+  </div>
+  <iframe id='search_frame'></iframe>
+  <div id='fuzzySearch'>
+    <input type='text'>
+    <ol></ol>
+  </div>
+  <div id='help'>
+    <p>
+      Quickly fuzzy find classes, mixins, methods, file:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-T</span>
+        Open fuzzy finder dialog
+      </li>
+    </ul>
+    <p>
+      In frame mode you can toggle the list naviation frame on the left side:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-L</span>
+        Toggle list view
+      </li>
+    </ul>
+    <p>
+      You can focus a list in frame mode or toggle a tab in frameless mode:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-C</span>
+        Class list
+      </li>
+      <li>
+        <span>Ctrl-I</span>
+        Mixin list
+      </li>
+      <li>
+        <span>Ctrl-F</span>
+        File list
+      </li>
+      <li>
+        <span>Ctrl-M</span>
+        Method list
+      </li>
+      <li>
+        <span>Ctrl-E</span>
+        Extras list
+      </li>
+    </ul>
+    <p>
+      You can focus and blur the search input:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-S</span>
+        Focus search input
+      </li>
+      <li>
+        <span>Esc</span>
+        Blur search input
+      </li>
+    </ul>
+    <p>
+      In frameless mode you can close the list tab:
+    </p>
+    <ul>
+      <li>
+        <span>Esc</span>
+        Close list tab
+      </li>
+    </ul>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        MouseControls
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>src&#47;engine&#47;MouseControls.coffee</td>
+        </tr>
+      </table>
+      <h2>Overview</h2>
+      <div class='docstring'>
+  <h2>Mouse Controls class</h2><p>Utility class to quickly bind mouse controls setups
+Extend and have access to mouse position and cached mouse events at anytime</p>
+</div>
+<div class='tags'>
+</div>
+      <h2>Direct Known Subclasses</h2>
+      <p class='children'>
+        <a href='../classes/GameControls.html'>GameControls</a>
+      </p>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#constructor-instance'>
+        - (void) <strong>constructor</strong>(game)
+      </a>
+    </span>
+    <span class='constructor note title'>Constructor</span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#on-instance'>
+        - (void) <strong>on</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Enable controls
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#off-instance'>
+        - (void) <strong>off</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Disable controls
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#reset-instance'>
+        - (void) <strong>reset</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Unbind mouse events
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#bind-instance'>
+        - (void) <strong>bind</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Bind mouse events
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updateMousePosition-instance'>
+        - (void) <strong>updateMousePosition</strong>(e)
+      </a>
+    </span>
+    <span class='desc'>
+      Update x and y in the mouse stats
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#mouseDown-instance'>
+        - (void) <strong>mouseDown</strong>(e)
+      </a>
+    </span>
+    <span class='desc'>
+      Bound to &#39;mousedown&#39;
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#mouseMove-instance'>
+        - (void) <strong>mouseMove</strong>(e)
+      </a>
+    </span>
+    <span class='desc'>
+      Bound to &#39;mousemove&#39;
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#mouseUp-instance'>
+        - (void) <strong>mouseUp</strong>(e)
+      </a>
+    </span>
+    <span class='desc'>
+      Bound to &#39;mouseup&#39;
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#click-instance'>
+        - (void) <strong>click</strong>(target, e)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getDragOffset-instance'>
+        - (void) <strong>getDragOffset</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Get the offset of the current drag
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#dragStart-instance'>
+        - (void) <strong>dragStart</strong>(e)
+      </a>
+    </span>
+    <span class='desc'>
+      Called when drag started
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#dragMove-instance'>
+        - (void) <strong>dragMove</strong>(lastOffset, totalOffset, e)
+      </a>
+    </span>
+    <span class='desc'>
+      Called when drag moved
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#dragStop-instance'>
+        - (void) <strong>dragStop</strong>(e)
+      </a>
+    </span>
+    <span class='desc'>
+      Called when drag stopped
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getRelativeMouse-instance'>
+        - (void) <strong>getRelativeMouse</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Get mouse position relative to viewport
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getMouseEvent-instance'>
+        - (void) <strong>getMouseEvent</strong>(e)
+      </a>
+    </span>
+    <span class='desc'>
+      Normalise mouse and touch events
+    </span>
+  </li>
+</ul>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-instance'>
+      - (void) <strong>constructor</strong>(game)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='on-instance'>
+      - (void) <strong>on</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Enable controls</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='off-instance'>
+      - (void) <strong>off</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Disable controls</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='reset-instance'>
+      - (void) <strong>reset</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Unbind mouse events</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='bind-instance'>
+      - (void) <strong>bind</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Bind mouse events</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateMousePosition-instance'>
+      - (void) <strong>updateMousePosition</strong>(e)
+    </p>
+    <div class='docstring'>
+  <p>Update x and y in the mouse stats</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='mouseDown-instance'>
+      - (void) <strong>mouseDown</strong>(e)
+    </p>
+    <div class='docstring'>
+  <p>Bound to &#39;mousedown&#39;</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='mouseMove-instance'>
+      - (void) <strong>mouseMove</strong>(e)
+    </p>
+    <div class='docstring'>
+  <p>Bound to &#39;mousemove&#39;</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='mouseUp-instance'>
+      - (void) <strong>mouseUp</strong>(e)
+    </p>
+    <div class='docstring'>
+  <p>Bound to &#39;mouseup&#39;</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='click-instance'>
+      - (void) <strong>click</strong>(target, e)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getDragOffset-instance'>
+      - (void) <strong>getDragOffset</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Get the offset of the current drag</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='dragStart-instance'>
+      - (void) <strong>dragStart</strong>(e)
+    </p>
+    <div class='docstring'>
+  <p>Called when drag started</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='dragMove-instance'>
+      - (void) <strong>dragMove</strong>(lastOffset, totalOffset, e)
+    </p>
+    <div class='docstring'>
+  <p>Called when drag moved</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='dragStop-instance'>
+      - (void) <strong>dragStop</strong>(e)
+    </p>
+    <div class='docstring'>
+  <p>Called when drag stopped</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getRelativeMouse-instance'>
+      - (void) <strong>getRelativeMouse</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Get mouse position relative to viewport</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getMouseEvent-instance'>
+      - (void) <strong>getMouseEvent</strong>(e)
+    </p>
+    <div class='docstring'>
+  <p>Normalise mouse and touch events</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  Generated on
+  Thu Sep 19 2013 04:09:29 GMT+0100 (BST)
+  by
+  <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
+  v1.9.0
+  (Node.js v0.10.0).
+  &#10034;
+  Press Ctrl-h to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/#!/netzpirat'>@netzpirat</a>
+  &#10034;
+  <a href='https://mksoft.ch'>mksoft.ch</a>
+</div>
+  </body>
+</html>

@@ -1,9 +1,10 @@
 
 ###
-User Data module
+## User Data module
 
-Loads or creates user progress data, takes care of its storage and loading in the localStorage
-object, interacts with the gameData module to get levels data and normalise user progress
+Loads or creates user progress data, takes care of its storage and loading in the
+`window.localStorage` object, interacts with the gameData module to get levels data and normalise
+user progress
 ###
 
 gameData = require './gameData'

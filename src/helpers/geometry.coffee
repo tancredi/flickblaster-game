@@ -1,6 +1,6 @@
 
 ###
-Geometry helpers
+## Geometry helpers
 
 A few geometry shortcuts and utilities
 ###

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript API Documentation</title>
+  <link rel='stylesheet' href='assets/codo.css' type='text/css'>
+  <script src='assets/codo.js'></script>
+  <script src='assets/search_data.js'></script>
+</head>
+  <body>
+    <div id='base' data-path=''></div>
+<div id='header'>
+  <div id='menu'>
+    <nav>
+      <ul>
+        <li class='noframes'>
+          (<a class='noframes' href='#'>no frames</a>)
+        </li>
+      </ul>
+    </nav>
+    <div id='search'>
+      <a id='class_list_link' href='class_list.html'>Classes</a>
+      <a id='file_list_link' href='file_list.html'>Files</a>
+      <a id='method_list_link' href='method_list.html'>Methods</a>
+      <a id='extra_list_link' href='extra_list.html'>Extras</a>
+    </div>
+  </div>
+  <iframe id='search_frame'></iframe>
+  <div id='fuzzySearch'>
+    <input type='text'>
+    <ol></ol>
+  </div>
+  <div id='help'>
+    <p>
+      Quickly fuzzy find classes, mixins, methods, file:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-T</span>
+        Open fuzzy finder dialog
+      </li>
+    </ul>
+    <p>
+      In frame mode you can toggle the list naviation frame on the left side:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-L</span>
+        Toggle list view
+      </li>
+    </ul>
+    <p>
+      You can focus a list in frame mode or toggle a tab in frameless mode:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-C</span>
+        Class list
+      </li>
+      <li>
+        <span>Ctrl-I</span>
+        Mixin list
+      </li>
+      <li>
+        <span>Ctrl-F</span>
+        File list
+      </li>
+      <li>
+        <span>Ctrl-M</span>
+        Method list
+      </li>
+      <li>
+        <span>Ctrl-E</span>
+        Extras list
+      </li>
+    </ul>
+    <p>
+      You can focus and blur the search input:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-S</span>
+        Focus search input
+      </li>
+      <li>
+        <span>Esc</span>
+        Blur search input
+      </li>
+    </ul>
+    <p>
+      In frameless mode you can close the list tab:
+    </p>
+    <ul>
+      <li>
+        <span>Esc</span>
+        Close list tab
+      </li>
+    </ul>
+  </div>
+</div>
+    <div id='content'>
+      <h1 class='noborder title'>CoffeeScript API Documentation</h1>
+      <div id='listing'>
+        <h1 class='alphaindex'>Alphabetic Index</h1>
+        <h2>Extra File Listing</h2>
+        <ul id='files'>
+          <li>
+            <a href='README.md.html' title='README.md'>README.md</a>
+          </li>
+        </ul>
+        <h2>Class Listing A-Z</h2>
+        <div class='index'>
+          <ul>
+            <li class='letter'>b</li>
+            <ul>
+              <li>
+                <a href='classes/BaseActionableBehaviour.html'>BaseActionableBehaviour</a>
+              </li>
+              <li>
+                <a href='classes/BaseBehaviour.html'>BaseBehaviour</a>
+              </li>
+              <li>
+                <a href='classes/ButtonBehaviour.html'>ButtonBehaviour</a>
+              </li>
+              <li>
+                <a href='classes/BaseView.html'>BaseView</a>
+              </li>
+              <li>
+                <a href='classes/BaseItem.html'>BaseItem</a>
+              </li>
+              <li>
+                <a href='classes/Body.html'>Body</a>
+              </li>
+              <li>
+                <a href='classes/BaseModal.html'>BaseModal</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>c</li>
+            <ul>
+              <li>
+                <a href='classes/CollisionManager.html'>CollisionManager</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>e</li>
+            <ul>
+              <li>
+                <a href='classes/Entity.html'>Entity</a>
+              </li>
+              <li>
+                <a href='classes/EndGameModal.html'>EndGameModal</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>g</li>
+            <ul>
+              <li>
+                <a href='classes/GameControls.html'>GameControls</a>
+              </li>
+              <li>
+                <a href='classes/GameView.html'>GameView</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>l</li>
+            <ul>
+              <li>
+                <a href='classes/LaserBehaviour.html'>LaserBehaviour</a>
+              </li>
+              <li>
+                <a href='classes/Lasers.html'>Lasers</a>
+              </li>
+              <li>
+                <a href='classes/Layer.html'>Layer</a>
+              </li>
+              <li>
+                <a href='classes/Loop.html'>Loop</a>
+              </li>
+              <li>
+                <a href='classes/LevelsView.html'>LevelsView</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>m</li>
+            <ul>
+              <li>
+                <a href='classes/MouseControls.html'>MouseControls</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>p</li>
+            <ul>
+              <li>
+                <a href='classes/PlayerBehaviour.html'>PlayerBehaviour</a>
+              </li>
+              <li>
+                <a href='classes/PauseModal.html'>PauseModal</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>s</li>
+            <ul>
+              <li>
+                <a href='classes/SensorBehaviour.html'>SensorBehaviour</a>
+              </li>
+              <li>
+                <a href='classes/Sprite.html'>Sprite</a>
+              </li>
+              <li>
+                <a href='classes/SpriteRenderer.html'>SpriteRenderer</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>t</li>
+            <ul>
+              <li>
+                <a href='classes/TargetBehaviour.html'>TargetBehaviour</a>
+              </li>
+              <li>
+                <a href='classes/TeleportBehaviour.html'>TeleportBehaviour</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>v</li>
+            <ul>
+              <li>
+                <a href='classes/Viewport.html'>Viewport</a>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>w</li>
+            <ul>
+              <li>
+                <a href='classes/Wall.html'>Wall</a>
+              </li>
+              <li>
+                <a href='classes/Walls.html'>Walls</a>
+              </li>
+              <li>
+                <a href='classes/World.html'>World</a>
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <h2>File Listing A-Z</h2>
+        <div class='index'>
+          <ul>
+            <li class='letter'>a</li>
+            <ul>
+              <li>
+                <a href='files/app.coffee.html'>app.coffee</a>
+              </li>
+              <li>
+                <a href='files/behaviours/actions.coffee.html'>actions.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>b</li>
+            <ul>
+              <li>
+                <a href='files/behaviours/BaseActionableBehaviour.coffee.html'>BaseActionableBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/behaviours/BaseBehaviour.coffee.html'>BaseBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/behaviours/ButtonBehaviour.coffee.html'>ButtonBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/core/BaseView.coffee.html'>BaseView.coffee</a>
+                <small>
+                  (core)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/BaseItem.coffee.html'>BaseItem.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/Body.coffee.html'>Body.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/ui/modals/BaseModal.coffee.html'>BaseModal.coffee</a>
+                <small>
+                  (ui&#47;modal)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>c</li>
+            <ul>
+              <li>
+                <a href='files/engine/CollisionManager.coffee.html'>CollisionManager.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>d</li>
+            <ul>
+              <li>
+                <a href='files/core/device.coffee.html'>device.coffee</a>
+                <small>
+                  (core)
+                </small>
+              </li>
+              <li>
+                <a href='files/helpers/debug.coffee.html'>debug.coffee</a>
+                <small>
+                  (helper)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>e</li>
+            <ul>
+              <li>
+                <a href='files/engine/Entity.coffee.html'>Entity.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/ui/modals/EndGameModal.coffee.html'>EndGameModal.coffee</a>
+                <small>
+                  (ui&#47;modal)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>g</li>
+            <ul>
+              <li>
+                <a href='files/engine/GameControls.coffee.html'>GameControls.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/gameData.coffee.html'>gameData.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/views/GameView.coffee.html'>GameView.coffee</a>
+                <small>
+                  (view)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>l</li>
+            <ul>
+              <li>
+                <a href='files/behaviours/LaserBehaviour.coffee.html'>LaserBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/Lasers.coffee.html'>Lasers.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/Layer.coffee.html'>Layer.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/Loop.coffee.html'>Loop.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/views/LevelsView.coffee.html'>LevelsView.coffee</a>
+                <small>
+                  (view)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>m</li>
+            <ul>
+              <li>
+                <a href='files/engine/MouseControls.coffee.html'>MouseControls.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>p</li>
+            <ul>
+              <li>
+                <a href='files/behaviours/PlayerBehaviour.coffee.html'>PlayerBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/ui/modals/PauseModal.coffee.html'>PauseModal.coffee</a>
+                <small>
+                  (ui&#47;modal)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>s</li>
+            <ul>
+              <li>
+                <a href='files/behaviours/SensorBehaviour.coffee.html'>SensorBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/Sprite.coffee.html'>Sprite.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/SpriteRenderer.coffee.html'>SpriteRenderer.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>t</li>
+            <ul>
+              <li>
+                <a href='files/behaviours/TargetBehaviour.coffee.html'>TargetBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/behaviours/TeleportBehaviour.coffee.html'>TeleportBehaviour.coffee</a>
+                <small>
+                  (behaviour)
+                </small>
+              </li>
+              <li>
+                <a href='files/ui/touchables.coffee.html'>touchables.coffee</a>
+                <small>
+                  (ui)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>u</li>
+            <ul>
+              <li>
+                <a href='files/engine/userData.coffee.html'>userData.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>v</li>
+            <ul>
+              <li>
+                <a href='files/core/viewTransitions.coffee.html'>viewTransitions.coffee</a>
+                <small>
+                  (core)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/Viewport.coffee.html'>Viewport.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+            </ul>
+          </ul>
+          <ul>
+            <li class='letter'>w</li>
+            <ul>
+              <li>
+                <a href='files/engine/Wall.coffee.html'>Wall.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/Walls.coffee.html'>Walls.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+              <li>
+                <a href='files/engine/World.coffee.html'>World.coffee</a>
+                <small>
+                  (engine)
+                </small>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id='footer'>
+  Generated on
+  Thu Sep 19 2013 04:09:29 GMT+0100 (BST)
+  by
+  <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
+  v1.9.0
+  (Node.js v0.10.0).
+  &#10034;
+  Press Ctrl-h to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/#!/netzpirat'>@netzpirat</a>
+  &#10034;
+  <a href='https://mksoft.ch'>mksoft.ch</a>
+</div>
+  </body>
+</html>

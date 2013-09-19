@@ -1,6 +1,6 @@
 
 ###
-View Transitions module
+## View Transitions module
 
 Contains core transitions between Views and DOM manipulation
 ###

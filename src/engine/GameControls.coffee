@@ -1,12 +1,4 @@
 
-###
-Game Controls Class
-
-Handles the binding, handling and UI of the game controls
-Read MouseControls for DOM bindings
-###
-
-# Multiplier used for the force applied to the player's Body when flicked
 shotStrength = 40
 
 MouseControls = require './MouseControls'
@@ -18,6 +10,13 @@ style =
   lineCap: 'round'
   strokeStyle: '#db7c52'
   lineWidth: 5
+
+###
+## Game Controls Class
+
+Handles the binding, handling and UI of the game controls
+Read MouseControls for DOM bindings
+###
 
 class GameControls extends MouseControls
 

@@ -1,18 +1,18 @@
 
+phys = require '../helpers/physics'
+
 ###
-Collision Manager class
+## Collision Manager class
 
 Work around for major issues encountered with several different ways of
 binding events to Box2D collisions.
 
 The events you can bind are:
-1. 'start':         
-2. 'end':           Triggered after the collision is solved
-3. 'BeginContact':  Triggered before the contact has happened
-4. 'EndContact':    Triggered after the contact has happened
+1. `start`:         *Triggered before the collision is solved*
+2. `end`:           *Triggered after the collision is solved*
+3. `BeginContact`:  *Triggered before the contact has happened*
+4. `EndContact`:    *Triggered after the contact has happened*
 ###
-
-phys = require '../helpers/physics'
 
 class CollisionManager
 

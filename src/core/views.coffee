@@ -1,6 +1,6 @@
 
 ###
-Views module
+## Views module
 
 Stores, instanciates, animates and handles views
 ###

@@ -1,14 +1,14 @@
 
+BaseBehaviour = require './BaseBehaviour'
+actions = require './actions'
+
 ###
-Base Actionable Behaviour class
+## Base Actionable Behaviour class
 
 Base behaviour for buttons, sensors, teleports and all behaviours that react to player collisions
 
 Calls .activate when touching the player, it needs to be deactivated before running again
 ###
-
-BaseBehaviour = require './BaseBehaviour'
-actions = require './actions'
 
 class BaseActionableBehaviour extends BaseBehaviour
 

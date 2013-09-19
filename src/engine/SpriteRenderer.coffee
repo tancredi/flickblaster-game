@@ -1,13 +1,14 @@
 
-###
-Sprite Renderer
+renderer = require '../core/renderer'
 
-Takes care of the DOM rendering and manipulation, updating and animating of Sprites
-Initialise with a preset
+###
+## Sprite Renderer
+
+Takes care of the DOM rendering and manipulation, updating and animating of Sprites Initialise
+with a preset
+
 Presets are defined in www/game/sprites.json and loaded throught the GameData module
 ###
-
-renderer = require '../core/renderer'
 
 class SpriteRenderer
 

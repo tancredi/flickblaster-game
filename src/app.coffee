@@ -1,16 +1,15 @@
 
 ###
-App File
+## App File
 
 The main file that starts up the app
 
 * Initialises the app and every module used in it
 * Defines views routing
 * Loads the Handlebars templates in the Renderer
-* If the app is loaded through phonegap listens for 'deviceready' Phonegap event
+* If the app is loaded through phonegap listens for `deviceready` Phonegap event
 * Instanciates and open the first view
 ###
-
 
 # Import Core Modules
 device = require './core/device'

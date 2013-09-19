@@ -1,20 +1,20 @@
 
-###
-Walls Class
-
-Used as a child World, handles the creation of the 4 Walls around the viewport and any other
-level-specific Wall passed from the World after loading the level data
-
-Also takes care of wrapping its children into an SVG object and refreshing its tree to display the
-updated render after the addition or change of any child Wall
-###
-
 Wall = require './Wall'
 Body = require './Body'
 renderer = require '../core/renderer'
 
 # Default wall thickness (Used for the 4 main walls)
 thickness = 10
+
+###
+## Walls Class
+
+Used as a child of World, handles the creation of the 4 Walls around the viewport and any other
+level-specific Wall passed from the World after loading the level data
+
+Also takes care of wrapping its children into an SVG object and refreshing its tree to display the
+updated render after the addition or change of any child Wall
+###
 
 class Walls
 

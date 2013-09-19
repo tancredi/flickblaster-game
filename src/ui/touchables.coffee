@@ -1,6 +1,6 @@
 
 ###
-Touchables
+## Touchables
 
 This module binds to the device-specific click event to add a .touch-active pseudo-class for
 a set duration after triggering It's applied to the targeted selectors and used to customise visual

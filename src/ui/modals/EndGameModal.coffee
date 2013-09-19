@@ -1,13 +1,4 @@
 
-###
-End of Game Modal class
-
-Shown at the end of every game
-Displays a different set of elements and actions depending on the outcome of the game
-
-Read BaseModal for more
-###
-
 BaseModal = require './BaseModal'
 device = require '../../core/device'
 views = require '../../core/views'
@@ -18,6 +9,15 @@ animationsDelay = 600
 
 # Star elements selector
 selectors = star: '.star'
+
+###
+## End of Game Modal class
+
+Shown at the end of every game
+Displays a different set of elements and actions depending on the outcome of the game
+
+Read BaseModal for more
+###
 
 class EndGameModal extends BaseModal
   templateName: 'modal-end-game'

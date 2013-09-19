@@ -1,6 +1,9 @@
 
+# Default properties
+defaults = x: 0, y: 0
+
 ###
-Base Item class
+## Base Item class
 
 Item classes that interact with the game logic have to extend from here
 
@@ -9,9 +12,6 @@ E.g. Entities, Bodies, Sprites and Walls extend from BaseItem
 The World and Layer classes will need to always have acces to the basic
 method specified in this class
 ###
-
-# Default properties
-defaults = x: 0, y: 0
 
 class BaseItem
   itemType: 'base' # Must change when extending

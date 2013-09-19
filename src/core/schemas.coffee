@@ -1,7 +1,6 @@
 
 ###
-
-Schemas class
+## Schemas module
 
 Takes care of migrations and versioning of DB tables in basic and hacky fashion
 ###

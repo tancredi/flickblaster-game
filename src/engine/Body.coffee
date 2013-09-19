@@ -1,18 +1,18 @@
 
+BaseItem = require './BaseItem'
+phys = require '../helpers/physics'
+
 ###
-Body class
+## Body class
 
 This game item type interfaces the game logic with Box2D bodies
 Bodies can be added to the scene either stand-alone of as children of entities
 
 Currently supported types of Body are:
-1. Circle:      ('circle') Initialise with x, y and radius
-2. Rectangles:  ('rect') Initialise with x, y, width and height
-3. Polygons:    ('poly') Initialise with x, y and an array with all coordinates of points
+1. **Circle**:      `circle` Initialise with `x`, `y` and `radius`
+2. **Rectangles**:  `rect` Initialise with `x`, `y`, `width` and `height`
+3. **Polygons**:    `poly` Initialise with `x`, `y` and a flat `points` array
 ###
-
-BaseItem = require './BaseItem'
-phys = require '../helpers/physics'
 
 class Body extends BaseItem
   itemType: 'body'

@@ -1,14 +1,14 @@
 
+BaseActionableBehaviour = require './BaseActionableBehaviour'
+
 ###
-Button Behaviour class
+## Button Behaviour class
 
 Buttons are an Actionable Behaviour that executes an action specified with an 'action' attribute
 on the Entity
 
 Read BaseActionableBehaviour and the Actions module for more
 ###
-
-BaseActionableBehaviour = require './BaseActionableBehaviour'
 
 class ButtonBehaviour extends BaseActionableBehaviour
 

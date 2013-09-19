@@ -1,11 +1,4 @@
 
-###
-Loop class
-
-Based on a requestAnimationFrame polyfill, it handles the loop at the very core of the game
-Callbacks may be called at a different frequencies depending on device performance
-###
-
 # requestAnimationFrame polyfill
 requestAnimationFrame =
   window.requestAnimationFrame or
@@ -14,6 +7,13 @@ requestAnimationFrame =
   window.oRequestAnimationFrame or
   window.msRequestAnimationFrame or
   (callback) -> window.setTimeout callback, 1000 / 60
+
+###
+## Loop class
+
+Based on a requestAnimationFrame polyfill, it handles the loop at the very core of the game
+Callbacks may be called at a different frequencies depending on device performance
+###
   
 class Loop
 

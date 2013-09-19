@@ -1,12 +1,12 @@
 
+BaseBehaviour = require './BaseBehaviour'
+
 ###
-Player Behaviour
+## Player Behaviour class
 
 Defines the behaviour of the player on stage
 Shamefully, the player is that little red disc you flick around the stage when playing
 ###
-
-BaseBehaviour = require './BaseBehaviour'
 
 class PlayerBehaviour extends BaseBehaviour
 

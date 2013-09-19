@@ -1,16 +1,16 @@
 
-###
-Levels View
-
-View containing information about user progress and levels navigation
-###
-
 BaseView = require '../core/BaseView'
 views = require '../core/views'
 device = require '../core/device'
 getByRole = (require '../helpers/dom').getByRole
 gameData = require '../engine/gameData'
 userData = require '../engine/userData'
+
+###
+## Levels View
+
+View containing information about user progress and levels navigation
+###
 
 class LevelsView extends BaseView
   templateName: 'levels'

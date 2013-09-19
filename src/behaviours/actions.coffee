@@ -1,6 +1,6 @@
 
 ###
-Actions module
+## Actions module
 
 Actions are abstracted, common functions used by some behaviours
 

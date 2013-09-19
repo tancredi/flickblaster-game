@@ -1,15 +1,4 @@
 
-###
-Base Modal class
-
-Extend this class to create a custom modal.
-Instanciate the class to render and open the modal
-
-Class-based modals may not necessarily be a great idea,
-but hey, I wanted to try a new approach.
-Deal with it.
-###
-
 renderer = require '../../core/renderer'
 
 modalTemplate = 'modal' # Base modal wrapper template
@@ -19,6 +8,17 @@ transitionTime = 200    # Duration of modal transition in milliseconds
 selectors =
   inner: '.modal'
   overlay: '.overlay'
+
+###
+## Base Modal class
+
+Extend this class to create a custom modal.
+Instanciate the class to render and open the modal
+
+Class-based modals may not necessarily be a great idea,
+but hey, I wanted to try a new approach.
+Deal with it.
+###
 
 class BaseModal
   templateName: 'modal-foo' # Customise this property to render a different template

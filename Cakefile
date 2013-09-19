@@ -1,9 +1,11 @@
 
 ###
-Cakefile
+## Cakefile
 
 Tasks to build the app's JavaScript (From Coffeescript), bundle it with Browserify, compile LESS
-and Handlebars templates 
+and Handlebars templates
+
+Also, it can update the documentation using Codo
 ###
 
 fs = require 'fs'
@@ -140,4 +142,16 @@ task 'watch', ->
   else
     tasksStr = taskNames[0]
 
-  console.log color.bold.cyan "Watching #{tasksStr}..."
+# Define 'docs' task
+task 'docs', ->
+  console.log color.yellowBright 'Generating documentation...'
+
+  src = 'src'
+  out = 'docs'
+
+  # Local Doco script - cut down global dependencies
+  localCodo = "node_modules/codo/bin/codo"
+
+  # Generates updated documentation using Codo
+  exec "#{localCodo} #{src} -o #{out}", ->
+    console.log color.green('✔') + color.white("  Generated documentation in #{out}\n")

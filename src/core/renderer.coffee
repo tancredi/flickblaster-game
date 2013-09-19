@@ -1,6 +1,6 @@
 
 ###
-Renderer Module
+## Renderer module
 
 Handles the storing and rendering of templates
 

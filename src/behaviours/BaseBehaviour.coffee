@@ -1,6 +1,6 @@
 
 ###
-Base Behaviour class
+## Base Behaviour class
 
 This class is ment to be extended when creating a new Behaviour
 

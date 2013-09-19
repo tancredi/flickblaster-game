@@ -1,10 +1,4 @@
 
-###
-World class
-
-Ties together level data, physics, game loop, stage element, game layers and game items
-###
-
 gameData = require './gameData'
 Layer = require './Layer'
 device = require '../core/device'
@@ -21,6 +15,12 @@ CollisionManager = require './CollisionManager'
 # Default options
 defaults =
   gravity: [ 0, 0 ]
+
+###
+## World class
+
+Ties together level data, physics, game loop, stage element, game layers and game items
+###
 
 class World
 

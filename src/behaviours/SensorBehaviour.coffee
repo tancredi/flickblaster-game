@@ -1,14 +1,14 @@
 
+BaseActionableBehaviour = require './BaseActionableBehaviour'
+
 ###
-Sensor Behaviours class
+## Sensor Behaviours class
 
 Sensors execute an action specified through their 'action' attribute every time they're hovered by
 the player
 
 Read ActionableBehaviour for more
 ###
-
-BaseActionableBehaviour = require './BaseActionableBehaviour'
 
 class SensorBehaviour extends BaseActionableBehaviour
 

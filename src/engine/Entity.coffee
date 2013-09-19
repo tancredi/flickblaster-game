@@ -1,21 +1,20 @@
-
-###
-Entity class
-
-Entities are the central players on the scene - They can have a body and multiple sprites which
-will move relatively to their position, they can be associated to a Behaviour, which will be
-manage their instance at every .update, they can have attributes which play a central role in
-the game mechanics.
-
-Entities can be instanciated with a preset from the ones contained in www/game/presets.json
-###
-
 BaseItem = require './BaseItem'
 gameData = require './gameData'
 behaviours = require '../behaviours/index'
 Sprite = require './Sprite'
 Body = require './Body'
 renderer = require '../core/renderer'
+
+###
+## Entity class
+
+Entities are the central players on the scene - They can have a body and multiple sprites which
+will move relatively to their position, they can be associated to a Behaviour, which will be
+manage their instance at every .update, they can have attributes which play a central role in
+the game mechanics.
+
+Entities can be instanciated with a preset from the ones contained in `www/game/presets.json`
+###
 
 class Entity extends BaseItem
   itemType: 'entity'

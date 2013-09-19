@@ -1,16 +1,16 @@
 
+BaseBehaviour = require './BaseBehaviour'
+
 ###
-Laser Behaviour class
+## Laser Behaviour class
 
 Determines the behaviour of laser Entities
 
-Laser Entities are Entities created through the editor with attributes 'type' and 'behaviour' set
-to 'laser'
+Laser Entities are Entities created through the editor with attributes `type` and `behaviour` set
+to `laser`
 Entities of 'type' attribute set to 'lasers' will be passe by the World instance to its Lasers
 manager and rendered with SVG
 ###
-
-BaseBehaviour = require './BaseBehaviour'
 
 class LaserBehaviour extends BaseBehaviour
 

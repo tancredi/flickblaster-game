@@ -1,6 +1,6 @@
 
 ###
-Behaviours Index module
+## Behaviours Index module
 
 Routing map, assigns all behaviours to standardised keys so they match the behaviour specified
 in Entities 'behaviour' attribute - usually through the editor

@@ -1,6 +1,6 @@
 
 ###
-DOM helpers
+## DOM helpers
 
 Common functions and utilities for DOM manipulation
 ###

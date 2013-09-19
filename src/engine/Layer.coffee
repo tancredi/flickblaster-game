@@ -1,17 +1,17 @@
 
-###
-Layer class
-
-A layer contains and handles groups of Entities
-It also provides the items a separate DOM element to render within, so than
-the order of display of all items is manageable
-
-It also takes care of their updating
-###
-
 Entity = require './Entity'
 renderer =  require '../core/renderer'
 device = require '../core/device'
+
+###
+## Layer class
+
+A layer contains and handles groups of Entities
+It also provides the items a separate DOM element to render within, so than the order of display of
+all items is manageable
+
+It also takes care of their updating
+###
 
 class Layer
 

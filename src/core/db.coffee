@@ -1,6 +1,6 @@
 
 ###
-DB Manager module
+## DB Manager module
 
 Interface to local SQLite DB
 ###

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript API Documentation</title>
+  <link rel='stylesheet' href='../assets/codo.css' type='text/css'>
+  <script src='../assets/codo.js'></script>
+  <script src='../assets/search_data.js'></script>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../README.md.html' title='Flickblaster-game'>Flickblaster-game</a>
+    &raquo;
+    <a href='../class_index.html' title='Index'>Index</a>
+    &raquo;
+    <span class='title'>Entity</span>
+    <nav>
+      <ul>
+        <li class='noframes'>
+          (<a class='noframes' href='#'>no frames</a>)
+        </li>
+      </ul>
+    </nav>
+    <div id='search'>
+      <a id='class_list_link' href='../class_list.html'>Classes</a>
+      <a id='file_list_link' href='../file_list.html'>Files</a>
+      <a id='method_list_link' href='../method_list.html'>Methods</a>
+      <a id='extra_list_link' href='../extra_list.html'>Extras</a>
+    </div>
+  </div>
+  <iframe id='search_frame'></iframe>
+  <div id='fuzzySearch'>
+    <input type='text'>
+    <ol></ol>
+  </div>
+  <div id='help'>
+    <p>
+      Quickly fuzzy find classes, mixins, methods, file:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-T</span>
+        Open fuzzy finder dialog
+      </li>
+    </ul>
+    <p>
+      In frame mode you can toggle the list naviation frame on the left side:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-L</span>
+        Toggle list view
+      </li>
+    </ul>
+    <p>
+      You can focus a list in frame mode or toggle a tab in frameless mode:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-C</span>
+        Class list
+      </li>
+      <li>
+        <span>Ctrl-I</span>
+        Mixin list
+      </li>
+      <li>
+        <span>Ctrl-F</span>
+        File list
+      </li>
+      <li>
+        <span>Ctrl-M</span>
+        Method list
+      </li>
+      <li>
+        <span>Ctrl-E</span>
+        Extras list
+      </li>
+    </ul>
+    <p>
+      You can focus and blur the search input:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-S</span>
+        Focus search input
+      </li>
+      <li>
+        <span>Esc</span>
+        Blur search input
+      </li>
+    </ul>
+    <p>
+      In frameless mode you can close the list tab:
+    </p>
+    <ul>
+      <li>
+        <span>Esc</span>
+        Close list tab
+      </li>
+    </ul>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Entity
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>src&#47;engine&#47;Entity.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../classes/BaseItem.html'>BaseItem</a>
+          </td>
+        </tr>
+      </table>
+      <h2>Overview</h2>
+      <div class='docstring'>
+  <h2>Entity class</h2><p>Entities are the central players on the scene - They can have a body and multiple sprites which
+will move relatively to their position, they can be associated to a Behaviour, which will be
+manage their instance at every .update, they can have attributes which play a central role in
+the game mechanics.</p><p>Entities can be instanciated with a preset from the ones contained in <code>www/game/presets.json</code></p>
+</div>
+<div class='tags'>
+</div>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#constructor-instance'>
+        - (void) <strong>constructor</strong>(options, layer)
+      </a>
+    </span>
+    <span class='constructor note title'>Constructor</span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#initBehaviour-instance'>
+        - (void) <strong>initBehaviour</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Instanciate the Behaviour - It will handle the Entity at every .update
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#render-instance'>
+        - (void) <strong>render</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Render the wrapping element
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#makeSprites-instance'>
+        - (void) <strong>makeSprites</strong>(sprites)
+      </a>
+    </span>
+    <span class='desc'>
+      Instanciate the sprites
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#hasAttr-instance'>
+        - (void) <strong>hasAttr</strong>(attr)
+      </a>
+    </span>
+    <span class='desc'>
+      Returns true if given attribute is defined
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#makeBody-instance'>
+        - (void) <strong>makeBody</strong>(bodies)
+      </a>
+    </span>
+    <span class='desc'>
+      Parses some custom attributes and instanciates the body
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setPose-instance'>
+        - (void) <strong>setPose</strong>(pose)
+      </a>
+    </span>
+    <span class='bound note title'>Bound</span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#updatePos-instance'>
+        - (void) <strong>updatePos</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#distance-instance'>
+        - (void) <strong>distance</strong>(target, absolute = true)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#update-instance'>
+        - (void) <strong>update</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Update all children position
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#remove-instance'>
+        - (void) <strong>remove</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Remove Entity element, sprites and bodies from the scene
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#position-instance'>
+        - (void) <strong>position</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Returns the Entity&#39;s position in game coordinates
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#onCollisionPre-instance'>
+        - (void) <strong>onCollisionPre</strong>(target, callback)
+      </a>
+    </span>
+    <span class='desc'>
+      Methods to bind callbacks to collision events on the Entity&#39;s body Read CollisionManager for more about these events
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#onCollisionPost-instance'>
+        - (void) <strong>onCollisionPost</strong>(target, callback)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#onCollisionStart-instance'>
+        - (void) <strong>onCollisionStart</strong>(target, callback)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#onCollisionEnd-instance'>
+        - (void) <strong>onCollisionEnd</strong>(target, callback)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+</ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+      </h2>
+      <h3 class='inherited'>
+        Methods inherited from
+        <a href='../classes/BaseItem.html'>BaseItem</a>
+      </h3>
+      <p class='inherited'>
+                <a href='../classes/BaseItem.html#constructor-instance'>#constructor</a>,
+                <a href='../classes/BaseItem.html#translate-instance'>#translate</a>,
+                <a href='../classes/BaseItem.html#moveTo-instance'>#moveTo</a>,
+                <a href='../classes/BaseItem.html#update-instance'>#update</a>,
+        <a href='../classes/BaseItem.html#remove-instance'>#remove</a>
+      </p>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-instance'>
+      - (void) <strong>constructor</strong>(options, layer)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='initBehaviour-instance'>
+      - (void) <strong>initBehaviour</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Instanciate the Behaviour - It will handle the Entity at every .update</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='render-instance'>
+      - (void) <strong>render</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Render the wrapping element</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='makeSprites-instance'>
+      - (void) <strong>makeSprites</strong>(sprites)
+    </p>
+    <div class='docstring'>
+  <p>Instanciate the sprites</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='hasAttr-instance'>
+      - (void) <strong>hasAttr</strong>(attr)
+    </p>
+    <div class='docstring'>
+  <p>Returns true if given attribute is defined</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='makeBody-instance'>
+      - (void) <strong>makeBody</strong>(bodies)
+    </p>
+    <div class='docstring'>
+  <p>Parses some custom attributes and instanciates the body</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setPose-instance'>
+      - (void) <strong>setPose</strong>(pose)
+      (bound)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updatePos-instance'>
+      - (void) <strong>updatePos</strong>()
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='distance-instance'>
+      - (void) <strong>distance</strong>(target, absolute = true)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='update-instance'>
+      - (void) <strong>update</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Update all children position</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='remove-instance'>
+      - (void) <strong>remove</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Remove Entity element, sprites and bodies from the scene</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='position-instance'>
+      - (void) <strong>position</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Returns the Entity&#39;s position in game coordinates</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='onCollisionPre-instance'>
+      - (void) <strong>onCollisionPre</strong>(target, callback)
+    </p>
+    <div class='docstring'>
+  <p>Methods to bind callbacks to collision events on the Entity&#39;s body
+Read CollisionManager for more about these events</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='onCollisionPost-instance'>
+      - (void) <strong>onCollisionPost</strong>(target, callback)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='onCollisionStart-instance'>
+      - (void) <strong>onCollisionStart</strong>(target, callback)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='onCollisionEnd-instance'>
+      - (void) <strong>onCollisionEnd</strong>(target, callback)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  Generated on
+  Thu Sep 19 2013 04:09:29 GMT+0100 (BST)
+  by
+  <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
+  v1.9.0
+  (Node.js v0.10.0).
+  &#10034;
+  Press Ctrl-h to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/#!/netzpirat'>@netzpirat</a>
+  &#10034;
+  <a href='https://mksoft.ch'>mksoft.ch</a>
+</div>
+  </body>
+</html>

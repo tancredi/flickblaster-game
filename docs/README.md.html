@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript API Documentation</title>
+  <link rel='stylesheet' href='assets/codo.css' type='text/css'>
+  <script src='assets/codo.js'></script>
+  <script src='assets/search_data.js'></script>
+</head>
+  <body>
+    <div id='base' data-path=''></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='README.md.html' title='Flickblaster-game'>Flickblaster-game</a>
+    &raquo;
+    <a href='class_index.html' title='Index'>Index</a>
+    &raquo;
+    <span class='title'>README.md</span>
+    <nav>
+      <ul>
+        <li class='noframes'>
+          (<a class='noframes' href='#'>no frames</a>)
+        </li>
+      </ul>
+    </nav>
+    <div id='search'>
+      <a id='class_list_link' href='class_list.html'>Classes</a>
+      <a id='file_list_link' href='file_list.html'>Files</a>
+      <a id='method_list_link' href='method_list.html'>Methods</a>
+      <a id='extra_list_link' href='extra_list.html'>Extras</a>
+    </div>
+  </div>
+  <iframe id='search_frame'></iframe>
+  <div id='fuzzySearch'>
+    <input type='text'>
+    <ol></ol>
+  </div>
+  <div id='help'>
+    <p>
+      Quickly fuzzy find classes, mixins, methods, file:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-T</span>
+        Open fuzzy finder dialog
+      </li>
+    </ul>
+    <p>
+      In frame mode you can toggle the list naviation frame on the left side:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-L</span>
+        Toggle list view
+      </li>
+    </ul>
+    <p>
+      You can focus a list in frame mode or toggle a tab in frameless mode:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-C</span>
+        Class list
+      </li>
+      <li>
+        <span>Ctrl-I</span>
+        Mixin list
+      </li>
+      <li>
+        <span>Ctrl-F</span>
+        File list
+      </li>
+      <li>
+        <span>Ctrl-M</span>
+        Method list
+      </li>
+      <li>
+        <span>Ctrl-E</span>
+        Extras list
+      </li>
+    </ul>
+    <p>
+      You can focus and blur the search input:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-S</span>
+        Focus search input
+      </li>
+      <li>
+        <span>Esc</span>
+        Blur search input
+      </li>
+    </ul>
+    <p>
+      In frameless mode you can close the list tab:
+    </p>
+    <ul>
+      <li>
+        <span>Esc</span>
+        Close list tab
+      </li>
+    </ul>
+  </div>
+</div>
+    <div id='content'>
+      <nav class='toc'>
+        <p class='title'>
+          <a class='hide_toc' href='#'>
+            <strong>Table of Contents</strong>
+          </a>
+          <small>
+            (<a class='float_toc' href='#'>left</a>)
+          </small>
+        </p>
+      </nav>
+      <div id='filecontents'>
+        <h1>FlickBlaster</h1><p>An HTML5 top-down physics-based puzzle game layed out in MVC fashion, rendered using a combination of DOM, SVG and canvas.</p><p>The game is written in <a href="http://coffeescript.org/">CoffeeScript</a>, bundled with <a href="http://browserify.org/">Browserify</a> and wrapped as a <a href="http://cordova.apache.org/">Cordova</a> cross-platform app, but can also be executed and tested in the browser.</p><p>Also, the styles compile from <a href="http://lesscss.org/">LESS CSS</a> and UI components are rendered using pre-compiled <a href="http://handlebarsjs.com/">Handlebars</a> templates.</p><h1>Quick source overlook</h1><p>The coffeescript source of the app is all contained in <code>src/</code>
+The directory structure is layed out as follow:</p><ul>
+<li>core - <em>The web-app framework core (Template rendering, routing, UI, ...) is contained in</em></li>
+<li>views - <em>All view controllers. GameView contains part of the base game mechanics</em></li>
+<li>engine - <em>The game engine core (World, Viewport, Entity, ...) is contained in this directory.</em></li>
+<li>behaviours - <em>The bahaviours of all game entities that determine the game logic</em></li>
+<li>ui - <em>UI elements and modules</em></li>
+<li>helpers - <em>Shared utilities</em></li>
+</ul>
+<h1>Global dependencies</h1><p>Includes requirements to build the app locally and run with a the local server for browser testing and also to deploy to a cordova build</p><ul>
+<li><a href="http://nodejs.org/">Node.js</a> Install: <code>brew install node</code></li>
+<li><a href="coffeescript.com">Coffeescript</a> - To build the web source and run the server - <code>sudo npm install -g coffee-script</code></li>
+<li><a href="http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html">Cordova command-line interface</a> - To build mobile source - <code>sudo npm install -g cordova</code></li>
+</ul>
+<h1>Install</h1>
+<pre><code>git clone git@github.com:tancredi/flickblaster-game.git
+cd flickblaster-game
+npm install -d</code></pre><p>Now you just have to compile the app and run the server</p><h1>Compile</h1><p>Build the app using <a href="http://coffeescript.org/documentation/docs/cake.html">Cake</a></p><ul>
+<li><code>cake build</code> - Built the app once</li>
+<li><code>cake watch</code> - Watch for changes</li>
+</ul>
+<h3>Building Tasks</h3>
+<ul>
+<li>less - <em>Compile <code>less/index.less</code> into <code>www/css/index.css</code></em></li>
+<li>handlebars - <em>Pre-compile Handlebars templates in <code>templates/</code> into <code>www/js/templates.js</code></em></li>
+<li>coffee - <em>Compile the CoffeeScript source in <code>src/</code> in Javascript inside <code>lib/</code></em></li>
+<li>bundle - <em>Wrap the generated JavaScript in <code>lib/</code> using Browserify into a single <code>www/js/app.js</code></em></li>
+</ul>
+<h1>Run</h1><p>To start the server, run</p><pre><code>npm start</code></pre><p>You can open your browser at <a href="http://localhost:3000">http://localhost:3000</a> and start playing</p><h1>Build with Cordova</h1><p>First, you may have to setup your environment to build for ios / android.
+For instructions on how to do that read the Apache Cordova Documentation:</p><ul>
+<li><a href="http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_ios_index.md.html">Getting Started with iOS</a></li>
+<li><a href="http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_android_index.md.html">Getting Started with Android</a></li>
+</ul><p>Run <code>cordova build</code> to build the app to all configured platforms.</p><p>You can also run <code>cordova build [platform]</code> to build to a specific platform. <code>ios</code> and <code>android</code> are already configured in the project.</p><p>Find the generated builds in the <code>platforms/</code> directory.</p><p>For more information about the Cordova Commmand-line interface read the <a href="http://cordova.apache.org/docs/en/2.9.0/guide_cli_index.md.html">official documentation</a>.</p><h1>Directory stucture</h1><p>A map of the core directories of the app</p><pre><code>├── less - Contains the LESS source
+├── platforms
+│   ├── android - Android app
+│   └── ios - iOS Xcode project
+├── plugins - Cordova plugins
+├── src - App source
+├── templates - Handlebards templates
+└── www - Web-app root
+    ├── css - Compiled CSS
+    ├── game - JSON Game data
+    └── js - Compiled and vendor JavaScript</code></pre>
+
+      </div>
+    </div>
+    <div id='footer'>
+  Generated on
+  Thu Sep 19 2013 04:09:29 GMT+0100 (BST)
+  by
+  <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
+  v1.9.0
+  (Node.js v0.10.0).
+  &#10034;
+  Press Ctrl-h to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/#!/netzpirat'>@netzpirat</a>
+  &#10034;
+  <a href='https://mksoft.ch'>mksoft.ch</a>
+</div>
+  </body>
+</html>

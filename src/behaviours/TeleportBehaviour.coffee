@@ -1,14 +1,14 @@
 
+BaseActionableBehaviour = require './BaseActionableBehaviour'
+
 ###
-Teleport behaviour
+## Teleport behaviour
 
 An actionable behaviour that teleports the player to the location of a second entity with 'id'
 matching its Entity 'target-id' attribute
 
 Read BaseActionableBehaviour and the Actions module for more
 ###
-
-BaseActionableBehaviour = require './BaseActionableBehaviour'
 
 class TeleportBehaviour extends BaseActionableBehaviour
 

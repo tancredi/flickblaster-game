@@ -43,6 +43,7 @@ Build the app using [Cake](http://coffeescript.org/documentation/docs/cake.html)
 
 * `cake build` - Built the app once
 * `cake watch` - Watch for changes
+* `cake docs` - Update documentation
 
 ### Building Tasks
 
@@ -82,6 +83,7 @@ For more information about the Cordova Commmand-line interface read the [officia
 A map of the core directories of the app
 
 ```
+├── docs - Contains Codo documentation
 ├── less - Contains the LESS source
 ├── platforms
 │   ├── android - Android app
@@ -94,3 +96,7 @@ A map of the core directories of the app
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript
 ```
+# Documentation
+
+The documentation contained in `docs/` is generated using [Codo](https://github.com/netzpirat/codo).
+You can generate an updated version of it by running `cake docs`.

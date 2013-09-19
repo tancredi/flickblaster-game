@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>CoffeeScript API Documentation</title>
+  <link rel='stylesheet' href='../assets/codo.css' type='text/css'>
+  <script src='../assets/codo.js'></script>
+  <script src='../assets/search_data.js'></script>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../README.md.html' title='Flickblaster-game'>Flickblaster-game</a>
+    &raquo;
+    <a href='../class_index.html' title='Index'>Index</a>
+    &raquo;
+    <span class='title'>World</span>
+    <nav>
+      <ul>
+        <li class='noframes'>
+          (<a class='noframes' href='#'>no frames</a>)
+        </li>
+      </ul>
+    </nav>
+    <div id='search'>
+      <a id='class_list_link' href='../class_list.html'>Classes</a>
+      <a id='file_list_link' href='../file_list.html'>Files</a>
+      <a id='method_list_link' href='../method_list.html'>Methods</a>
+      <a id='extra_list_link' href='../extra_list.html'>Extras</a>
+    </div>
+  </div>
+  <iframe id='search_frame'></iframe>
+  <div id='fuzzySearch'>
+    <input type='text'>
+    <ol></ol>
+  </div>
+  <div id='help'>
+    <p>
+      Quickly fuzzy find classes, mixins, methods, file:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-T</span>
+        Open fuzzy finder dialog
+      </li>
+    </ul>
+    <p>
+      In frame mode you can toggle the list naviation frame on the left side:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-L</span>
+        Toggle list view
+      </li>
+    </ul>
+    <p>
+      You can focus a list in frame mode or toggle a tab in frameless mode:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-C</span>
+        Class list
+      </li>
+      <li>
+        <span>Ctrl-I</span>
+        Mixin list
+      </li>
+      <li>
+        <span>Ctrl-F</span>
+        File list
+      </li>
+      <li>
+        <span>Ctrl-M</span>
+        Method list
+      </li>
+      <li>
+        <span>Ctrl-E</span>
+        Extras list
+      </li>
+    </ul>
+    <p>
+      You can focus and blur the search input:
+    </p>
+    <ul>
+      <li>
+        <span>Ctrl-S</span>
+        Focus search input
+      </li>
+      <li>
+        <span>Esc</span>
+        Blur search input
+      </li>
+    </ul>
+    <p>
+      In frameless mode you can close the list tab:
+    </p>
+    <ul>
+      <li>
+        <span>Esc</span>
+        Close list tab
+      </li>
+    </ul>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        World
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>src&#47;engine&#47;World.coffee</td>
+        </tr>
+      </table>
+      <h2>Overview</h2>
+      <div class='docstring'>
+  <h2>World class</h2><p>Ties together level data, physics, game loop, stage element, game layers and game items</p>
+</div>
+<div class='tags'>
+</div>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#constructor-instance'>
+        - (void) <strong>constructor</strong>(wrap, levelId, options = {})
+      </a>
+    </span>
+    <span class='constructor note title'>Constructor</span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#initPhysics-instance'>
+        - (void) <strong>initPhysics</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#playPhysics-instance'>
+        - (void) <strong>playPhysics</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Start running Box2D physics
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#onReady-instance'>
+        - (void) <strong>onReady</strong>(callback)
+      </a>
+    </span>
+    <span class='desc'>
+      Attach a callback to level data loading - execute straight away if loaded
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadLevel-instance'>
+        - (void) <strong>loadLevel</strong>(levelId, callback)
+      </a>
+    </span>
+    <span class='desc'>
+      Load level data from gameData module and initialise
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addItem-instance'>
+        - (void) <strong>addItem</strong>(layerId, item)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadLayerData-instance'>
+        - (void) <strong>loadLayerData</strong>(layerId)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addLayer-instance'>
+        - (void) <strong>addLayer</strong>(id, type)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getLayerById-instance'>
+        - (void) <strong>getLayerById</strong>(layerId)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addBody-instance'>
+        - (void) <strong>addBody</strong>(body)
+      </a>
+    </span>
+    <span class='desc'>
+      Initialise Box2D body from object containing fixtureDev and bodyDef
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getItemById-instance'>
+        - (void) <strong>getItemById</strong>(id)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getItemsByAttr-instance'>
+        - (void) <strong>getItemsByAttr</strong>(attr, value)
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#start-instance'>
+        - (void) <strong>start</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Initialise gameloop and behaviours
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#play-instance'>
+        - (void) <strong>play</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Start gameloop and physics
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#stop-instance'>
+        - (void) <strong>stop</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Stop gameloop and physics
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#initBehaviours-instance'>
+        - (void) <strong>initBehaviours</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Initialise all entities behaviours
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#update-instance'>
+        - (void) <strong>update</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      Update each layer
+    </span>
+  </li>
+</ul>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-instance'>
+      - (void) <strong>constructor</strong>(wrap, levelId, options = {})
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='initPhysics-instance'>
+      - (void) <strong>initPhysics</strong>()
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='playPhysics-instance'>
+      - (void) <strong>playPhysics</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Start running Box2D physics</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='onReady-instance'>
+      - (void) <strong>onReady</strong>(callback)
+    </p>
+    <div class='docstring'>
+  <p>Attach a callback to level data loading - execute straight away if loaded</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadLevel-instance'>
+      - (void) <strong>loadLevel</strong>(levelId, callback)
+    </p>
+    <div class='docstring'>
+  <p>Load level data from gameData module and initialise</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addItem-instance'>
+      - (void) <strong>addItem</strong>(layerId, item)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadLayerData-instance'>
+      - (void) <strong>loadLayerData</strong>(layerId)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addLayer-instance'>
+      - (void) <strong>addLayer</strong>(id, type)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getLayerById-instance'>
+      - (void) <strong>getLayerById</strong>(layerId)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addBody-instance'>
+      - (void) <strong>addBody</strong>(body)
+    </p>
+    <div class='docstring'>
+  <p>Initialise Box2D body from object containing fixtureDev and bodyDef</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getItemById-instance'>
+      - (void) <strong>getItemById</strong>(id)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getItemsByAttr-instance'>
+      - (void) <strong>getItemsByAttr</strong>(attr, value)
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='start-instance'>
+      - (void) <strong>start</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Initialise gameloop and behaviours</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='play-instance'>
+      - (void) <strong>play</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Start gameloop and physics</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='stop-instance'>
+      - (void) <strong>stop</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Stop gameloop and physics</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='initBehaviours-instance'>
+      - (void) <strong>initBehaviours</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Initialise all entities behaviours</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='update-instance'>
+      - (void) <strong>update</strong>()
+    </p>
+    <div class='docstring'>
+  <p>Update each layer</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  Generated on
+  Thu Sep 19 2013 04:09:29 GMT+0100 (BST)
+  by
+  <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
+  v1.9.0
+  (Node.js v0.10.0).
+  &#10034;
+  Press Ctrl-h to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/#!/netzpirat'>@netzpirat</a>
+  &#10034;
+  <a href='https://mksoft.ch'>mksoft.ch</a>
+</div>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 
 ###
-Physics helpers
+## Physics helpers
 
 Wraps Box2D (Box2DWeb port) into a simpler API, defines a layer of separation from the actual port
 that would allow me to simply replace it with a different port/library

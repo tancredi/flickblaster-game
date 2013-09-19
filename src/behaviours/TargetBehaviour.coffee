@@ -1,14 +1,16 @@
 
-###
-Target Behaviour class
+BaseBehaviour = require './BaseBehaviour'
 
-Targets are the sort of holes in which you have to pot the player to win the game
+###
+## Target Behaviour class
+
+Targets are holes the player has to aim to to win the game
 
 The pot logic is contained in PlayerBehaviour, this behaviour mainly shows effects on the target
 when hovered by the player
 ###
 
-class BaseBehaviour
+class TargetBehaviour extends BaseBehaviour
 
   constructor: (@entity, @world) ->
     # Bind to event fired by player on the instance
@@ -28,4 +30,4 @@ class BaseBehaviour
   # Overwrite basic behaviour (No need to go anywhere o update the sprite)
   update: ->
 
-module.exports = BaseBehaviour
+module.exports = TargetBehaviour

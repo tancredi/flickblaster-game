@@ -1,11 +1,4 @@
 
-###
-Lasers class
-
-Similar to Layer class, but handling lasers in the scene
-Renders the laser body using SVG, takes care of manipulating and updating it when needed
-###
-
 renderer = require '../core/renderer'
 
 # Define lasers palette
@@ -17,6 +10,13 @@ colors =
   blue: '#5adef6'
 
 lasers = []
+
+###
+## Lasers class
+
+Similar to Layer class, but handling lasers in the scene
+Renders the laser body using SVG, takes care of manipulating and updating it when needed
+###
 
 class Lasers
 

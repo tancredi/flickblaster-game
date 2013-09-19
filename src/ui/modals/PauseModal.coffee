@@ -1,14 +1,14 @@
 
+BaseModal = require './BaseModal'
+device = require '../../core/device'
+views = require '../../core/views'
+
 ###
-Pause Modal class
+## Pause Modal class
 
 Modal shown when pausing
 Read BaseModal for more
 ###
-
-BaseModal = require './BaseModal'
-device = require '../../core/device'
-views = require '../../core/views'
 
 class PauseModal extends BaseModal
   templateName: 'modal-pause'

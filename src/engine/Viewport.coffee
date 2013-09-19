@@ -1,21 +1,21 @@
 
-###
-Viewport Class
-
-Contains game view elements on its wrapping elements, takes care of panning them into the screen
-After afapting to the screen size, it also takes care of translating screen coordinates into game
-coordinates and vice-versa
-
-This conversion is used by all modules that deal with rendering, and allows dealing with game
-logic, physics and measurement with better flexibility and ease
-###
-
 device = require '../core/device'
 
 win = $ window
 
 # Amount of easing applied when panning to follow a game item
 followEasing = 20
+
+###
+## Viewport Class
+
+Contains game view elements on its wrapping elements, takes care of panning them into the screen
+after adapting to the screen size, it also takes care of translating screen coordinates into game
+coordinates and vice-versa
+
+This conversion is used by all modules that deal with rendering, and allows dealing with game
+logic, physics and measurement with better flexibility and ease
+###
 
 class Viewport
 

@@ -1,21 +1,21 @@
 
-###
-Wall class
-
-A physical Body (Game item) which shape gets rendered on screen in an SVG path element of a fixed
-color
-
-Read Walls for more about the way a Wall is added to the scene and handled
-Walls support all shape types ('type') that Body supports
-
-Read Body for more
-###
-
 Body = require './Body'
 renderer = require '../core/renderer'
 
 # Fixed color all Walls will be rendered to
 wallsColor = '#a2bfc9'
+
+###
+## Wall class
+
+A physical Body (Game item) which shape gets rendered on screen in an SVG path element of a fixed
+color
+
+Read Walls for more about the way a Wall is added to the scene and handled Walls support all
+shape types (`type`) that Body supports
+
+Read Body for more
+###
 
 class Wall extends Body
   itemType: 'wall'

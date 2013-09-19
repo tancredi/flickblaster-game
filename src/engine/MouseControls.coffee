@@ -1,15 +1,15 @@
 
-###
-Mouse Controls class
-
-Utility scaffholding class to quickly bind mouse controls setups
-Extend and have access to mouse position and cached mouse events at anytime
-###
-
 device = require '../core/device'
 
 body = $ 'body'
 viewWrap = $ '#view-wrap'
+
+###
+##Mouse Controls class
+
+Utility class to quickly bind mouse controls setups
+Extend and have access to mouse position and cached mouse events at anytime
+###
 
 class MouseControls
 
