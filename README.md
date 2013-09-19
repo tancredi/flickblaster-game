@@ -100,7 +100,8 @@ A map of the core directories of the app
 # Documentation
 
 The documentation contained in `docs/` is generated using [Codo](https://github.com/netzpirat/codo).
-You can generate an updated version by running `cake docs`.
+
+Generate an updated version by running `cake docs`.
 
 # Dependencies
 
