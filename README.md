@@ -1,9 +1,11 @@
 
 # FlickBlaster
 
-An HTML5 top-down physics-based puzzle game layed out in MVC fashion, rendered using a combination of DOM, SVG and canvas wrapped as a mobile app using Cordova.
+An HTML5 top-down physics-based puzzle game layed out in MVC fashion, rendered using a combination of DOM, SVG and canvas.
 
 The game is written in [CoffeeScript](http://coffeescript.org/), bundled with [Browserify](http://browserify.org/) and wrapped as a [Cordova](http://cordova.apache.org/) cross-platform app, but can also be executed and tested in the browser.
+
+Also, the styles compile from [LESS CSS](http://lesscss.org/) and UI components are rendered using pre-compiled [Handlebars](http://handlebarsjs.com/) templates.
 
 # Quick source overlook
 
@@ -22,8 +24,7 @@ The directory structure is layed out as follow:
 Includes requirements to build the app locally and run with a the local server for browser testing and also to deploy to a cordova build
 
 * [Node.js](http://nodejs.org/) Install: `brew install node`
-* [Coffeescript](coffeescript.com) - To build the web source - `sudo npm install -g coffee-script`
-* [Grunt](http://gruntjs.com/) - To run build tasks - `sudo npm install -g grunt-cli`
+* [Coffeescript](coffeescript.com) - To build the web source and run the server - `sudo npm install -g coffee-script`
 * [Cordova command-line interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html) - To build mobile source - `sudo npm install -g cordova`
 
 # Install
