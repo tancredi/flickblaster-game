@@ -13,6 +13,7 @@ path = require 'path'
 watcher = (require 'watch-tree-maintained').watchTree
 color = require 'cli-color'
 async = require 'async'
+RetinaDownsizer = require 'retina-downsizer'
 
 {print} = require 'util'
 {spawn} = require 'child_process'
@@ -39,6 +40,8 @@ confs =
 
 # Watch configuration
 watchRate = 3
+
+downsize = new RetinaDownsizer targets: 'www/assets', densities: [ 1.5, 1 ]
 
 # Execute a command from just a string, fire callback if successful
 exec = (command, callback = null) ->
@@ -155,3 +158,8 @@ task 'docs', ->
   # Generates updated documentation using Codo
   exec "#{localCodo} #{src} -o #{out}", ->
     console.log color.green('✔') + color.white("  Generated documentation in #{out}\n")
+
+# Define 'downsize' task
+task 'downsize', ->
+  downsize.run()
+

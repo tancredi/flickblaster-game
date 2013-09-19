@@ -2,7 +2,7 @@
 
     "player": {
         "assets": {
-            "default": "sprites/player@2x.png"
+            "default": "sprites/player"
         },
         "size": [ 80, 80 ],
         "offset": [ 0, 0 ],
@@ -16,13 +16,13 @@
             }
         },
         "decorators": {
-            "burn": "sprites/player-burn@2x.png"
+            "burn": "sprites/player-burn"
         }
     },
 
     "target": {
         "assets": {
-            "default": "sprites/target@2x.png"
+            "default": "sprites/target"
         },
         "size": [ 90, 90 ],
         "offset": [ 0, 0 ],
@@ -36,13 +36,13 @@
             }
         },
         "decorators": {
-           "lights": "sprites/target-lights@2x.png"
+           "lights": "sprites/target-lights"
         }
     },
 
     "button-v-yellow": {
         "assets": {
-            "default": "sprites/button-yellow@2x.png"
+            "default": "sprites/button-yellow"
         },
         "size": [ 42, 57 ],
         "offset": [ 0, 15 ],
@@ -74,20 +74,20 @@
     "button-v-red": {
         "extends": "button-v-yellow",
         "assets": {
-            "default": "sprites/button-red@2x.png"
+            "default": "sprites/button-red"
         }
     },
 
     "button-h-red": {
         "extends": "button-h-yellow",
         "assets": {
-            "default": "sprites/button-red@2x.png"
+            "default": "sprites/button-red"
         }
     },
 
     "teleport": {
         "assets": {
-            "default": "sprites/teleport@2x.png"
+            "default": "sprites/teleport"
         },
         "size": [ 80, 80 ],
         "offset": [ 0, 0 ],
@@ -101,13 +101,13 @@
             }
         },
         "decorators": {
-            "lights": "sprites/teleport-lights@2x.png"
+            "lights": "sprites/teleport-lights"
         }
     },
 
     "sensor": {
         "assets": {
-            "default": "sprites/sensor@2x.png"
+            "default": "sprites/sensor"
         },
         "size": [ 40, 40 ],
         "offset": [ 0, 0 ],
@@ -121,13 +121,13 @@
             }
         },
         "decorators": {
-            "light": "sprites/sensor-light@2x.png"
+            "light": "sprites/sensor-light"
         }
     },
 
     "bullet": {
         "assets": {
-            "default": "sprites/bullet@2x.png"
+            "default": "sprites/bullet"
         },
         "size": [ 40, 40 ],
         "offset": [ 0, 0 ],

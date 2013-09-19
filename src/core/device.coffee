@@ -36,9 +36,10 @@ isTouch = (_.has document.documentElement, 'ontouchstart') or (_.has window, 'on
 useFakeSize = fakeSize? and not isMobile
 
 device =
-  isMobile: isMobile          # Returns true if supported touch device is detected
-  size: null                  # Device screen size
-  isTouch: isTouch            # Is a touch device
+  isMobile: isMobile                        # Returns true if supported touch device is detected
+  size: null                                # Device screen size
+  isTouch: isTouch                          # Is a touch device
+  pixelRatio: window.devicePixelRatio or 1  # Device pixel ratio
 
 # Updates screen size when device resizes
 onResize = -> device.size = width: win.innerWidth(), height: win.innerHeight()
@@ -47,6 +48,8 @@ win.on 'resize', onResize
 # Executes once to populate device size
 onResize()
 module.exports =
+
+  getPixelRatio: -> device.pixelRatio
 
   isTouch: -> device.isTouch
 

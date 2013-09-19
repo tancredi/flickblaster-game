@@ -16,6 +16,7 @@
     "cli-color": "~0.2.x",
     "less": "~1.4.x",
     "handlebars": "~1.0.1x",
-    "codo": "~1.9.0"
+    "codo": "~1.9.0",
+    "retina-downsizer": "0.0.x"
   }
 }

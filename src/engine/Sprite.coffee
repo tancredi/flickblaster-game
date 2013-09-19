@@ -3,6 +3,7 @@ BaseItem = require './BaseItem'
 SpriteRenderer = require './SpriteRenderer'
 gameData = require './gameData'
 renderer = require '../core/renderer'
+assets = require './assets'
 
 wallsColor = '#a2bfc9'
 
@@ -43,7 +44,11 @@ class Sprite extends BaseItem
   renderDecorators: ->
     for key, decorator of @preset.decorators
       el = $ renderer.render 'game-decorator'
-      el.css backgroundImage: "url(assets/#{decorator})"
+
+      # Get full asset path
+      assetPath = assets.getAssetPath decorator
+
+      el.css backgroundImage: "url(#{assetPath})"
       el.hide()
       @el.append el
       @decorators[key] = el

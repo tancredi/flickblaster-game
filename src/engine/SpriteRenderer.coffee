@@ -1,5 +1,6 @@
 
 renderer = require '../core/renderer'
+assets = require './assets'
 
 ###
 ## Sprite Renderer
@@ -20,13 +21,19 @@ class SpriteRenderer
 
   # Render and setup the DOM element
   render: ->
+
     @el = $ renderer.render 'game-sprite'
+
     # Get the current pose asset
     asset = @assets[@poses[@pose].assets or 'default']
+
+    # Get full asset path
+    assetPath = assets.getAssetPath asset
+
     @el.css
       width: Math.floor @viewport.worldToScreen @poses[@pose].module[0]
       height: Math.floor @viewport.worldToScreen @poses[@pose].module[1]
-      backgroundImage: "url(assets/#{asset})"
+      backgroundImage: "url(#{assetPath})"
       backgroundSize: "#{Math.floor @width}px #{Math.floor @height}px"
       backgroundPosition: "-#{@offset.x}px -#{@offset.y}px"
 
