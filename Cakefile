@@ -84,7 +84,7 @@ build =
   css: (callback) ->
     console.log color.magentaBright 'Compiling CSS...'
 
-    src = '#{confs.css.src}/#{confs.css.main}'
+    src = "#{confs.css.src}/#{confs.css.main}"
     out = confs.css.out
 
     # Local LESS script - cut down global dependencies
