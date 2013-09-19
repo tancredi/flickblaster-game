@@ -111,7 +111,7 @@ Generate an updated version by running `cake docs`.
 * `watch-tree-maintained`: [Watch-Tree](https://github.com/tafa/node-watch-tree) - Used to set up watch tasks
 * `async`: [Async.js](https://github.com/caolan/async) - Used to ease asynchronus operations
 * `cli-color`: [Cli-color](https://github.com/medikoo/cli-color) - Used to easily display colors in the console
-* `less`: [LESS CSS](http://lesscss.org/ - Used to pre-process the CSS
+* `less`: [LESS CSS](http://lesscss.org/ - Used to pre-process the CSS)
 * `handlebars`: [Handlebars](http://handlebarsjs.com/) - Used to pre-compile templates
 * `codo`: [Codo](https://github.com/netzpirat/codo) - Used to generate the documentation
 * `retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Used to generate resized assets for different pixel-ratios
