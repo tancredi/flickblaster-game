@@ -116,7 +116,7 @@ Generate an updated version by running `cake docs`.
 * `codo`: [Codo](https://github.com/netzpirat/codo) - Used to generate the documentation
 * `retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Used to generate resized assets for different pixel-ratios
 
-# Sublime Project
+# Sublime Text Project
 
 A [Sublime Text](http://www.sublimetext.com/) project is provided in the repository (`flickblaster-game.sublime-project`).
 
