@@ -115,3 +115,7 @@ Generate an updated version by running `cake docs`.
 * `handlebars`: [Handlebars](http://handlebarsjs.com/) - Used to pre-compile templates
 * `codo`: [Codo](https://github.com/netzpirat/codo) - Used to generate the documentation
 * `retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Used to generate resized assets for different pixel-ratios
+
+# Sublime Project
+
+A [Sublime Text](http://www.sublimetext.com/) project is provided in the repository (`flickblaster-game.sublime-project`) toa make it easier to browse through the directories of the project excluding compiled output, dependencies, mobile builds, documentation and superfluos directories or files.

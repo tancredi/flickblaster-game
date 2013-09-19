@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"lib",
+				"www/js",
+				"www/css",
+				"node_modules",
+				"platforms",
+				"merges",
+				".cordova",
+				"docs"
+			],
+			"file_exclude_patterns": [
+				"*.sublime-project",
+				"*.sublime-workspace"
+			],
+			"path": "./"
+		}
+	]
+}
