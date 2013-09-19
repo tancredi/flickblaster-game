@@ -131,7 +131,7 @@ src/game
 
 # Core Game Modeling
 
-![Core game engine concepts](http://oi40.tinypic.com/2rrxyyp.jpg)
+![Core game engine concepts](http://oi44.tinypic.com/20ilqs.jpg)
 
 #### World
 
