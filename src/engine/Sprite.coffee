@@ -85,7 +85,7 @@ class Sprite extends BaseItem
 
     @updatePos()
 
-  # Mirror on given axis (0: x, 1: y)
+  # Mirror on given axis (0=x, 1=y)
   flip: (dir) ->
     if dir is 0
       @flipped.x = not @flipped.x
