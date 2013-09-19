@@ -12,9 +12,9 @@ Also, the styles compile from [LESS CSS](http://lesscss.org/) and UI components 
 The coffeescript source of the app is all contained in `src/`
 The directory structure is layed out as follow:
 
-* core - *The web-app framework core (Template rendering, routing, UI) is contained in*
+* core - *The web-app framework core (Template rendering, routing, UI, ...) is contained in*
 * views - *All view controllers. GameView contains part of the base game mechanics*
-* engine - *The game engine core is contained in this directory. World, viewport, entities, etc...*
+* engine - *The game engine core (World, Viewport, Entity, ...) is contained in this directory.*
 * behaviours - *The bahaviours of all game entities that determine the game logic*
 * ui - *UI elements and modules*
 * helpers - *Shared utilities*
@@ -34,6 +34,8 @@ git clone git@github.com:tancredi/flickblaster-game.git
 cd flickblaster-game
 npm install -d
 ```
+
+Now you just have to compile the app and run the server
 
 # Compile
 
