@@ -105,12 +105,12 @@ Generate an updated version by running `cake docs`.
 
 # Dependencies
 
-`coffee-script`: [Coffeescript](http://coffeescript.org) - Compile and run the game
-`browserify`: [Browserify](http://browserify.org/) - Bundles javascript modules for the browser
-`watch-tree-maintained`: [Watch-Tree](https://github.com/tafa/node-watch-tree) - Set up watch tasks
-`async`: [Async.js](https://github.com/caolan/async) - Powerful helper for asynchronus JavaScript
-`cli-color`: [Cli-color](https://github.com/medikoo/cli-color) - Simple colors for the console
-`less`: [LESS CSS](http://lesscss.org/ - Dynamic CSS pre-processor
-`handlebars`: [Handlebars](http://handlebarsjs.com/) - Semantic templating language
-`codo`: [Codo](https://github.com/netzpirat/codo) - CoffeeSccript API generator
-`retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Generate image resizes for different pixel-ratios
+* `coffee-script`: [Coffeescript](http://coffeescript.org) - Compile and run the game
+* `browserify`: [Browserify](http://browserify.org/) - Bundles javascript modules for the browser
+* `watch-tree-maintained`: [Watch-Tree](https://github.com/tafa/node-watch-tree) - Set up watch tasks
+* `async`: [Async.js](https://github.com/caolan/async) - Powerful helper for asynchronus JavaScript
+* `cli-color`: [Cli-color](https://github.com/medikoo/cli-color) - Simple colors for the console
+* `less`: [LESS CSS](http://lesscss.org/ - Dynamic CSS pre-processor
+* `handlebars`: [Handlebars](http://handlebarsjs.com/) - Semantic templating language
+* `codo`: [Codo](https://github.com/netzpirat/codo) - CoffeeSccript API generator
+* `retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Generate image resizes for different pixel-ratios
