@@ -132,7 +132,7 @@ The directory structure is layed out as follow:</p><ul>
 <h1>Install</h1>
 <pre><code>git clone git@github.com:tancredi/flickblaster-game.git
 cd flickblaster-game
-npm install -d</code></pre><p>Now you just have to compile the app and run the server</p><h1>Compile</h1><p>Build the app using <a href="http://coffeescript.org/documentation/docs/cake.html">Cake</a></p><ul>
+npm install</code></pre><p>Now you just have to compile the app and run the server</p><h1>Compile</h1><p>Build the app using <a href="http://coffeescript.org/documentation/docs/cake.html">Cake</a></p><ul>
 <li><code>cake build</code> - Built the app once</li>
 <li><code>cake watch</code> - Watch for changes</li>
 <li><code>cake docs</code> - Update documentation</li>
@@ -140,7 +140,7 @@ npm install -d</code></pre><p>Now you just have to compile the app and run the s
 </ul>
 <h3>Building Tasks</h3>
 <ul>
-<li>less - <em>Compile <code>less/index.less</code> into <code>www/css/index.css</code></em></li>
+<li>less - <em>Compile <code>less/index.less</code> into <code>www/compiled.css</code></em></li>
 <li>handlebars - <em>Pre-compile Handlebars templates in <code>templates/</code> into <code>www/js/templates.js</code></em></li>
 <li>coffee - <em>Compile the CoffeeScript source in <code>src/</code> in Javascript inside <code>lib/</code></em></li>
 <li>bundle - <em>Wrap the generated JavaScript in <code>lib/</code> using Browserify into a single <code>www/js/app.js</code></em></li>
@@ -159,7 +159,6 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
 ├── src - App source
 ├── templates - Handlebards templates
 └── www - Web-app root
-    ├── css - Compiled CSS
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript</code></pre>
 <h3>Core directory</h3><p>The web app framework taking care of views, transitions, routing, rendering of the templates, etc.. is contained in <code>src/core/</code> and contains the following modules:</p><pre><code>src/core
@@ -176,7 +175,12 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
 ├── controls - Game controls classes
 ├── items - GameItem Classes (Entity, Sprite, Body, ...)
 └── utils - Shared utilities and modules</code></pre>
-<h1>Documentation</h1><p>The documentation contained in <code>docs/</code> is generated using <a href="https://github.com/netzpirat/codo">Codo</a>.</p><p>Generate an updated version by running <code>cake docs</code>.</p><h1>Dependencies</h1>
+<h1>Core Game Modeling</h1><p><img src="http://oi44.tinypic.com/20ilqs.jpg" alt="Core game engine concepts"></p><h4>World</h4><p>The game is tied together by the <strong>World</strong>, which contains <strong>Layers</strong> and a <strong>Loop</strong>, a <strong>Viewport</strong> and the Box2D <strong>physics world</strong></p><h4>Loop</h4><p>The <strong>Loop</strong> updates the game at every accessible frame depending on the device performance using <code>requestAnimationFrame</code> or falling back to vendor polyfills or a simple <code>setTimeout</code> loop.</p><p>It provides a simple <code>use</code> method to bind callbacks to every update.</p><h4>Viewport</h4><p>The <strong>Viewport</strong> wraps the stage element and takes care of moving it around, scaling it to fit the screen size and is used by other modules to translate game coordinates into screen coordinates and vice-versa.</p><h4>Layers</h4><p>The <strong>Layers</strong> contain different types of game items. They take care of separating it&#39;s children and updating at every iteration of the <strong>World</strong>&#39;s <strong>Loop</strong></p><h4>Game Items</h4><p>Gamt items are the player, targets, lasers and everything that appears on stage. They all extend from <strong>BaseItem</strong>, and there are three main types of them:</p><ul>
+<li><strong>Body</strong> - <em>Bodies are bi-dimensional physical objects in the stage, they are added to the Box2D World and can be of three types: <code>circle</code>, <code>rect</code> and <code>poly</code></em></li>
+<li><strong>Sprite</strong> - <em>Sprites are visual elements, they can be animated and contain decorators, which are visual sub-elemtents used for effects</em></li>
+<li><strong>Entity</strong> - <em>Entites are the main players on the scene - They contain bodies and sprites and can be associated to a <strong>Behaviour</strong> </em></li>
+</ul>
+<h4>Behaviours</h4><p><strong>Behaviours</strong> are instanciated from <strong>Entities</strong>, depending on the entity <code>behaviour</code> property, usually determined through the editor or by a preset.</p><p>They are passed the parent <strong>Entity</strong> and <strong>World</strong>, and they get updated at every <em>*Loop</em> iteration, so that they can manipulate properties and events around them freely.</p><p>Behaviours determine the base game-logic.</p><h1>Documentation</h1><p>The documentation contained in <code>docs/</code> is generated using <a href="https://github.com/netzpirat/codo">Codo</a>.</p><p>Generate an updated version by running <code>cake docs</code>.</p><h1>Dependencies</h1>
 <ul>
 <li><code>express</code>: <a href="http://expressjs.com/">Express 3</a> - Used to run the server</li>
 <li><code>coffee-script</code>: <a href="http://coffeescript.org">Coffeescript</a> - Used to compile and run the game</li>
@@ -194,7 +198,7 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
     </div>
     <div id='footer'>
   Generated on
-  Thu Sep 19 2013 17:21:49 GMT+0100 (BST)
+  Fri Sep 20 2013 03:49:39 GMT+0100 (BST)
   by
   <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
   v1.9.0

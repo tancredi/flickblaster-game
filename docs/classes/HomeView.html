@@ -15,7 +15,7 @@
     &raquo;
     <a href='../class_index.html' title='Index'>Index</a>
     &raquo;
-    <span class='title'>Viewport</span>
+    <span class='title'>HomeView</span>
     <nav>
       <ul>
         <li class='noframes'>
@@ -106,20 +106,23 @@
     <div id='content'>
       <h1>
         Class:
-        Viewport
+        HomeView
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
-          <td>src&#47;game&#47;components&#47;Viewport.coffee</td>
+          <td>src&#47;views&#47;HomeView.coffee</td>
+        </tr>
+        <tr>
+          <td>Inherits:</td>
+          <td>
+            <a href='../classes/BaseView.html'>BaseView</a>
+          </td>
         </tr>
       </table>
       <h2>Overview</h2>
       <div class='docstring'>
-  <h2>Viewport Class</h2><p>Contains game view elements on its wrapping elements, takes care of panning them into the screen
-after adapting to the screen size, it also takes care of translating screen coordinates into game
-coordinates and vice-versa</p><p>This conversion is used by all modules that deal with rendering, and allows dealing with game
-logic, physics and measurement with better flexibility and ease</p>
+  <h2>Home View class</h2><p>The first view shown when the app is started</p>
 </div>
 <div class='tags'>
 </div>
@@ -128,7 +131,7 @@ logic, physics and measurement with better flexibility and ease</p>
   <li>
     <span class='signature'>
       <a href='#constructor-instance'>
-        - (void) <strong>constructor</strong>(el, width, height)
+        - (void) <strong>constructor</strong>(levelName)
       </a>
     </span>
     <span class='constructor note title'>Constructor</span>
@@ -138,68 +141,28 @@ logic, physics and measurement with better flexibility and ease</p>
   </li>
   <li>
     <span class='signature'>
-      <a href='#center-instance'>
-        - (void) <strong>center</strong>()
+      <a href='#getElements-instance'>
+        - (void) <strong>getElements</strong>()
       </a>
     </span>
     <span class='desc'>
-      Center the viewport of game stage
+      
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#fitInScreen-instance'>
-        - (void) <strong>fitInScreen</strong>()
+      <a href='#bind-instance'>
+        - (void) <strong>bind</strong>()
       </a>
     </span>
     <span class='desc'>
-      Scale to fit horizontally on the screen size
+      
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#moveTo-instance'>
-        - (void) <strong>moveTo</strong>(x, y, duration = 0, callback = null, ease = false)
-      </a>
-    </span>
-    <span class='desc'>
-      Set stage position absolutely - animate and ease if specified
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#worldToScreen-instance'>
-        - (void) <strong>worldToScreen</strong>(value)
-      </a>
-    </span>
-    <span class='desc'>
-      Translate world coordinates into screen coordinates
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#screenToWorld-instance'>
-        - (void) <strong>screenToWorld</strong>(value)
-      </a>
-    </span>
-    <span class='desc'>
-      Translate screen coordinates into world coordinates
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#fits-instance'>
-        - (void) <strong>fits</strong>()
-      </a>
-    </span>
-    <span class='desc'>
-      Returns true if the whole height is shown (Useful if scaled to fit horizontally)
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#followEntity-instance'>
-        - (void) <strong>followEntity</strong>(target, duration = 0, callback = null)
+      <a href='#getNextLevel-instance'>
+        - (void) <strong>getNextLevel</strong>()
       </a>
     </span>
     <span class='desc'>
@@ -207,11 +170,28 @@ logic, physics and measurement with better flexibility and ease</p>
     </span>
   </li>
 </ul>
+      <h2>
+        <small>Inherited Method Summary</small>
+      </h2>
+      <h3 class='inherited'>
+        Methods inherited from
+        <a href='../classes/BaseView.html'>BaseView</a>
+      </h3>
+      <p class='inherited'>
+                <a href='../classes/BaseView.html#render-instance'>#render</a>,
+                <a href='../classes/BaseView.html#transitionComplete-instance'>#transitionComplete</a>,
+                <a href='../classes/BaseView.html#getElements-instance'>#getElements</a>,
+                <a href='../classes/BaseView.html#bind-instance'>#bind</a>,
+                <a href='../classes/BaseView.html#resize-instance'>#resize</a>,
+                <a href='../classes/BaseView.html#close-instance'>#close</a>,
+                <a href='../classes/BaseView.html#hide-instance'>#hide</a>,
+        <a href='../classes/BaseView.html#show-instance'>#show</a>
+      </p>
       <h2>Constructor Details</h2>
       <div class='methods'>
   <div class='method_details'>
     <p class='signature' id='constructor-instance'>
-      - (void) <strong>constructor</strong>(el, width, height)
+      - (void) <strong>constructor</strong>(levelName)
     </p>
     <div class='tags'>
 </div>
@@ -220,68 +200,22 @@ logic, physics and measurement with better flexibility and ease</p>
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='center-instance'>
-      - (void) <strong>center</strong>()
+    <p class='signature' id='getElements-instance'>
+      - (void) <strong>getElements</strong>()
     </p>
-    <div class='docstring'>
-  <p>Center the viewport of game stage</p>
-</div>
-<div class='tags'>
+    <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='fitInScreen-instance'>
-      - (void) <strong>fitInScreen</strong>()
+    <p class='signature' id='bind-instance'>
+      - (void) <strong>bind</strong>()
     </p>
-    <div class='docstring'>
-  <p>Scale to fit horizontally on the screen size</p>
-</div>
-<div class='tags'>
+    <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='moveTo-instance'>
-      - (void) <strong>moveTo</strong>(x, y, duration = 0, callback = null, ease = false)
-    </p>
-    <div class='docstring'>
-  <p>Set stage position absolutely - animate and ease if specified</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='worldToScreen-instance'>
-      - (void) <strong>worldToScreen</strong>(value)
-    </p>
-    <div class='docstring'>
-  <p>Translate world coordinates into screen coordinates</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='screenToWorld-instance'>
-      - (void) <strong>screenToWorld</strong>(value)
-    </p>
-    <div class='docstring'>
-  <p>Translate screen coordinates into world coordinates</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='fits-instance'>
-      - (void) <strong>fits</strong>()
-    </p>
-    <div class='docstring'>
-  <p>Returns true if the whole height is shown (Useful if scaled to fit horizontally)</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='followEntity-instance'>
-      - (void) <strong>followEntity</strong>(target, duration = 0, callback = null)
+    <p class='signature' id='getNextLevel-instance'>
+      - (void) <strong>getNextLevel</strong>()
     </p>
     <div class='tags'>
 </div>
