@@ -18,7 +18,7 @@ testSizes =
   'ipad-mini': [ 768, 1024, 2 ]
 
 # If not null will fake specified resolution
-fakeSize = testSizes['iphone-5']
+# fakeSize = testSizes['iphone-5']
 
 # Used to translate mouse events in touch events
 touchEvents =

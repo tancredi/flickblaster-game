@@ -68,8 +68,8 @@
                     "id": "player"
                 },
                 {
-                    "x": 18,
-                    "y": 840,
+                    "x": 15,
+                    "y": 850,
                     "preset": "button-v-yellow",
                     "attributes": {
                         "action": "laser-off",
@@ -106,8 +106,8 @@
                     "height": 10
                 },
                 {
-                    "x": 433,
-                    "y": 865,
+                    "x": 444,
+                    "y": 866,
                     "type": "rect",
                     "width": 200,
                     "height": 140

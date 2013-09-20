@@ -86,13 +86,6 @@
                     "id": "target"
                 },
                 {
-                    "x": -444,
-                    "y": 223.5,
-                    "preset": "button-v-red",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
                     "x": 266,
                     "y": 418,
                     "preset": "sensor",
@@ -141,7 +134,7 @@
                     "id": ""
                 },
                 {
-                    "x": 524,
+                    "x": 525,
                     "y": 705,
                     "preset": "button-v-red",
                     "attributes": {
@@ -194,7 +187,7 @@
                     "height": 10
                 },
                 {
-                    "x": 5,
+                    "x": 4,
                     "y": 643,
                     "type": "poly",
                     "points": [
@@ -207,8 +200,8 @@
                     ]
                 },
                 {
-                    "x": 7,
-                    "y": 812,
+                    "x": 4,
+                    "y": 816,
                     "type": "poly",
                     "points": [
                         0,

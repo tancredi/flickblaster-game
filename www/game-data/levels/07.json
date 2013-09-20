@@ -72,13 +72,6 @@
                     "id": "player"
                 },
                 {
-                    "x": -444,
-                    "y": 223.5,
-                    "preset": "button-v-red",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
                     "x": 400,
                     "y": 540,
                     "preset": "button-v-red",
@@ -91,7 +84,7 @@
                     "id": ""
                 },
                 {
-                    "x": 17,
+                    "x": 15,
                     "y": 840,
                     "preset": "button-v-yellow",
                     "attributes": {
@@ -122,10 +115,10 @@
                     "height": 10
                 },
                 {
-                    "x": 470,
+                    "x": 472,
                     "y": 675.5,
                     "type": "rect",
-                    "width": 128,
+                    "width": 132,
                     "height": 700
                 },
                 {

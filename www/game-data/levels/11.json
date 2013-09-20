@@ -21,13 +21,6 @@
                     "id": "target"
                 },
                 {
-                    "x": -444,
-                    "y": 223.5,
-                    "preset": "button-v-red",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
                     "x": 270,
                     "y": 840,
                     "preset": "player",
