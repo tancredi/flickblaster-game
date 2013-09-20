@@ -14,14 +14,14 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 274,
+                    "x": 270,
                     "y": 160,
                     "preset": "target",
                     "attributes": {},
                     "id": "target"
                 },
                 {
-                    "x": 274,
+                    "x": 270,
                     "y": 760,
                     "preset": "player",
                     "attributes": {},

@@ -8,5 +8,15 @@
 		"title": "Lasers!",
 		"text": "Careful! There's a laser on your way.<br>Try to push that button to deactivate it.",
 		"icon": "flag"
+	},
+	"teleports": {
+		"title": "Teleports!",
+		"text": "Teleports will bring you to a different location.<br><br>This may be another teleport, or sometimes unexpected places",
+		"icon": "magic"
+	},
+	"sensors": {
+		"title": "Sensors",
+		"text": "Sensors are like buttons, but they can be activated many times, by passing over them",
+		"icon": "eye-open"
 	}
 }

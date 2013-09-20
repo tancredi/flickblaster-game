@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        920
+        959
     ],
     "layers": [
         {
@@ -9,37 +9,15 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 150,
-                    "y": 373,
+                    "x": 269,
+                    "y": 560,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 4,
-                            "height": 730
-                        }
-                    ],
-                    "attributes": {
-                        "color": "red",
-                        "type": "laser",
-                        "interaction": "static",
-                        "group": "laser-red"
-                    },
-                    "behaviour": "laser",
-                    "id": "test"
-                },
-                {
-                    "x": 351,
-                    "y": 758,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "rect",
-                            "width": 358,
+                            "width": 520,
                             "height": 4
                         }
                     ],
@@ -48,7 +26,51 @@
                         "type": "laser",
                         "interaction": "static",
                         "sensor": true,
-                        "off": true,
+                        "group": "laser-red"
+                    },
+                    "behaviour": "laser"
+                },
+                {
+                    "x": 269,
+                    "y": 400,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 520,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "color": "blue",
+                        "type": "laser",
+                        "interaction": "static",
+                        "sensor": true,
+                        "group": "laser-blue",
+                        "off": true
+                    },
+                    "behaviour": "laser"
+                },
+                {
+                    "x": 269,
+                    "y": 250,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 520,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "color": "red",
+                        "type": "laser",
+                        "interaction": "static",
+                        "sensor": true,
                         "group": "laser-red"
                     },
                     "behaviour": "laser"
@@ -67,20 +89,41 @@
                     "id": "target"
                 },
                 {
-                    "x": 76,
-                    "y": 818,
+                    "x": 175,
+                    "y": 624.5,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "laser-toggle",
+                        "target-group": "all"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 393,
+                    "y": 472.5,
                     "preset": "sensor",
                     "attributes": {
                         "action": "laser-toggle",
-                        "interaction": "static",
-                        "target-group": "laser-red",
+                        "target-group": "all",
                         "sensor": true
                     },
                     "id": ""
                 },
                 {
-                    "x": 80,
-                    "y": 150,
+                    "x": 173,
+                    "y": 320,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "laser-toggle",
+                        "target-group": "laser-red"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 180,
+                    "y": 840,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
@@ -90,53 +133,7 @@
         {
             "id": "walls",
             "type": "body",
-            "items": [
-                {
-                    "x": 150,
-                    "y": 760,
-                    "type": "circle",
-                    "radius": 22
-                },
-                {
-                    "x": 4,
-                    "y": 820,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        100,
-                        100,
-                        0,
-                        100
-                    ]
-                },
-                {
-                    "x": 441,
-                    "y": 820,
-                    "type": "poly",
-                    "points": [
-                        100,
-                        0,
-                        100,
-                        100,
-                        0,
-                        100
-                    ]
-                },
-                {
-                    "x": 4,
-                    "y": 4,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        100,
-                        0,
-                        0,
-                        100
-                    ]
-                }
-            ]
+            "items": []
         },
         {
             "id": "background",
@@ -145,6 +142,6 @@
         }
     ],
     "data": {
-        "shots": 2
+        "shots": 3
     }
 }
