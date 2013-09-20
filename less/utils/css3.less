@@ -159,6 +159,15 @@
     background: @falloff -moz-gradient(center top, @start 0%, @stop 100%);
 }
 
+.vertical-gradient-multi(...) {
+    @joined: ~`"@{arguments}".slice(1,-1)`;
+    background: -webkit-linear-gradient(@joined);
+    background: -moz-linear-gradient(@joined);
+    background: -ms-linear-gradient(@joined);
+    background: -o-linear-gradient(@joined);
+    background: linear-gradient(@joined);
+}
+
 .opacity(@opacity:1) {
     @freaking-ie: @opacity * 100;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{freaking-ie})";

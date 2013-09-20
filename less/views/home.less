@@ -1,13 +1,14 @@
 
 .view.view-home {
 	@bg-color: lighten(@color-pale-blue-lighter, 20%);
+	@overlay-color: fade(@bg-color, 70%);
 
 	background-color: @bg-color;
 	.bg-image('illustrations/home', 100% auto, no-repeat, center bottom);
 
 	.inner {
 		padding: 20px;
-		.vertical-gradient(@bg-color, fade(@bg-color, 0%), transparent);
+		.vertical-gradient-multi(@overlay-color 0, @overlay-color 85%, fade(@overlay-color, 0%) 100%);
 		padding-bottom: 100px;
 
 		.main-nav {
