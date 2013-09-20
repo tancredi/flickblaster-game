@@ -75,8 +75,8 @@ class Body extends BaseItem
     return out
 
   moveTo: (pos) ->
-    x = ( @viewport.worldToScreen pos.x ) / phys.ratio
-    y = ( @viewport.worldToScreen pos.y ) / phys.ratio
+    x = pos.x / phys.ratio
+    y = pos.y / phys.ratio
     pos = new phys.Vector x, y
     # Horrible hack to force the Box2D body to change position
     setTimeout ( => @b2dBody.m_body.SetPosition pos ), .001
