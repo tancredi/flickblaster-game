@@ -6,20 +6,44 @@ BaseBehaviour = require './BaseBehaviour'
 
 Targets are holes the player has to aim to to win the game
 
-The pot logic is contained in PlayerBehaviour, this behaviour mainly shows effects on the target
-when hovered by the player
+On the same level there can theoretically be multiple targets and players
+Once a target gets hit by a player with the same `data.targetType` property, it will communicate
+the point to the world and stay in active state
 ###
 
 class TargetBehaviour extends BaseBehaviour
 
   constructor: (@entity, @world) ->
-    # Bind to event fired by player on the instance
-    (_ @entity).on 'hover', => @lightsOn()
-    (_ @entity).on 'release', => @lightsOff()
+    # True when scored by player
+    @potted = false
+
+    @bind()
 
     # Get lights decorator element
     @lights = @entity.sprites[0].getDecorator 'lights'
     @lights.show().css opacity: 0
+
+  bind: ->
+    players = @world.getItemsByAttr 'type', 'player'
+
+    # Bind collision listeners to all players on stage
+    for player in players
+        # Only consider players of the same type as the target
+      if player.data.targetType is @entity.data.targetType
+
+        @entity.onCollisionStart player, =>
+          return if @potted
+
+          @lightsOn()
+          @pot()
+
+        @entity.onCollisionEnd player, =>
+          @lightsOff() unless @potted
+
+  pot: ->
+    @potted = true
+    # Score pot
+    (_ @world).emit 'pot', [ @ ]
 
   # Fade the lights in
   lightsOn: -> @lights.stop().transition opacity: 1, 500

@@ -58,7 +58,8 @@ class GameView extends BaseView
       e.preventDefault()
 
     (_ @world).on 'shoot', => @setShots @shots - 1
-    (_ @world).on 'pot', => @setTargetsCount @targetsCount - 1
+    (_ @world).on 'pot', =>
+      @setTargetsCount @targetsCount - 1
 
   # Re-initialise this view with same level to restart the game
   restart: ->
@@ -90,9 +91,11 @@ class GameView extends BaseView
     @targetsCount = amt
 
     # End the game if all targets were hit
-    if amt is 0 then @finish true
+    if amt is 0
+      @finish true
 
   finish: (win = false) ->
+    @player.behaviour.win()
     if not @finished
       @finished = true
 

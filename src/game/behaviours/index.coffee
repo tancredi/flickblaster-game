@@ -15,5 +15,6 @@ laser = require './LaserBehaviour'
 button = require './ButtonBehaviour'
 teleport = require './TeleportBehaviour'
 sensor = require './SensorBehaviour'
+turbo = require './TurboBehaviour'
 
-module.exports = { base, player, target, laser, button, teleport, sensor }
+module.exports = { base, player, target, laser, button, teleport, sensor, turbo }

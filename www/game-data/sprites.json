@@ -140,6 +140,26 @@
                 "play": false
             }
         }
+    },
+
+    "turbo": {
+        "assets": {
+            "default": "sprites/turbo"
+        },
+        "size": [ 100, 100 ],
+        "offset": [ 0, 0 ],
+        "poses": {
+            "default": {
+                "offset": [ 0, 0 ],
+                "module": [ 100, 100 ],
+                "frameLength": 0,
+                "repeat": true,
+                "play": false
+            }
+        },
+        "decorators": {
+            "light": "sprites/turbo-lights"
+        }
     }
 
 }

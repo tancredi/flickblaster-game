@@ -106,6 +106,21 @@
 		"bodies": [
 			{ "type": "circle", "radius": 15, "x": 0, "y": 0 }
 		]
+	},
+
+	"turbo": {
+		"behaviour": "turbo",
+		"attributes": {
+			"type": "turbo",
+			"sensor": true,
+			"interaction": "static"
+		},
+		"sprites": [
+			{ "type": "turbo", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "circle", "radius": 50, "x": 0, "y": 0 }
+		]
 	}
 
 }

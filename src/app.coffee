@@ -47,6 +47,7 @@ touchables.initialise()
 gameData.init()
 gameData.onReady ->
   # Open Levels view
-  views.open 'home'
+  # views.open 'home'
+  views.open 'game', null, null, false, '11'
 
 init()
