@@ -174,6 +174,8 @@ Generate an updated version by running `cake docs`.
 
 # Dependencies
 
+### Node.js Dependencies
+
 * `express`: [Express 3](http://expressjs.com/) - Used to run the server
 * `coffee-script`: [Coffeescript](http://coffeescript.org) - Used to compile and run the game
 * `browserify`: [Browserify](http://browserify.org/) - Used to bundle javascript modules for the browser
@@ -184,6 +186,15 @@ Generate an updated version by running `cake docs`.
 * `handlebars`: [Handlebars](http://handlebarsjs.com/) - Used to pre-compile templates
 * `codo`: [Codo](https://github.com/netzpirat/codo) - Used to generate the documentation
 * `retina-downsizer`: [Retina Downsizer](https://github.com/tancredi/node-retina-downsizer) - Used to generate resized assets for different pixel-ratios
+
+### Client-side libraries
+
+* [Jquery](http://jquery.com/)
+* [Underscore.js](http://underscorejs.org/)
+* [Handlebars](http://handlebarsjs.com/)
+* [Transit.js](http://ricostacruz.com/jquery.transit/)
+* [Quo.js](http://quojs.tapquo.com/)
+* [Box2DWeb](https://code.google.com/p/box2dweb/)
 
 # Sublime Text Project
 
