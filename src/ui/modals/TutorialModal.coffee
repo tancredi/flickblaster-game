@@ -19,7 +19,7 @@ class TutorialModal extends BaseModal
     @context = gameData.get 'tutorials', @id
 
     # Only open if tutorial wasn't seen already
-    if userData.getSeenTutorials().indexOf @id
+    if (userData.getSeenTutorials().indexOf @id) is -1
       super @wrap, @context
 
   # Delegate actions to all buttons

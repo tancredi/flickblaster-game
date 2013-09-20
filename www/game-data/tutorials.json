@@ -18,5 +18,20 @@
 		"title": "Sensors",
 		"text": "Sensors are like buttons, but they can be activated many times, by passing over them",
 		"icon": "eye-open"
+	},
+	"turbos": {
+		"title": "Boosters!",
+		"text": "Boosters make you go faster when you pass over them.",
+		"icon": "bolt"
+	},
+	"multiple-targets": {
+		"title": "Multiple targets",
+		"text": "Sometimes, you may have to activate more than 1 target to win",
+		"icon": "bullseye"
+	},
+	"obstacles": {
+		"title": "Obstacles",
+		"text": "Heavy objects on your way may slow you down.<br><br>Work your way around them",
+		"icon": "anchor"
 	}
 }

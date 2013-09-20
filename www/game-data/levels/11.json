@@ -14,50 +14,36 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 100,
-                    "y": 100,
+                    "x": 66,
+                    "y": 198,
                     "preset": "target",
                     "attributes": {},
-                    "id": ""
+                    "id": "target"
                 },
                 {
-                    "x": 440,
-                    "y": 100,
-                    "preset": "target",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 440,
-                    "y": 820,
-                    "preset": "target",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 100,
-                    "y": 820,
-                    "preset": "target",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 100,
-                    "y": 290,
-                    "preset": "turbo",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 100,
-                    "y": 460,
+                    "x": 270,
+                    "y": 760,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
                 },
                 {
                     "x": 270,
-                    "y": 100,
+                    "y": 400,
+                    "preset": "turbo",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 460,
+                    "y": 197,
+                    "preset": "turbo",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 239,
+                    "y": 77,
                     "preset": "turbo",
                     "attributes": {},
                     "id": ""
@@ -69,65 +55,84 @@
             "type": "body",
             "items": [
                 {
-                    "x": 440,
-                    "y": 420,
-                    "type": "poly",
-                    "points": [
-                        100,
-                        0,
-                        100,
-                        100,
-                        100,
-                        200,
-                        0,
-                        100
-                    ]
-                },
-                {
-                    "x": 440,
-                    "y": 4,
-                    "type": "poly",
-                    "points": [
-                        100,
-                        0,
-                        100,
-                        100,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "x": 4,
-                    "y": 4,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        100,
-                        0,
-                        0,
-                        100
-                    ]
-                },
-                {
-                    "x": 4,
-                    "y": 816,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        100,
-                        100,
-                        0,
-                        100
-                    ]
-                },
-                {
-                    "x": 270,
-                    "y": 750,
+                    "x": 149,
+                    "y": 259,
                     "type": "rect",
-                    "width": 200,
+                    "width": 472,
                     "height": 10
+                },
+                {
+                    "x": 211,
+                    "y": 259,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 490,
+                    "y": 680,
+                    "type": "rect",
+                    "width": 100,
+                    "height": 600
+                },
+                {
+                    "x": 439,
+                    "y": 283,
+                    "type": "poly",
+                    "points": [
+                        100,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 436,
+                    "y": 4,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        100,
+                        100
+                    ]
+                },
+                {
+                    "x": 380,
+                    "y": 197,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 130
+                },
+                {
+                    "x": 108,
+                    "y": 309,
+                    "type": "rect",
+                    "width": 208,
+                    "height": 100
+                },
+                {
+                    "x": 1,
+                    "y": -1,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
                 }
             ]
         },
@@ -139,6 +144,6 @@
     ],
     "data": {
         "shots": 1,
-        "tutorial": "multiple-targets"
+        "tutorial": "turbos"
     }
 }

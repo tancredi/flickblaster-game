@@ -31,7 +31,6 @@ class TurboBehaviour extends BaseActionableBehaviour
 
     player.body.b2dBody.m_body.m_linearVelocity.x *= @multiplier
     player.body.b2dBody.m_body.m_linearVelocity.y *= @multiplier
-    console.log player.body.b2dBody
 
     # Show the lights and fade them back out
     @light.stop().transition opacity: 1, 50, =>

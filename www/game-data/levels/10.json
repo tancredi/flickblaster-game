@@ -84,6 +84,13 @@
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
+                },
+                {
+                    "x": 189,
+                    "y": 839,
+                    "preset": "turbo",
+                    "attributes": {},
+                    "id": ""
                 }
             ]
         },
