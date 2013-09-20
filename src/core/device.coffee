@@ -15,7 +15,7 @@ testSizes =
   'nexus-4': [ 768, 1280, 2 ]
   'iphone-4': [ 640, 920, 2 ]
   'iphone-5': [ 640, 1136, 2 ]
-  'ipad-mini': [ 768, 1024, 1 ]
+  'ipad-mini': [ 768, 1024, 2 ]
 
 # If not null will fake specified resolution
 fakeSize = testSizes['iphone-5']
