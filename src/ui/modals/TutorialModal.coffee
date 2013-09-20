@@ -30,6 +30,8 @@ class TutorialModal extends BaseModal
       @done()
       e.preventDefault()
 
-  done: -> userData.saveSeenTutorial @id
+  done: ->
+    userData.saveSeenTutorial @id
+    @close()
 
 module.exports = TutorialModal

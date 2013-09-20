@@ -3,5 +3,10 @@
 		"title": "Welcome",
 		"text": "Flick the red disc into the the targets to win the game.<br><br>Try to do it in the number of shots indicated on top!",
 		"icon": "flag"
+	},
+	"lasers": {
+		"title": "Lasers!",
+		"text": "Careful! There's a laser on your way.<br>Try to push that button to deactivate it.",
+		"icon": "flag"
 	}
 }
