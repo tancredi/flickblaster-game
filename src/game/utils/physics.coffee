@@ -31,7 +31,7 @@ module.exports =
     Poly: Box2D.Collision.Shapes.b2PolygonShape
 
   # Shortcut to make Box2D vectors
-  getVector: (x, y) -> new @Vector ( x ), ( y )
+  getVector: (x, y) -> new @Vector (x * @ratio), (y * @ratio)
 
   # Generate a Body (BodyDef and FixtureDef) with given objects
   getBody: (options) ->

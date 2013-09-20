@@ -39,7 +39,7 @@ class Body extends BaseItem
         return
 
     # Creates the Box2D body through the physics module and adds it to the scene
-    bodyData = phys.getBody @parseOptions options
+    bodyData = phys.getBody options
     @b2dBody = @world.addBody bodyData
 
   # Parses and scales to viewport given body options
@@ -90,8 +90,8 @@ class Body extends BaseItem
     pos = @viewport.worldToScreen @position()
 
     # Places the new body relatively to the main one
-    body.fixtureDef.shape.m_p.x = ( options.x - pos.x ) / phys.ratio
-    body.fixtureDef.shape.m_p.y = ( options.y - pos.y ) / phys.ratio
+    body.fixtureDef.shape.m_p.x = @viewport.screenToWorld ( options.x - pos.x ) / phys.ratio
+    body.fixtureDef.shape.m_p.y = @viewport.screenToWorld ( options.y - pos.y ) / phys.ratio
 
     # Adds the body to itself
     @b2dBody.m_body.CreateFixture body.fixtureDef
@@ -99,13 +99,13 @@ class Body extends BaseItem
   # Applies a force with given direction and multiplier
   applyForce: (x, y, multiplier = 0) ->
     point = @b2dBody.m_body.GetWorldCenter()
-    x = (@viewport.worldToScreen x) * multiplier
-    y = (@viewport.worldToScreen y) * multiplier
+    x *= multiplier
+    y *= multiplier
     vector = phys.getVector x, y
     @b2dBody.m_body.ApplyForce vector, point
 
   # Retuns position in world coordinates
-  position: -> @viewport.screenToWorld phys.getBodyPosition @b2dBody
+  position: -> phys.getBodyPosition @b2dBody
 
   # Set sensor state
   # If true the object will stop interactive in collisions, but keep triggering them

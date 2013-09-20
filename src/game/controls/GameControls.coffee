@@ -1,5 +1,5 @@
 
-shotStrength = 40
+shotStrength = 1
 
 renderer = require '../../core/renderer'
 
@@ -92,9 +92,10 @@ class GameControls extends MouseControls
       center = @viewport.worldToScreen @game.player.position()
       vertex = @getRelativeMouse()
       dragged = x: center.x - vertex.x, y: center.y - vertex.y
+      dragged = @viewport.screenToWorld dragged
       @hideCanvas()
       @clearLast()
-      @flickTarget.body.applyForce dragged.x, dragged.y, -shotStrength
+      @flickTarget.body.applyForce -dragged.x, -dragged.y, shotStrength
       @flicking = false
       @flickTarget = null
 

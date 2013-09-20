@@ -103,7 +103,10 @@ class Entity extends BaseItem
 
   updatePos: ->
     if @body?
-      @el.css @layer.viewport.worldToScreen @body.position()
+      pos = @layer.viewport.worldToScreen @body.position()
+      # pos.x /= 30
+      # pos.y /= 30
+      @el.css pos
 
   distance: (target, absolute = true) ->
     diff = x: @x - target.x, y: @x - target.y
