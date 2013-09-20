@@ -1,5 +1,5 @@
 
-shotStrength = 1
+shotStrength = 2
 
 renderer = require '../../core/renderer'
 
