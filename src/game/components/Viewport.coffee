@@ -6,7 +6,7 @@ win = $ window
 # Amount of easing applied when panning to follow a game item
 followEasing = 20
 
-topPadding = 18
+topPadding = 23
 
 ###
 ## Viewport Class
