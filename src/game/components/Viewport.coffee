@@ -6,6 +6,8 @@ win = $ window
 # Amount of easing applied when panning to follow a game item
 followEasing = 20
 
+topPadding = 18
+
 ###
 ## Viewport Class
 
@@ -36,8 +38,8 @@ class Viewport
   # Scale to fit horizontally on the screen size
   fitInScreen: ->
     @scaleRatio = @width / @screen.width
-    if @height / @scaleRatio > @screen.height
-      @scaleRatio = @height / @screen.height
+    if @height / @scaleRatio + topPadding > @screen.height
+      @scaleRatio = @height / (@screen.height - topPadding * 2)
 
     @el.css width: @width / @scaleRatio, height: @height / @scaleRatio
 
@@ -59,16 +61,18 @@ class Viewport
       @x = x
       @y = y
 
+      y = @y + topPadding / 2
+
     # Using Transit.js (For 3D Transforms and transitions) to access hardware acceleration
     # and avoid thre constant re-draw of children elements
 
     # Apply CSS transformation if not animating
     # Otherwise animate it with CSS translation
     if not duration
-      @el.css x: @x, y: @y
+      @el.css x: @x, y: y
       callback() if callback?
     else
-      @el.transition x: @x, y: @y, duration, => callback() if callback?
+      @el.transition x: @x, y: y, duration, => callback() if callback?
 
   # Translate world coordinates into screen coordinates
   worldToScreen: (value) ->

@@ -58,11 +58,11 @@ class Walls
           w = @width
           h = thickness
           x = @width / 2
-          y = if opposite then @height - thickness / 2 else thickness / 2
+          y = if opposite then @height else 0
         else
           w = thickness
           h = @height
-          x = if opposite then @width - thickness / 2 else thickness / 2
+          x = if opposite then @width else 0
           y = @height / 2
         @add type: 'rect', x: x, y: y, width: w, height: h
 
