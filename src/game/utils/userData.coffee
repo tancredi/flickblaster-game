@@ -12,11 +12,17 @@ gameData = require './gameData'
 # Will contain the level objects loaded from gameData
 levels = []
 
-# Load level progress data from localStorage or create if missing
+# Load level progress data from `localStorage` or create if missing
 if localStorage.levelsProgress?
   levelsProgress = JSON.parse localStorage.levelsProgress
 else
   levelsProgress = []
+
+# Load seen tutorials array from `localStorage` or create if missing
+if localStorage.seenTutorials?
+  seenTutorials = JSON.parse localStorage.seenTutorials
+else
+  seenTutorials = []
 
 # Normalises progress in base on the actual amount of levels
 normaliseLevelsProgress = ->
@@ -56,6 +62,15 @@ module.exports =
         levelsProgress[levelIndex + 1].locked = false
 
       @storeLevelsProgress()
+
+  # Get array with ids of seen tutorials
+  getSeenTutorials: -> seenTutorials
+
+  # Add the ID of a seen tutorial
+  saveSeenTutorial: (id) ->
+    if seenTutorials.indexOf id is -1
+      seenTutorials.push id
+      localStorage.seenTutorials = JSON.stringify seenTutorials
 
   # Saves all levels progress in localStorage
   storeLevelsProgress: ->

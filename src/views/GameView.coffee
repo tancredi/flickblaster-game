@@ -13,6 +13,8 @@ GameControls = require '../game/controls/GameControls'
 userData = require '../game/utils/userData'
 phys = require '../game/utils/physics'
 
+TutorialModal = require '../ui/modals/TutorialModal'
+
 # Cache jQuery-wrapped window object
 win = $ window
 
@@ -73,6 +75,11 @@ class GameView extends BaseView
 
   startGame: ->
     @world.play()
+
+    # Show tutorial if level has one
+    tutorial = @world.level.data.tutorial
+    if tutorial
+      new TutorialModal @elements.main, tutorial
 
     # Fetch base game entities
     @player = @world.getItemById 'player'

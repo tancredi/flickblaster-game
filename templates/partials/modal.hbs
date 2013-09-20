@@ -2,7 +2,15 @@
 	<div class="overlay"></div>
 	<div class="modal {{class-names}}">
 		{{#if title}}
-			<h1 class="modal-head">{{{title}}}</h1>
+			<h1 class="modal-head">
+
+				{{#if icon}}
+					<i class="icon-{{icon}}"></i>
+				{{/if}}
+
+				{{{title}}}
+
+			</h1>
 		{{/if}}
 		<div class="modal-body">{{{body}}}</div>
 	</div>

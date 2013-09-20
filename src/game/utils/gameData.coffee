@@ -28,7 +28,7 @@ readyCallbacks = []   # Callbacks to execute when data is loaded
 module.exports =
 
   init: ->
-    @loadData [ 'sprites', 'materials', 'presets', 'levels' ], ->
+    @loadData [ 'sprites', 'materials', 'presets', 'levels', 'tutorials' ], ->
       ready = true
       cb() for cb in readyCallbacks
 
