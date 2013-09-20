@@ -37,7 +37,9 @@ class GameControls extends MouseControls
     @canvas.hide().appendTo @game.world.stage
     @ctx = @canvas[0].getContext '2d'
     # Apply style attributes to the canvas
+    lineWidth = @viewport.worldToScreen style.lineWidth
     $.extend @ctx, style
+    @ctx.lineWidth = lineWidth
 
   update: ->
     @clearLast()
@@ -56,11 +58,13 @@ class GameControls extends MouseControls
 
   # Clear the the bounding box of last frame's render area if happened
   clearLast: ->
+    
+
     if @lastUpdate?
-      x = @lastUpdate.x - style.lineWidth
-      y = @lastUpdate.y - style.lineWidth
-      width = @lastUpdate.width + style.lineWidth * 2
-      height = @lastUpdate.height + style.lineWidth * 2
+      x = @lastUpdate.x - @ctx.lineWidth
+      y = @lastUpdate.y - @ctx.lineWidth
+      width = @lastUpdate.width + @ctx.lineWidth * 2
+      height = @lastUpdate.height + @ctx.lineWidth * 2
       @ctx.clearRect x, y, width, height
       @lastUpdate = null
 

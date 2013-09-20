@@ -36,6 +36,9 @@ class Viewport
   # Scale to fit horizontally on the screen size
   fitInScreen: ->
     @scaleRatio = @width / @screen.width
+    if @height / @scaleRatio > @screen.height
+      @scaleRatio = @height / @screen.height
+
     @el.css width: @width / @scaleRatio, height: @height / @scaleRatio
 
   # Set stage position absolutely - animate and ease if specified
