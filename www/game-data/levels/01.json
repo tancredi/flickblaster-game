@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
@@ -22,7 +22,7 @@
                 },
                 {
                     "x": 274,
-                    "y": 800,
+                    "y": 500,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"

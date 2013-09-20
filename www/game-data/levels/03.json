@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
@@ -10,7 +10,7 @@
             "items": [
                 {
                     "x": 449,
-                    "y": 340,
+                    "y": 300,
                     "sprites": [],
                     "bodies": [
                         {
@@ -45,14 +45,14 @@
                 },
                 {
                     "x": 274,
-                    "y": 800,
+                    "y": 760,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
                 },
                 {
                     "x": 157,
-                    "y": 352,
+                    "y": 312,
                     "preset": "button-h-yellow",
                     "attributes": {
                         "flip-y": true,
@@ -70,14 +70,14 @@
             "items": [
                 {
                     "x": 383,
-                    "y": 604,
+                    "y": 610,
                     "type": "rect",
                     "width": 450,
                     "height": 10
                 },
                 {
                     "x": 143,
-                    "y": 340,
+                    "y": 300,
                     "type": "rect",
                     "width": 450,
                     "height": 10

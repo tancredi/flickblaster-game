@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
@@ -32,7 +32,7 @@
                 },
                 {
                     "x": 190,
-                    "y": 762,
+                    "y": 742,
                     "sprites": [],
                     "bodies": [
                         {
@@ -40,7 +40,7 @@
                             "y": 0,
                             "type": "rect",
                             "width": 4,
-                            "height": 374
+                            "height": 334
                         }
                     ],
                     "attributes": {
@@ -80,7 +80,7 @@
                 },
                 {
                     "x": 400,
-                    "y": 550,
+                    "y": 540,
                     "preset": "button-v-red",
                     "attributes": {
                         "flip-x": true,
@@ -92,7 +92,7 @@
                 },
                 {
                     "x": 17,
-                    "y": 860,
+                    "y": 840,
                     "preset": "button-v-yellow",
                     "attributes": {
                         "anchor": "left",

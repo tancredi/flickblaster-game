@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
@@ -44,7 +44,7 @@
                 },
                 {
                     "x": 70,
-                    "y": 580,
+                    "y": 560,
                     "preset": "teleport",
                     "attributes": {
                         "target-id": "teleport-b"
@@ -53,7 +53,7 @@
                 },
                 {
                     "x": 270,
-                    "y": 880,
+                    "y": 853,
                     "preset": "teleport",
                     "attributes": {
                         "target-id": "teleport-a"
@@ -61,15 +61,15 @@
                     "id": "teleport-b"
                 },
                 {
-                    "x": 270,
-                    "y": 580,
+                    "x": 280,
+                    "y": 560,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
                 },
                 {
                     "x": 18,
-                    "y": 880,
+                    "y": 840,
                     "preset": "button-v-yellow",
                     "attributes": {
                         "action": "laser-off",
@@ -86,7 +86,7 @@
             "items": [
                 {
                     "x": 270,
-                    "y": 814,
+                    "y": 794,
                     "type": "rect",
                     "width": 530,
                     "height": 10
@@ -107,7 +107,7 @@
                 },
                 {
                     "x": 433,
-                    "y": 884.5,
+                    "y": 865,
                     "type": "rect",
                     "width": 200,
                     "height": 140

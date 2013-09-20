@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
@@ -22,7 +22,7 @@
                 },
                 {
                     "x": 270,
-                    "y": 460,
+                    "y": 520,
                     "preset": "teleport",
                     "attributes": {
                         "target-id": "teleport-b"
@@ -31,7 +31,7 @@
                 },
                 {
                     "x": 270,
-                    "y": 330,
+                    "y": 320,
                     "preset": "teleport",
                     "attributes": {
                         "target-id": "teleport-a"
@@ -53,7 +53,7 @@
             "items": [
                 {
                     "x": 270,
-                    "y": 400,
+                    "y": 420,
                     "type": "rect",
                     "width": 530,
                     "height": 10
