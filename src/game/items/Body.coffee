@@ -39,37 +39,19 @@ class Body extends BaseItem
         return
 
     # Creates the Box2D body through the physics module and adds it to the scene
-    bodyData = phys.getBody options
+    bodyData = phys.getBody @parseOptions options
     @b2dBody = @world.addBody bodyData
 
   # Parses and scales to viewport given body options
   parseOptions: (options) ->
-    out =
-      type: options.type                            # Body type
-      mat: options.mat or 'default'                 # Material
-      interaction: options.interaction or 'dynamic' # 'dynamic', 'static' or 'kinematic'
-
-    if options.x? and options.y?
-      # Translate position to screen coordinates
-      out.x = @viewport.worldToScreen options.x
-      out.y = @viewport.worldToScreen options.y
-
-    if options.radius?
-      # Translate radius to screen coordinates
-      out.radius = @viewport.worldToScreen options.radius
-
-    if options.width? and options.height?
-      # Translate width and height to screen coordinates
-      out.width = @viewport.worldToScreen options.width
-      out.height = @viewport.worldToScreen options.height
+    out = $.extend true, {}, options
 
     if options.points?
-      # Translate points array data structure from
-      # [ ax, ay, bx, by, .. ] to [ ax, ay, bx, by, .. ]
+      # [ ax, ay, bx, by, .. ] to [ [ ax, ay ], [ bx, by ], .. ]
       out.points = []
       for point in @points
-        x = @viewport.worldToScreen point[0]
-        y = @viewport.worldToScreen point[1]
+        x = point[0]
+        y = point[1]
         out.points.push [ x, y ]
 
     return out
