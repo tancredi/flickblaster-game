@@ -48,7 +48,7 @@ Build the app using [Cake](http://coffeescript.org/documentation/docs/cake.html)
 
 ### Building Tasks
 
-* less - *Compile `less/index.less` into `www/css/index.css`*
+* less - *Compile `less/index.less` into `www/compiled.css`*
 * handlebars - *Pre-compile Handlebars templates in `templates/` into `www/js/templates.js`*
 * coffee - *Compile the CoffeeScript source in `src/` in Javascript inside `lib/`*
 * bundle - *Wrap the generated JavaScript in `lib/` using Browserify into a single `www/js/app.js`*
@@ -94,7 +94,6 @@ A map of the core directories of the app
 ├── src - App source
 ├── templates - Handlebards templates
 └── www - Web-app root
-    ├── css - Compiled CSS
     ├── game - JSON Game data
     └── js - Compiled and vendor JavaScript
 ```

@@ -23,7 +23,7 @@ confs =
   css:
     src: 'less'
     main: 'index.less'
-    out: 'www/css/index.css'
+    out: 'www/compiled.css'
     pagesDir: 'pages'
     match: /\.styl$/i
     setupDirs: [ 'public/css', 'public/css/pages' ]
@@ -94,7 +94,7 @@ build =
     # Local LESS script - cut down global dependencies
     localLess = 'node_modules/less/bin/lessc'
 
-    exec "node #{localLess} #{src} -o #{out}", ->
+    exec "node #{localLess} #{src} -o --yui-compress #{out}", ->
       console.log color.green('✔') + color.white("  Created #{confs.css.out}\n")
       callback() if callback
 

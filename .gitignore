@@ -4,7 +4,7 @@ node_modules
 lib
 www/js/app.js
 www/js/templates.js
-www/css
+www/compiled.css
 platforms/android/bin/dexedLibs/cordova-2.9.0-93cf26563ea24777a358fd96cf85de41.jar
 platforms/ios/FlickBlaster.xcodeproj/project.xcworkspace/xcuserdata/
 www/cordova.js

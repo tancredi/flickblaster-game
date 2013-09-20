@@ -6,7 +6,7 @@
 			[
 				"lib",
 				"www/js",
-				"www/css",
+				"www/compiled.css",
 				"node_modules",
 				"platforms",
 				"merges",
