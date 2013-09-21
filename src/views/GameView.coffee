@@ -53,7 +53,7 @@ class GameView extends BaseView
     @world = new World @elements.main, @levelName
 
     # Bind pause button
-    @elements.pause.on (device.getEvent 'click'), (e) =>
+    @elements.pause.on (device.getEvent 'mousedown'), (e) =>
       context = title: 'Pause'
       options = game: @, levelName: @levelName
       new PauseModal @elements.main, context, options
@@ -62,6 +62,12 @@ class GameView extends BaseView
     (_ @world).on 'shoot', => @setShots @shots - 1
     (_ @world).on 'pot', =>
       @setTargetsCount @targetsCount - 1
+
+  resize: ->
+    super
+
+    if @world?
+      @world.viewport.resize()
 
   # Re-initialise this view with same level to restart the game
   restart: ->

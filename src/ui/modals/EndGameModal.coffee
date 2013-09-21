@@ -47,15 +47,15 @@ class EndGameModal extends BaseModal
   bind: ->
     super
 
-    @inner.on (device.getEvent 'click'), '[data-role="restart"]', (e) =>
+    @inner.on (device.getEvent 'mousedown'), '[data-role="restart"]', (e) =>
       @game.restart()
       e.preventDefault()
 
-    @inner.on (device.getEvent 'click'), '[data-role="next"]', (e) =>
+    @inner.on (device.getEvent 'mousedown'), '[data-role="next"]', (e) =>
       @openNextLevel()
       e.preventDefault()
 
-    @inner.on (device.getEvent 'click'), '[data-role="back"]', (e) =>
+    @inner.on (device.getEvent 'mousedown'), '[data-role="back"]', (e) =>
       views.open 'levels', 'slide-left'
       e.preventDefault()
 

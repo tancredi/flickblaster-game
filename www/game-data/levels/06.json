@@ -43,7 +43,7 @@
                     "id": "target"
                 },
                 {
-                    "x": 70,
+                    "x": 100,
                     "y": 560,
                     "preset": "teleport",
                     "attributes": {
@@ -52,7 +52,7 @@
                     "id": "teleport-a"
                 },
                 {
-                    "x": 270,
+                    "x": 250,
                     "y": 853,
                     "preset": "teleport",
                     "attributes": {

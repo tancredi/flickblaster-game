@@ -25,14 +25,18 @@ class Viewport
     @scaleRatio = 0             # Stored for translations within game and screen coordinates
     @x = 0                      # Viewport X position
     @y = 0                      # Viewport Y position
-    @screen = device.getSize()  # Screen size
 
+    @screen = device.getSize()
     @fitInScreen()
     @elWidth = @el.width()
     @elHeight = @el.height()
+    @resize()
+
+  resize: ->
+    @screen = device.getSize()
     @center()
 
-  # Center the viewport of game stage
+  # Center the viewport on game stage
   center: -> @moveTo ( @screen.width - @elWidth ) / 2, ( @screen.height - @elHeight ) / 2
 
   # Scale to fit horizontally on the screen size

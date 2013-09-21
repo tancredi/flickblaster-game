@@ -2,11 +2,14 @@
 renderer = require './renderer'
 device = require './device'
 
+# Cache jQuery-wrapped window
+win = $ window
+
 ###
 ## Base View class
 
 Base class to extend from to create any view
-Takes care of basic rendering and defines mein methods
+Takes care of basic rendering and defines main methods
 ###
 
 class BaseView
@@ -21,7 +24,7 @@ class BaseView
 
     @elements = main: $ "<div data-role='view' class='view #{@classNames}'>#{rendered}</div>"
 
-    if @fixHeight then @elements.main.css height: device.getSize().height, overflow: 'auto'
+    if @fixHeight then @elements.main.css overflow: 'auto'
 
     @getElements()
 
@@ -29,7 +32,7 @@ class BaseView
     @resize()
     @bind()
 
-    $(window).on 'resize', => @resize()
+    win.on 'resize', => @resize()
     
     return @
 
@@ -41,12 +44,16 @@ class BaseView
 
   # Method called after elements parsed
   bind: ->
+    @resizeCallback = => @resize()
+    win.on 'resize', @resizeCallback
 
-  # Method called on window resize (and after rendering)
-  resize: ->
+  # Method called after elements are parsed and when window is resized
+  resize: -> if @fixHeight then @elements.main.css height: device.getSize().height
 
   # Method called when view is closed
-  close: -> @elements.main.remove()
+  close: ->
+    @elements.main.remove()
+    win.off 'resize', @resizeCallback
 
   # Method called when view is hidden
   hide: ->  @elements.main.hide()

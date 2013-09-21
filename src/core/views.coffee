@@ -22,9 +22,15 @@ module.exports =
 
   # Initialises views wrapper based on device screen size
   init: ->
+    viewWrap.css overflow: 'hidden'
+    @resize()
+
+    win.on 'resize', => @resize()
+
+  resize: ->
     screen = device.getSize()
+
     viewWrap.css
-      overflow: 'hidden'
       width: screen.width
       height: screen.height
       left: (win.width() - screen.width) / 2

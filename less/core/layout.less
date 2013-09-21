@@ -45,6 +45,30 @@ body {
 	background: @color-pale-blue-lighter;
 }
 
+.top-bar {
+	margin: 0;
+	padding: 10px 0;
+	background: @color-pale-blue-light;
+	position: relative;
+	margin-bottom: 10px;
+	z-index: 2;
+
+	&.fixed {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 0;
+	}
+
+	h1 {
+		font-weight: normal;
+		margin: 0;
+		line-height: 27px;
+		margin-bottom: 5px;
+	}
+}
+
+
 .top-bar-button {
 	.button-flat;
 	position: absolute;
@@ -66,27 +90,5 @@ body {
 
 	&.button-right {
 		right: 6px;
-	}
-}
-
-.top-bar {
-	margin: 0;
-	padding: 10px 0;
-	background: @color-pale-blue-light;
-	position: relative;
-	margin-bottom: 10px;
-
-	&.fixed {
-		position: absolute;
-		left: 0;
-		width: 100%;
-		top: 0;
-	}
-
-	h1 {
-		font-weight: normal;
-		margin: 0;
-		line-height: 27px;
-		margin-bottom: 5px;
 	}
 }
