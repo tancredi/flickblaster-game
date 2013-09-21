@@ -1,5 +1,7 @@
 
-![# FlickBlaster](http://oi40.tinypic.com/10cki6u.jpg)
+![# FlickBlaster](http://oi40.tinypic.com/6r6o7d.jpg)
+
+# FlickBlaster
 
 An HTML5 top-down physics-based puzzle game layed out in MVC fashion, rendered using a combination of DOM, SVG and canvas.
 
