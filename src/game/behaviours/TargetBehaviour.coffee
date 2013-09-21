@@ -32,7 +32,7 @@ class TargetBehaviour extends BaseBehaviour
       if player.data.targetType is @entity.data.targetType
 
         @entity.onCollisionStart player, =>
-          return if @potted
+          return if @potted or player.behaviour.dead
 
           @lightsOn()
           @pot()

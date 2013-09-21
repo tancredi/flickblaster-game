@@ -72,8 +72,8 @@ class EndGameModal extends BaseModal
     @animatedStars = 0
 
     # Add each animation with a different delay
-    for i in [ 1..@starsCount ]
-      setTimeout ( => @addStar() ), animationsDelay / 3 * (i - 1)
+    for i in [ 0...@starsCount ]
+      setTimeout ( => @addStar() ), animationsDelay / 3 * i
 
   # Animate next hidden star popping out
   addStar: ->

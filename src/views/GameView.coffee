@@ -119,6 +119,7 @@ class GameView extends BaseView
     if amt < -2 then @setStars 0
     else if amt < -1 then @setStars 1
     else if amt < 0 then @setStars 2
+
     @elements.shots.text amt
 
   setStars: (amt) ->

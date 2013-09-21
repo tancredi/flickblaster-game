@@ -42,6 +42,8 @@ class LaserBehaviour extends BaseBehaviour
     decorator = sprite.getDecorator 'burn'
     decorator.fadeIn 100
 
+    @player.behaviour.die()
+
     # Fade the player Sprite out
     sprite.el.fadeOut 300, =>
       @player.remove()
