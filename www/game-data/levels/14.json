@@ -83,6 +83,7 @@
         }
     ],
     "data": {
-        "shots": 1
+        "shots": 1,
+        "tutorial": "obstacles"
     }
 }

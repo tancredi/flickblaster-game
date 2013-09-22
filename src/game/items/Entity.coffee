@@ -70,6 +70,9 @@ class Entity extends BaseItem
     if (@hasAttr 'flip-y') and @attributes['flip-y']
       (sprite.flip 1) for sprite in @sprites
 
+    if (@hasAttr 'z-index')
+      (@el.css zIndex: @attributes['z-index']) for sprite in @sprites
+
   # Returns true if given attribute is defined
   hasAttr: (attr) ->
     return _.has @attributes, attr
@@ -78,6 +81,7 @@ class Entity extends BaseItem
   makeBody: (bodies) ->
     for body, i in bodies
       options = $.extend true, {}, body
+
       options.x = @x + body.x
       options.y = @y + body.y
 
@@ -91,6 +95,7 @@ class Entity extends BaseItem
 
       # Create the first body in the bodies array and adds other bodies shapes to it
       if i is 0
+        @bodyOffset = x: body.x, y: body.y
         @offset = x: body.x, y: body.y
         @body = new Body options, @layer.world
         # If specified in the Entity attributes, make the body a sensor
@@ -103,9 +108,9 @@ class Entity extends BaseItem
 
   updatePos: ->
     if @body?
-      pos = @layer.viewport.worldToScreen @body.position()
-      # pos.x /= 30
-      # pos.y /= 30
+      pos = @layer.viewport.worldToScreen  @body.position()
+      pos.x -= @layer.viewport.worldToScreen @bodyOffset.x
+      pos.y -= @layer.viewport.worldToScreen @bodyOffset.y
       @el.css pos
 
   distance: (target, absolute = true) ->
@@ -129,8 +134,11 @@ class Entity extends BaseItem
 
   # Returns the Entity's position in game coordinates
   position: ->
-    if @body? then @body.position()
-    else x: @x, y: @y
+    if @body?
+      pos = @body.position()
+      return x: pos.x - @bodyOffset.x, y: pos.y - @bodyOffset.y
+    else
+      return x: @x, y: @y
 
   # Methods to bind callbacks to collision events on the Entity's body
   # Read CollisionManager for more about these events

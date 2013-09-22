@@ -4,17 +4,16 @@ BaseBehaviour = require './BaseBehaviour'
 ###
 ## Target Behaviour class
 
-Targets are holes the player has to aim to to win the game
+Targets are the platforms player has to action to win the game
 
 On the same level there can theoretically be multiple targets and players
-Once a target gets hit by a player with the same `data.targetType` property, it will communicate
-the point to the world and stay in active state
+Once a target gets hit by a player of another object with attribute `trigger-target` set to `true`,
+it will communicate the point to its World and stay in active state
 ###
 
 class TargetBehaviour extends BaseBehaviour
 
   constructor: (@entity, @world) ->
-    # True when scored by player
     @potted = false
 
     @bind()
@@ -24,21 +23,21 @@ class TargetBehaviour extends BaseBehaviour
     @lights.show().css opacity: 0
 
   bind: ->
-    players = @world.getItemsByAttr 'type', 'player'
+    actioners = @world.getItemsByAttr 'trigger-target', true
 
     # Bind collision listeners to all players on stage
-    for player in players
-        # Only consider players of the same type as the target
-      if player.data.targetType is @entity.data.targetType
+    @addActioner actioner for actioner in actioners
 
-        @entity.onCollisionStart player, =>
-          return if @potted or player.behaviour.dead
+  # Bind an element that can action the target
+  addActioner: (actioner) ->
+    @entity.onCollisionStart actioner, =>
+      return if @potted or actioner.behaviour.dead
 
-          @lightsOn()
-          @pot()
+      @lightsOn()
+      @pot()
 
-        @entity.onCollisionEnd player, =>
-          @lightsOff() unless @potted
+    @entity.onCollisionEnd actioner, =>
+      @lightsOff() unless @potted
 
   pot: ->
     @potted = true

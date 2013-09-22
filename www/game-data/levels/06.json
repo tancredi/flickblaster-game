@@ -53,7 +53,7 @@
                 },
                 {
                     "x": 250,
-                    "y": 853,
+                    "y": 856,
                     "preset": "teleport",
                     "attributes": {
                         "target-id": "teleport-a"
@@ -68,8 +68,8 @@
                     "id": "player"
                 },
                 {
-                    "x": 15,
-                    "y": 850,
+                    "x": 14,
+                    "y": 854,
                     "preset": "button-v-yellow",
                     "attributes": {
                         "action": "laser-off",

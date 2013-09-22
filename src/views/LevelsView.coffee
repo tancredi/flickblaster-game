@@ -8,6 +8,8 @@ getByRole = (require '../helpers/dom').getByRole
 gameData = require '../game/utils/gameData'
 userData = require '../game/utils/userData'
 
+selectors = locked: '.locked'
+
 ###
 ## Levels View
 
@@ -59,7 +61,7 @@ class LevelsView extends BaseView
 
     # Bind click on level elements
     self = @
-    @elements.levels.on (device.getEvent 'click'), (e) ->
+    @elements.levels.not(selectors.locked).on (device.getEvent 'click'), (e) ->
       e.preventDefault()
       self.openLevel ($ @).attr 'data-level-name'
 

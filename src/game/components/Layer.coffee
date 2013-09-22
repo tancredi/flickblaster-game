@@ -29,6 +29,9 @@ class Layer
       item = new Entity options, @
     else return
 
+    # Initialise item behaviour if World has already started
+    item.initBehaviour() if @world.started
+
     @items.push item
     return item
 

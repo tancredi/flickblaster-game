@@ -26,12 +26,17 @@
 	},
 	"multiple-targets": {
 		"title": "Multiple targets",
-		"text": "Sometimes, you may have to activate more than 1 target to win",
+		"text": "Sometimes, you may have to activate more than one target to win",
 		"icon": "bullseye"
 	},
 	"obstacles": {
-		"title": "Obstacles",
-		"text": "Heavy objects on your way may slow you down.<br><br>Work your way around them",
+		"title": "Heavy objects",
+		"text": "This type of objects will slow you down if on your way.<br><br>Work your way around them",
 		"icon": "anchor"
+	},
+	"cannons": {
+		"title": "Cannons!",
+		"text": "Cannons can be activated using buttons or sensors.<br><br>Their bullets can hit targets and help you winning",
+		"icon": "screenshot"
 	}
 }

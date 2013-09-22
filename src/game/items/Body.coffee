@@ -49,9 +49,10 @@ class Body extends BaseItem
     if options.points?
       # [ ax, ay, bx, by, .. ] to [ [ ax, ay ], [ bx, by ], .. ]
       out.points = []
-      for point in @points
-        x = point[0]
-        y = point[1]
+
+      for i in [ 0 ... options.points.length / 2 ]
+        x = options.points[i * 2]
+        y = options.points[i * 2 + 1]
         out.points.push [ x, y ]
 
     return out
@@ -67,13 +68,12 @@ class Body extends BaseItem
   addShape: (options) ->
     options = @parseOptions options
     body = phys.getBody options
-
-    # Translates relative position to screen coordinates
-    pos = @viewport.worldToScreen @position()
+    pos = @position()
 
     # Places the new body relatively to the main one
-    body.fixtureDef.shape.m_p.x = @viewport.screenToWorld ( options.x - pos.x ) / phys.ratio
-    body.fixtureDef.shape.m_p.y = @viewport.screenToWorld ( options.y - pos.y ) / phys.ratio
+    for v in body.fixtureDef.shape.m_vertices
+      v.x += ( options.x - pos.x ) / 30
+      v.y += ( options.y - pos.y ) / 30
 
     # Adds the body to itself
     @b2dBody.m_body.CreateFixture body.fixtureDef

@@ -160,6 +160,32 @@
         "decorators": {
             "light": "sprites/turbo-lights"
         }
+    },
+
+    "cannon-h": {
+        "assets": {
+            "default": "sprites/cannon-h"
+        },
+        "size": [ 55, 55 ],
+        "offset": [ 0, 0 ],
+        "poses": {
+            "default": {
+                "offset": [ 0, 0 ],
+                "module": [ 55, 55 ],
+                "frameLength": 0,
+                "repeat": true,
+                "play": false
+            }
+        },
+        "decorators": {
+        }
+    },
+
+    "cannon-v": {
+        "extends": "cannon-h",
+        "assets": {
+            "default": "sprites/cannon-v"
+        }
     }
 
 }

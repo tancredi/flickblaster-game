@@ -3,7 +3,9 @@
 	"player": {
 		"behaviour": "player",
 		"attributes": {
-			"type": "player"
+			"type": "player",
+			"z-index": 2,
+			"trigger-target": true
 		},
 		"sprites": [
 			{ "type": "player", "x": 0, "y": 0 }
@@ -98,7 +100,8 @@
 	"bullet": {
 		"attributes": {
 			"type": "bullet",
-			"material": "metal"
+			"material": "metal",
+			"trigger-target": true
 		},
 		"sprites": [
 			{ "type": "bullet", "x": 0, "y": 0 }
@@ -120,6 +123,77 @@
 		],
 		"bodies": [
 			{ "type": "circle", "radius": 50, "x": 0, "y": 0 }
+		]
+	},
+
+	"cannon-left": {
+		"behaviour": "cannon",
+		"attributes": {
+			"type": "cannon",
+			"sensor": true,
+			"interaction": "static",
+			"direction": [ -1, 0 ],
+			"z-index": 2
+		},
+		"sprites": [
+			{ "type": "cannon-h", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "rect", "width": 30, "height": 4, "x": -10, "y": -25 },
+			{ "type": "rect", "width": 30, "height": 4, "x": -10, "y": 25 },
+			{ "type": "rect", "width": 4, "height": 30, "x": 20, "y": 0 }
+		]
+	},
+
+	"cannon-right": {
+		"extends": "cannon-left",
+		"attributes": {
+			"type": "cannon",
+			"sensor": true,
+			"interaction": "static",
+			"flip-x": true,
+			"direction": [ 1, 0 ]
+		},
+		"bodies": [
+			{ "type": "rect", "width": 30, "height": 4, "x": 10, "y": -25 },
+			{ "type": "rect", "width": 30, "height": 4, "x": 10, "y": 25 },
+			{ "type": "rect", "width": 4, "height": 30, "x": -20, "y": 0 }
+		]
+	},
+
+	"cannon-top": {
+		"extends": "cannon-left",
+		"attributes": {
+			"type": "cannon",
+			"sensor": true,
+			"interaction": "static",
+			"direction": [ 0, -1 ],
+			"z-index": 2
+		},
+		"sprites": [
+			{ "type": "cannon-v", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "rect", "width": 4, "height": 30, "x": -25, "y": -10 },
+			{ "type": "rect", "width": 4, "height": 30, "x": 25, "y": -10 },
+			{ "type": "rect", "width": 30, "height": 4, "x": 0, "y": 20 }
+		]
+	},
+
+	"cannon-bottom": {
+		"extends": "cannon-top",
+		"attributes": {
+			"type": "cannon",
+			"sensor": true,
+			"interaction": "static",
+			"flip-y": true,
+			"direction": [ 0, 1 ],
+			"z-index": 2
+		},
+		"bodies": [
+			{ "type": "rect", "width": 4, "height": 30, "x": -25, "y": 10 },
+			{ "type": "rect", "width": 4, "height": 30, "x": 25, "y": 10 },
+			{ "type": "rect", "width": 30, "height": 4, "x": 0, "y": -20 }
 		]
 	}
 

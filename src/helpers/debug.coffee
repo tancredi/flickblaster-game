@@ -20,7 +20,7 @@ initPhysicsDebugger = (world) ->
   canvas = $ ctx.canvas
   debugDraw = new Box2D.Dynamics.b2DebugDraw
   debugDraw.SetSprite ctx
-  debugDraw.SetDrawScale 17.7
+  debugDraw.SetDrawScale 17
   debugDraw.SetFillAlpha 0.3
   debugDraw.SetLineThickness 1.0
   debugDraw.SetFlags Box2D.Dynamics.b2DebugDraw.e_shapeBit or Box2D.Dynamics.b2DebugDraw.e_jointBit

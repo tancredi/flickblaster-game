@@ -39,6 +39,12 @@ actions =
   'laser-on': (entity, world, behaviour) ->
     targets = getEntityTargets entity, world, 'laser'
     target.behaviour.on() for target in targets
+
+  # Shoot a cannon
+  'cannon-shoot': (entity, world, behaviour) ->
+    targets = getEntityTargets entity, world, 'cannon'
+    for cannon in targets
+      cannon.behaviour.shoot()
     
 module.exports =
 

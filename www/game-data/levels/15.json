@@ -1,139 +1,64 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
             "id": "lasers",
             "type": "entity",
-            "items": [
-                {
-                    "x": 269,
-                    "y": 560,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "rect",
-                            "width": 520,
-                            "height": 4
-                        }
-                    ],
-                    "attributes": {
-                        "color": "red",
-                        "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-red"
-                    },
-                    "behaviour": "laser"
-                },
-                {
-                    "x": 269,
-                    "y": 400,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "rect",
-                            "width": 520,
-                            "height": 4
-                        }
-                    ],
-                    "attributes": {
-                        "color": "blue",
-                        "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-blue",
-                        "off": true
-                    },
-                    "behaviour": "laser"
-                },
-                {
-                    "x": 269,
-                    "y": 250,
-                    "sprites": [],
-                    "bodies": [
-                        {
-                            "x": 0,
-                            "y": 0,
-                            "type": "rect",
-                            "width": 520,
-                            "height": 4
-                        }
-                    ],
-                    "attributes": {
-                        "color": "red",
-                        "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-red"
-                    },
-                    "behaviour": "laser"
-                }
-            ]
+            "items": []
         },
         {
             "id": "entities",
             "type": "entity",
             "items": [
                 {
-                    "x": 246,
-                    "y": 80,
+                    "x": 100,
+                    "y": 100,
                     "preset": "target",
                     "attributes": {},
                     "id": "target"
                 },
                 {
-                    "x": 175,
-                    "y": 624.5,
-                    "preset": "sensor",
+                    "x": 270,
+                    "y": 906,
+                    "preset": "button-h-yellow",
                     "attributes": {
-                        "sensor": true,
-                        "action": "laser-toggle",
-                        "target-group": "all"
+                        "action": "cannon-shoot",
+                        "target-id": "cannon",
+                        "anchor": "bottom"
                     },
                     "id": ""
                 },
                 {
-                    "x": 393,
-                    "y": 472.5,
-                    "preset": "sensor",
-                    "attributes": {
-                        "action": "laser-toggle",
-                        "target-group": "all",
-                        "sensor": true
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 173,
-                    "y": 320,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
-                        "action": "laser-toggle",
-                        "target-group": "laser-red"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 180,
-                    "y": 840,
+                    "x": 270,
+                    "y": 530,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
+                },
+                {
+                    "x": 450,
+                    "y": 100,
+                    "preset": "cannon-left",
+                    "attributes": {},
+                    "id": "cannon"
                 }
             ]
         },
         {
             "id": "walls",
             "type": "body",
-            "items": []
+            "items": [
+                {
+                    "x": 270,
+                    "y": 200,
+                    "type": "rect",
+                    "width": 540,
+                    "height": 10
+                }
+            ]
         },
         {
             "id": "background",
@@ -142,6 +67,7 @@
         }
     ],
     "data": {
-        "shots": 3
+        "shots": 1,
+        "tutorial": "cannons"
     }
 }

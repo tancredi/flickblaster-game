@@ -35,6 +35,7 @@ class World
     @layers = {}                                              # Game layers
     @stage = ($ renderer.render 'game-stage').appendTo @wrap  # Stage
     @loop = new Loop                                          # Gameloop
+    @started = false                                          # True when behaviours are initialised
 
     @initPhysics()
     @loadLevel levelId
@@ -116,6 +117,7 @@ class World
 
   # Initialise Box2D body from object containing fixtureDev and bodyDef
   addBody: (body) ->
+    @b2dWorld.Step()
     return @b2dWorld.CreateBody(body.bodyDef).CreateFixture body.fixtureDef
 
   getItemById: (id) ->
@@ -151,6 +153,7 @@ class World
   initBehaviours: ->
     for item in @items
       item.initBehaviour() if item.itemType is 'entity'
+    @started = true
 
   #Update each layer
   update: ->

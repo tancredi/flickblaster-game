@@ -45,7 +45,7 @@
                 },
                 {
                     "x": 270,
-                    "y": 903,
+                    "y": 906,
                     "preset": "button-h-yellow",
                     "attributes": {
                         "action": "laser-off",

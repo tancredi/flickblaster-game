@@ -15,7 +15,7 @@ class PlayerBehaviour extends BaseBehaviour
 
   win: (callback) ->
     for sprite in @entity.sprites
-      sprite.el.transition scale: 0, opacity: 0, 600
+      sprite.el.transition scale: .1, opacity: 0, 600
     setTimeout callback, 600 if callback?
 
   die: -> @dead = true
