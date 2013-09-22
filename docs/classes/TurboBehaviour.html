@@ -15,7 +15,7 @@
     &raquo;
     <a href='../class_index.html' title='Index'>Index</a>
     &raquo;
-    <span class='title'>PlayerBehaviour</span>
+    <span class='title'>TurboBehaviour</span>
     <nav>
       <ul>
         <li class='noframes'>
@@ -106,24 +106,23 @@
     <div id='content'>
       <h1>
         Class:
-        PlayerBehaviour
+        TurboBehaviour
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
-          <td>src&#47;game&#47;behaviours&#47;PlayerBehaviour.coffee</td>
+          <td>src&#47;game&#47;behaviours&#47;TurboBehaviour.coffee</td>
         </tr>
         <tr>
           <td>Inherits:</td>
           <td>
-            <a href='../classes/BaseBehaviour.html'>BaseBehaviour</a>
+            <a href='../classes/BaseActionableBehaviour.html'>BaseActionableBehaviour</a>
           </td>
         </tr>
       </table>
       <h2>Overview</h2>
       <div class='docstring'>
-  <h2>Player Behaviour class</h2><p>Defines the behaviour of the player on stage
-Shamefully, the player is just that little red disc you flick around the stage when playing</p>
+  <h2>Turbo Behaviours class</h2><p>Boosts player speed when hit</p><p>Read ActionableBehaviour for more</p>
 </div>
 <div class='tags'>
 </div>
@@ -142,18 +141,8 @@ Shamefully, the player is just that little red disc you flick around the stage w
   </li>
   <li>
     <span class='signature'>
-      <a href='#win-instance'>
-        - (void) <strong>win</strong>(callback)
-      </a>
-    </span>
-    <span class='desc'>
-      
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#die-instance'>
-        - (void) <strong>die</strong>()
+      <a href='#activate-instance'>
+        - (void) <strong>activate</strong>(player)
       </a>
     </span>
     <span class='desc'>
@@ -164,6 +153,14 @@ Shamefully, the player is just that little red disc you flick around the stage w
       <h2>
         <small>Inherited Method Summary</small>
       </h2>
+      <h3 class='inherited'>
+        Methods inherited from
+        <a href='../classes/BaseActionableBehaviour.html'>BaseActionableBehaviour</a>
+      </h3>
+      <p class='inherited'>
+                <a href='../classes/BaseActionableBehaviour.html#constructor-instance'>#constructor</a>,
+        <a href='../classes/BaseActionableBehaviour.html#activate-instance'>#activate</a>
+      </p>
       <h3 class='inherited'>
         Methods inherited from
         <a href='../classes/BaseBehaviour.html'>BaseBehaviour</a>
@@ -185,15 +182,8 @@ Shamefully, the player is just that little red disc you flick around the stage w
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='win-instance'>
-      - (void) <strong>win</strong>(callback)
-    </p>
-    <div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='die-instance'>
-      - (void) <strong>die</strong>()
+    <p class='signature' id='activate-instance'>
+      - (void) <strong>activate</strong>(player)
     </p>
     <div class='tags'>
 </div>

@@ -122,8 +122,9 @@
       </table>
       <h2>Overview</h2>
       <div class='docstring'>
-  <h2>Target Behaviour class</h2><p>Targets are holes the player has to aim to to win the game</p><p>The pot logic is contained in PlayerBehaviour, this behaviour mainly shows effects on the target
-when hovered by the player</p>
+  <h2>Target Behaviour class</h2><p>Targets are the platforms player has to action to win the game</p><p>On the same level there can theoretically be multiple targets and players
+Once a target gets hit by a player of another object with attribute <code>trigger-target</code> set to <code>true</code>,
+it will communicate the point to its World and stay in active state</p>
 </div>
 <div class='tags'>
 </div>
@@ -136,6 +137,36 @@ when hovered by the player</p>
       </a>
     </span>
     <span class='constructor note title'>Constructor</span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#bind-instance'>
+        - (void) <strong>bind</strong>()
+      </a>
+    </span>
+    <span class='desc'>
+      
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#addActioner-instance'>
+        - (void) <strong>addActioner</strong>(actioner)
+      </a>
+    </span>
+    <span class='desc'>
+      Bind an element that can action the target
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#pot-instance'>
+        - (void) <strong>pot</strong>()
+      </a>
+    </span>
     <span class='desc'>
       
     </span>
@@ -195,6 +226,30 @@ when hovered by the player</p>
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
+    <p class='signature' id='bind-instance'>
+      - (void) <strong>bind</strong>()
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='addActioner-instance'>
+      - (void) <strong>addActioner</strong>(actioner)
+    </p>
+    <div class='docstring'>
+  <p>Bind an element that can action the target</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='pot-instance'>
+      - (void) <strong>pot</strong>()
+    </p>
+    <div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
     <p class='signature' id='lightsOn-instance'>
       - (void) <strong>lightsOn</strong>()
     </p>
@@ -228,7 +283,7 @@ when hovered by the player</p>
     </div>
     <div id='footer'>
   Generated on
-  Fri Sep 20 2013 03:49:39 GMT+0100 (BST)
+  Sun Sep 22 2013 01:57:28 GMT+0100 (BST)
   by
   <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
   v1.9.0

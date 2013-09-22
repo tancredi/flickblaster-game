@@ -115,7 +115,7 @@
         </p>
       </nav>
       <div id='filecontents'>
-        <h1>FlickBlaster</h1><p>An HTML5 top-down physics-based puzzle game layed out in MVC fashion, rendered using a combination of DOM, SVG and canvas.</p><p>The game is written in <a href="http://coffeescript.org/">CoffeeScript</a>, bundled with <a href="http://browserify.org/">Browserify</a> and wrapped as a <a href="http://cordova.apache.org/">Cordova</a> cross-platform app, but can also be executed and tested in the browser.</p><p>Also, the styles compile from <a href="http://lesscss.org/">LESS CSS</a> and UI components are rendered using pre-compiled <a href="http://handlebarsjs.com/">Handlebars</a> templates.</p><h1>Quick source overlook</h1><p>The coffeescript source of the app is all contained in <code>src/</code>
+        <p><img src="http://oi40.tinypic.com/6r6o7d.jpg" alt="# FlickBlaster"></p><h1>FlickBlaster</h1><p>An HTML5 top-down physics-based puzzle game layed out in MVC fashion, rendered using a combination of DOM, SVG and canvas.</p><p>The game is written in <a href="http://coffeescript.org/">CoffeeScript</a>, bundled with <a href="http://browserify.org/">Browserify</a> and wrapped as a <a href="http://cordova.apache.org/">Cordova</a> cross-platform app, but can also be executed and tested in the browser.</p><p>Also, the styles compile from <a href="http://lesscss.org/">LESS CSS</a> and UI components are rendered using pre-compiled <a href="http://handlebarsjs.com/">Handlebars</a> templates.</p><h1>Quick source overlook</h1><p>The coffeescript source of the app is all contained in <code>src/</code>
 The directory structure is layed out as follow:</p><ul>
 <li>core - <em>The web-app framework core (Template rendering, routing, UI, ...) is contained in</em></li>
 <li>views - <em>All view controllers. GameView contains part of the base game mechanics</em></li>
@@ -125,7 +125,7 @@ The directory structure is layed out as follow:</p><ul>
 <li>helpers - <em>Shared utilities</em></li>
 </ul>
 <h1>Global dependencies</h1><p>Includes requirements to build the app locally and run with a the local server for browser testing and also to deploy to a cordova build</p><ul>
-<li><a href="http://nodejs.org/">Node.js</a> Install: <code>brew install node</code></li>
+<li><a href="http://nodejs.org/">Node.js</a></li>
 <li><a href="coffeescript.com">Coffeescript</a> - To build the web source and run the server - <code>sudo npm install -g coffee-script</code></li>
 <li><a href="http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html">Cordova command-line interface</a> - To build mobile source - <code>sudo npm install -g cordova</code></li>
 </ul>
@@ -181,6 +181,7 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
 <li><strong>Entity</strong> - <em>Entites are the main players on the scene - They contain bodies and sprites and can be associated to a <strong>Behaviour</strong> </em></li>
 </ul>
 <h4>Behaviours</h4><p><strong>Behaviours</strong> are instanciated from <strong>Entities</strong>, depending on the entity <code>behaviour</code> property, usually determined through the editor or by a preset.</p><p>They are passed the parent <strong>Entity</strong> and <strong>World</strong>, and they get updated at every <em>*Loop</em> iteration, so that they can manipulate properties and events around them freely.</p><p>Behaviours determine the base game-logic.</p><h1>Documentation</h1><p>The documentation contained in <code>docs/</code> is generated using <a href="https://github.com/netzpirat/codo">Codo</a>.</p><p>Generate an updated version by running <code>cake docs</code>.</p><h1>Dependencies</h1>
+<h3>Node.js Dependencies</h3>
 <ul>
 <li><code>express</code>: <a href="http://expressjs.com/">Express 3</a> - Used to run the server</li>
 <li><code>coffee-script</code>: <a href="http://coffeescript.org">Coffeescript</a> - Used to compile and run the game</li>
@@ -193,12 +194,21 @@ For instructions on how to do that read the Apache Cordova Documentation:</p><ul
 <li><code>codo</code>: <a href="https://github.com/netzpirat/codo">Codo</a> - Used to generate the documentation</li>
 <li><code>retina-downsizer</code>: <a href="https://github.com/tancredi/node-retina-downsizer">Retina Downsizer</a> - Used to generate resized assets for different pixel-ratios</li>
 </ul>
+<h3>Client-side libraries</h3>
+<ul>
+<li><a href="http://jquery.com/">Jquery</a></li>
+<li><a href="http://underscorejs.org/">Underscore.js</a></li>
+<li><a href="http://handlebarsjs.com/">Handlebars</a></li>
+<li><a href="http://ricostacruz.com/jquery.transit/">Transit.js</a></li>
+<li><a href="http://quojs.tapquo.com/">Quo.js</a></li>
+<li><a href="https://code.google.com/p/box2dweb/">Box2DWeb</a></li>
+</ul>
 <h1>Sublime Text Project</h1><p>A <a href="http://www.sublimetext.com/">Sublime Text</a> project is provided in the repository (<code>flickblaster-game.sublime-project</code>).</p><p>The project makes it easier to browse through the directories of the project without being disturbed by compiled output, dependencies, mobile builds, documentation and superfluous directories or files.</p>
       </div>
     </div>
     <div id='footer'>
   Generated on
-  Fri Sep 20 2013 03:49:39 GMT+0100 (BST)
+  Sun Sep 22 2013 01:57:28 GMT+0100 (BST)
   by
   <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
   v1.9.0
