@@ -60,6 +60,7 @@
 
     "button-h-yellow": {
         "extends": "button-v-yellow",
+        "offset": [ -42, 0 ],
         "poses": {
             "default": {
                 "module": [ 42, 15 ]
