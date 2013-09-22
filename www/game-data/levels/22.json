@@ -10,7 +10,7 @@
             "items": [
                 {
                     "x": 271,
-                    "y": 300,
+                    "y": 350,
                     "sprites": [],
                     "bodies": [
                         {
@@ -31,7 +31,7 @@
                 },
                 {
                     "x": 271,
-                    "y": 350,
+                    "y": 300,
                     "sprites": [],
                     "bodies": [
                         {
@@ -65,7 +65,7 @@
                 },
                 {
                     "x": 270,
-                    "y": 460,
+                    "y": 520,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
@@ -137,7 +137,7 @@
                     "y": 460,
                     "preset": "turbo-mini",
                     "attributes": {
-                        "multiplier": 40
+                        "multiplier": 2
                     },
                     "id": ""
                 },
@@ -158,10 +158,23 @@
                     "id": ""
                 },
                 {
-                    "x": 127,
+                    "x": 270,
+                    "y": 430,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "laser-toggle",
+                        "target-group": "lasers-yellow"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 128,
                     "y": 460,
                     "preset": "turbo-mini",
-                    "attributes": {},
+                    "attributes": {
+                        "multiplier": 2
+                    },
                     "id": ""
                 }
             ]
