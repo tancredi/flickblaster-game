@@ -9,16 +9,16 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 359,
-                    "y": 143,
+                    "x": 273,
+                    "y": 300,
                     "sprites": [],
                     "bodies": [
                         {
-                            "x": 11,
-                            "y": 75,
+                            "x": 0,
+                            "y": 0,
                             "type": "rect",
-                            "width": 4,
-                            "height": 126
+                            "width": 368,
+                            "height": 4
                         }
                     ],
                     "attributes": {
@@ -29,6 +29,27 @@
                         "off": true
                     },
                     "behaviour": "laser"
+                },
+                {
+                    "x": 273,
+                    "y": 600,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 368,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
                 }
             ]
         },
@@ -37,103 +58,69 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 344,
-                    "y": 58,
+                    "x": 270,
+                    "y": 190,
                     "preset": "target",
                     "attributes": {},
                     "id": "target"
                 },
                 {
                     "x": 270,
-                    "y": 820,
+                    "y": 710,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
                 },
                 {
-                    "x": 460,
-                    "y": 475,
-                    "preset": "cannon-left",
-                    "attributes": {
-                        "group": "cannons"
-                    },
-                    "id": "cannon-2"
+                    "x": 499,
+                    "y": 879,
+                    "preset": "cannon-top",
+                    "attributes": {},
+                    "id": "cannon-a"
                 },
                 {
-                    "x": 80,
-                    "y": 477,
-                    "preset": "cannon-right",
-                    "attributes": {
-                        "group": "cannons"
-                    },
-                    "id": "cannon-1"
-                },
-                {
-                    "x": 270,
-                    "y": 630,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
-                        "action": "cannon-shoot",
-                        "target-group": "cannons"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 75,
-                    "y": 75,
-                    "preset": "teleport",
-                    "attributes": {
-                        "target-id": "teleport-1"
-                    },
-                    "id": "teleport-2"
-                },
-                {
-                    "x": 526,
-                    "y": 820,
+                    "x": 449,
+                    "y": 873,
                     "preset": "button-v-red",
                     "attributes": {
                         "anchor": "right",
-                        "action": "cannon-shoot",
-                        "target-id": "cannon-2",
-                        "flip-x": true
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 14,
-                    "y": 820,
-                    "preset": "button-v-red",
-                    "attributes": {
-                        "anchor": "left",
-                        "action": "cannon-shoot",
-                        "target-id": "cannon-1"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 268,
-                    "y": 363,
-                    "preset": "target",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 180,
-                    "y": 75,
-                    "preset": "turbo",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 451,
-                    "y": 151,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
+                        "flip-x": true,
                         "action": "laser-toggle",
+                        "multi-use": true,
                         "target-group": "lasers-red"
                     },
+                    "id": ""
+                },
+                {
+                    "x": 99,
+                    "y": 710,
+                    "preset": "button-v-blue",
+                    "attributes": {
+                        "action": "cannon-shoot",
+                        "target-id": "cannon-a",
+                        "multi-use": true
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 499,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 45,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 43,
+                    "preset": "turbo-mini",
+                    "attributes": {},
                     "id": ""
                 }
             ]
@@ -143,130 +130,71 @@
             "type": "body",
             "items": [
                 {
-                    "x": 270,
-                    "y": 550,
+                    "x": 461,
+                    "y": 525,
                     "type": "rect",
-                    "width": 532,
-                    "height": 10
+                    "width": 10,
+                    "height": 900
                 },
                 {
-                    "x": 76,
-                    "y": 345,
+                    "x": 86,
+                    "y": 450,
                     "type": "rect",
-                    "width": 150,
-                    "height": 120
+                    "width": 10,
+                    "height": 750
                 },
                 {
-                    "x": 262,
-                    "y": 142,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        120,
-                        0,
-                        120
-                    ]
+                    "x": 271,
+                    "y": 79,
+                    "type": "rect",
+                    "width": 380,
+                    "height": 8
                 },
                 {
-                    "x": 242,
-                    "y": 70,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        0,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 270,
-                    "y": 285,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        0,
-                        120,
-                        120
-                    ]
-                },
-                {
-                    "x": 150,
-                    "y": 285,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        0,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 189,
-                    "y": 151,
+                    "x": 271,
+                    "y": 827,
                     "type": "rect",
                     "width": 380,
                     "height": 10
                 },
                 {
-                    "x": 521,
-                    "y": 109,
-                    "type": "rect",
-                    "width": 380,
-                    "height": 120
-                },
-                {
-                    "x": 420,
-                    "y": 181,
-                    "type": "poly",
-                    "points": [
-                        120,
-                        0,
-                        120,
-                        120,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 375,
-                    "y": 109,
-                    "type": "poly",
-                    "points": [
-                        120,
-                        0,
-                        120,
-                        120,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 76,
-                    "y": 144,
+                    "x": 0,
+                    "y": 0,
                     "type": "poly",
                     "points": [
                         0,
                         0,
-                        120,
-                        120,
+                        50,
                         0,
-                        120
+                        0,
+                        50
                     ]
                 },
                 {
-                    "x": 464,
-                    "y": 345,
-                    "type": "rect",
-                    "width": 150,
-                    "height": 120
+                    "x": 490,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        50,
+                        50
+                    ]
+                },
+                {
+                    "x": 0,
+                    "y": 870,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        50,
+                        0,
+                        50
+                    ]
                 }
             ]
         },
@@ -277,6 +205,7 @@
         }
     ],
     "data": {
-        "shots": 1
+        "shots": 3,
+        "tutorial": "intro"
     }
 }

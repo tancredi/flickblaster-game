@@ -26,7 +26,7 @@ class BaseActionableBehaviour extends BaseBehaviour
   
   # Attach collosion listener to a new activator
   addActivator: (activator) ->
-    @entity.onCollisionStart activator, => @activate activator
+    @entity.onCollisionStart activator, => (@activate activator unless @active)
 
   # Extend this method to define a custom activation logic
   activate: (activator) ->

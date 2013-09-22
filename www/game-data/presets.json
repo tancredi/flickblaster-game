@@ -55,6 +55,31 @@
 		]
 	},
 
+	"button-v-blue": {
+		"behaviour": "button",
+		"attributes": {
+			"type": "button",
+			"sensor": true,
+			"interaction": "static"
+		},
+		"sprites": [
+			{ "type": "button-v-blue", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "rect", "width": 15, "height": 42, "x": 0, "y": 0 }
+		]
+	},
+
+	"button-h-blue": {
+		"extends": "button-v-blue",
+		"sprites": [
+			{ "type": "button-h-blue", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "rect", "width": 42, "height": 15, "x": 0, "y": 0 }
+		]
+	},
+
 	"button-v-red": {
 		"extends": "button-v-yellow",
 		"sprites": [
@@ -108,7 +133,7 @@
 			{ "type": "bullet", "x": 0, "y": 0 }
 		],
 		"bodies": [
-			{ "type": "circle", "radius": 15, "x": 0, "y": 0 }
+			{ "type": "circle", "radius": 20, "x": 0, "y": 0 }
 		]
 	},
 
@@ -124,6 +149,16 @@
 		],
 		"bodies": [
 			{ "type": "circle", "radius": 50, "x": 0, "y": 0 }
+		]
+	},
+
+	"turbo-mini": {
+		"extends": "turbo",
+		"sprites": [
+			{ "type": "turbo-mini", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "circle", "radius": 30, "x": 0, "y": 0 }
 		]
 	},
 

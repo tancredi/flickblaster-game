@@ -85,6 +85,20 @@
         }
     },
 
+    "button-v-blue": {
+        "extends": "button-v-yellow",
+        "assets": {
+            "default": "sprites/button-blue"
+        }
+    },
+
+    "button-h-blue": {
+        "extends": "button-h-yellow",
+        "assets": {
+            "default": "sprites/button-blue"
+        }
+    },
+
     "teleport": {
         "assets": {
             "default": "sprites/teleport"
@@ -159,6 +173,20 @@
         },
         "decorators": {
             "light": "sprites/turbo-lights"
+        }
+    },
+
+    "turbo-mini": {
+        "size": [ 60, 60 ],
+        "extends": "turbo",
+        "poses": {
+            "default": {
+                "offset": [ 0, 0 ],
+                "module": [ 60, 60 ],
+                "frameLength": 0,
+                "repeat": true,
+                "play": false
+            }
         }
     },
 
