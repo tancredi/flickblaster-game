@@ -1,0 +1,81 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 360,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 520,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "interaction": "static",
+                        "color": "yellow",
+                        "group": "laser-yellow"
+                    },
+                    "behaviour": "laser",
+                    "id": "laser-01"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 260,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 906,
+                    "preset": "button-h-yellow",
+                    "attributes": {
+                        "action": "laser-off",
+                        "target-group": "laser-yellow",
+                        "anchor": "bottom"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 460,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": []
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1,
+        "tutorial": "lasers"
+    }
+}

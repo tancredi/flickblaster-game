@@ -1,0 +1,20 @@
+{
+	"default": {
+		"density": 1.0,
+		"friction": 0.5,
+		"restitution": 0.2,
+		"linearDamping": 0.8
+	},
+	"metal": {
+		"density": 10.0,
+		"friction": 1,
+		"restitution": 0.05,
+		"linearDamping": 1
+	},
+	"rubber": {
+		"density": 0.8,
+		"friction": 0.9,
+		"restitution": 0.8,
+		"linearDamping": 0.8
+	}
+}

@@ -1,0 +1,157 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 150,
+                    "y": 373,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 4,
+                            "height": 730
+                        }
+                    ],
+                    "attributes": {
+                        "color": "red",
+                        "type": "laser",
+                        "interaction": "static",
+                        "group": "laser-red"
+                    },
+                    "behaviour": "laser",
+                    "id": "test"
+                },
+                {
+                    "x": 351,
+                    "y": 758,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 358,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "color": "red",
+                        "type": "laser",
+                        "interaction": "static",
+                        "sensor": true,
+                        "off": true,
+                        "group": "laser-red"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 246,
+                    "y": 80,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 76,
+                    "y": 818,
+                    "preset": "sensor",
+                    "attributes": {
+                        "action": "laser-toggle",
+                        "interaction": "static",
+                        "target-group": "laser-red",
+                        "sensor": true
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 80,
+                    "y": 150,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 189,
+                    "y": 839,
+                    "preset": "turbo",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 150,
+                    "y": 760,
+                    "type": "circle",
+                    "radius": 22
+                },
+                {
+                    "x": 4,
+                    "y": 820,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 441,
+                    "y": 820,
+                    "type": "poly",
+                    "points": [
+                        100,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 4,
+                    "y": 4,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 2
+    }
+}

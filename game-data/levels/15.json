@@ -1,0 +1,73 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": []
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 100,
+                    "y": 100,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 906,
+                    "preset": "button-h-yellow",
+                    "attributes": {
+                        "action": "cannon-shoot",
+                        "target-id": "cannon",
+                        "anchor": "bottom"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 530,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 450,
+                    "y": 100,
+                    "preset": "cannon-left",
+                    "attributes": {},
+                    "id": "cannon"
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 200,
+                    "type": "rect",
+                    "width": 540,
+                    "height": 10
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1,
+        "tutorial": "cannons"
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": []
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 160,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 820,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 500,
+                    "y": 610,
+                    "preset": "cannon-left",
+                    "attributes": {
+                        "group": "cannone"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 500,
+                    "y": 460,
+                    "preset": "cannon-left",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 500,
+                    "y": 310,
+                    "preset": "cannon-left",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 40,
+                    "y": 660,
+                    "preset": "cannon-right",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 40,
+                    "y": 510,
+                    "preset": "cannon-right",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 40,
+                    "y": 360,
+                    "preset": "cannon-right",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 730,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "cannon-shoot",
+                        "target-group": "cannons"
+                    },
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": []
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1
+    }
+}

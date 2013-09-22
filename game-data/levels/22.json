@@ -1,0 +1,310 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 271,
+                    "y": 350,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 194,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                },
+                {
+                    "x": 271,
+                    "y": 300,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 194,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "yellow",
+                        "group": "lasers-yellow",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 190,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 520,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 499,
+                    "y": 879,
+                    "preset": "cannon-top",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": "cannon-a"
+                },
+                {
+                    "x": 43,
+                    "y": 877,
+                    "preset": "cannon-top",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": "cannon-b"
+                },
+                {
+                    "x": 415,
+                    "y": 870,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "cannon-shoot",
+                        "target-id": "cannon-b"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 906,
+                    "preset": "button-h-blue",
+                    "attributes": {
+                        "anchor": "bottom",
+                        "action": "cannon-shoot",
+                        "target-id": "cannon-a"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 125,
+                    "y": 906,
+                    "preset": "button-h-yellow",
+                    "attributes": {
+                        "anchor": "bottom",
+                        "action": "laser-toggle",
+                        "target-group": "lasers-yellow"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 415,
+                    "y": 906,
+                    "preset": "button-h-red",
+                    "attributes": {
+                        "anchor": "bottom",
+                        "action": "laser-toggle",
+                        "target-group": "lasers-red"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 45,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {
+                        "multiplier": 2
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 499,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {
+                        "multiplier": 40
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 415,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 430,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "laser-toggle",
+                        "target-group": "lasers-yellow"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 128,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {
+                        "multiplier": 2
+                    },
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 461,
+                    "y": 525,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 900
+                },
+                {
+                    "x": 86,
+                    "y": 525,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 900
+                },
+                {
+                    "x": 170,
+                    "y": 460,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 920
+                },
+                {
+                    "x": 370,
+                    "y": 460,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 920
+                },
+                {
+                    "x": 270,
+                    "y": 40,
+                    "type": "rect",
+                    "width": 210,
+                    "height": 80
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        0,
+                        50
+                    ]
+                },
+                {
+                    "x": 490,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        50,
+                        50
+                    ]
+                },
+                {
+                    "x": 120,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        50,
+                        50
+                    ]
+                },
+                {
+                    "x": 370,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        0,
+                        50
+                    ]
+                },
+                {
+                    "x": 172,
+                    "y": 79,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        0,
+                        50
+                    ]
+                },
+                {
+                    "x": 316,
+                    "y": 77,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        50,
+                        50
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 2
+    }
+}

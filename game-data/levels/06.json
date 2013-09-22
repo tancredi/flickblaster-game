@@ -1,0 +1,126 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 269,
+                    "y": 354,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 165,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "color": "yellow",
+                        "type": "laser",
+                        "group": "laser-yellow",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 160,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 100,
+                    "y": 560,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-b"
+                    },
+                    "id": "teleport-a"
+                },
+                {
+                    "x": 250,
+                    "y": 856,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-a"
+                    },
+                    "id": "teleport-b"
+                },
+                {
+                    "x": 280,
+                    "y": 560,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 14,
+                    "y": 854,
+                    "preset": "button-v-yellow",
+                    "attributes": {
+                        "action": "laser-off",
+                        "target-group": "laser-yellow",
+                        "anchor": "left"
+                    },
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 794,
+                    "type": "rect",
+                    "width": 530,
+                    "height": 10
+                },
+                {
+                    "x": 95,
+                    "y": 354,
+                    "type": "rect",
+                    "width": 184,
+                    "height": 10
+                },
+                {
+                    "x": 443,
+                    "y": 354,
+                    "type": "rect",
+                    "width": 184,
+                    "height": 10
+                },
+                {
+                    "x": 444,
+                    "y": 866,
+                    "type": "rect",
+                    "width": 200,
+                    "height": 140
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 2
+    }
+}

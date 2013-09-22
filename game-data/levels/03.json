@@ -1,0 +1,96 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 449,
+                    "y": 300,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 162,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "interaction": "static",
+                        "color": "yellow",
+                        "group": "laser-yellow"
+                    },
+                    "behaviour": "laser",
+                    "id": "laser-01"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 160,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 760,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 157,
+                    "y": 312,
+                    "preset": "button-h-yellow",
+                    "attributes": {
+                        "flip-y": true,
+                        "action": "laser-off",
+                        "target-group": "laser-yellow",
+                        "anchor": "top"
+                    },
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 383,
+                    "y": 610,
+                    "type": "rect",
+                    "width": 450,
+                    "height": 10
+                },
+                {
+                    "x": 143,
+                    "y": 300,
+                    "type": "rect",
+                    "width": 450,
+                    "height": 10
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 2
+    }
+}

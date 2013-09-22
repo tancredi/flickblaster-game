@@ -1,0 +1,281 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": []
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 600,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 170,
+                    "y": 160,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 85,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 455,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 85,
+                    "y": 840,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 455,
+                    "y": 840,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 370,
+                    "y": 160,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 370,
+                    "y": 760,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 170,
+                    "y": 760,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 490,
+                    "y": 460,
+                    "type": "rect",
+                    "width": 100,
+                    "height": 602
+                },
+                {
+                    "x": 50,
+                    "y": 460,
+                    "type": "rect",
+                    "width": 100,
+                    "height": 602
+                },
+                {
+                    "x": 270,
+                    "y": 870,
+                    "type": "rect",
+                    "width": 202,
+                    "height": 100
+                },
+                {
+                    "x": 270,
+                    "y": 50,
+                    "type": "rect",
+                    "width": 202,
+                    "height": 100
+                },
+                {
+                    "x": 0,
+                    "y": 760,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 70,
+                    "y": 820,
+                    "type": "poly",
+                    "points": [
+                        100,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 440,
+                    "y": 60,
+                    "type": "poly",
+                    "points": [
+                        100,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 370,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 70,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        100,
+                        100
+                    ]
+                },
+                {
+                    "x": 440,
+                    "y": 760,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        100,
+                        100
+                    ]
+                },
+                {
+                    "x": 0,
+                    "y": 60,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 370,
+                    "y": 820,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 440,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        100,
+                        100
+                    ]
+                },
+                {
+                    "x": 440,
+                    "y": 820,
+                    "type": "poly",
+                    "points": [
+                        100,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 0,
+                    "y": 820,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 5,
+        "tutorial": "rubber-balls"
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": []
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 160,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 520,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-b"
+                    },
+                    "id": "teleport-a"
+                },
+                {
+                    "x": 270,
+                    "y": 320,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-a"
+                    },
+                    "id": "teleport-b"
+                },
+                {
+                    "x": 270,
+                    "y": 700,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 420,
+                    "type": "rect",
+                    "width": 530,
+                    "height": 10
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1,
+        "tutorial": "teleports"
+    }
+}

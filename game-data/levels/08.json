@@ -1,0 +1,89 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 95,
+                    "y": 310,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 170,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "sensor": true,
+                        "color": "red",
+                        "interaction": "static",
+                        "type": "laser"
+                    },
+                    "behaviour": "laser",
+                    "id": "laser-red"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 160,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 266,
+                    "y": 450,
+                    "preset": "sensor",
+                    "attributes": {
+                        "action": "laser-toggle",
+                        "target-id": "laser-red",
+                        "sensor": true
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 760,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 355,
+                    "y": 310,
+                    "type": "rect",
+                    "width": 350,
+                    "height": 10
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 2,
+        "tutorial": "sensors"
+    }
+}

@@ -1,0 +1,182 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 160,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 170,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                },
+                {
+                    "x": 449,
+                    "y": 160,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 170,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                },
+                {
+                    "x": 90,
+                    "y": 160,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 170,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 600,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 445,
+                    "y": 400,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 100,
+                    "y": 400,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 400,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 90,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 445,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 445,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 90,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 180,
+                    "y": 70,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 200
+                },
+                {
+                    "x": 359,
+                    "y": 70,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 200
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 5,
+        "tutorial": "rubber-balls"
+    }
+}

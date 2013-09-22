@@ -1,0 +1,201 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 155,
+                    "y": 491,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 4,
+                            "height": 154
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 80,
+                    "y": 491,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 96,
+                    "y": 840,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 218,
+                    "y": 184,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "laser-off",
+                        "target-group": "lasers-red"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 520,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-b",
+                        "single-use": true
+                    },
+                    "id": "teleport-a"
+                },
+                {
+                    "x": 140,
+                    "y": 100,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 388,
+                    "y": 342,
+                    "preset": "teleport",
+                    "attributes": {
+                        "single-use": true
+                    },
+                    "id": "teleport-b"
+                },
+                {
+                    "x": 359,
+                    "y": 617,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 321,
+                    "y": 293,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 267,
+                    "y": 239,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 410,
+                    "type": "rect",
+                    "width": 532,
+                    "height": 10
+                },
+                {
+                    "x": 80,
+                    "y": 573,
+                    "type": "rect",
+                    "width": 155,
+                    "height": 10
+                },
+                {
+                    "x": 125,
+                    "y": -3,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        420,
+                        0,
+                        420,
+                        420
+                    ]
+                },
+                {
+                    "x": 4,
+                    "y": 55,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        350,
+                        350,
+                        0,
+                        350
+                    ]
+                },
+                {
+                    "x": 49,
+                    "y": 4,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 24,
+                    "y": 53,
+                    "type": "rect",
+                    "width": 56,
+                    "height": 132
+                },
+                {
+                    "x": 275,
+                    "y": 117,
+                    "type": "rect",
+                    "width": 68,
+                    "height": 80
+                },
+                {
+                    "x": 151,
+                    "y": 251,
+                    "type": "rect",
+                    "width": 88,
+                    "height": 84
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 2
+    }
+}

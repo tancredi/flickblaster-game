@@ -1,0 +1,210 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 273,
+                    "y": 300,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 368,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static",
+                        "off": true
+                    },
+                    "behaviour": "laser"
+                },
+                {
+                    "x": 273,
+                    "y": 600,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 368,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 190,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 710,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 499,
+                    "y": 879,
+                    "preset": "cannon-top",
+                    "attributes": {},
+                    "id": "cannon-a"
+                },
+                {
+                    "x": 449,
+                    "y": 873,
+                    "preset": "button-v-red",
+                    "attributes": {
+                        "anchor": "right",
+                        "flip-x": true,
+                        "action": "laser-toggle",
+                        "multi-use": true,
+                        "target-group": "lasers-red"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 99,
+                    "y": 710,
+                    "preset": "button-v-blue",
+                    "attributes": {
+                        "action": "cannon-shoot",
+                        "target-id": "cannon-a",
+                        "multi-use": true
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 499,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 45,
+                    "y": 460,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 43,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 461,
+                    "y": 525,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 900
+                },
+                {
+                    "x": 86,
+                    "y": 450,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 750
+                },
+                {
+                    "x": 271,
+                    "y": 79,
+                    "type": "rect",
+                    "width": 380,
+                    "height": 8
+                },
+                {
+                    "x": 271,
+                    "y": 827,
+                    "type": "rect",
+                    "width": 380,
+                    "height": 10
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        0,
+                        50
+                    ]
+                },
+                {
+                    "x": 490,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        50,
+                        50
+                    ]
+                },
+                {
+                    "x": 0,
+                    "y": 870,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        50,
+                        0,
+                        50
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 3
+    }
+}
