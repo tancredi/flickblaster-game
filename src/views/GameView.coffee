@@ -44,6 +44,7 @@ class GameView extends BaseView
     super
 
     @elements.pause = getByRole 'pause', @elements.main         # Pause button
+    @elements.reset = getByRole 'reset', @elements.main         # Reset button
     @elements.shots = getByRole 'shots-counter', @elements.main # Shots display
 
   bind: ->
@@ -51,6 +52,9 @@ class GameView extends BaseView
 
     # Instanciate the World (Containing the core of the game logic)
     @world = new World @elements.main, @levelName
+
+    @elements.reset.on (device.getEvent 'mousedown'), (e) =>
+      @restart()
 
     # Bind pause button
     @elements.pause.on (device.getEvent 'mousedown'), (e) =>
@@ -153,6 +157,7 @@ class GameView extends BaseView
   close: ->
     # Unbind events
     @elements.pause.off device.getEvent 'click'
+    @elements.reset.off device.getEvent 'click'
 
     super
 

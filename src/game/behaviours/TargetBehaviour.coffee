@@ -24,6 +24,8 @@ class TargetBehaviour extends BaseActionableBehaviour
   activate: (activator) ->
     super
 
+    @active = true
+
     return if activator.behaviour.dead
 
     @lightsOn()

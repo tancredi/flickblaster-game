@@ -28,43 +28,8 @@
                     "id": "player"
                 },
                 {
-                    "x": 70,
-                    "y": 500,
-                    "preset": "bullet",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 370,
-                    "y": 540,
-                    "preset": "bullet",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 470,
-                    "y": 500,
-                    "preset": "bullet",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 170,
-                    "y": 540,
-                    "preset": "bullet",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
                     "x": 270,
-                    "y": 230,
-                    "preset": "bullet",
-                    "attributes": {},
-                    "id": ""
-                },
-                {
-                    "x": 270,
-                    "y": 320,
+                    "y": 400,
                     "preset": "bullet",
                     "attributes": {},
                     "id": ""
@@ -74,7 +39,22 @@
         {
             "id": "walls",
             "type": "body",
-            "items": []
+            "items": [
+                {
+                    "x": 55,
+                    "y": 347,
+                    "type": "rect",
+                    "width": 350,
+                    "height": 10
+                },
+                {
+                    "x": 480,
+                    "y": 347,
+                    "type": "rect",
+                    "width": 350,
+                    "height": 10
+                }
+            ]
         },
         {
             "id": "background",
@@ -84,6 +64,6 @@
     ],
     "data": {
         "shots": 1,
-        "tutorial": "obstacles"
+        "tutorial": "bullets"
     }
 }

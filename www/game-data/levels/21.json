@@ -205,7 +205,6 @@
         }
     ],
     "data": {
-        "shots": 3,
-        "tutorial": "intro"
+        "shots": 3
     }
 }

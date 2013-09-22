@@ -57,23 +57,11 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 326,
+                    "x": 320,
                     "y": 820,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
-                },
-                {
-                    "x": 526,
-                    "y": 820,
-                    "preset": "button-v-red",
-                    "attributes": {
-                        "anchor": "right",
-                        "action": "cannon-shoot",
-                        "target-id": "cannon-2",
-                        "flip-x": true
-                    },
-                    "id": ""
                 },
                 {
                     "x": 460,
@@ -83,8 +71,8 @@
                     "id": ""
                 },
                 {
-                    "x": 345,
-                    "y": 655,
+                    "x": 320,
+                    "y": 600,
                     "preset": "bullet",
                     "attributes": {},
                     "id": ""

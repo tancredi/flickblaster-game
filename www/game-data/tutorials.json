@@ -11,12 +11,12 @@
 	},
 	"teleports": {
 		"title": "Teleports!",
-		"text": "Teleports will bring you to a different location.<br><br>This may be another teleport, or sometimes unexpected places",
+		"text": "Teleports will bring you to a different location.<br><br>This may be another teleport, or sometimes unexpected places.",
 		"icon": "magic"
 	},
 	"sensors": {
 		"title": "Sensors",
-		"text": "Sensors are like buttons, but they can be activated many times, by passing over them",
+		"text": "Sensors are like buttons, but they can be activated many times, by passing over them.",
 		"icon": "eye-open"
 	},
 	"turbos": {
@@ -26,22 +26,22 @@
 	},
 	"multiple-targets": {
 		"title": "Multiple targets",
-		"text": "Sometimes, you may have to activate more than one target to win",
+		"text": "Sometimes, you may have to activate more than one target to win.",
 		"icon": "bullseye"
 	},
-	"obstacles": {
-		"title": "Heavy objects",
-		"text": "This type of objects will slow you down if on your way.<br><br>Work your way around them",
-		"icon": "anchor"
+	"bullets": {
+		"title": "Bullets!",
+		"text": "Bullets can be pushed around and used to reach places the disc couln't normally reach.",
+		"icon": "screenshot"
 	},
 	"cannons": {
 		"title": "Cannons!",
-		"text": "Cannons can be activated using buttons or sensors.<br><br>Their bullets can hit targets and help you winning",
-		"icon": "screenshot"
+		"text": "Activate the cannons by using buttons or sensors.",
+		"icon": "certificate"
 	},
 	"teleport-single-use": {
 		"title": "One way only",
-		"text": "Some teleports will disappear after being used.<br><br>Find a workaround",
+		"text": "Some teleports will disappear after being used.<br><br>Find a workaround.",
 		"icon": "circle-up"
 	}
 }

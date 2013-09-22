@@ -94,9 +94,16 @@
                     "id": ""
                 },
                 {
-                    "x": 307,
-                    "y": 261,
-                    "preset": "turbo",
+                    "x": 321,
+                    "y": 293,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 267,
+                    "y": 239,
+                    "preset": "turbo-mini",
                     "attributes": {},
                     "id": ""
                 }
