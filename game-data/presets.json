@@ -175,6 +175,7 @@
 	"cannon-left": {
 		"behaviour": "cannon",
 		"attributes": {
+			"type": "cannon",
 			"sensor": true,
 			"interaction": "static",
 			"direction": [ -1, 0 ],
