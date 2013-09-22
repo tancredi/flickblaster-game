@@ -37,8 +37,8 @@ class CannonBehaviour extends BaseBehaviour
       target.behaviour.addActioner bullet
 
     # Animate cannon shot
-    @spriteEl.css scale: 1.2
-    @spriteEl.stop().animate scale: 1, 200
+    @spriteEl.css zoom: 1.2
+    @spriteEl.stop().animate zoom: 1, 200
 
     # Apply force to bullet
     setTimeout ( =>
