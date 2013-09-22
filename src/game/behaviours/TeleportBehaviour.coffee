@@ -19,7 +19,7 @@ class TeleportBehaviour extends BaseActionableBehaviour
     @lights = @sprite.decorators.lights   # The lights decorator element
 
   activate: (player) ->
-    return if @active
+    return if @active or @prevent
 
     super
 
@@ -56,6 +56,7 @@ class TeleportBehaviour extends BaseActionableBehaviour
     ), delay
 
   pop: ->
+    @prevent = true
     @entity.el.stop().transition scale: 1.3, 200, =>
       @entity.el.stop().transition scale: .1, opacity: 0, 300, =>
         @entity.remove()

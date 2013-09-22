@@ -9,24 +9,23 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 359,
-                    "y": 143,
+                    "x": 155,
+                    "y": 491,
                     "sprites": [],
                     "bodies": [
                         {
-                            "x": 11,
-                            "y": 75,
+                            "x": 0,
+                            "y": 0,
                             "type": "rect",
                             "width": 4,
-                            "height": 126
+                            "height": 154
                         }
                     ],
                     "attributes": {
                         "type": "laser",
                         "color": "red",
                         "group": "lasers-red",
-                        "interaction": "static",
-                        "off": true
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 }
@@ -37,103 +36,68 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 344,
-                    "y": 58,
+                    "x": 80,
+                    "y": 491,
                     "preset": "target",
                     "attributes": {},
                     "id": "target"
                 },
                 {
-                    "x": 270,
-                    "y": 820,
+                    "x": 96,
+                    "y": 840,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
                 },
                 {
-                    "x": 460,
-                    "y": 475,
-                    "preset": "cannon-left",
-                    "attributes": {
-                        "group": "cannons"
-                    },
-                    "id": "cannon-2"
-                },
-                {
-                    "x": 80,
-                    "y": 477,
-                    "preset": "cannon-right",
-                    "attributes": {
-                        "group": "cannons"
-                    },
-                    "id": "cannon-1"
-                },
-                {
-                    "x": 270,
-                    "y": 630,
+                    "x": 218,
+                    "y": 184,
                     "preset": "sensor",
                     "attributes": {
                         "sensor": true,
-                        "action": "cannon-shoot",
-                        "target-group": "cannons"
+                        "action": "laser-off",
+                        "target-group": "lasers-red"
                     },
                     "id": ""
                 },
                 {
-                    "x": 75,
-                    "y": 75,
+                    "x": 270,
+                    "y": 520,
                     "preset": "teleport",
                     "attributes": {
-                        "target-id": "teleport-1"
+                        "target-id": "teleport-b",
+                        "single-use": true
                     },
-                    "id": "teleport-2"
+                    "id": "teleport-a"
                 },
                 {
-                    "x": 526,
-                    "y": 820,
-                    "preset": "button-v-red",
-                    "attributes": {
-                        "anchor": "right",
-                        "action": "cannon-shoot",
-                        "target-id": "cannon-2",
-                        "flip-x": true
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 14,
-                    "y": 820,
-                    "preset": "button-v-red",
-                    "attributes": {
-                        "anchor": "left",
-                        "action": "cannon-shoot",
-                        "target-id": "cannon-1"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 268,
-                    "y": 363,
+                    "x": 140,
+                    "y": 100,
                     "preset": "target",
                     "attributes": {},
                     "id": ""
                 },
                 {
-                    "x": 180,
-                    "y": 75,
-                    "preset": "turbo",
+                    "x": 388,
+                    "y": 342,
+                    "preset": "teleport",
+                    "attributes": {
+                        "single-use": true
+                    },
+                    "id": "teleport-b"
+                },
+                {
+                    "x": 359,
+                    "y": 617,
+                    "preset": "bullet",
                     "attributes": {},
                     "id": ""
                 },
                 {
-                    "x": 451,
-                    "y": 151,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
-                        "action": "laser-toggle",
-                        "target-group": "lasers-red"
-                    },
+                    "x": 307,
+                    "y": 261,
+                    "preset": "turbo",
+                    "attributes": {},
                     "id": ""
                 }
             ]
@@ -144,129 +108,77 @@
             "items": [
                 {
                     "x": 270,
-                    "y": 550,
+                    "y": 410,
                     "type": "rect",
                     "width": 532,
                     "height": 10
                 },
                 {
-                    "x": 76,
-                    "y": 345,
+                    "x": 80,
+                    "y": 573,
                     "type": "rect",
-                    "width": 150,
-                    "height": 120
-                },
-                {
-                    "x": 262,
-                    "y": 142,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        120,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 242,
-                    "y": 70,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        0,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 270,
-                    "y": 285,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        0,
-                        120,
-                        120
-                    ]
-                },
-                {
-                    "x": 150,
-                    "y": 285,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        0,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 189,
-                    "y": 151,
-                    "type": "rect",
-                    "width": 380,
+                    "width": 155,
                     "height": 10
                 },
                 {
-                    "x": 521,
-                    "y": 109,
+                    "x": 125,
+                    "y": -3,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        420,
+                        0,
+                        420,
+                        420
+                    ]
+                },
+                {
+                    "x": 4,
+                    "y": 55,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        350,
+                        350,
+                        0,
+                        350
+                    ]
+                },
+                {
+                    "x": 49,
+                    "y": 4,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 24,
+                    "y": 53,
                     "type": "rect",
-                    "width": 380,
-                    "height": 120
+                    "width": 56,
+                    "height": 132
                 },
                 {
-                    "x": 420,
-                    "y": 181,
-                    "type": "poly",
-                    "points": [
-                        120,
-                        0,
-                        120,
-                        120,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 375,
-                    "y": 109,
-                    "type": "poly",
-                    "points": [
-                        120,
-                        0,
-                        120,
-                        120,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 76,
-                    "y": 144,
-                    "type": "poly",
-                    "points": [
-                        0,
-                        0,
-                        120,
-                        120,
-                        0,
-                        120
-                    ]
-                },
-                {
-                    "x": 464,
-                    "y": 345,
+                    "x": 275,
+                    "y": 117,
                     "type": "rect",
-                    "width": 150,
-                    "height": 120
+                    "width": 68,
+                    "height": 80
+                },
+                {
+                    "x": 151,
+                    "y": 251,
+                    "type": "rect",
+                    "width": 88,
+                    "height": 84
                 }
             ]
         },

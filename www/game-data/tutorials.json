@@ -38,5 +38,10 @@
 		"title": "Cannons!",
 		"text": "Cannons can be activated using buttons or sensors.<br><br>Their bullets can hit targets and help you winning",
 		"icon": "screenshot"
+	},
+	"teleport-single-use": {
+		"title": "One way only",
+		"text": "Some teleports will disappear after being used.<br><br>Find a workaround",
+		"icon": "circle-up"
 	}
 }
