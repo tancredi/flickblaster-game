@@ -30,6 +30,16 @@
 		]
 	},
 
+	"target-mini": {
+		"extends": "target",
+		"sprites": [
+			{ "type": "target-mini", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "circle", "radius": 28, "x": 0, "y": 0 }
+		]
+	},
+
 	"button-v-yellow": {
 		"behaviour": "button",
 		"attributes": {
@@ -88,7 +98,7 @@
 	},
 
 	"button-h-red": {
-		"extends": "button-h-red",
+		"extends": "button-h-yellow",
 		"sprites": [
 			{ "type": "button-h-red", "x": 0, "y": 0 }
 		]

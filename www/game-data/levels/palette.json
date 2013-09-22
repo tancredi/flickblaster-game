@@ -1,0 +1,269 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 469,
+                    "y": 763,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 11,
+                            "y": 75,
+                            "type": "rect",
+                            "width": 4,
+                            "height": 126
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static",
+                        "off": true
+                    },
+                    "behaviour": "laser"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 58,
+                    "y": 618,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 266,
+                    "y": 591,
+                    "preset": "cannon-left",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": "cannon-2"
+                },
+                {
+                    "x": 184,
+                    "y": 591,
+                    "preset": "cannon-right",
+                    "attributes": {
+                        "group": "cannons"
+                    },
+                    "id": "cannon-1"
+                },
+                {
+                    "x": 466,
+                    "y": 690,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "cannon-shoot",
+                        "target-group": "cannons"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 67,
+                    "y": 753,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-1"
+                    },
+                    "id": "teleport-2"
+                },
+                {
+                    "x": 376,
+                    "y": 604,
+                    "preset": "button-v-red",
+                    "attributes": {
+                        "anchor": "left",
+                        "action": "cannon-shoot",
+                        "target-id": "cannon-1"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 264,
+                    "y": 313,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 440,
+                    "y": 435,
+                    "preset": "turbo",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 371,
+                    "y": 695,
+                    "preset": "button-v-yellow",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 265,
+                    "y": 757,
+                    "preset": "button-h-yellow",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 261,
+                    "y": 683,
+                    "preset": "button-h-red",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 371,
+                    "y": 793,
+                    "preset": "button-v-blue",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 261,
+                    "y": 835,
+                    "preset": "button-h-blue",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 175,
+                    "y": 707,
+                    "preset": "cannon-top",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 175,
+                    "y": 819,
+                    "preset": "cannon-bottom",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 439,
+                    "y": 299,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 469,
+                    "y": 595,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 355,
+                    "y": 319,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 550,
+                    "type": "rect",
+                    "width": 532,
+                    "height": 10
+                },
+                {
+                    "x": 96,
+                    "y": 327,
+                    "type": "rect",
+                    "width": 150,
+                    "height": 120
+                },
+                {
+                    "x": 20,
+                    "y": 416,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        120,
+                        120,
+                        0,
+                        120
+                    ]
+                },
+                {
+                    "x": 38,
+                    "y": 405,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        120,
+                        0,
+                        120,
+                        120
+                    ]
+                },
+                {
+                    "x": 188,
+                    "y": 415,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        120,
+                        0,
+                        0,
+                        120
+                    ]
+                },
+                {
+                    "x": 217,
+                    "y": 239,
+                    "type": "rect",
+                    "width": 380,
+                    "height": 10
+                },
+                {
+                    "x": 220,
+                    "y": 415,
+                    "type": "poly",
+                    "points": [
+                        120,
+                        0,
+                        120,
+                        120,
+                        0,
+                        120
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1
+    }
+}

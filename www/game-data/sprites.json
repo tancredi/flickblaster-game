@@ -40,6 +40,20 @@
         }
     },
 
+    "target-mini": {
+        "extends": "target",
+        "size": [ 60, 60 ],
+        "poses": {
+            "default": {
+                "offset": [ 0, 0 ],
+                "module": [ 60, 60 ],
+                "frameLength": 0,
+                "repeat": true,
+                "play": false
+            }
+        }
+    },
+
     "button-v-yellow": {
         "assets": {
             "default": "sprites/button-yellow"
