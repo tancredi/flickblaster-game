@@ -43,5 +43,10 @@
 		"title": "One way only",
 		"text": "Some teleports will disappear after being used.<br><br>Find a workaround.",
 		"icon": "circle-up"
+	},
+	"rubber-balls": {
+		"title": "Rubber balls",
+		"text": "Use them like bullets, but careful - They bounce quite a lot!",
+		"icon": "circle"
 	}
 }

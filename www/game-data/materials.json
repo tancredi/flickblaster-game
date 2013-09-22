@@ -10,5 +10,11 @@
 		"friction": 1,
 		"restitution": 0.05,
 		"linearDamping": 1
+	},
+	"rubber": {
+		"density": 0.8,
+		"friction": 0.9,
+		"restitution": 0.8,
+		"linearDamping": 0.8
 	}
 }

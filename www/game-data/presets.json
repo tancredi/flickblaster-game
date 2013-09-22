@@ -175,7 +175,6 @@
 	"cannon-left": {
 		"behaviour": "cannon",
 		"attributes": {
-			"type": "cannon",
 			"sensor": true,
 			"interaction": "static",
 			"direction": [ -1, 0 ],
@@ -195,7 +194,6 @@
 		"extends": "cannon-left",
 		"attributes": {
 			"type": "cannon",
-			"sensor": true,
 			"interaction": "static",
 			"flip-x": true,
 			"direction": [ 1, 0 ]
@@ -211,7 +209,6 @@
 		"extends": "cannon-left",
 		"attributes": {
 			"type": "cannon",
-			"sensor": true,
 			"interaction": "static",
 			"direction": [ 0, -1 ],
 			"z-index": 2
@@ -230,7 +227,6 @@
 		"extends": "cannon-top",
 		"attributes": {
 			"type": "cannon",
-			"sensor": true,
 			"interaction": "static",
 			"flip-y": true,
 			"direction": [ 0, 1 ],
@@ -240,6 +236,31 @@
 			{ "type": "rect", "width": 4, "height": 30, "x": -25, "y": 10 },
 			{ "type": "rect", "width": 4, "height": 30, "x": 25, "y": 10 },
 			{ "type": "rect", "width": 30, "height": 4, "x": 0, "y": -20 }
+		]
+	},
+
+	"rubber-ball-orange": {
+		"attributes": {
+			"type": "rubber-ball",
+			"z-index": 2,
+			"material": "rubber",
+			"activator": true
+		},
+		"sprites": [
+			{ "type": "rubber-ball-orange", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "circle", "radius": 35, "x": 2, "y": 2 }
+		]
+	},
+
+	"rubber-ball-orange-mini": {
+		"extends": "rubber-ball-orange",
+		"sprites": [
+			{ "type": "rubber-ball-orange-mini", "x": 0, "y": 0 }
+		],
+		"bodies": [
+			{ "type": "circle", "radius": 25, "x": 2, "y": 2 }
 		]
 	}
 

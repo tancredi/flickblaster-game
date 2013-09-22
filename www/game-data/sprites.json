@@ -4,8 +4,8 @@
         "assets": {
             "default": "sprites/player"
         },
-        "size": [ 80, 80 ],
         "offset": [ 0, 0 ],
+        "size": [ 80, 80 ],
         "poses": {
             "default": {
                 "offset": [ 0, 0 ],
@@ -25,14 +25,9 @@
             "default": "sprites/target"
         },
         "size": [ 90, 90 ],
-        "offset": [ 0, 0 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 90, 90 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 90, 90 ]
             }
         },
         "decorators": {
@@ -45,11 +40,7 @@
         "size": [ 60, 60 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 60, 60 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 60, 60 ]
             }
         }
     },
@@ -62,25 +53,16 @@
         "offset": [ 0, 15 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 15, 42 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 15, 42 ]
             }
         }
     },
 
     "button-h-yellow": {
         "extends": "button-v-yellow",
-        "offset": [ 0, 0 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 42, 15 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 42, 15 ]
             }
         }
     },
@@ -118,14 +100,9 @@
             "default": "sprites/teleport"
         },
         "size": [ 80, 80 ],
-        "offset": [ 0, 0 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 80, 80 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 80, 80 ]
             }
         },
         "decorators": {
@@ -138,14 +115,9 @@
             "default": "sprites/sensor"
         },
         "size": [ 40, 40 ],
-        "offset": [ 0, 0 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 40, 40 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 40, 40 ]
             }
         },
         "decorators": {
@@ -158,14 +130,9 @@
             "default": "sprites/bullet"
         },
         "size": [ 40, 40 ],
-        "offset": [ 0, 0 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 40, 40 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 40, 40 ]
             }
         }
     },
@@ -175,14 +142,9 @@
             "default": "sprites/turbo"
         },
         "size": [ 100, 100 ],
-        "offset": [ 0, 0 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 100, 100 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 100, 100 ]
             }
         },
         "decorators": {
@@ -195,11 +157,7 @@
         "extends": "turbo",
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 60, 60 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 60, 60 ]
             }
         }
     },
@@ -209,14 +167,9 @@
             "default": "sprites/cannon-h"
         },
         "size": [ 55, 55 ],
-        "offset": [ 0, 0 ],
         "poses": {
             "default": {
-                "offset": [ 0, 0 ],
-                "module": [ 55, 55 ],
-                "frameLength": 0,
-                "repeat": true,
-                "play": false
+                "module": [ 55, 55 ]
             }
         },
         "decorators": {
@@ -227,6 +180,28 @@
         "extends": "cannon-h",
         "assets": {
             "default": "sprites/cannon-v"
+        }
+    },
+
+    "rubber-ball-orange": {
+        "assets": {
+            "default": "sprites/rubber-ball-orange"
+        },
+        "size": [ 80, 80 ],
+        "poses": {
+            "default": {
+                "module": [ 80, 80 ]
+            }
+        }
+    },
+
+    "rubber-ball-orange-mini": {
+        "extends": "rubber-ball-orange",
+        "size": [ 55, 55 ],
+        "poses": {
+            "default": {
+                "module": [ 55, 55 ]
+            }
         }
     }
 

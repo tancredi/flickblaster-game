@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
@@ -9,69 +9,65 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 269,
-                    "y": 560,
+                    "x": 270,
+                    "y": 150,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 520,
+                            "width": 148,
                             "height": 4
                         }
                     ],
                     "attributes": {
-                        "color": "red",
                         "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-red"
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 },
                 {
-                    "x": 269,
-                    "y": 400,
+                    "x": 68,
+                    "y": 790,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 520,
+                            "width": 125,
                             "height": 4
                         }
                     ],
                     "attributes": {
-                        "color": "blue",
                         "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-blue",
-                        "off": true
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 },
                 {
-                    "x": 269,
-                    "y": 250,
+                    "x": 472,
+                    "y": 790,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 520,
+                            "width": 125,
                             "height": 4
                         }
                     ],
                     "attributes": {
-                        "color": "red",
                         "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-red"
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 }
@@ -82,58 +78,134 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 246,
-                    "y": 80,
-                    "preset": "target",
-                    "attributes": {},
-                    "id": "target"
-                },
-                {
-                    "x": 175,
-                    "y": 624.5,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
-                        "action": "laser-toggle",
-                        "target-group": "all"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 393,
-                    "y": 472.5,
-                    "preset": "sensor",
-                    "attributes": {
-                        "action": "laser-toggle",
-                        "target-group": "all",
-                        "sensor": true
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 173,
-                    "y": 320,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
-                        "action": "laser-toggle",
-                        "target-group": "laser-red"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 180,
-                    "y": 840,
+                    "x": 270,
+                    "y": 470,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
+                },
+                {
+                    "x": 270,
+                    "y": 75,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 300,
+                    "preset": "rubber-ball-orange",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 70,
+                    "y": 850,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 470,
+                    "y": 850,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 420,
+                    "y": 600,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 120,
+                    "y": 600,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
                 }
             ]
         },
         {
             "id": "walls",
             "type": "body",
-            "items": []
+            "items": [
+                {
+                    "x": 450,
+                    "y": 80,
+                    "type": "rect",
+                    "width": 212,
+                    "height": 155
+                },
+                {
+                    "x": 90,
+                    "y": 80,
+                    "type": "rect",
+                    "width": 212,
+                    "height": 155
+                },
+                {
+                    "x": 300,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        50,
+                        50
+                    ]
+                },
+                {
+                    "x": 190,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        50,
+                        0,
+                        0,
+                        50
+                    ]
+                },
+                {
+                    "x": 270,
+                    "y": 860,
+                    "type": "rect",
+                    "width": 280,
+                    "height": 150
+                },
+                {
+                    "x": 0,
+                    "y": 150,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 440,
+                    "y": 150,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        100,
+                        100
+                    ]
+                }
+            ]
         },
         {
             "id": "background",
@@ -142,6 +214,7 @@
         }
     ],
     "data": {
-        "shots": 3
+        "shots": 3,
+        "tutorial": "rubber-balls"
     }
 }

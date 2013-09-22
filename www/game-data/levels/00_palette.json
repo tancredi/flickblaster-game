@@ -175,6 +175,20 @@
                     "preset": "target-mini",
                     "attributes": {},
                     "id": ""
+                },
+                {
+                    "x": 467,
+                    "y": 191,
+                    "preset": "baloon-orange",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 467,
+                    "y": 103,
+                    "preset": "baloon-orange-mini",
+                    "attributes": {},
+                    "id": ""
                 }
             ]
         },
