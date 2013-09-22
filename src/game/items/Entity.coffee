@@ -56,6 +56,9 @@ class Entity extends BaseItem
     @el.appendTo @layer.element
     @el.data 'entity', @
 
+    if @hasAttr 'z-index'
+      @el.css zIndex: @attributes['z-index']
+
   # Instanciate the sprites
   makeSprites: (sprites) ->
     for sprite in sprites
@@ -69,9 +72,6 @@ class Entity extends BaseItem
 
     if (@hasAttr 'flip-y') and @attributes['flip-y']
       (sprite.flip 1) for sprite in @sprites
-
-    if (@hasAttr 'z-index')
-      (@el.css zIndex: @attributes['z-index']) for sprite in @sprites
 
   # Returns true if given attribute is defined
   hasAttr: (attr) ->

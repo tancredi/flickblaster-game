@@ -31,14 +31,13 @@ class CannonBehaviour extends BaseBehaviour
     # Add bullet to the cannon layer
     bullet = @entity.layer.add bullet
 
-    # Add the bullet as actioner to all targets on stage
+    # Add the bullet as activator to all targets on stage
     targets = @world.getItemsByAttr 'type', 'target'
-    for target in targets
-      target.behaviour.addActioner bullet
+    (_ @world).emit 'addActivator', [ bullet ]
 
     # Animate cannon shot
     @spriteEl.css zoom: 1.2
-    @spriteEl.stop().animate zoom: 1, 200
+    @spriteEl.stop().transition zoom: 1, 200
 
     # Apply force to bullet
     setTimeout ( =>

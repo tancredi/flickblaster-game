@@ -31,10 +31,12 @@ class TeleportBehaviour extends BaseActionableBehaviour
 
     if target?
       @lightsFx()
+      @pop() if @entity.attributes['single-use']
 
       # Animate target as well if it's another teleport
       if target.attributes.type? and target.attributes.type is 'teleport'
         target.behaviour.lightsFx 200
+        target.behaviour.pop() if target.attributes['single-use']
 
       # Quickly fade player out
       playerSprite.transition opacity: 0, 30, =>
@@ -52,6 +54,13 @@ class TeleportBehaviour extends BaseActionableBehaviour
         @active = false
         @lights.stop().transition opacity: 0, rotate: 180, 200, 'easeInCirc'
     ), delay
+
+  pop: ->
+    @entity.el.stop().transition scale: 1.3, 200, =>
+      @entity.el.stop().transition scale: .1, opacity: 0, 300, =>
+        @entity.remove()
+
+  postUse: ->
 
   update: ->
 

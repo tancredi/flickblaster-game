@@ -1,5 +1,5 @@
 
-BaseBehaviour = require './BaseBehaviour'
+BaseActionableBehaviour = require './BaseActionableBehaviour'
 
 ###
 ## Target Behaviour class
@@ -11,32 +11,25 @@ Once a target gets hit by a player of another object with attribute `trigger-tar
 it will communicate the point to its World and stay in active state
 ###
 
-class TargetBehaviour extends BaseBehaviour
+class TargetBehaviour extends BaseActionableBehaviour
 
   constructor: (@entity, @world) ->
-    @potted = false
-
-    @bind()
+    super
 
     # Get lights decorator element
     @lights = @entity.sprites[0].getDecorator 'lights'
     @lights.show().css opacity: 0
 
-  bind: ->
-    actioners = @world.getItemsByAttr 'trigger-target', true
+  # Bind an activator the target
+  activate: (activator) ->
+    super
 
-    # Bind collision listeners to all players on stage
-    @addActioner actioner for actioner in actioners
+    return if activator.behaviour.dead
 
-  # Bind an element that can action the target
-  addActioner: (actioner) ->
-    @entity.onCollisionStart actioner, =>
-      return if @potted or actioner.behaviour.dead
+    @lightsOn()
+    @pot()
 
-      @lightsOn()
-      @pot()
-
-    @entity.onCollisionEnd actioner, =>
+    @entity.onCollisionEnd activator, =>
       @lightsOff() unless @potted
 
   pot: ->

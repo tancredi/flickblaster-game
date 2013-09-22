@@ -6,7 +6,7 @@
 		"linearDamping": 0.8
 	},
 	"metal": {
-		"density": 20.0,
+		"density": 6.0,
 		"friction": 1,
 		"restitution": 0.05,
 		"linearDamping": 1

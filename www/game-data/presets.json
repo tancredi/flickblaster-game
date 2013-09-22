@@ -5,7 +5,7 @@
 		"attributes": {
 			"type": "player",
 			"z-index": 2,
-			"trigger-target": true
+			"activator": true
 		},
 		"sprites": [
 			{ "type": "player", "x": 0, "y": 0 }
@@ -101,7 +101,8 @@
 		"attributes": {
 			"type": "bullet",
 			"material": "metal",
-			"trigger-target": true
+			"activator": true,
+			"z-index": 1
 		},
 		"sprites": [
 			{ "type": "bullet", "x": 0, "y": 0 }
