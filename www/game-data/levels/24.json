@@ -1,7 +1,7 @@
 {
     "size": [
         540,
-        959
+        920
     ],
     "layers": [
         {
@@ -9,69 +9,65 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 269,
-                    "y": 560,
+                    "x": 270,
+                    "y": 160,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 520,
+                            "width": 170,
                             "height": 4
                         }
                     ],
                     "attributes": {
-                        "color": "red",
                         "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-red"
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 },
                 {
-                    "x": 269,
-                    "y": 400,
+                    "x": 449,
+                    "y": 160,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 520,
+                            "width": 170,
                             "height": 4
                         }
                     ],
                     "attributes": {
-                        "color": "blue",
                         "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-blue",
-                        "off": true
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 },
                 {
-                    "x": 269,
-                    "y": 250,
+                    "x": 90,
+                    "y": 160,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 520,
+                            "width": 170,
                             "height": 4
                         }
                     ],
                     "attributes": {
-                        "color": "red",
                         "type": "laser",
-                        "interaction": "static",
-                        "sensor": true,
-                        "group": "laser-red"
+                        "color": "red",
+                        "group": "lasers-red",
+                        "interaction": "static"
                     },
                     "behaviour": "laser"
                 }
@@ -82,58 +78,96 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 246,
-                    "y": 80,
-                    "preset": "target",
-                    "attributes": {},
-                    "id": "target"
-                },
-                {
-                    "x": 175,
-                    "y": 624.5,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
-                        "action": "laser-toggle",
-                        "target-group": "all"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 393,
-                    "y": 472.5,
-                    "preset": "sensor",
-                    "attributes": {
-                        "action": "laser-toggle",
-                        "target-group": "all",
-                        "sensor": true
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 173,
-                    "y": 320,
-                    "preset": "sensor",
-                    "attributes": {
-                        "sensor": true,
-                        "action": "laser-toggle",
-                        "target-group": "laser-red"
-                    },
-                    "id": ""
-                },
-                {
-                    "x": 180,
-                    "y": 840,
+                    "x": 270,
+                    "y": 600,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
+                },
+                {
+                    "x": 445,
+                    "y": 400,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 100,
+                    "y": 400,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 400,
+                    "preset": "rubber-ball-orange-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 90,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 445,
+                    "y": 80,
+                    "preset": "target-mini",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 270,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 445,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 90,
+                    "y": 500,
+                    "preset": "bullet",
+                    "attributes": {},
+                    "id": ""
                 }
             ]
         },
         {
             "id": "walls",
             "type": "body",
-            "items": []
+            "items": [
+                {
+                    "x": 180,
+                    "y": 70,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 200
+                },
+                {
+                    "x": 359,
+                    "y": 70,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 200
+                }
+            ]
         },
         {
             "id": "background",
@@ -142,6 +176,7 @@
         }
     ],
     "data": {
-        "shots": 3
+        "shots": 5,
+        "tutorial": "rubber-balls"
     }
 }
