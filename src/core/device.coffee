@@ -36,6 +36,9 @@ iOS = (ua.indexOf 'iPhone') isnt -1 or (ua.indexOf 'iPod') isnt -1 or (ua.indexO
 # Detect if is running as full-screen app
 isStandAlone = window.navigator.standalone
 
+# Detect if is running as full-screen app
+isCordova = window.cordova
+
 # Detect if using a supported mobile device
 isMobile = if window.navigator.userAgent.match /(iPhone|iPod|iPad|Android|BlackBerry)/ then true else false
 
@@ -53,7 +56,7 @@ device =
 
 # Updates screen size when device resizes
 onResize = ->
-  if iOS and not isStandAlone
+  if iOS and not isStandAlone and not isCordova
     device.size =
       width: win.width()
       height: document.documentElement.clientHeight - 60
