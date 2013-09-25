@@ -27,7 +27,16 @@ touchEvents =
   mousemove: "touchmove"
   mouseup: "touchend"
 
-# Detects if using a supported mobile device
+# Detect user agent
+userAgent = ua = navigator.userAgent
+
+# Detect if device is iOS
+iOS = (ua.indexOf 'iPhone') isnt -1 or (ua.indexOf 'iPod') isnt -1 or (ua.indexOf 'iPad') isnt -1
+
+# Detect if is running as full-screen app
+isStandAlone = window.navigator.standalone
+
+# Detect if using a supported mobile device
 isMobile = if window.navigator.userAgent.match /(iPhone|iPod|iPad|Android|BlackBerry)/ then true else false
 
 # Detect if using a touch device
@@ -43,16 +52,31 @@ device =
   pixelRatio: window.devicePixelRatio or 1  # Device pixel ratio
 
 # Updates screen size when device resizes
-onResize = -> device.size = width: win.innerWidth(), height: win.innerHeight()
+onResize = ->
+  if iOS and not isStandAlone
+    device.size =
+      width: win.width()
+      height: document.documentElement.clientHeight - 60
+  else
+    device.size =
+      width: win.width()
+      height: win.height()
+
 win.on 'resize', onResize
 
 # Executes once to populate device size
 onResize()
 module.exports =
 
+  resize: onResize
+
   getPixelRatio: -> device.pixelRatio
 
   isTouch: -> device.isTouch
+
+  isStandAlone: -> isStandAlone
+
+  isFakeSize: -> fakeSize?
 
   getSize: ->
     if useFakeSize then return width: fakeSize[0] / fakeSize[2], height: fakeSize[1] / fakeSize[2]

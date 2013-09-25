@@ -1,11 +1,16 @@
 
 .view.view-levels {
+	overflow: hidden !important;
+	height: 100%;
 	
 	ul.levels-list {
 		.list;
 		text-align: center;
 		margin-top: 70px;
 		margin-bottom: 10px;
+		overflow: auto;
+		height: 100%;
+		.clearfix;
 
 		li {
 			display: inline-block;
@@ -19,6 +24,10 @@
 			color: #fff;
 			margin: 0 5px 10px;
 			position: relative;
+
+			&:last-child {
+				margin-bottom: 100px;
+			}
 
 			.progress {
 				font-size: 16px;

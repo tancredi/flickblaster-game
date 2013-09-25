@@ -10,6 +10,8 @@ device = require './device'
 getByRole = (require '../helpers/dom').getByRole
 transitions = require './viewTransitions'
 
+selectors = scrollable: '.scrollable'
+
 win = $ window
 viewWrap = $ '#view-wrap'
 
@@ -25,16 +27,39 @@ module.exports =
     viewWrap.css overflow: 'hidden'
     @resize()
 
+    @bindFullscreen()
+
+    ($ document).on "touchmove", (e) ->
+      target = $ e.target
+      if selectors.scrollable and (target.closest selectors.scrollable).length is 0
+        window.scrollTo 0, 1
+        e.preventDefault()
+
     win.on 'resize', => @resize()
+
+  bindFullscreen: ->
+    # Hide the address bar on windows load (Needed for mobile)
+    window.addEventListener "load", =>
+      setTimeout ( =>
+        window.scrollTo 0, 1
+        device.resize()
+      ), 0
 
   resize: ->
     screen = device.getSize()
 
+    if device.isFakeSize()
+      x = (window.outerWidth - screen.width) / 2
+      y = (window.outerHeight - screen.height) / 2
+    else
+      x = 0
+      y = 0
+
     viewWrap.css
       width: screen.width
       height: screen.height
-      left: (win.width() - screen.width) / 2
-      top: (win.height() - screen.height) / 2
+      left: x
+      top: y
 
   # Close all views
   closeAll: -> getByRole('view', @wrap).remove()
