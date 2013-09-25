@@ -15,6 +15,8 @@
     "less": "~1.4.x",
     "handlebars": "~1.0.1x",
     "codo": "~1.9.0",
-    "retina-downsizer": "0.0.x"
+    "retina-downsizer": "0.0.x",
+    "optimist": "~0.6.0",
+    "uglify-js": "~2.4.0"
   }
 }
