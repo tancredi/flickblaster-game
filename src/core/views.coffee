@@ -58,8 +58,8 @@ module.exports =
     viewWrap.css
       width: screen.width
       height: screen.height
-      left: x
-      top: y
+      left: x + device.getOffset().x
+      top: y + device.getOffset().y
 
   # Close all views
   closeAll: -> getByRole('view', @wrap).remove()

@@ -32,6 +32,7 @@ userAgent = ua = navigator.userAgent
 
 # Detect if device is iOS
 iOS = (ua.indexOf 'iPhone') isnt -1 or (ua.indexOf 'iPod') isnt -1 or (ua.indexOf 'iPad') isnt -1
+iOS7 = iOS and (ua.indexOf 'OS 7') isnt -1
 
 # Detect if is running as full-screen app
 isStandAlone = window.navigator.standalone
@@ -53,17 +54,21 @@ device =
   size: null                                # Device screen size
   isTouch: isTouch                          # Is a touch device
   pixelRatio: window.devicePixelRatio or 1  # Device pixel ratio
+  offset: x: 0, y: 0
 
 # Updates screen size when device resizes
 onResize = ->
-  if iOS and not isStandAlone and not isCordova
-    device.size =
-      width: win.width()
-      height: document.documentElement.clientHeight - 60
-  else
-    device.size =
-      width: win.width()
-      height: win.height()
+  device.size =
+    width: win.width()
+    height: win.height()
+
+  if iOS
+    if isCordova
+      if iOS7
+        device.size.height -= 23
+        device.offset.y += 23
+    else if isStandAlone
+      device.size.height -= 63
 
 win.on 'resize', onResize
 
@@ -84,6 +89,8 @@ module.exports =
   getSize: ->
     if useFakeSize then return width: fakeSize[0] / fakeSize[2], height: fakeSize[1] / fakeSize[2]
     return device.size
+
+  getOffset: -> device.offset or x: 0, y: 0
 
   getEvent: (evtType) -> if device.isTouch and (_.has touchEvents, evtType) then touchEvents[evtType] else evtType
 
