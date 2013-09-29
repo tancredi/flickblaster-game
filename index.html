@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
     <head>
 
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="apple-touch-icon" href="res/icon/ios/icon-60-precomposed.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="res/icon/ios/icon-76-precomposed.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="res/icon/ios/icon-60-2x-precomposed.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="res/icon/ios/icon-76-2x-precomposed.png" />
         
         <link rel="stylesheet" type="text/css" href="compiled.css" />
 
@@ -24,6 +30,9 @@
 
         <div id="view-wrap"></div>
 
+        <div id="notifications-wrap"></div>
+
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/templates.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
