@@ -46,6 +46,7 @@ Build the app using [Cake](http://coffeescript.org/documentation/docs/cake.html)
 * `cake build` - Built the app once
 * `cake watch` - Watch for changes
 * `cake docs` - Update documentation
+* `cake manifest` - Generate HTML5 cache manifest
 * `cake downsize` - Generate resized assets for different pixel-ratios - **Needs [imagemagick](http://www.imagemagick.org/script/index.php)
 
 ### Building Tasks
