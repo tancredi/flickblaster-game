@@ -22,6 +22,7 @@ Read BaseModal for more
 class EndGameModal extends BaseModal
   templateName: 'modal-end-game'
   classNames: 'modal-end-game'
+  showClose: false
 
   constructor: (@wrap, @context, options = {}) ->
     @game = options.game            # Parent Game instance
@@ -34,12 +35,15 @@ class EndGameModal extends BaseModal
     # Finds level and gets next level data, if any
     # Used to show Next Level button
 
-    nextLevel = null
+    @nextLevel = null
 
     for level, i in levels
       if level.name is @levelName
+        @level = levels[i]
         @nextLevel = levels[i + 1] if levels[i + 1]
         break
+
+    @context['next-level'] = @nextLevel
 
     super
 

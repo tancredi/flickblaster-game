@@ -119,11 +119,9 @@ class GameView extends BaseView
       @finished = true
 
       # Render and show end of game modal
-      context = win: win, title: if win then 'Level Complete!' else 'Ouch!'
+      modalTitle = if win then "Level #{@levelName} Complete!" else "Ouch!"
+      context = win: win, title: modalTitle
       options = stars: @stars, game: @, levelName: @levelName
-
-     if @shots > 0
-      achievements.unlock 'hacker'
 
       if win
         userData.saveLevelScore @levelName, @stars
@@ -138,7 +136,9 @@ class GameView extends BaseView
     allStars = true
 
     achievements.unlock 'novice'
-    achievements.unlock 'fryup'
+    
+    if @shots > 0
+        achievements.unlock 'hacker'
 
     for level in progress
       if not level.completed
@@ -148,6 +148,7 @@ class GameView extends BaseView
         allStars = false
 
     if allCompleted
+      localStorage.gameCompleted = true
       achievements.unlock 'champion'
 
     if allStars

@@ -13,6 +13,7 @@ Read BaseModal for more
 class PauseModal extends BaseModal
   templateName: 'modal-pause'
   classNames: 'modal-pause'
+  showClose: false
 
   constructor: (@wrap, @context, options = {}) ->
     @game = options.game            # Parent GameView instance

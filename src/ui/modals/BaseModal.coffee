@@ -1,5 +1,6 @@
 
 renderer = require '../../core/renderer'
+device = require '../../core/device'
 
 modalTemplate = 'modal' # Base modal wrapper template
 transitionTime = 200    # Duration of modal transition in milliseconds
@@ -23,18 +24,29 @@ Deal with it.
 class BaseModal
   templateName: 'modal-foo' # Customise this property to render a different template
   classNames: ''            # Custom classnames for the inner element
+  showClose: true           # Will render a close button if true
 
   constructor: (@wrap, @context, options = {}) ->
     @onClose = options.onClose or null  # Callback triggered when .close() is called
     @onOpen = options.onOpen or null    # Callback triggered when .open() is called
+
+    # Overwrite modal template and classnames if specified in options
+
+    if options.templateName
+      @templateName = options.templateName
+
+    if options.classNames
+      @classNames = options.classNames
+
     @open()
 
   # Render modal body template
   render: ->
     body = renderer.render @templateName, @context
+    context = $.extend @context, body: body, 'show-close': @showClose
 
     # Render modal wrap
-    @el = $ renderer.render modalTemplate, $.extend @context, body: body
+    @el = $ renderer.render modalTemplate, context
 
     # Find pre-existing overlay element
     @overlay = @el.find selectors.overlay
@@ -63,6 +75,9 @@ class BaseModal
 
   # Called after opening transition is over
   bind: ->
+    @inner.on (device.getEvent 'click'), '[data-role="close"]', (e) =>
+      e.preventDefault()
+      @close()
 
   # Start closing transition
   close: (callback) ->

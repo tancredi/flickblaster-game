@@ -1,4 +1,17 @@
 
+.modal-top-button {
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	line-height: 35px;
+	color: mix(@color-pale-blue-lighter, #fff, 50%);
+	text-align: center;
+	background: @color-pale-blue-dark;
+	.border-radius(@radius-base);
+	position: absolute;
+	top: 5px;
+}
+
 .modal-wrap {
 	.full-space;
 	z-index: 5;
@@ -67,5 +80,10 @@
 				}
 			}
 		}
+	}
+
+	.button-close  {
+		.modal-top-button;
+		right: 5px;
 	}
 }

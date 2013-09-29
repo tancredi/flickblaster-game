@@ -1,6 +1,13 @@
 <div class="modal-wrap">
 	<div class="overlay"></div>
 	<div class="modal {{class-names}}">
+
+		{{#if show-close}}
+			<a class="button-close" href="#" data-role="close">
+				&times;
+			</a>
+		{{/if}}
+
 		{{#if title}}
 			<h1 class="modal-head">
 
@@ -12,6 +19,10 @@
 
 			</h1>
 		{{/if}}
-		<div class="modal-body">{{{body}}}</div>
+
+		<div class="modal-body">
+			{{{body}}}
+		</div>
+
 	</div>
 </div>

@@ -2,13 +2,18 @@
 BaseView = require '../core/BaseView'
 views = require '../core/views'
 device = require '../core/device'
+renderer = require '../core/renderer'
 
 getByRole = (require '../helpers/dom').getByRole
 
 gameData = require '../game/utils/gameData'
 userData = require '../game/utils/userData'
 
+BaseModal = require '../ui/modals/BaseModal'
+
 selectors = locked: '.locked'
+
+viewWrap = $ '#view-wrap'
 
 ###
 ## Levels View
@@ -59,6 +64,10 @@ class LevelsView extends BaseView
   bind: =>
     super
 
+    # Show game completion modal if game has been completed but not notified
+    if localStorage.gameCompleted and not localStorage.gameCompletionNotified
+      @notifyGameCompletion()
+
     # Bind click on level elements
     self = @
     @elements.levels.not(selectors.locked).on (device.getEvent 'click'), (e) ->
@@ -69,6 +78,18 @@ class LevelsView extends BaseView
     @elements.nav.home.on (device.getEvent 'click'), (e) ->
       e.preventDefault()
       views.open 'home', 'slide-left'
+
+  notifyGameCompletion: ->
+    modalContext =
+      title: 'Well done!'
+      icon: 'trophy'
+
+    modalOptions =
+      templateName: 'modal-completed-game'
+      classNames: 'modal-completed-game'
+
+    new BaseModal viewWrap, modalContext, modalOptions
+    localStorage.gameCompletionNotified = true
 
   # Start the game on the specified level (Opens Game View with chosen level name)
   openLevel: (levelName) -> views.open 'game', 'slide-right', null, false, levelName

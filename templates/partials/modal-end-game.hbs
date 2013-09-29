@@ -30,10 +30,21 @@
 			Restart
 		</a>
 
-		<a href="#" class="primary" data-role="next">
-			Next
-			<i class="icon-chevron-right"></i>
-		</a>
+		{{#if next-level}}
+
+			<a href="#" class="primary" data-role="next">
+				Next
+				<i class="icon-chevron-right"></i>
+			</a>
+
+		{{else}}
+
+			<a href="#" class="primary" data-role="back">
+				<i class="icon-list"></i>
+				Levels
+			</a>
+
+		{{/if}}
 
 	</div>
 
