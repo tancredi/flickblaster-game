@@ -20,7 +20,7 @@ Read BaseModal for more
 ###
 
 class EndGameModal extends BaseModal
-  templateName: 'modal-end-game'
+  templateName: 'partials/modal-end-game'
   classNames: 'modal-end-game'
   showClose: false
 

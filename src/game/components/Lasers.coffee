@@ -9,6 +9,11 @@ colors =
   red: '#f56949'
   blue: '#5adef6'
 
+templates =
+  lasers: 'partials/game-lasers'
+  svg:
+    rect: 'partials/svg-rect'
+
 lasers = []
 
 ###
@@ -31,7 +36,7 @@ class Lasers
     ctx =
       width: @viewport.worldToScreen @width
       height: @viewport.worldToScreen @height
-    @el = $ renderer.render 'game-lasers', ctx
+    @el = $ renderer.render templates.lasers, ctx
 
   # Add a laser with the given options
   add: (entityOptions) ->
@@ -52,7 +57,7 @@ class Lasers
         fill: colors[entityOptions.attributes.color]
 
       # Create element and add it to the wrapper
-      el = $ renderer.render 'svg-rect', ctx
+      el = $ renderer.render templates.svg.rect, ctx
       @el.append el
       out.push el
 

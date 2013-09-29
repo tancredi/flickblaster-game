@@ -5,6 +5,8 @@ device = require './device'
 # Cache jQuery-wrapped window
 win = $ window
 
+templatesRoot = 'views/'
+
 ###
 ## Base View class
 
@@ -20,7 +22,7 @@ class BaseView
 
   # Render template, append element to given wrapper and perform additional operations
   render: (wrapper) ->
-    rendered = renderer.render "views/#{@templateName}", @context
+    rendered = renderer.render "#{templatesRoot}#{@templateName}", @context
 
     @elements = main: $ "<div data-role='view' class='view #{@classNames}'>#{rendered}</div>"
 

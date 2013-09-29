@@ -24,10 +24,4 @@ module.exports =
   get: (nsString = null) -> if nsString? then @templates[nsString] else @templates
 
   # Render template by id
-  render: (id, data) ->
-    if @get(id)?
-      @get(id) data
-    else if @get("partials/#{id}")?
-      @get("partials/#{id}") data
-    else
-      throw Error "Template '#{id}' not found"
+  render: (id, context) -> Handlebars.compile("{{> #{id}}}") context

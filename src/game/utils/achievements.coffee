@@ -14,6 +14,9 @@ notificationsWrap = $ '#notifications-wrap'
 selectors =
   notification: '.achievement-notification'
 
+templates =
+  notification: 'partials/achievement-notification'
+
 conf =
   notificationMargin: 10
   transitionDuration: 300
@@ -76,7 +79,7 @@ module.exports = window.a =
       title: achievement.title
       description: achievement.description
 
-    el = $ renderer.render 'achievement-notification', ctx
+    el = $ renderer.render templates.notification, ctx
     el.css opacity: 0, top: -100
     notificationsWrap.append el
 
@@ -84,7 +87,7 @@ module.exports = window.a =
       setTimeout ( =>
         el.transition opacity: 0, top: -100, conf.transitionDuration, =>
           el.remove()
-        ), 2500
+        ), conf.notificationPersistance
 
   # Returns stored `achievementsData` object
   getData: (key) ->
@@ -94,3 +97,13 @@ module.exports = window.a =
   storeData: (data) ->
     $.extend achievementsData, data
     localStorage.achievementsData = JSON.stringify achievementsData
+
+  # Get an array with of all achievements with user progress
+  getAll: ->
+    out = $.extend true, {}, achievements
+
+    for id, achievement in achievements
+      achievement.id = id
+      achievement.unlocked = (unlocked.indexOf id) isnt -1
+
+    return out

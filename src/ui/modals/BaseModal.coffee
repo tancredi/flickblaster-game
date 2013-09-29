@@ -2,13 +2,15 @@
 renderer = require '../../core/renderer'
 device = require '../../core/device'
 
-modalTemplate = 'modal' # Base modal wrapper template
 transitionTime = 200    # Duration of modal transition in milliseconds
 
 # Selectors used in this class
 selectors =
   inner: '.modal'
   overlay: '.overlay'
+
+templates =
+   modal: 'partials/modal'
 
 ###
 ## Base Modal class
@@ -22,7 +24,7 @@ Deal with it.
 ###
 
 class BaseModal
-  templateName: 'modal-foo' # Customise this property to render a different template
+  templateName: 'partials/modal-foo' # Customise this property to render a different template
   classNames: ''            # Custom classnames for the inner element
   showClose: true           # Will render a close button if true
 
@@ -46,7 +48,7 @@ class BaseModal
     context = $.extend @context, body: body, 'show-close': @showClose
 
     # Render modal wrap
-    @el = $ renderer.render modalTemplate, context
+    @el = $ renderer.render templates.modal, context
 
     # Find pre-existing overlay element
     @overlay = @el.find selectors.overlay

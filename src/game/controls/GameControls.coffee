@@ -12,6 +12,9 @@ style =
   strokeStyle: '#db7c52'
   lineWidth: 5
 
+templates =
+  controls: 'partials/game-controls'
+
 ###
 ## Game Controls Class
 
@@ -32,7 +35,7 @@ class GameControls extends MouseControls
   # Render the UI canvas element in the given World's Viewport
   render: ->
     ctx = width: @viewport.elWidth, height: @viewport.elHeight
-    @canvas = $ renderer.render 'game-controls', ctx
+    @canvas = $ renderer.render templates.controls, ctx
     # Hide the UI canvas (Will be displayed when dragging) and get its context
     @canvas.hide().appendTo @game.world.stage
     @ctx = @canvas[0].getContext '2d'

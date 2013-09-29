@@ -7,6 +7,9 @@ Body = require './Body'
 gameData = require '../utils/gameData'
 behaviours = require '../behaviours/index'
 
+templates =
+  entity: 'partials/game-entity'
+
 ###
 ## Entity class
 
@@ -52,7 +55,7 @@ class Entity extends BaseItem
 
   # Render the wrapping element
   render: ->
-    @el = $ renderer.render 'game-entity'
+    @el = $ renderer.render templates.entity
     @el.appendTo @layer.element
     @el.data 'entity', @
 

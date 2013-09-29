@@ -4,6 +4,12 @@ renderer = require '../../core/renderer'
 Body = require './Body'
 gameConfig = require '../config'
 
+templates =
+  svg:
+    rect: "partials/svg-rect"
+    circle: "partials/svg-circle"
+    poly: "partials/svg-poly"
+
 ###
 ## Wall class
 
@@ -55,7 +61,7 @@ class Wall extends Body
       ctx.points = ctx.points.join ' '
 
     # Render SVG path element
-    @el = $ renderer.render "svg-#{@type}", ctx
+    @el = $ renderer.render templates.svg[@type], ctx
     # Append to Walls wrap
     @el.appendTo @wrap
 

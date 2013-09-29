@@ -4,6 +4,9 @@ device = require '../../core/device'
 
 Entity = require '../items/Entity'
 
+templates =
+  layer: 'partials/game-layer'
+
 ###
 ## Layer class
 
@@ -18,7 +21,7 @@ class Layer
 
   constructor: (@world, @itemsType, @id) ->
     @viewport = @world.viewport
-    @element = $ renderer.render 'game-layer'
+    @element = $ renderer.render templates.layer
     @element.appendTo @viewport.el
     @items = []
 

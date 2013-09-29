@@ -12,7 +12,7 @@ Shown once with custom message
 ###
 
 class TutorialModal extends BaseModal
-  templateName: 'modal-tutorial'
+  templateName: 'partials/modal-tutorial'
   classNames: 'modal-tutorial'
 
   constructor: (@wrap, @id) ->

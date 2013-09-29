@@ -31,6 +31,7 @@ class HomeView extends BaseView
     @elements.nav =
       play: getByRole 'nav-play', @elements.main         # Pause button
       levels: getByRole 'nav-levels', @elements.main # Shots display
+      achievements: getByRole 'nav-achievements', @elements.main # Shots display
 
   bind: ->
     super
@@ -44,6 +45,10 @@ class HomeView extends BaseView
     @elements.nav.levels.on device.getEvent('click'), (e) ->
       e.preventDefault()
       views.open 'levels', 'slide-right'
+
+    @elements.nav.achievements.on device.getEvent('click'), (e) ->
+      e.preventDefault()
+      views.open 'achievements', 'slide-right'
 
   getNextLevel: ->
     levelIndex = null

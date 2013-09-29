@@ -11,7 +11,7 @@ Read BaseModal for more
 ###
 
 class PauseModal extends BaseModal
-  templateName: 'modal-pause'
+  templateName: 'partials/modal-pause'
   classNames: 'modal-pause'
   showClose: false
 

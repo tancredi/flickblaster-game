@@ -24,6 +24,7 @@ touchables = require './ui/touchables'
 views.load
   home: require './views/HomeView'
   levels: require './views/LevelsView'
+  achievements: require './views/AchievementsView'
   game: require './views/GameView'
 
 # Initialise views

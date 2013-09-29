@@ -7,6 +7,9 @@ gameData = require '../utils/gameData'
 assets = require '../utils/assets'
 gameConfig = require '../config'
 
+templates =
+  decorator: 'partials/game-decorator'
+
 ###
 ## Sprite class
 
@@ -43,7 +46,7 @@ class Sprite extends BaseItem
   # Create one element for each decorator in the preset
   renderDecorators: ->
     for key, decorator of @preset.decorators
-      el = $ renderer.render 'game-decorator'
+      el = $ renderer.render templates.decorator
 
       # Get full asset path
       assetPath = assets.getAssetPath decorator

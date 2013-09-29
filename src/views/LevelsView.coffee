@@ -13,6 +13,9 @@ BaseModal = require '../ui/modals/BaseModal'
 
 selectors = locked: '.locked'
 
+templates =
+  gameCompletionModal: 'partials/modal-completed-game'
+
 viewWrap = $ '#view-wrap'
 
 ###
@@ -82,10 +85,10 @@ class LevelsView extends BaseView
   notifyGameCompletion: ->
     modalContext =
       title: 'Well done!'
-      icon: 'trophy'
+      icon: 'thumbs-up'
 
     modalOptions =
-      templateName: 'modal-completed-game'
+      templateName: templates.gameCompletionModal
       classNames: 'modal-completed-game'
 
     new BaseModal viewWrap, modalContext, modalOptions

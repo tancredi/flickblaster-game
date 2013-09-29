@@ -107,7 +107,7 @@ build =
     ext = confs.handlebars.extension
 
     localHandlebars = 'node_modules/handlebars/bin/handlebars'
-    exec "node #{localHandlebars} --namespace=#{ns} --extension=#{ext} -wf #{out} #{src}", ->
+    exec "node #{localHandlebars} -p --namespace=#{ns} --extension=#{ext} -wf #{out} #{src}", ->
       console.log color.green('✔') + color.white("  Created #{out}\n")
       callback() if callback
 

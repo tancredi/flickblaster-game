@@ -14,6 +14,9 @@ Walls = require './components/Walls'
 Lasers = require './components/Lasers'
 CollisionManager = require './components/CollisionManager'
 
+templates =
+  stage: 'partials/game-stage'
+
 # Default options
 defaults =
   gravity: [ 0, 0 ]
@@ -27,15 +30,15 @@ Ties together level data, physics, game loop, stage element, game layers and gam
 class World
 
   constructor: (@wrap, levelId, options = {}) ->
-    @ready = false                                            # Level data
-    @readyCallbacks = []                                      # .onReady callbacks
-    options = $.extend true, {}, defaults, options            # Options extended on top of defaults
-    @gravity = options.gravity                                # [ x, y ] gravity
-    @items = []                                               # All game items (entities, bodies and sprites)
-    @layers = {}                                              # Game layers
-    @stage = ($ renderer.render 'game-stage').appendTo @wrap  # Stage
-    @loop = new Loop                                          # Gameloop
-    @started = false                                          # True when behaviours are initialised
+    @ready = false                                                # Level data
+    @readyCallbacks = []                                          # .onReady callbacks
+    options = $.extend true, {}, defaults, options                # Options extended on top of defaults
+    @gravity = options.gravity                                    # [ x, y ] gravity
+    @items = []                                                   # All game items (entities, bodies and sprites)
+    @layers = {}                                                  # Game layers
+    @stage = ($ renderer.render templates.stage).appendTo @wrap   # Stage
+    @loop = new Loop                                              # Gameloop
+    @started = false                                              # True when behaviours are initialised
 
     @initPhysics()
     @loadLevel levelId

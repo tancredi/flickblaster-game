@@ -3,6 +3,9 @@ renderer = require '../../core/renderer'
 
 assets = require './assets'
 
+templates =
+  sprite: 'partials/game-sprite'
+
 ###
 ## Sprite Renderer
 
@@ -23,7 +26,7 @@ class SpriteRenderer
   # Render and setup the DOM element
   render: ->
 
-    @el = $ renderer.render 'game-sprite'
+    @el = $ renderer.render templates.sprite
 
     # Get the current pose asset
     asset = @assets[@poses[@pose].assets or 'default']

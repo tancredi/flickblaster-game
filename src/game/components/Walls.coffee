@@ -7,6 +7,9 @@ Body = require '../items/Body'
 # Default wall thickness (Used for the 4 main walls)
 thickness = 10
 
+templates =
+  walls: 'partials/game-walls'
+
 ###
 ## Walls Class
 
@@ -35,7 +38,7 @@ class Walls
       height: @world.viewport.worldToScreen @height # Height on screen
 
     # Create wrap element
-    @wrap = $ renderer.render 'game-walls', ctx
+    @wrap = $ renderer.render templates.walls, ctx
     # Get its inner SVG
     @svg = @wrap.find 'svg'
     # Add it to the scene
