@@ -16,8 +16,9 @@
     "handlebars": "~1.0.1x",
     "codo": "~1.9.0",
     "retina-downsizer": "0.0.x",
-    "optimist": "~0.6.0",
-    "uglify-js": "~2.4.0",
-    "walkdir": "0.0.7"
+    "optimist": "~0.6.x",
+    "uglify-js": "~2.4.x",
+    "walkdir": "0.0.x",
+    "underscore": "~1.5.x"
   }
 }
