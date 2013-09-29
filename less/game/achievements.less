@@ -20,8 +20,8 @@
 			border: 3px solid #fff;
 			.border-box;
 
-			&.achievement-icon-flickblaster {
-				.achievement-icon('flickblaster');
+			&.achievement-icon-novice {
+				.achievement-icon('novice');
 			}
 
 			&.achievement-icon-fryup {
@@ -32,8 +32,8 @@
 				.achievement-icon('hacker');
 			}
 
-			&.achievement-icon-allstars {
-				.achievement-icon('allstars');
+			&.achievement-icon-master {
+				.achievement-icon('master');
 			}
 
 			&.achievement-icon-committed {
@@ -44,20 +44,22 @@
 }
 
 .achievement-notification {
-	position: fixed;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 6;
+	margin-bottom: 10px;
+	position: relative;
 
 	.achievement-box {
 		max-width: 360px;
 		padding: 10px;
 		.border-box;
 		margin: auto;
-		background: @color-pale-blue-light;
+		background: fade(@color-pale-blue-light, 80%);
 		.clearfix;
-		.border-radius(0 0 @radius-base @radius-base);
+		.border-radius(@radius-base);
+		position: relative;
+
+		&:first-child {
+			.border-radius(0 0 @radius-base @radius-base);
+		}
 
 		h6 {
 			font-size: @type-heading6-size - 13px;

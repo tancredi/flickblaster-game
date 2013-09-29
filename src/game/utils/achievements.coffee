@@ -9,8 +9,15 @@ unlocked from another module class
 userData = require './userData'
 renderer = require '../../core/renderer'
 
-# Cache jQuery wrapped body
-body = $ 'body'
+notificationsWrap = $ '#notifications-wrap'
+
+selectors =
+  notification: '.achievement-notification'
+
+conf =
+  notificationMargin: 10
+  transitionDuration: 300
+  notificationPersistance: 2500
 
 # Gets achievements data from localStorage or creates new object
 # `achievementsData` is ment to contain persistant stats that other modules use
@@ -30,17 +37,17 @@ achievements =
     title: 'Novice'
     description: 'Complete a level'
 
-  committed:
-    title: 'Commited'
+  champion:
+    title: 'Champion'
     description: 'Complete the game'
 
-  allstars:
-    title: 'All Stars'
+  master:
+    title: 'Master'
     description: 'Complete all levels with 3 stars'
 
   hacker:
     title: 'All Stars'
-    description: 'Complete a level with spare shots'
+    description: 'Complete a level with shots left'
 
   # Logic contained in `LaserBehaviour`
   fryup:
@@ -71,11 +78,11 @@ module.exports = window.a =
 
     el = $ renderer.render 'achievement-notification', ctx
     el.css opacity: 0, top: -100
-    body.append el
+    notificationsWrap.append el
 
-    el.transition opacity: 1, top: 0, 300, =>
+    el.transition opacity: 1, top: 0, conf.transitionDuration, =>
       setTimeout ( =>
-        el.transition opacity: 0, top: -100, 300, =>
+        el.transition opacity: 0, top: -100, conf.transitionDuration, =>
           el.remove()
         ), 2500
 

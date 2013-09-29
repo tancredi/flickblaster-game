@@ -122,11 +122,36 @@ class GameView extends BaseView
       context = win: win, title: if win then 'Level Complete!' else 'Ouch!'
       options = stars: @stars, game: @, levelName: @levelName
 
+     if @shots > 0
+      achievements.unlock 'hacker'
+
       if win
         userData.saveLevelScore @levelName, @stars
-        achievements.unlock 'novice'
+        @checkWinningAchievements()
 
       new EndGameModal @elements.main, context, options
+
+  # Check conditions to unlock achievements related to levels completion
+  checkWinningAchievements: ->
+    progress = userData.getLevelsProgress()
+    allCompleted = true
+    allStars = true
+
+    achievements.unlock 'novice'
+    achievements.unlock 'fryup'
+
+    for level in progress
+      if not level.completed
+        allCompleted = false
+        allStars = false
+      else if level.stars < 3
+        allStars = false
+
+    if allCompleted
+      achievements.unlock 'champion'
+
+    if allStars
+      achievements.unlock 'master'
 
   setShots: (amt) ->
     @shots = amt
