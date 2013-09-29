@@ -1,5 +1,6 @@
 
 BaseBehaviour = require './BaseBehaviour'
+achievements = require '../utils/achievements'
 
 ###
 ## Laser Behaviour class
@@ -43,11 +44,21 @@ class LaserBehaviour extends BaseBehaviour
     decorator.fadeIn 100
 
     @player.behaviour.die()
+    @checkAchievement()
 
     # Fade the player Sprite out
     sprite.el.fadeOut 300, =>
       @player.remove()
       (_ @player).emit 'die'
+
+  checkAchievement: ->
+    timesBurned = (achievements.getData 'times-burned') or 0
+    timesBurned++
+
+    if timesBurned is 10
+      achievements.unlock 'fryup'
+    else
+      achievements.storeData 'times-burned': timesBurned
 
   # Turn the laser off
   off: ->

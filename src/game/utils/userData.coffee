@@ -2,9 +2,9 @@
 ###
 ## User Data module
 
-Loads or creates user progress data, takes care of its storage and loading in the
-`window.localStorage` object, interacts with the gameData module to get levels data and normalise
-user progress
+Loads or creates user progress data, takes care of its storage and loading in
+the `window.localStorage` object, interacts with the gameData module to get
+levels data and normalise user progress
 ###
 
 gameData = require './gameData'
@@ -23,6 +23,12 @@ if localStorage.seenTutorials?
   seenTutorials = JSON.parse localStorage.seenTutorials
 else
   seenTutorials = []
+
+# Load array containing unlocked achievents ids from `localStorage` or create
+if localStorage.unlockedAchievements
+  unlockedAchievements = JSON.parse localStorage.unlockedAchievements
+else
+  unlockedAchievements = []
 
 # Normalises progress in base on the actual amount of levels
 normaliseLevelsProgress = ->
@@ -75,3 +81,12 @@ module.exports =
   # Saves all levels progress in localStorage
   storeLevelsProgress: ->
     localStorage.levelsProgress = JSON.stringify levelsProgress
+
+  # Get array of with of unlocked achievements
+  getUnlockedAchievements: ->
+    return unlockedAchievements
+
+  # Store array with ids of unlocked achievements
+  storeUnlockedAchievements: (data) ->
+    unlockedAchievements = data
+    localStorage.unlockedAchievements = JSON.stringify data

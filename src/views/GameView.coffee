@@ -12,6 +12,7 @@ World = require '../game/World'
 GameControls = require '../game/controls/GameControls'
 userData = require '../game/utils/userData'
 phys = require '../game/utils/physics'
+achievements = require '../game/utils/achievements'
 
 TutorialModal = require '../ui/modals/TutorialModal'
 
@@ -113,13 +114,18 @@ class GameView extends BaseView
 
   finish: (win = false) ->
     @player.behaviour.win()
+
     if not @finished
       @finished = true
 
       # Render and show end of game modal
       context = win: win, title: if win then 'Level Complete!' else 'Ouch!'
       options = stars: @stars, game: @, levelName: @levelName
-      if win then userData.saveLevelScore @levelName, @stars
+
+      if win
+        userData.saveLevelScore @levelName, @stars
+        achievements.unlock 'novice'
+
       new EndGameModal @elements.main, context, options
 
   setShots: (amt) ->

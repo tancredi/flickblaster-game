@@ -1,0 +1,82 @@
+
+.achievement-icon (@id) {
+	.bg-image("achievements/@{id}", 40px 40px, no-repeat, center center);
+}
+
+.achievement-box {
+	@size: 45px;
+
+	.icon-wrap {
+		padding: 5px;
+		float: left;
+		margin-right: 10px;
+		.border-radius(@radius-base);
+		background: @color-pale-blue-dark;
+
+		.achievement-icon {
+			width: @size;
+			height: @size;
+			.border-radius(@size);
+			border: 3px solid #fff;
+			.border-box;
+
+			&.achievement-icon-flickblaster {
+				.achievement-icon('flickblaster');
+			}
+
+			&.achievement-icon-fryup {
+				.achievement-icon('fryup');
+			}
+
+			&.achievement-icon-hacker {
+				.achievement-icon('hacker');
+			}
+
+			&.achievement-icon-allstars {
+				.achievement-icon('allstars');
+			}
+
+			&.achievement-icon-committed {
+				.achievement-icon('committed');
+			}
+		}
+	}
+}
+
+.achievement-notification {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 6;
+
+	.achievement-box {
+		max-width: 360px;
+		padding: 10px;
+		.border-box;
+		margin: auto;
+		background: @color-pale-blue-light;
+		.clearfix;
+		.border-radius(0 0 @radius-base @radius-base);
+
+		h6 {
+			font-size: @type-heading6-size - 13px;
+			color: @color-pale-blue-lightest;
+			margin-bottom: 7px;
+		}
+
+		h3 {
+			color: #fff;
+			font-size: @type-heading6-size - 5px;
+			margin-bottom: 0;
+		}
+
+		h4 {
+			color: #fff;
+			font-size: @type-heading6-size - 8px;
+			color: @color-pale-blue-darkest;
+			margin-bottom: 0;
+			letter-spacing: -1px;
+		}
+	}
+}
