@@ -33,7 +33,6 @@ module.exports =
   bindFullscreen: ->
     window.addEventListener "load", =>
       setTimeout ( =>
-        window.scrollTo 0, 10
         device.resize()
       ), 0
 
