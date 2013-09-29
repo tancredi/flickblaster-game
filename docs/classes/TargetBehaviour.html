@@ -116,7 +116,7 @@
         <tr>
           <td>Inherits:</td>
           <td>
-            <a href='../classes/BaseBehaviour.html'>BaseBehaviour</a>
+            <a href='../classes/BaseActionableBehaviour.html'>BaseActionableBehaviour</a>
           </td>
         </tr>
       </table>
@@ -143,22 +143,12 @@ it will communicate the point to its World and stay in active state</p>
   </li>
   <li>
     <span class='signature'>
-      <a href='#bind-instance'>
-        - (void) <strong>bind</strong>()
+      <a href='#activate-instance'>
+        - (void) <strong>activate</strong>(activator)
       </a>
     </span>
     <span class='desc'>
-      
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#addActioner-instance'>
-        - (void) <strong>addActioner</strong>(actioner)
-      </a>
-    </span>
-    <span class='desc'>
-      Bind an element that can action the target
+      Bind an activator the target
     </span>
   </li>
   <li>
@@ -207,6 +197,15 @@ it will communicate the point to its World and stay in active state</p>
       </h2>
       <h3 class='inherited'>
         Methods inherited from
+        <a href='../classes/BaseActionableBehaviour.html'>BaseActionableBehaviour</a>
+      </h3>
+      <p class='inherited'>
+                <a href='../classes/BaseActionableBehaviour.html#constructor-instance'>#constructor</a>,
+                <a href='../classes/BaseActionableBehaviour.html#addActivator-instance'>#addActivator</a>,
+        <a href='../classes/BaseActionableBehaviour.html#activate-instance'>#activate</a>
+      </p>
+      <h3 class='inherited'>
+        Methods inherited from
         <a href='../classes/BaseBehaviour.html'>BaseBehaviour</a>
       </h3>
       <p class='inherited'>
@@ -226,18 +225,11 @@ it will communicate the point to its World and stay in active state</p>
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='bind-instance'>
-      - (void) <strong>bind</strong>()
-    </p>
-    <div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='addActioner-instance'>
-      - (void) <strong>addActioner</strong>(actioner)
+    <p class='signature' id='activate-instance'>
+      - (void) <strong>activate</strong>(activator)
     </p>
     <div class='docstring'>
-  <p>Bind an element that can action the target</p>
+  <p>Bind an activator the target</p>
 </div>
 <div class='tags'>
 </div>
@@ -283,11 +275,11 @@ it will communicate the point to its World and stay in active state</p>
     </div>
     <div id='footer'>
   Generated on
-  Sun Sep 22 2013 01:57:28 GMT+0100 (BST)
+  Sun Sep 29 2013 18:40:46 GMT+0200 (CEST)
   by
   <a href='https://github.com/netzpirat/codo' title='CoffeeScript API documentation generator'>Codo</a>
   v1.9.0
-  (Node.js v0.10.0).
+  (Node.js v0.10.19).
   &#10034;
   Press Ctrl-h to see the keyboard shortcuts
   &#10034;
