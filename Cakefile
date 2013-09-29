@@ -14,6 +14,8 @@ watcher = (require 'watch-tree-maintained').watchTree
 color = require 'cli-color'
 async = require 'async'
 RetinaDownsizer = require 'retina-downsizer'
+Handlebars = require 'handlebars'
+walk = require 'walkdir'
 
 {print} = require 'util'
 {spawn} = require 'child_process'
@@ -37,6 +39,19 @@ confs =
     out: 'www/js/templates.js'
     namespace: 'window.templates'
     extension: 'hbs'
+  manifest:
+    src: 'www',
+    out: 'www/cache.manifest'
+    template: 'templates/cache.manifest.hbs'
+    files: [
+      'compiled.css'
+    ]
+    dirs: [
+      'js', 'assets', 'fonts', 'game-data'
+    ]
+    ignorePatterns: [
+      /\.(psd)$/i
+    ]
 
 # Watch configuration
 watchRate = 3
@@ -111,8 +126,37 @@ build =
       console.log color.green('✔') + color.white("  Created #{out}\n")
       callback() if callback
 
-# Define 'build' task
-task 'build', ->
+  # Synchronously generating manifest file
+  manifest: (callback) ->
+    console.log color.yellowBright 'Generating cache manifest...'
+
+    cache = []
+
+    for dir in confs.manifest.dirs
+      files = walk.sync path.resolve confs.manifest.src, dir
+      for file in files
+        allowed = true
+        for pattern in confs.manifest.ignorePatterns
+          if (file.match pattern)?
+            console.log 'fds'
+            allowed = false
+        if allowed
+          cache.push path.join dir, file
+
+    cache.concat confs.manifest.files
+
+    template = fs.readFileSync confs.manifest.template, 'utf8'
+    template = Handlebars.compile template
+
+    out = template cache: cache
+
+    fs.writeFileSync confs.manifest.out, out
+    console.log color.green('✔') + color.white("  Generated manifest in #{confs.manifest.out}\n")
+
+    callback() if callback
+
+# Run all build tasks
+buildAll = (callback) ->
   tasks = []
 
   console.log color.bold.cyan 'Building app...\n'
@@ -124,27 +168,35 @@ task 'build', ->
   # Executes tasks in series
   async.series tasks, ->
     console.log color.bold.green "All done\n"
+    callback() if callback
+
+# Define 'build' task
+task 'build', ->
+  buildAll()
 
 # Define 'watch' task
 task 'watch', ->
-  taskNames = []
+  buildAll ->
+    console.log color.bold.cyan 'Watching for changes...\n'
 
-  # Initialise watchers for all configured sources
-  for taskId, conf of confs
-    taskNames.push taskId
+    taskNames = []
 
-    # Run build function every time a file of the given source changes
-    do (taskId) ->
-      (watcher conf.src, 'sample-rate': watchRate).on 'fileModified', (stat) ->
-        console.log "#{color.cyan('Changed detected in')} #{color.white(stat)}\n"
-        build[taskId]()
+    # Initialise watchers for all configured sources
+    for taskId, conf of confs
+      taskNames.push taskId
 
-  # Creates string listing watch tasks
-  if taskNames.length > 1
-    lastTask = taskNames.pop()
-    tasksStr = taskNames.join(', ') + " and #{lastTask}"
-  else
-    tasksStr = taskNames[0]
+      # Run build function every time a file of the given source changes
+      do (taskId) ->
+        (watcher conf.src, 'sample-rate': watchRate).on 'fileModified', (stat) ->
+          console.log "#{color.cyan('Changed detected in')} #{color.white(stat)}\n"
+          build[taskId]()
+
+    # Creates string listing watch tasks
+    if taskNames.length > 1
+      lastTask = taskNames.pop()
+      tasksStr = taskNames.join(', ') + " and #{lastTask}"
+    else
+      tasksStr = taskNames[0]
 
 # Define 'docs' task
 task 'docs', ->
@@ -164,3 +216,6 @@ task 'docs', ->
 task 'downsize', ->
   downsize.run()
 
+# Define 'manifest' task
+task 'manifest', ->
+  build.manifest()
