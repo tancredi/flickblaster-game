@@ -1,13 +1,14 @@
-<div class="achievement-box">
-
-	<h6>Achievement unlocked!</h6>
+<div class="achievement-box {{#if unlocked}}unlocked{{/if}}">
 	
 	<div class="icon-wrap">
 		<div class="achievement-icon achievement-icon-{{id}}"></div>
 	</div>
 
-	<h3>{{title}}</h3>
+	<div class="detail">
 
-	<h4>{{description}}</h4>
+		<h3>{{title}}</h3>
+		<p>{{description}}</p>
+
+	</div>
 
 </div>

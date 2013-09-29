@@ -68,7 +68,12 @@ onResize = ->
         device.size.height -= 23
         device.offset.y += 23
     else if isStandAlone
-      device.size.height -= 63
+      device.size.height -= 10
+    else if iOS7
+      ($ window).css overflow: 'hidden'
+      device.size.height -= 105
+    else
+      device.size.height -= 60
 
 win.on 'resize', onResize
 

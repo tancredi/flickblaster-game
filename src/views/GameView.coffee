@@ -51,6 +51,9 @@ class GameView extends BaseView
   bind: ->
     super
 
+    # Go full-screen
+    window.scrollTo 0, 0
+
     # Instanciate the World (Containing the core of the game logic)
     @world = new World @elements.main, @levelName
 
@@ -67,6 +70,13 @@ class GameView extends BaseView
     (_ @world).on 'shoot', => @setShots @shots - 1
     (_ @world).on 'pot', =>
       @setTargetsCount @targetsCount - 1
+
+    # Disable scrolling
+    ($ document).on "touchmove", @onTouchMove
+
+  onTouchMove: (e) ->
+    window.scrollTo 0, 0
+    e.preventDefault()
 
   resize: ->
     super
@@ -186,11 +196,13 @@ class GameView extends BaseView
           callback()
     else callback()
 
-  close: ->
+  unbind: ->
     # Unbind events
     @elements.pause.off device.getEvent 'click'
     @elements.reset.off device.getEvent 'click'
+    ($ document).off "touchmove", @onTouchMove
 
+  close: ->
     super
 
     # Unbind game controls and stop gameloop

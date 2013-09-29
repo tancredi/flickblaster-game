@@ -1,6 +1,9 @@
 
 BaseView = require '../core/BaseView'
 device = require '../core/device'
+views = require '../core/views'
+
+getByRole = (require '../helpers/dom').getByRole
 
 achievements = require '../game/utils/achievements'
 
@@ -20,7 +23,17 @@ class AchievementsView extends BaseView
 
     super
 
+  getElements: ->
+    super
+
+    @elements.nav = home: getByRole 'nav-home', @elements.main
+
   bind: ->
     super
+
+    # Bind back to home button
+    @elements.nav.home.on (device.getEvent 'click'), (e) ->
+      e.preventDefault()
+      views.open 'home', 'slide-left'
 
 module.exports = AchievementsView

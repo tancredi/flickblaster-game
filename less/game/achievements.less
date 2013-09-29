@@ -5,6 +5,28 @@
 
 .achievement-box {
 	@size: 45px;
+	.clearfix;
+	.border-radius(@radius-base);
+	background: fade(@color-pale-blue-light, 80%);
+	margin-bottom: 10px;
+
+	.detail {
+		float: left;
+	}
+
+	h3 {
+		color: #fff;
+		font-size: @type-heading6-size - 5px;
+		margin-bottom: 0;
+		margin-top: 3px;
+	}
+
+	p {
+		font-size: @type-heading6-size - 8px;
+		color: @color-pale-blue-darkest;
+		margin-bottom: 0;
+		letter-spacing: -1px;
+	}
 
 	.icon-wrap {
 		padding: 5px;
@@ -47,7 +69,11 @@
 	margin-bottom: 10px;
 	position: relative;
 
-	.achievement-box {
+	&:first-child .inner {
+		.border-radius(0 0 @radius-base @radius-base);
+	}
+
+	.inner {
 		max-width: 360px;
 		padding: 10px;
 		.border-box;
@@ -57,28 +83,15 @@
 		.border-radius(@radius-base);
 		position: relative;
 
-		&:first-child {
-			.border-radius(0 0 @radius-base @radius-base);
+		.achievement-box {
+			background: transparent;
+			margin-bottom: 0;
 		}
 
 		h6 {
 			font-size: @type-heading6-size - 13px;
 			color: @color-pale-blue-lightest;
 			margin-bottom: 7px;
-		}
-
-		h3 {
-			color: #fff;
-			font-size: @type-heading6-size - 5px;
-			margin-bottom: 0;
-		}
-
-		h4 {
-			color: #fff;
-			font-size: @type-heading6-size - 8px;
-			color: @color-pale-blue-darkest;
-			margin-bottom: 0;
-			letter-spacing: -1px;
 		}
 	}
 }

@@ -2,7 +2,14 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	-webkit-overflow-scrolling: touch;
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	overflow: auto;
 }
 
 body {
@@ -66,18 +73,12 @@ body {
 	margin-bottom: 10px;
 	z-index: 2;
 
-	&.fixed {
-		position: absolute;
-		left: 0;
-		width: 100%;
-		top: 0;
-	}
-
 	h1 {
 		font-weight: normal;
 		margin: 0;
-		line-height: 27px;
-		margin-bottom: 5px;
+		line-height: 32px;
+		font-size: @type-heading3-size;
+		margin-bottom: 0;
 	}
 }
 

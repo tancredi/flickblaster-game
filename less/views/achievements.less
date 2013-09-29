@@ -1,4 +1,25 @@
 
 .view.view-achievements {
-	
+
+	.achievements-list {
+		.border-box;
+		margin: auto;
+		margin-top: 50px;
+
+		.achievement-box {
+			padding: 10px;
+			.opacity(.5);
+
+			.icon-wrap {
+				.opacity(.2);
+			}
+
+			&.unlocked {
+
+				&, .icon-wrap {
+					.opacity(1);
+				}
+			}
+		}
+	}	
 }

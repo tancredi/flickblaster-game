@@ -10,8 +10,6 @@ device = require './device'
 getByRole = (require '../helpers/dom').getByRole
 transitions = require './viewTransitions'
 
-selectors = scrollable: '.scrollable'
-
 win = $ window
 viewWrap = $ '#view-wrap'
 
@@ -29,19 +27,13 @@ module.exports =
 
     @bindFullscreen()
 
-    ($ document).on "touchmove", (e) ->
-      target = $ e.target
-      if selectors.scrollable and (target.closest selectors.scrollable).length is 0
-        window.scrollTo 0, 1
-        e.preventDefault()
-
     win.on 'resize', => @resize()
 
+  # Hide the address bar on windows load (Needed for mobile)
   bindFullscreen: ->
-    # Hide the address bar on windows load (Needed for mobile)
     window.addEventListener "load", =>
       setTimeout ( =>
-        window.scrollTo 0, 1
+        window.scrollTo 0, 10
         device.resize()
       ), 0
 
@@ -75,6 +67,8 @@ module.exports =
   open: (ns, transition = null, callback = null, openOnTop = false, options = {}) ->
     if not openOnTop then @shown = []
     if transition? and @animating then return false
+
+    if @current? then @current.unbind()
 
     if typeof ns is 'object'
       view = ns

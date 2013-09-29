@@ -52,6 +52,9 @@ class BaseView
   # Method called after elements are parsed and when window is resized
   resize: -> if @fixHeight then @elements.main.css height: device.getSize().height
 
+  # Method called before closing transition
+  unbind: ->
+
   # Method called when view is closed
   close: ->
     @elements.main.remove()

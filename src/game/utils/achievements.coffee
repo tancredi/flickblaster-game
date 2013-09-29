@@ -102,7 +102,7 @@ module.exports = window.a =
   getAll: ->
     out = $.extend true, {}, achievements
 
-    for id, achievement in achievements
+    for id, achievement of out
       achievement.id = id
       achievement.unlocked = (unlocked.indexOf id) isnt -1
 
