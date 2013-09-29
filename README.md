@@ -9,6 +9,8 @@ The game is written in [CoffeeScript](http://coffeescript.org/), bundled with [B
 
 Also, the styles compile from [LESS CSS](http://lesscss.org/) and UI components are rendered using pre-compiled [Handlebars](http://handlebarsjs.com/) templates.
 
+#### [Play the game on your browser](http://tancredi.github.io/flickblaster-game/)
+
 # Quick source overlook
 
 The coffeescript source of the app is all contained in `src/`
