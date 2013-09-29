@@ -77,7 +77,7 @@ class BaseModal
 
   # Called after opening transition is over
   bind: ->
-    @inner.on (device.getEvent 'click'), '[data-role="close"]', (e) =>
+    @inner.on (device.getEvent 'mousedown'), '[data-role="close"]', (e) =>
       e.preventDefault()
       @close()
 
