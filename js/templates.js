@@ -193,7 +193,7 @@ function program6(depth0,data) {
 function program8(depth0,data) {
   
   
-  return "\n\n	<div class=\"actions\">\n		\n		<a href=\"#\" data-role=\"back\">\n			<i class=\"icon-list\"></i>\n			Levels\n		</a>\n\n		<a href=\"#\" class=\"primary\" data-role=\"restart\">\n			<i class=\"icon-rotate-left\"></i>\n			Try Again\n		</a>\n\n	</div>\n\n";
+  return "\n\n	<div class=\"actions\">\n		\n		<a href=\"#\" data-role=\"back\">\n			<i class=\"icon-list\"></i>\n			Levels\n		</a>\n\n		<a href=\"#\" class=\"primary button-try-again\" data-role=\"restart\">\n			<i class=\"icon-rotate-left\"></i>\n			Try Again\n		</a>\n\n	</div>\n\n";
   }
 
   stack1 = helpers['if'].call(depth0, depth0.win, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
@@ -210,6 +210,14 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
 
   return "<div class=\"actions\">\n\n	<a href=\"#\" data-role=\"restart\">\n		<i class=\"icon-rotate-left\"></i>\n		Restart\n	</a>\n	\n	<a href=\"#\" class=\"primary\" data-role=\"resume\">\n		Resume\n		<i class=\"icon-chevron-right\"></i>\n	</a>\n\n</div>\n\n<a class=\"button-flat-light block\" data-role=\"back\">\n	<i class=\"icon-list\"></i>\n	Levels\n</a>";
+  });
+Handlebars.partials['partials/modal-settings'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<ul class=\"settings-list\">\n	<li>\n\n		<span class=\"label\">Sound</span>\n\n		<span class=\"switch\" data-role=\"sound\">\n			<span class=\"inner\"></span>\n		</span>\n\n	</li>\n</ul>";
   });
 Handlebars.partials['partials/modal-tutorial'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
@@ -382,7 +390,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"inner\">\n	<div class=\"main-nav\">\n\n		<img class=\"logo\" src=\"./assets/logo/home@2x.png\">\n\n		<a class=\"button-flat block\" data-role=\"nav-play\" href=\"#\">\n			<i class=\"icon-gamepad\"></i>\n			Play\n		</a>\n\n		<a class=\"button-flat block\" data-role=\"nav-levels\" href=\"#\">\n			<i class=\"icon-list\"></i>\n			Levels\n		</a>\n\n		<a class=\"button-flat block\" data-role=\"nav-achievements\" href=\"#\">\n			<i class=\"icon-trophy\"></i>\n			Achievements\n		</a>\n\n	</div>\n</div>";
+  return "<a href=\"#\" class=\"button-settings\" data-role=\"settings\">\n	<i class=\"icon-gear\"></i>\n</a>\n\n<div class=\"inner\">\n	<div class=\"main-nav\">\n\n		<img class=\"logo\" src=\"./assets/logo/home@2x.png\">\n\n		<a class=\"button-flat block\" data-role=\"nav-play\" href=\"#\">\n			<i class=\"icon-gamepad\"></i>\n			Play\n		</a>\n\n		<a class=\"button-flat block\" data-role=\"nav-levels\" href=\"#\">\n			<i class=\"icon-list\"></i>\n			Levels\n		</a>\n\n		<a class=\"button-flat block\" data-role=\"nav-achievements\" href=\"#\">\n			<i class=\"icon-trophy\"></i>\n			Achievements\n		</a>\n\n	</div>\n</div>";
   });
 Handlebars.partials['views/levels'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
@@ -445,7 +453,7 @@ function program8(depth0,data) {
   return "scored";
   }
 
-  buffer += "<div class=\"top-bar fixed\">\n	\n	<a class=\"top-bar-button button-left\" href=\"#\" data-role=\"nav-home\">\n		<i class=\"icon-caret-left\"></i>\n	</a>\n\n	<h1 class=\"center\">\n		Levels\n	</h1>\n\n</div>\n\n<ul class=\"levels-list\">\n	";
+  buffer += "<div class=\"top-bar fixed\">\n	\n	<a class=\"top-bar-button button-left\" href=\"#\" data-role=\"nav-home\">\n		<i class=\"icon-caret-left\"></i>\n	</a>\n\n	<h1 class=\"center\">\n		Levels\n	</h1>\n\n	<a href=\"#\" class=\"button-settings\" data-role=\"settings\">\n		<i class=\"icon-gear\"></i>\n	</a>\n\n</div>\n\n<ul class=\"levels-list\">\n	";
   stack1 = helpers.each.call(depth0, depth0.levels, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</ul>";

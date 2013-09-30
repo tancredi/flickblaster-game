@@ -1,0 +1,170 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": []
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 420,
+                    "y": 85,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 270,
+                    "y": 860,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 270,
+                    "y": 500,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-a"
+                    },
+                    "id": "teleport-e"
+                },
+                {
+                    "x": 420,
+                    "y": 500,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-c"
+                    },
+                    "id": "teleport-f"
+                },
+                {
+                    "x": 120,
+                    "y": 500,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-b"
+                    },
+                    "id": "teleport-d"
+                },
+                {
+                    "x": 120,
+                    "y": 290,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-e"
+                    },
+                    "id": "teleport-a"
+                },
+                {
+                    "x": 270,
+                    "y": 290,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-f"
+                    },
+                    "id": "teleport-b"
+                },
+                {
+                    "x": 420,
+                    "y": 290,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-end"
+                    },
+                    "id": "teleport-c"
+                },
+                {
+                    "x": 120,
+                    "y": 85,
+                    "preset": "teleport",
+                    "attributes": {},
+                    "id": "teleport-end"
+                },
+                {
+                    "x": 270,
+                    "y": 85,
+                    "preset": "turbo",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 180,
+                    "type": "rect",
+                    "width": 530,
+                    "height": 10
+                },
+                {
+                    "x": 270,
+                    "y": 400,
+                    "type": "rect",
+                    "width": 530,
+                    "height": 10
+                },
+                {
+                    "x": 45,
+                    "y": 840,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 410,
+                    "y": 820,
+                    "type": "poly",
+                    "points": [
+                        100,
+                        0,
+                        100,
+                        100,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 20,
+                    "y": 665,
+                    "type": "rect",
+                    "width": 60,
+                    "height": 540
+                },
+                {
+                    "x": 520,
+                    "y": 670,
+                    "type": "rect",
+                    "width": 60,
+                    "height": 540
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1,
+        "tutorial": "intro"
+    }
+}
