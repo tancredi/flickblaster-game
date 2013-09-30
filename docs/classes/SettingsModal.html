@@ -15,7 +15,7 @@
     &raquo;
     <a href='../class_index.html' title='Index'>Index</a>
     &raquo;
-    <span class='title'>Sprite</span>
+    <span class='title'>SettingsModal</span>
     <nav>
       <ul>
         <li class='noframes'>
@@ -106,27 +106,23 @@
     <div id='content'>
       <h1>
         Class:
-        Sprite
+        SettingsModal
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
-          <td>src&#47;game&#47;items&#47;Sprite.coffee</td>
+          <td>src&#47;ui&#47;modals&#47;SettingsModal.coffee</td>
         </tr>
         <tr>
           <td>Inherits:</td>
           <td>
-            <a href='../classes/BaseItem.html'>BaseItem</a>
+            <a href='../classes/BaseModal.html'>BaseModal</a>
           </td>
         </tr>
       </table>
       <h2>Overview</h2>
       <div class='docstring'>
-  <h2>Sprite class</h2><p>Game Item displaying an asset or a portion of it in a DOM element on the stage
-Can be a child of an Entity, in which case it will wrap it&#39;s element in the Entity&#39;s wrap element,
-otherwise will render inside its layer</p><p>The rendering makes use of the SpriteRenderer class
-It also makes use of decorators, which are other overlapped sprites that can be switched on an
-off to create effects</p><p>Initialise with a &#39;type&#39; option, which will be the key of its preset in www/game/sprites.json</p><p>Read Game Data class for more on JSON assets</p>
+  <h2>Settings Modal class</h2><p>Modal called from game and home to change user settings</p>
 </div>
 <div class='tags'>
 </div>
@@ -135,7 +131,7 @@ off to create effects</p><p>Initialise with a &#39;type&#39; option, which will 
   <li>
     <span class='signature'>
       <a href='#constructor-instance'>
-        - (void) <strong>constructor</strong>(options, layer)
+        - (void) <strong>constructor</strong>(wrap)
       </a>
     </span>
     <span class='constructor note title'>Constructor</span>
@@ -145,42 +141,12 @@ off to create effects</p><p>Initialise with a &#39;type&#39; option, which will 
   </li>
   <li>
     <span class='signature'>
-      <a href='#renderDecorators-instance'>
-        - (void) <strong>renderDecorators</strong>()
+      <a href='#getElements-instance'>
+        - (void) <strong>getElements</strong>()
       </a>
     </span>
     <span class='desc'>
-      Create one element for each decorator in the preset
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#showDecorator-instance'>
-        - (void) <strong>showDecorator</strong>(decoratorId)
-      </a>
-    </span>
-    <span class='desc'>
-      Show the decorator with given ID
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#hideDecorator-instance'>
-        - (void) <strong>hideDecorator</strong>(decoratorId)
-      </a>
-    </span>
-    <span class='desc'>
-      Hide the decorator with given ID
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#getDecorator-instance'>
-        - (void) <strong>getDecorator</strong>(decoratorId)
-      </a>
-    </span>
-    <span class='desc'>
-      Find the decorator with given ID
+      
     </span>
   </li>
   <li>
@@ -189,15 +155,14 @@ off to create effects</p><p>Initialise with a &#39;type&#39; option, which will 
         - (void) <strong>render</strong>()
       </a>
     </span>
-    <span class='bound note title'>Bound</span>
     <span class='desc'>
-      
+      Delegate actions to all buttons
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#moveTo-instance'>
-        - (void) <strong>moveTo</strong>()
+      <a href='#soundIsOn-instance'>
+        - (void) <strong>soundIsOn</strong>()
       </a>
     </span>
     <span class='desc'>
@@ -206,18 +171,8 @@ off to create effects</p><p>Initialise with a &#39;type&#39; option, which will 
   </li>
   <li>
     <span class='signature'>
-      <a href='#flip-instance'>
-        - (void) <strong>flip</strong>(dir)
-      </a>
-    </span>
-    <span class='desc'>
-      Mirror on given axis (0=x, 1=y)
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#remove-instance'>
-        - (void) <strong>remove</strong>()
+      <a href='#initSound-instance'>
+        - (void) <strong>initSound</strong>()
       </a>
     </span>
     <span class='desc'>
@@ -226,22 +181,22 @@ off to create effects</p><p>Initialise with a &#39;type&#39; option, which will 
   </li>
   <li>
     <span class='signature'>
-      <a href='#getScreenPosition-instance'>
-        - (void) <strong>getScreenPosition</strong>()
+      <a href='#toggleSound-instance'>
+        - (void) <strong>toggleSound</strong>()
       </a>
     </span>
     <span class='desc'>
-      Returns current position in screen coordinates
+      
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#updatePos-instance'>
-        - (void) <strong>updatePos</strong>(x, y)
+      <a href='#updateSound-instance'>
+        - (void) <strong>updateSound</strong>()
       </a>
     </span>
     <span class='desc'>
-      Updates DOM element position to match
+      
     </span>
   </li>
 </ul>
@@ -250,20 +205,20 @@ off to create effects</p><p>Initialise with a &#39;type&#39; option, which will 
       </h2>
       <h3 class='inherited'>
         Methods inherited from
-        <a href='../classes/BaseItem.html'>BaseItem</a>
+        <a href='../classes/BaseModal.html'>BaseModal</a>
       </h3>
       <p class='inherited'>
-                <a href='../classes/BaseItem.html#constructor-instance'>#constructor</a>,
-                <a href='../classes/BaseItem.html#translate-instance'>#translate</a>,
-                <a href='../classes/BaseItem.html#moveTo-instance'>#moveTo</a>,
-                <a href='../classes/BaseItem.html#update-instance'>#update</a>,
-        <a href='../classes/BaseItem.html#remove-instance'>#remove</a>
+                <a href='../classes/BaseModal.html#constructor-instance'>#constructor</a>,
+                <a href='../classes/BaseModal.html#render-instance'>#render</a>,
+                <a href='../classes/BaseModal.html#open-instance'>#open</a>,
+                <a href='../classes/BaseModal.html#bind-instance'>#bind</a>,
+        <a href='../classes/BaseModal.html#close-instance'>#close</a>
       </p>
       <h2>Constructor Details</h2>
       <div class='methods'>
   <div class='method_details'>
     <p class='signature' id='constructor-instance'>
-      - (void) <strong>constructor</strong>(options, layer)
+      - (void) <strong>constructor</strong>(wrap)
     </p>
     <div class='tags'>
 </div>
@@ -272,95 +227,48 @@ off to create effects</p><p>Initialise with a &#39;type&#39; option, which will 
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='renderDecorators-instance'>
-      - (void) <strong>renderDecorators</strong>()
+    <p class='signature' id='getElements-instance'>
+      - (void) <strong>getElements</strong>()
     </p>
-    <div class='docstring'>
-  <p>Create one element for each decorator in the preset</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='showDecorator-instance'>
-      - (void) <strong>showDecorator</strong>(decoratorId)
-    </p>
-    <div class='docstring'>
-  <p>Show the decorator with given ID</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='hideDecorator-instance'>
-      - (void) <strong>hideDecorator</strong>(decoratorId)
-    </p>
-    <div class='docstring'>
-  <p>Hide the decorator with given ID</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='getDecorator-instance'>
-      - (void) <strong>getDecorator</strong>(decoratorId)
-    </p>
-    <div class='docstring'>
-  <p>Find the decorator with given ID</p>
-</div>
-<div class='tags'>
+    <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
     <p class='signature' id='render-instance'>
       - (void) <strong>render</strong>()
-      (bound)
-    </p>
-    <div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='moveTo-instance'>
-      - (void) <strong>moveTo</strong>()
-    </p>
-    <div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='flip-instance'>
-      - (void) <strong>flip</strong>(dir)
     </p>
     <div class='docstring'>
-  <p>Mirror on given axis (0=x, 1=y)</p>
+  <p>Delegate actions to all buttons</p>
 </div>
 <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='remove-instance'>
-      - (void) <strong>remove</strong>()
+    <p class='signature' id='soundIsOn-instance'>
+      - (void) <strong>soundIsOn</strong>()
     </p>
     <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='getScreenPosition-instance'>
-      - (void) <strong>getScreenPosition</strong>()
+    <p class='signature' id='initSound-instance'>
+      - (void) <strong>initSound</strong>()
     </p>
-    <div class='docstring'>
-  <p>Returns current position in screen coordinates</p>
-</div>
-<div class='tags'>
+    <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='updatePos-instance'>
-      - (void) <strong>updatePos</strong>(x, y)
+    <p class='signature' id='toggleSound-instance'>
+      - (void) <strong>toggleSound</strong>()
     </p>
-    <div class='docstring'>
-  <p>Updates DOM element position to match</p>
+    <div class='tags'>
 </div>
-<div class='tags'>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='updateSound-instance'>
+      - (void) <strong>updateSound</strong>()
+    </p>
+    <div class='tags'>
 </div>
   </div>
 </div>
