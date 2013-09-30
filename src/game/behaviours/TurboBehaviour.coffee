@@ -2,6 +2,7 @@
 defaultMultiplier = 4
 
 BaseActionableBehaviour = require './BaseActionableBehaviour'
+sounds = require '../utils/sounds'
 
 ###
 ## Turbo Behaviours class
@@ -26,6 +27,8 @@ class TurboBehaviour extends BaseActionableBehaviour
 
   activate: (player) ->
     return if @active
+
+    sounds.play 'turbo', 'activate'
 
     super
 

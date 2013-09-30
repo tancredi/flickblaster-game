@@ -1,6 +1,7 @@
 
 BaseBehaviour = require './BaseBehaviour'
 gameData = require '../utils/gameData'
+sounds = require '../utils/sounds'
 
 defaultStrength = 2000
 
@@ -20,6 +21,8 @@ class CannonBehaviour extends BaseBehaviour
 
   shoot: ->
     pos = @entity.position()
+
+    sounds.play 'cannon', 'shoot'
 
     # Create bullet entity
     bullet =

@@ -1,5 +1,6 @@
 
 BaseActionableBehaviour = require './BaseActionableBehaviour'
+sounds = require '../utils/sounds'
 
 ###
 ## Teleport behaviour
@@ -37,6 +38,9 @@ class TeleportBehaviour extends BaseActionableBehaviour
       if target.attributes.type? and target.attributes.type is 'teleport'
         target.behaviour.lightsFx 200
         target.behaviour.pop() if target.attributes['single-use']
+
+      # Play sound FX
+      sounds.play 'teleport', 'activate'
 
       # Quickly fade player out
       playerSprite.transition opacity: 0, 30, =>

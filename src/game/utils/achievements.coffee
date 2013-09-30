@@ -49,7 +49,7 @@ achievements =
     description: 'Complete all levels with 3 stars'
 
   hacker:
-    title: 'All Stars'
+    title: 'Hacker'
     description: 'Complete a level with shots left'
 
   # Logic contained in `LaserBehaviour`

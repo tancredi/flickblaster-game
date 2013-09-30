@@ -16,9 +16,13 @@ device = require './core/device'
 renderer = require './core/renderer'
 views = require './core/views'
 gameData = require './game/utils/gameData'
+sounds = require './game/utils/sounds'
 
 # Import Secondary Modules
 touchables = require './ui/touchables'
+
+# Init sounds
+sounds.init()
 
 # Import Views
 views.load

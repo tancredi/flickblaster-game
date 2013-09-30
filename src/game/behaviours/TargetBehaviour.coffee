@@ -1,5 +1,6 @@
 
 BaseActionableBehaviour = require './BaseActionableBehaviour'
+sounds = require '../utils/sounds'
 
 ###
 ## Target Behaviour class
@@ -27,6 +28,8 @@ class TargetBehaviour extends BaseActionableBehaviour
     @active = true
 
     return if activator.behaviour.dead
+
+    sounds.play 'target', 'achieved'
 
     @lightsOn()
     @pot()

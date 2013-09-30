@@ -24,6 +24,11 @@ class PauseModal extends BaseModal
 
     super
 
+  render: ->
+    @context.title = "Level #{@game.levelName}"
+
+    super
+
   # Delegate actions to all buttons
   bind: ->
     super

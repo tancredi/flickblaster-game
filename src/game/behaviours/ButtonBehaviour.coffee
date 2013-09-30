@@ -1,5 +1,6 @@
 
 BaseActionableBehaviour = require './BaseActionableBehaviour'
+sounds = require '../utils/sounds'
 
 ###
 ## Button Behaviour class
@@ -31,6 +32,9 @@ class ButtonBehaviour extends BaseActionableBehaviour
     return if @active
 
     super
+
+    # Play sound FX
+    sounds.play 'button', 'press'
 
     # Parse its background position
     bgPos = (@sprite.el.css 'background-position').split ' '

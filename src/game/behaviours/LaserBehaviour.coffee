@@ -1,6 +1,7 @@
 
 BaseBehaviour = require './BaseBehaviour'
 achievements = require '../utils/achievements'
+sounds = require '../utils/sounds'
 
 ###
 ## Laser Behaviour class
@@ -38,6 +39,8 @@ class LaserBehaviour extends BaseBehaviour
     @off() if (@entity.hasAttr 'off') and @entity.attributes.off
 
   burnPlayer: ->
+    sounds.play 'laser', 'burn'
+
     # Fade in burning FX decorator
     sprite = @player.sprites[0]
     decorator = sprite.getDecorator 'burn'
@@ -67,6 +70,8 @@ class LaserBehaviour extends BaseBehaviour
       @cachedElements = @entity.elements
     @world.lasers.refresh()
 
+    sounds.play 'laser', 'toggle'
+
     @active = false
 
   # Turn the laser on
@@ -74,6 +79,8 @@ class LaserBehaviour extends BaseBehaviour
     for element in @cachedElements
       @world.lasers.el.append element
     @world.lasers.refresh()
+
+    sounds.play 'laser', 'toggle'
 
     # Burn the player if already touching
     if @touching then @burnPlayer()

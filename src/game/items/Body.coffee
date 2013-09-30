@@ -113,7 +113,8 @@ class Body extends BaseItem
       bodyB = c.m_fixtureB.m_body
 
       if not target?
-        if bodyA is @b2dBody.m_body then callback c
+        if bodyA is @b2dBody.m_body or bodyB is @b2dBody.m_body
+          callback c
         return
       else
         targetBody = target.b2dBody.m_body

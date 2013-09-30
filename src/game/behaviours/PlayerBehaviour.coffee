@@ -1,5 +1,6 @@
 
 BaseBehaviour = require './BaseBehaviour'
+sounds = require '../utils/sounds'
 
 ###
 ## Player Behaviour class
@@ -12,6 +13,12 @@ class PlayerBehaviour extends BaseBehaviour
 
   constructor: (@entity, @world) ->
     @dead = false
+
+    @bindSounds()
+
+  bindSounds: ->
+    @entity.body.onCollision 'start', null, =>
+      sounds.play 'collisions', 'player'
 
   win: (callback) ->
     for sprite in @entity.sprites

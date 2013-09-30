@@ -4,6 +4,7 @@ shotStrength = 2.5
 renderer = require '../../core/renderer'
 
 phys = require '../utils/physics'
+sounds = require '../utils/sounds'
 MouseControls = require './MouseControls'
 
 # Style of the line rendered to display visual feedback of the dragging
@@ -85,6 +86,7 @@ class GameControls extends MouseControls
     entity = ($ evt.target).data 'entity'
 
     if entity? and entity.id is 'player'
+      sounds.play 'player', 'click'
       @showCanvas()
       @flicking = true
       @flickTarget = entity
@@ -95,6 +97,7 @@ class GameControls extends MouseControls
 
     # Creates force vector and applies it to target when flicked
     if @flicking
+      sounds.play 'player', 'release'
       (_ @game.world).emit 'shoot', []
       center = @viewport.worldToScreen @game.player.position()
       vertex = @getRelativeMouse()

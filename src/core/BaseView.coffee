@@ -2,6 +2,10 @@
 renderer = require './renderer'
 device = require './device'
 
+getByRole = (require '../helpers/dom').getByRole
+
+SettingsModal = require '../ui/modals/SettingsModal'
+
 # Cache jQuery-wrapped window
 win = $ window
 
@@ -43,11 +47,17 @@ class BaseView
 
   # Method called after rendering
   getElements: ->
+    @elements.settings = getByRole 'settings', @elements.main
 
   # Method called after elements parsed
   bind: ->
     @resizeCallback = => @resize()
     win.on 'resize', @resizeCallback
+
+    # Bind settings button
+    @elements.settings.on device.getEvent('mousedown'), (e) ->
+      e.preventDefault()
+      new SettingsModal
 
   # Method called after elements are parsed and when window is resized
   resize: -> if @fixHeight then @elements.main.css height: device.getSize().height

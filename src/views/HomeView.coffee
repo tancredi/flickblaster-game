@@ -8,7 +8,6 @@ getByRole = (require '../helpers/dom').getByRole
 userData = require '../game/utils/userData'
 gameData = require '../game/utils/gameData'
 
-# Cache jQuery-wrapped window object
 win = $ window
 
 ###
@@ -29,24 +28,24 @@ class HomeView extends BaseView
     super
 
     @elements.nav =
-      play: getByRole 'nav-play', @elements.main         # Pause button
-      levels: getByRole 'nav-levels', @elements.main # Shots display
-      achievements: getByRole 'nav-achievements', @elements.main # Shots display
+      play: getByRole 'nav-play', @elements.main                  # Pause button
+      levels: getByRole 'nav-levels', @elements.main              # Shots display
+      achievements: getByRole 'nav-achievements', @elements.main  # Shots display
 
   bind: ->
     super
 
     nextLevel = @getNextLevel()
 
-    @elements.nav.play.on device.getEvent('click'), (e) ->
+    @elements.nav.play.on device.getEvent('mousedown'), (e) ->
       e.preventDefault()
       views.open 'game', 'pop-out', null, false, nextLevel.name
 
-    @elements.nav.levels.on device.getEvent('click'), (e) ->
+    @elements.nav.levels.on device.getEvent('mousedown'), (e) ->
       e.preventDefault()
       views.open 'levels', 'slide-right'
 
-    @elements.nav.achievements.on device.getEvent('click'), (e) ->
+    @elements.nav.achievements.on device.getEvent('mousedown'), (e) ->
       e.preventDefault()
       views.open 'achievements', 'slide-right'
 

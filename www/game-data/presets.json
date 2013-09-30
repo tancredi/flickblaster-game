@@ -133,6 +133,7 @@
 	},
 
 	"bullet": {
+		"behaviour": "bullet",
 		"attributes": {
 			"type": "bullet",
 			"material": "metal",
@@ -241,6 +242,7 @@
 	},
 
 	"rubber-ball-orange": {
+		"behaviour": "rubberBall",
 		"attributes": {
 			"type": "rubber-ball",
 			"z-index": 2,

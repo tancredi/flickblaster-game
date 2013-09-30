@@ -206,3 +206,7 @@ Generate an updated version by running `cake docs`.
 A [Sublime Text](http://www.sublimetext.com/) project is provided in the repository (`flickblaster-game.sublime-project`).
 
 The project makes it easier to browse through the directories of the project without being disturbed by compiled output, dependencies, mobile builds, documentation and superfluous directories or files.
+
+### Contributors
+
+Thanks to Ali Cotcher for the sound effects
