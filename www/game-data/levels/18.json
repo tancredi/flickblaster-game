@@ -9,22 +9,43 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 270,
-                    "y": 345,
+                    "x": 350,
+                    "y": 77,
                     "sprites": [],
                     "bodies": [
                         {
                             "x": 0,
                             "y": 0,
                             "type": "rect",
-                            "width": 240,
-                            "height": 4
+                            "width": 4,
+                            "height": 142
                         }
                     ],
                     "attributes": {
                         "type": "laser",
                         "color": "red",
                         "group": "lasers-red",
+                        "interaction": "static"
+                    },
+                    "behaviour": "laser"
+                },
+                {
+                    "x": 80,
+                    "y": 590,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 150,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "color": "blue",
+                        "group": "lasers-blue",
                         "interaction": "static"
                     },
                     "behaviour": "laser"
@@ -36,25 +57,74 @@
             "type": "entity",
             "items": [
                 {
-                    "x": 270,
-                    "y": 820,
+                    "x": 250,
+                    "y": 830,
                     "preset": "player",
                     "attributes": {},
                     "id": "player"
                 },
                 {
-                    "x": 268,
-                    "y": 170,
+                    "x": 440,
+                    "y": 78,
                     "preset": "target",
                     "attributes": {},
                     "id": ""
                 },
                 {
-                    "x": 270,
-                    "y": 500,
+                    "x": 268,
+                    "y": 80,
                     "preset": "bullet",
                     "attributes": {},
                     "id": ""
+                },
+                {
+                    "x": 250,
+                    "y": 280,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-b",
+                        "single-use": true
+                    },
+                    "id": "teleport-a"
+                },
+                {
+                    "x": 445,
+                    "y": 830,
+                    "preset": "teleport",
+                    "attributes": {
+                        "single-use": true
+                    },
+                    "id": "teleport-b"
+                },
+                {
+                    "x": 443,
+                    "y": 280,
+                    "preset": "teleport",
+                    "attributes": {
+                        "target-id": "teleport-d",
+                        "single-use": true
+                    },
+                    "id": "teleport-c"
+                },
+                {
+                    "x": 14,
+                    "y": 830,
+                    "preset": "button-v-blue",
+                    "attributes": {
+                        "anchor": "left",
+                        "action": "laser-toggle",
+                        "target-group": "lasers-blue"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 80,
+                    "y": 665,
+                    "preset": "teleport",
+                    "attributes": {
+                        "single-use": true
+                    },
+                    "id": "teleport-d"
                 }
             ]
         },
@@ -63,17 +133,44 @@
             "type": "body",
             "items": [
                 {
-                    "x": 76,
-                    "y": 345,
+                    "x": 160,
+                    "y": 445,
                     "type": "rect",
-                    "width": 150,
+                    "width": 10,
+                    "height": 595
+                },
+                {
+                    "x": 365,
+                    "y": 153,
+                    "type": "rect",
+                    "width": 420,
                     "height": 10
                 },
                 {
-                    "x": 464,
-                    "y": 345,
+                    "x": 0,
+                    "y": 0,
+                    "type": "poly",
+                    "points": [
+                        0,
+                        0,
+                        100,
+                        0,
+                        0,
+                        100
+                    ]
+                },
+                {
+                    "x": 350,
+                    "y": 554,
                     "type": "rect",
-                    "width": 150,
+                    "width": 10,
+                    "height": 800
+                },
+                {
+                    "x": 65,
+                    "y": 740,
+                    "type": "rect",
+                    "width": 200,
                     "height": 10
                 }
             ]
@@ -85,6 +182,6 @@
         }
     ],
     "data": {
-        "shots": 1
+        "shots": 2
     }
 }
