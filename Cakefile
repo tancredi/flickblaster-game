@@ -138,7 +138,6 @@ build =
         allowed = true
         for pattern in confs.manifest.ignorePatterns
           if (file.match pattern)?
-            console.log 'fds'
             allowed = false
         if allowed
           cache.push path.join dir, file
