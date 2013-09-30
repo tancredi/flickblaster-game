@@ -200,6 +200,7 @@ Generate an updated version by running `cake docs`.
 * [Transit.js](http://ricostacruz.com/jquery.transit/)
 * [Quo.js](http://quojs.tapquo.com/)
 * [Box2DWeb](https://code.google.com/p/box2dweb/)
+* [Buzz](http://buzz.jaysalvat.com/)
 
 # Sublime Text Project
 
@@ -209,4 +210,4 @@ The project makes it easier to browse through the directories of the project wit
 
 ### Contributors
 
-Thanks to Ali Cotcher for the sound effects
+Thanks to Ali Cotcher for designing the sound effects
