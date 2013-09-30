@@ -11,7 +11,7 @@ soundsMap =
 
 sounds = {}
 soundsDir = 'sounds'
-formats = [ 'mp3' ]
+formats = [ 'mp3', 'wav' ]
 
 module.exports =
 
