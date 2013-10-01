@@ -163,6 +163,23 @@
         }
     },
 
+    "turbo-directional-h": {
+        "extends": "turbo",
+        "assets": {
+            "default": "sprites/turbo-directional-h"
+        },
+        "decorators": {
+            "light": "sprites/turbo-directional-lights"
+        }
+    },
+
+    "turbo-directional-v": {
+        "extends": "turbo-directional-h",
+        "assets": {
+            "default": "sprites/turbo-directional-v"
+        }
+    },
+
     "cannon-h": {
         "assets": {
             "default": "sprites/cannon-h"

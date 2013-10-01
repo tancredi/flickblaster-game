@@ -1,0 +1,108 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": []
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 475,
+                    "y": 380,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 475,
+                    "y": 540,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 475,
+                    "y": 65,
+                    "preset": "turbo-directional-bottom",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 475,
+                    "y": 855,
+                    "preset": "turbo-directional-left",
+                    "attributes": {
+                        "multiplier": 20
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 65,
+                    "y": 855,
+                    "preset": "turbo-directional-top",
+                    "attributes": {},
+                    "id": ""
+                },
+                {
+                    "x": 65,
+                    "y": 65,
+                    "preset": "turbo-directional-right",
+                    "attributes": {
+                        "multiplier": 30
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 61,
+                    "y": 542,
+                    "preset": "turbo-mini",
+                    "attributes": {},
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 270,
+                    "y": 290,
+                    "type": "rect",
+                    "width": 295,
+                    "height": 388
+                },
+                {
+                    "x": 473,
+                    "y": 460,
+                    "type": "rect",
+                    "width": 128,
+                    "height": 48
+                },
+                {
+                    "x": 270,
+                    "y": 700,
+                    "type": "rect",
+                    "width": 295,
+                    "height": 220
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 1,
+        "tutorial": "directional-turbos"
+    }
+}

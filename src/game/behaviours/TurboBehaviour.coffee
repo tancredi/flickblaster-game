@@ -1,5 +1,7 @@
 
 defaultMultiplier = 4
+directionalMultiplier = 10
+directionalDelay = 20
 
 BaseActionableBehaviour = require './BaseActionableBehaviour'
 sounds = require '../utils/sounds'
@@ -32,8 +34,17 @@ class TurboBehaviour extends BaseActionableBehaviour
 
     super
 
-    player.body.b2dBody.m_body.m_linearVelocity.x *= @multiplier
-    player.body.b2dBody.m_body.m_linearVelocity.y *= @multiplier
+    playerVelocity = player.body.b2dBody.m_body.m_linearVelocity
+
+    if @entity.hasAttr 'direction'
+      dir = @entity.attributes.direction
+      setTimeout ( =>
+        playerVelocity.x += dir[0] * @multiplier * directionalMultiplier
+        playerVelocity.y += dir[1] * @multiplier * directionalMultiplier
+        ), directionalDelay
+    else
+      player.body.b2dBody.m_body.m_linearVelocity.x *= @multiplier
+      player.body.b2dBody.m_body.m_linearVelocity.y *= @multiplier
 
     # Show the lights and fade them back out
     @light.stop().transition opacity: 1, 50, =>
