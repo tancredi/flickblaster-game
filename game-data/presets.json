@@ -1,270 +1,318 @@
 {
 
-	"player": {
-		"behaviour": "player",
-		"attributes": {
-			"type": "player",
-			"z-index": 2,
-			"activator": true
-		},
-		"sprites": [
-			{ "type": "player", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 38, "x": -1, "y": -1 }
-		]
-	},
+    "player": {
+        "behaviour": "player",
+        "attributes": {
+            "type": "player",
+            "z-index": 2,
+            "activator": true
+        },
+        "sprites": [
+            { "type": "player", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 38, "x": -1, "y": -1 }
+        ]
+    },
 
-	"target": {
-		"behaviour": "target",
-		"attributes": {
-			"type": "target",
-			"sensor": true,
-			"interaction": "static"
-		},
-		"sprites": [
-			{ "type": "target", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 42, "x": 0, "y": 0 }
-		]
-	},
+    "target": {
+        "behaviour": "target",
+        "attributes": {
+            "type": "target",
+            "sensor": true,
+            "interaction": "static"
+        },
+        "sprites": [
+            { "type": "target", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 42, "x": 0, "y": 0 }
+        ]
+    },
 
-	"target-mini": {
-		"extends": "target",
-		"sprites": [
-			{ "type": "target-mini", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 28, "x": 0, "y": 0 }
-		]
-	},
+    "target-mini": {
+        "extends": "target",
+        "sprites": [
+            { "type": "target-mini", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 28, "x": 0, "y": 0 }
+        ]
+    },
 
-	"button-v-yellow": {
-		"behaviour": "button",
-		"attributes": {
-			"type": "button",
-			"sensor": true,
-			"interaction": "static"
-		},
-		"sprites": [
-			{ "type": "button-v-yellow", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "rect", "width": 15, "height": 42, "x": 0, "y": 0 }
-		]
-	},
+    "button-v-yellow": {
+        "behaviour": "button",
+        "attributes": {
+            "type": "button",
+            "sensor": true,
+            "interaction": "static"
+        },
+        "sprites": [
+            { "type": "button-v-yellow", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "rect", "width": 15, "height": 42, "x": 0, "y": 0 }
+        ]
+    },
 
-	"button-h-yellow": {
-		"extends": "button-v-yellow",
-		"sprites": [
-			{ "type": "button-h-yellow", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "rect", "width": 42, "height": 15, "x": 0, "y": 0 }
-		]
-	},
+    "button-h-yellow": {
+        "extends": "button-v-yellow",
+        "sprites": [
+            { "type": "button-h-yellow", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "rect", "width": 42, "height": 15, "x": 0, "y": 0 }
+        ]
+    },
 
-	"button-v-blue": {
-		"behaviour": "button",
-		"attributes": {
-			"type": "button",
-			"sensor": true,
-			"interaction": "static"
-		},
-		"sprites": [
-			{ "type": "button-v-blue", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "rect", "width": 15, "height": 42, "x": 0, "y": 0 }
-		]
-	},
+    "button-v-blue": {
+        "behaviour": "button",
+        "attributes": {
+            "type": "button",
+            "sensor": true,
+            "interaction": "static"
+        },
+        "sprites": [
+            { "type": "button-v-blue", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "rect", "width": 15, "height": 42, "x": 0, "y": 0 }
+        ]
+    },
 
-	"button-h-blue": {
-		"extends": "button-v-blue",
-		"sprites": [
-			{ "type": "button-h-blue", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "rect", "width": 42, "height": 15, "x": 0, "y": 0 }
-		]
-	},
+    "button-h-blue": {
+        "extends": "button-v-blue",
+        "sprites": [
+            { "type": "button-h-blue", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "rect", "width": 42, "height": 15, "x": 0, "y": 0 }
+        ]
+    },
 
-	"button-v-red": {
-		"extends": "button-v-yellow",
-		"sprites": [
-			{ "type": "button-v-red", "x": 0, "y": 0 }
-		]
-	},
+    "button-v-red": {
+        "extends": "button-v-yellow",
+        "sprites": [
+            { "type": "button-v-red", "x": 0, "y": 0 }
+        ]
+    },
 
-	"button-h-red": {
-		"extends": "button-h-yellow",
-		"sprites": [
-			{ "type": "button-h-red", "x": 0, "y": 0 }
-		]
-	},
+    "button-h-red": {
+        "extends": "button-h-yellow",
+        "sprites": [
+            { "type": "button-h-red", "x": 0, "y": 0 }
+        ]
+    },
 
-	"teleport": {
-		"behaviour": "teleport",
-		"attributes": {
-			"type": "teleport",
-			"sensor": true,
-			"interaction": "static"
-		},
-		"sprites": [
-			{ "type": "teleport", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 35, "x": 0, "y": 0 }
-		]
-	},
+    "teleport": {
+        "behaviour": "teleport",
+        "attributes": {
+            "type": "teleport",
+            "sensor": true,
+            "interaction": "static"
+        },
+        "sprites": [
+            { "type": "teleport", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 35, "x": 0, "y": 0 }
+        ]
+    },
 
-	"sensor": {
-		"behaviour": "sensor",
-		"attributes": {
-			"type": "sensor"
-		},
-		"sprites": [
-			{ "type": "sensor", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 20, "x": 0, "y": 0 }
-		]
-	},
+    "sensor": {
+        "behaviour": "sensor",
+        "attributes": {
+            "type": "sensor"
+        },
+        "sprites": [
+            { "type": "sensor", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 20, "x": 0, "y": 0 }
+        ]
+    },
 
-	"bullet": {
-		"behaviour": "bullet",
-		"attributes": {
-			"type": "bullet",
-			"material": "metal",
-			"activator": true,
-			"z-index": 1
-		},
-		"sprites": [
-			{ "type": "bullet", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 20, "x": 0, "y": 0 }
-		]
-	},
+    "bullet": {
+        "behaviour": "bullet",
+        "attributes": {
+            "type": "bullet",
+            "material": "metal",
+            "activator": true,
+            "z-index": 1
+        },
+        "sprites": [
+            { "type": "bullet", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 20, "x": 0, "y": 0 }
+        ]
+    },
 
-	"turbo": {
-		"behaviour": "turbo",
-		"attributes": {
-			"type": "turbo",
-			"sensor": true,
-			"interaction": "static"
-		},
-		"sprites": [
-			{ "type": "turbo", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 50, "x": 0, "y": 0 }
-		]
-	},
+    "turbo": {
+        "behaviour": "turbo",
+        "attributes": {
+            "type": "turbo",
+            "sensor": true,
+            "interaction": "static"
+        },
+        "sprites": [
+            { "type": "turbo", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 50, "x": 0, "y": 0 }
+        ]
+    },
 
-	"turbo-mini": {
-		"extends": "turbo",
-		"sprites": [
-			{ "type": "turbo-mini", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 30, "x": 0, "y": 0 }
-		]
-	},
+    "turbo-mini": {
+        "extends": "turbo",
+        "sprites": [
+            { "type": "turbo-mini", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 30, "x": 0, "y": 0 }
+        ]
+    },
 
-	"cannon-left": {
-		"behaviour": "cannon",
-		"attributes": {
-			"type": "cannon",
-			"sensor": true,
-			"interaction": "static",
-			"direction": [ -1, 0 ],
-			"z-index": 2
-		},
-		"sprites": [
-			{ "type": "cannon-h", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "rect", "width": 30, "height": 4, "x": -10, "y": -25 },
-			{ "type": "rect", "width": 30, "height": 4, "x": -10, "y": 25 },
-			{ "type": "rect", "width": 4, "height": 30, "x": 20, "y": 0 }
-		]
-	},
+    "turbo-directional-right": {
+        "extends": "turbo",
+        "attributes": {
+            "type": "turbo",
+            "sensor": true,
+            "interaction": "static",
+            "direction": [ 1, 0 ]
+        },
+        "sprites": [
+            { "type": "turbo-directional-h", "x": 0, "y": 0 }
+        ]
+    },
 
-	"cannon-right": {
-		"extends": "cannon-left",
-		"attributes": {
-			"type": "cannon",
-			"interaction": "static",
-			"flip-x": true,
-			"direction": [ 1, 0 ]
-		},
-		"bodies": [
-			{ "type": "rect", "width": 30, "height": 4, "x": 10, "y": -25 },
-			{ "type": "rect", "width": 30, "height": 4, "x": 10, "y": 25 },
-			{ "type": "rect", "width": 4, "height": 30, "x": -20, "y": 0 }
-		]
-	},
+    "turbo-directional-left": {
+        "extends": "turbo-directional-right",
+        "attributes": {
+            "type": "turbo",
+            "sensor": true,
+            "interaction": "static",
+            "direction": [ -1, 0 ],
+            "flip-x": true
+        }
+    },
 
-	"cannon-top": {
-		"extends": "cannon-left",
-		"attributes": {
-			"type": "cannon",
-			"interaction": "static",
-			"direction": [ 0, -1 ],
-			"z-index": 2
-		},
-		"sprites": [
-			{ "type": "cannon-v", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "rect", "width": 4, "height": 30, "x": -25, "y": -10 },
-			{ "type": "rect", "width": 4, "height": 30, "x": 25, "y": -10 },
-			{ "type": "rect", "width": 30, "height": 4, "x": 0, "y": 20 }
-		]
-	},
+    "turbo-directional-top": {
+        "extends": "turbo-directional-right",
+        "attributes": {
+            "type": "turbo",
+            "sensor": true,
+            "interaction": "static",
+            "direction": [ 0, -1 ]
+        },
+        "sprites": [
+            { "type": "turbo-directional-v", "x": 0, "y": 0 }
+        ]
+    },
 
-	"cannon-bottom": {
-		"extends": "cannon-top",
-		"attributes": {
-			"type": "cannon",
-			"interaction": "static",
-			"flip-y": true,
-			"direction": [ 0, 1 ],
-			"z-index": 2
-		},
-		"bodies": [
-			{ "type": "rect", "width": 4, "height": 30, "x": -25, "y": 10 },
-			{ "type": "rect", "width": 4, "height": 30, "x": 25, "y": 10 },
-			{ "type": "rect", "width": 30, "height": 4, "x": 0, "y": -20 }
-		]
-	},
+    "turbo-directional-bottom": {
+        "extends": "turbo-directional-top",
+        "attributes": {
+            "type": "turbo",
+            "sensor": true,
+            "interaction": "static",
+            "direction": [ 0, 1 ],
+            "flip-y": true
+        }
+    },
 
-	"rubber-ball-orange": {
-		"behaviour": "rubberBall",
-		"attributes": {
-			"type": "rubber-ball",
-			"z-index": 2,
-			"material": "rubber",
-			"activator": true
-		},
-		"sprites": [
-			{ "type": "rubber-ball-orange", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 35, "x": 2, "y": 2 }
-		]
-	},
+    "cannon-left": {
+        "behaviour": "cannon",
+        "attributes": {
+            "type": "cannon",
+            "sensor": true,
+            "interaction": "static",
+            "direction": [ -1, 0 ],
+            "z-index": 2
+        },
+        "sprites": [
+            { "type": "cannon-h", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "rect", "width": 30, "height": 4, "x": -10, "y": -25 },
+            { "type": "rect", "width": 30, "height": 4, "x": -10, "y": 25 },
+            { "type": "rect", "width": 4, "height": 30, "x": 20, "y": 0 }
+        ]
+    },
 
-	"rubber-ball-orange-mini": {
-		"extends": "rubber-ball-orange",
-		"sprites": [
-			{ "type": "rubber-ball-orange-mini", "x": 0, "y": 0 }
-		],
-		"bodies": [
-			{ "type": "circle", "radius": 25, "x": 2, "y": 2 }
-		]
-	}
+    "cannon-right": {
+        "extends": "cannon-left",
+        "attributes": {
+            "type": "cannon",
+            "interaction": "static",
+            "flip-x": true,
+            "direction": [ 1, 0 ]
+        },
+        "bodies": [
+            { "type": "rect", "width": 30, "height": 4, "x": 10, "y": -25 },
+            { "type": "rect", "width": 30, "height": 4, "x": 10, "y": 25 },
+            { "type": "rect", "width": 4, "height": 30, "x": -20, "y": 0 }
+        ]
+    },
+
+    "cannon-top": {
+        "extends": "cannon-left",
+        "attributes": {
+            "type": "cannon",
+            "interaction": "static",
+            "direction": [ 0, -1 ],
+            "z-index": 2
+        },
+        "sprites": [
+            { "type": "cannon-v", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "rect", "width": 4, "height": 30, "x": -25, "y": -10 },
+            { "type": "rect", "width": 4, "height": 30, "x": 25, "y": -10 },
+            { "type": "rect", "width": 30, "height": 4, "x": 0, "y": 20 }
+        ]
+    },
+
+    "cannon-bottom": {
+        "extends": "cannon-top",
+        "attributes": {
+            "type": "cannon",
+            "interaction": "static",
+            "flip-y": true,
+            "direction": [ 0, 1 ],
+            "z-index": 2
+        },
+        "bodies": [
+            { "type": "rect", "width": 4, "height": 30, "x": -25, "y": 10 },
+            { "type": "rect", "width": 4, "height": 30, "x": 25, "y": 10 },
+            { "type": "rect", "width": 30, "height": 4, "x": 0, "y": -20 }
+        ]
+    },
+
+    "rubber-ball-orange": {
+        "behaviour": "rubberBall",
+        "attributes": {
+            "type": "rubber-ball",
+            "z-index": 2,
+            "material": "rubber",
+            "activator": true
+        },
+        "sprites": [
+            { "type": "rubber-ball-orange", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 35, "x": 2, "y": 2 }
+        ]
+    },
+
+    "rubber-ball-orange-mini": {
+        "extends": "rubber-ball-orange",
+        "sprites": [
+            { "type": "rubber-ball-orange-mini", "x": 0, "y": 0 }
+        ],
+        "bodies": [
+            { "type": "circle", "radius": 25, "x": 2, "y": 2 }
+        ]
+    }
 
 }

@@ -179,14 +179,14 @@
                 {
                     "x": 467,
                     "y": 191,
-                    "preset": "baloon-orange",
+                    "preset": "rubber-ball-orange",
                     "attributes": {},
                     "id": ""
                 },
                 {
                     "x": 467,
                     "y": 103,
-                    "preset": "baloon-orange-mini",
+                    "preset": "rubber-ball-orange-mini",
                     "attributes": {},
                     "id": ""
                 }

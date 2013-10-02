@@ -2,11 +2,13 @@ CACHE MANIFEST
 
 CACHE:
 
+js/Users/tanc/projects/flickblaster-game/www/js/.DS_Store
 js/Users/tanc/projects/flickblaster-game/www/js/app.js
 js/Users/tanc/projects/flickblaster-game/www/js/templates.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/box2dweb.custom.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/box2dweb.js
+js/Users/tanc/projects/flickblaster-game/www/js/vendor/buzz.min.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/handlebars.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/jquery.animate-enhanced.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/jquery.easing.js
@@ -15,6 +17,7 @@ js/Users/tanc/projects/flickblaster-game/www/js/vendor/jquery.transit.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/quo.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/underscore.js
 js/Users/tanc/projects/flickblaster-game/www/js/vendor/underscore.observer.js
+assets/Users/tanc/projects/flickblaster-game/www/assets/.DS_Store
 assets/Users/tanc/projects/flickblaster-game/www/assets/achievements
 assets/Users/tanc/projects/flickblaster-game/www/assets/achievements/champion.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/achievements/champion@1.5.png
@@ -47,6 +50,7 @@ assets/Users/tanc/projects/flickblaster-game/www/assets/logo/home.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/logo/home@1.5.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/logo/home@2x.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/.DS_Store
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/bullet.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/bullet@1.5.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/bullet@2x.png
@@ -92,6 +96,15 @@ assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/teleport-lights@
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/teleport.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/teleport@1.5.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/teleport@2x.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-h.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-h@1.5.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-h@2x.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-lights.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-lights@1.5.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-lights@2x.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-v.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-v@1.5.png
+assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-directional-v@2x.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-lights.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-lights@1.5.png
 assets/Users/tanc/projects/flickblaster-game/www/assets/sprites/turbo-lights@2x.png
@@ -132,6 +145,11 @@ game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/23.json
 game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/24.json
 game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/25.json
 game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/26.json
+game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/27.json
+game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/28.json
+game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/29.json
+game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/30.json
+game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels/31.json
 game-data/Users/tanc/projects/flickblaster-game/www/game-data/levels.json
 game-data/Users/tanc/projects/flickblaster-game/www/game-data/materials.json
 game-data/Users/tanc/projects/flickblaster-game/www/game-data/presets.json

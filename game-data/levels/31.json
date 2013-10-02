@@ -1,0 +1,165 @@
+{
+    "size": [
+        540,
+        920
+    ],
+    "layers": [
+        {
+            "id": "lasers",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 162,
+                    "y": 360,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 316,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "interaction": "static",
+                        "color": "red",
+                        "group": "lasers-red"
+                    },
+                    "behaviour": "laser",
+                    "id": "laser-01"
+                },
+                {
+                    "x": 162,
+                    "y": 610,
+                    "sprites": [],
+                    "bodies": [
+                        {
+                            "x": 0,
+                            "y": 0,
+                            "type": "rect",
+                            "width": 316,
+                            "height": 4
+                        }
+                    ],
+                    "attributes": {
+                        "type": "laser",
+                        "interaction": "static",
+                        "color": "red",
+                        "group": "lasers-red",
+                        "off": true
+                    },
+                    "behaviour": "laser",
+                    "id": "laser-01"
+                }
+            ]
+        },
+        {
+            "id": "entities",
+            "type": "entity",
+            "items": [
+                {
+                    "x": 160,
+                    "y": 838,
+                    "preset": "target",
+                    "attributes": {},
+                    "id": "target"
+                },
+                {
+                    "x": 390,
+                    "y": 850,
+                    "preset": "player",
+                    "attributes": {},
+                    "id": "player"
+                },
+                {
+                    "x": 485,
+                    "y": 60,
+                    "preset": "cannon-left",
+                    "attributes": {},
+                    "id": "cannon-a"
+                },
+                {
+                    "x": 391,
+                    "y": 14,
+                    "preset": "button-h-blue",
+                    "attributes": {
+                        "anchor": "top",
+                        "action": "cannon-shoot",
+                        "target-id": "cannon-a",
+                        "flip-y": true
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 233,
+                    "y": 58,
+                    "preset": "turbo-directional-left",
+                    "attributes": {
+                        "multiplier": 5
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 160,
+                    "y": 486,
+                    "preset": "sensor",
+                    "attributes": {
+                        "sensor": true,
+                        "action": "laser-toggle",
+                        "target-group": "lasers-red"
+                    },
+                    "id": ""
+                },
+                {
+                    "x": 14,
+                    "y": 180,
+                    "preset": "button-v-red",
+                    "attributes": {
+                        "anchor": "left",
+                        "action": "laser-toggle",
+                        "target-group": "lasers-red",
+                        "multi-use": true
+                    },
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "walls",
+            "type": "body",
+            "items": [
+                {
+                    "x": 500,
+                    "y": 560,
+                    "type": "rect",
+                    "width": 100,
+                    "height": 900
+                },
+                {
+                    "x": 325,
+                    "y": 690,
+                    "type": "rect",
+                    "width": 10,
+                    "height": 900
+                },
+                {
+                    "x": 130,
+                    "y": 115,
+                    "type": "rect",
+                    "width": 400,
+                    "height": 10
+                }
+            ]
+        },
+        {
+            "id": "background",
+            "type": "sprite",
+            "items": []
+        }
+    ],
+    "data": {
+        "shots": 3
+    }
+}

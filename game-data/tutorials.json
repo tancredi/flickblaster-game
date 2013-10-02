@@ -1,7 +1,7 @@
 {
 	"intro": {
 		"title": "Welcome",
-		"text": "Flick the red disc into the the targets to win the game.<br><br>Try to do it in the number of shots indicated on top!",
+		"text": "Flick the red disc into the targets to win the game.<br><br>Try to do it in the number of shots indicated on top!",
 		"icon": "flag"
 	},
 	"lasers": {
@@ -48,5 +48,10 @@
 		"title": "Rubber balls",
 		"text": "Use them like bullets, but careful - They bounce quite a lot!",
 		"icon": "circle"
+	},
+	"directional-turbos": {
+		"title": "Directional boosters",
+		"text": "Some boosters will only push you in a specific direction.<br><br>Use them to find your way!",
+		"icon": "location-arrow"
 	}
 }
