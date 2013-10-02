@@ -53,6 +53,5 @@ gameData.init()
 gameData.onReady ->
   # Open Levels view
   views.open 'home'
-  # views.open 'game', null, null, false, '28'
 
 init()
