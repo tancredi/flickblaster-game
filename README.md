@@ -1,4 +1,3 @@
-
 ![# FlickBlaster](http://oi40.tinypic.com/6r6o7d.jpg)
 
 # FlickBlaster
@@ -210,7 +209,7 @@ The project makes it easier to browse through the directories of the project wit
 
 ### Contributors
 
-Thanks to Ali Cotcher for designing the sound effects
+Thanks to Ali Tocher for designing the sound effects
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tancredi/flickblaster-game/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
